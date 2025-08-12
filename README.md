@@ -29,7 +29,7 @@ google-code-golf-2025
         { 
             "paths": ["**/testcases/*.txt"],
             "rules": [
-                { "patterns": ["0"], "color": "Blue"},
+                { "patterns": ["0"], "color": "White"},
                 { "patterns": ["1"], "color": "BrightBlack"},
                 { "patterns": ["2"], "color": "BrightBlue"},
                 { "patterns": ["3"], "color": "BrightCyan"},
@@ -38,7 +38,7 @@ google-code-golf-2025
                 { "patterns": ["6"], "color": "BrightRed"},
                 { "patterns": ["7"], "color": "BrightWhite"},
                 { "patterns": ["8"], "color": "BrightYellow"},
-                { "patterns": ["9"], "color": "Green"}
+                { "patterns": ["9"], "color": "Blue"}
             ]
         }
     ]
@@ -50,4 +50,5 @@ google-code-golf-2025
 - 問題を読んで1_solution.mdを頑張って書く
 - 2_plain_code.pyをAIに書かせる
 - 3_submission.pyをAIに書かせる
+
 
