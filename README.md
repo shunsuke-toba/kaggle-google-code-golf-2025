@@ -36,7 +36,7 @@ google-code-golf-2025
                 { "patterns": ["4"], "color": "BrightGreen"},
                 { "patterns": ["5"], "color": "BrightMagenta"},
                 { "patterns": ["6"], "color": "BrightRed"},
-                { "patterns": ["7"], "color": "BrightWhite"},
+                { "patterns": ["7"], "color": "Red"},
                 { "patterns": ["8"], "color": "BrightYellow"},
                 { "patterns": ["9"], "color": "Blue"}
             ]
@@ -50,5 +50,6 @@ google-code-golf-2025
 - 問題を読んで1_solution.mdを頑張って書く
 - 2_plain_code.pyをAIに書かせる
 - 3_submission.pyをAIに書かせる
+
 
 
