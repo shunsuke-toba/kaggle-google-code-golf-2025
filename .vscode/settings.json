@@ -1,0 +1,19 @@
+{
+    "colorMyText.configurations": [
+        { 
+            "paths": ["**/testcases/*.txt"],
+            "rules": [
+                { "patterns": ["0"], "color": "White"},
+                { "patterns": ["1"], "color": "BrightBlack"},
+                { "patterns": ["2"], "color": "BrightBlue"},
+                { "patterns": ["3"], "color": "BrightCyan"},
+                { "patterns": ["4"], "color": "BrightGreen"},
+                { "patterns": ["5"], "color": "BrightMagenta"},
+                { "patterns": ["6"], "color": "BrightRed"},
+                { "patterns": ["7"], "color": "Red"},
+                { "patterns": ["8"], "color": "BrightYellow"},
+                { "patterns": ["9"], "color": "BrightMagenta"}
+            ]
+        }
+    ]
+}

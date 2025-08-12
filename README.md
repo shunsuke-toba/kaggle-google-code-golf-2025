@@ -1,0 +1,42 @@
+# Google-Code-Golf-2025
+
+## ファイル構成
+
+google-code-golf-2025
+├── XXX（001~400）
+│   ├── testcases（テストケースのフォルダ）
+│   ├── 0_input.json（入力JSON）
+│   ├── 1_solution.md（問題の考察ポイントや解くための手続きを自然言語で記述）
+│   ├── 2_plain_code.py（平易なPythonで記載されたコード）
+│   └── 3_submission.py（コードゴルフ用のコード）
+├── verify.py（テストケースを実行するためのバリデータ・未実装）
+├── list_unsolved.py（subが未実装のファイルの一覧を取得）
+├── generate_testcases.py（テストケースのテキストファイルを生成するためのスクリプト）
+└── generate_submission.py（提出用のフォルダを生成するためのスクリプト）
+
+## テストケースの色付き表示方法
+
+- VsCodeの拡張機能「Color My Text」をインストール
+- ワークスペースの設定に以下を追加
+
+```json
+{
+    "colorMyText.configurations": [
+        { 
+            "paths": ["**/testcases/*.txt"],
+            "rules": [
+                { "patterns": ["0"], "color": "Blue"},
+                { "patterns": ["1"], "color": "BrightBlack"},
+                { "patterns": ["2"], "color": "BrightBlue"},
+                { "patterns": ["3"], "color": "BrightCyan"},
+                { "patterns": ["4"], "color": "BrightGreen"},
+                { "patterns": ["5"], "color": "BrightMagenta"},
+                { "patterns": ["6"], "color": "BrightRed"},
+                { "patterns": ["7"], "color": "BrightWhite"},
+                { "patterns": ["8"], "color": "BrightYellow"},
+                { "patterns": ["9"], "color": "Green"}
+            ]
+        }
+    ]
+}
+```
