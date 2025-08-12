@@ -10,7 +10,7 @@ google-code-golf-2025
 │   ├── 1_solution.md（問題の考察ポイントや解くための手続きを自然言語で記述）
 │   ├── 2_plain_code.py（平易なPythonで記載されたコード）
 │   └── 3_submission.py（コードゴルフ用のコード）
-├── verify.py（テストケースを実行するためのバリデータ・未実装）
+├── verify.py（テストケースを実行するためのバリデータ）
 ├── list_unsolved.py（subが未実装のファイルの一覧を取得）
 ├── generate_testcases.py（テストケースのテキストファイルを生成するためのスクリプト）
 └── generate_submission.py（提出用のフォルダを生成するためのスクリプト）
@@ -19,8 +19,9 @@ google-code-golf-2025
 ## テストケースの色付き表示方法
 
 - generate_testcases.pyを実行すると、testcasesフォルダにテストケースのテキストファイルが生成される
-- VsCodeの拡張機能「Color My Text」をインストール
+- VSCodeの拡張機能「Color My Text」をインストール
 - ワークスペースの設定に以下を追加
+- テキストファイルをVSCode上で開くと色がついて表示される
 
 ```json
 {
@@ -49,3 +50,4 @@ google-code-golf-2025
 - 問題を読んで1_solution.mdを頑張って書く
 - 2_plain_code.pyをAIに書かせる
 - 3_submission.pyをAIに書かせる
+
