@@ -2,6 +2,7 @@
 
 ## ファイル構成
 
+```
 google-code-golf-2025
 ├── XXX（001~400）
 │   ├── testcases（テストケースのフォルダ）
@@ -13,9 +14,11 @@ google-code-golf-2025
 ├── list_unsolved.py（subが未実装のファイルの一覧を取得）
 ├── generate_testcases.py（テストケースのテキストファイルを生成するためのスクリプト）
 └── generate_submission.py（提出用のフォルダを生成するためのスクリプト）
+```
 
 ## テストケースの色付き表示方法
 
+- generate_testcases.pyを実行すると、testcasesフォルダにテストケースのテキストファイルが生成される
 - VsCodeの拡張機能「Color My Text」をインストール
 - ワークスペースの設定に以下を追加
 
@@ -40,3 +43,9 @@ google-code-golf-2025
     ]
 }
 ```
+
+## 進め方
+
+- 問題を読んで1_solution.mdを頑張って書く
+- 2_plain_code.pyをAIに書かせる
+- 3_submission.pyをAIに書かせる
