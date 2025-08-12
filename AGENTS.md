@@ -3,6 +3,7 @@
 - Before implementing a solution, read the task description in `0_input.json` and the reasoning in `1_solution.md` carefully.
 - Implement the solution in `2_plain_code.py` first, ensuring it works correctly.
 - Once the plain code is verified, create a golfed version in `3_submission.py`.
+- Dont use 4-space indents in `3_submission.py`; use 1-space indents to minimize byte count.
 
 ## Project Structure & Module Organization
 - Root: utility scripts and docs — `verify.py` (local validator), `generate_submission.py` (builds zip), `list_unsolved.py` (quick status), `README.md`, `CLAUDE.md`.
