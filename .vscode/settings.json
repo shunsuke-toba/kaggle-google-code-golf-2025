@@ -12,7 +12,7 @@
                 { "patterns": ["6"], "color": "BrightRed"},
                 { "patterns": ["7"], "color": "Red"},
                 { "patterns": ["8"], "color": "BrightYellow"},
-                { "patterns": ["9"], "color": "BrightMagenta"}
+                { "patterns": ["9"], "color": "Blue"}
             ]
         }
     ]
