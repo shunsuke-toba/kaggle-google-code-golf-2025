@@ -1,15 +1,15 @@
 def p(grid):
     for i in range(len(grid)):
         for j in range(len(grid[i])):
-            if grid[i][j] == 0:
-                grid[i][j] = 4
-    dir = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-    for loop in range(16):
-        for i in range(len(grid)):
-            for j in range(len(grid[i])):
-                if grid[i][j] == 4:
-                    for d in dir:
-                        ni, nj = i + d[0], j + d[1]
-                        if not (0 <= ni < len(grid) and 0 <= nj < len(grid[i])) or grid[ni][nj] == 0:
-                            grid[i][j] = 0
+            for k in range(i+2, len(grid)):
+                for l in range(j+2, len(grid[i])):
+                    ok = 1
+                    for x in range(i+1, k):
+                        ok = ok and not(grid[x][j] != 3 or grid[x][l] != 3)
+                    for y in range(j+1, l):
+                        ok = ok and not(grid[i][y] != 3 or grid[k][y] != 3)
+                    if ok:
+                        for x in range(i+1, k):
+                            for y in range(j+1, l):
+                                grid[x][y] = grid[x][y] or 4
     return grid

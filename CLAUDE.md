@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - 0_input.jsonを読む。（pattern: ""train"", path: "005/0_input.json", output_mode: "content", head_limit: 5）のようにする。
 - testcasesや1_solution.mdを参考にして、2_plain_code.pyを実装する。
-    - 日本語のコメントを含むファイルを作成する際は、エンコーディングがUTF-8であることを確認する。
+    - 日本語のコメントを含むファイルを作成する際は、エンコーディングがUTF-8であることを確認する。(重要)
     - importは使ってはいけない。
 - 「python verify.py (問題番号) plain」を実行して、テストケースに対して正しく動作するか確認する。
 - その後、2_plain_code.pyを参考にして、3_submission.pyを実装する。
