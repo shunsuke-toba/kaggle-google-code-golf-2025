@@ -1,19 +1,10 @@
-def p(j):
- A,c=len(j),len(j[0]);E=[[0]*c for _ in j];k=[]
- def f(W,l):
-  J=[(W,l)];E[W][l]=1;a=[(W,l)];C=1
-  while J:
-   e,K=J.pop()
-   for w,L in[(0,1),(1,0),(0,-1),(-1,0)]:
-    p,b=e+w,K+L
-    if not(0<=p<A and 0<=b<c):C=0;continue
-    if j[p][b]<1and not E[p][b]:E[p][b]=1;J+=[(p,b)];a+=[(p,b)]
-  return a if C else[]
- for W in range(A):
-  for l in range(c-1,-1,-1):
-   if j[W][l]<1and not E[W][l]:k+=[f(W,l)]
- k.sort(key=len,reverse=1)
- for W,e in enumerate(k):
-  d=min(8,max(6,len(e)**.5+.5//1+5))
-  for K in e:j[K[0]][K[1]]=d
- return j
+def p(g,R=range):
+ h,w=len(g),len(g[0])
+ for s in R(3,6):
+  c=s+3
+  for i in R(h-s+1):
+   for j in R(w-s+1):
+    k=j+s-1;l=i+s-1
+    if g[i][j:j+s]==[5]*s==g[l][j:j+s]and all(g[y][j]==g[y][k]==5 for y in R(i,l+1)):
+     for y in R(i+1,l):g[y][j+1:k]=[c]*(s-2)
+ return g
