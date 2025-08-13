@@ -11,7 +11,8 @@ google-code-golf-2025
 │   ├── 2_plain_code.py（平易なPythonで記載されたコード）
 │   └── 3_submission.py（コードゴルフ用のコード）
 ├── verify.py（テストケースを実行するためのバリデータ）
-├── list_unsolved.py（subが未実装のファイルの一覧を取得）
+├── verify.all（全てのsubをテストした上でスコアを計算）
+├── list.py（subが未実装のファイルの一覧を取得）
 ├── generate_testcases.py（テストケースのテキストファイルを生成するためのスクリプト）
 └── generate_submission.py（提出用のフォルダを生成するためのスクリプト）
 ```
@@ -50,6 +51,7 @@ google-code-golf-2025
 - 問題を読んで1_solution.mdを頑張って書く
 - 2_plain_code.pyをAIに書かせる
 - 3_submission.pyをAIに書かせる
+
 
 
 
