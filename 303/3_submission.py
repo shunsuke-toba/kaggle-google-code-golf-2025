@@ -1,1 +1,1 @@
-p=lambda g:[[2if 1-any(r)*any(z)else r[j]for j,z in enumerate(zip(*g))]for r in g]
+p=lambda g:[[a if any(r)*any(c)else 2for a,c in zip(r,zip(*g))]for r in g]
