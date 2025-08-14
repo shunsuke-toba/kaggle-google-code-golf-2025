@@ -1,0 +1,1 @@
+def p(g):e=enumerate;s=max(B:=[i for i,r in e(g)if 2 in r])-min(B)+1;a,b=zip(*[(i,j)for i,r in e(g)for j,v in e(r)if 0<v!=2]);u=min(a);v=min(b);R=range(h:=max(a)-u+1);Q=(s-2)//h*[0];r=[[g[u+i][v+j]for j in R for _ in Q]for i in R for _ in Q];f=[2]*(len(r)+2);return[f,*[[2]+x+[2]for x in r],f]
