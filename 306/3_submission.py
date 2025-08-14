@@ -1,0 +1,1 @@
+p=lambda g,R=range,S=sum:[[g[i][j]or S(S(r[j%10::10])for r in g[i%10::10])for j in R(len(g[0]))]for i in R(len(g))]
