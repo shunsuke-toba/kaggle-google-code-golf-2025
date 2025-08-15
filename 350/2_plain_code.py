@@ -1,35 +1,31 @@
 def p(grid):
-    # Get grid dimensions
-    rows = len(grid)
-    cols = len(grid[0])
+    # 356風解法：各行と列で端の1の間を8で埋める
+    result = [row[:] for row in grid]
     
-    # Direction vectors: up, down, left, right
-    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    # 各行について処理
+    for i in range(len(grid)):
+        # この行で1がある位置を探す
+        positions = [j for j in range(len(grid[0])) if grid[i][j] == 1]
+        
+        # 2個以上の1がある場合、端から端まで8で埋める（1以外の場所を）
+        if len(positions) >= 2:
+            min_pos = min(positions)
+            max_pos = max(positions)
+            for j in range(min_pos, max_pos + 1):
+                if result[i][j] != 1:  # 1でない場合のみ8に変更
+                    result[i][j] = 8
     
-    # Search all cells
-    for r in range(rows):
-        for c in range(cols):
-            # If current cell is 1
-            if grid[r][c] == 1:
-                # Search in each direction
-                for dr, dc in directions:
-                    # Move one step from current position
-                    nr, nc = r + dr, c + dc
-                    path = []  # Record cells on the path
-                    
-                    # Continue until hitting boundary or 1
-                    while 0 <= nr < rows and 0 <= nc < cols:
-                        if grid[nr][nc] == 1:
-                            # If hit 1, change all cells on path to 8
-                            for pr, pc in path:
-                                grid[pr][pc] = 8
-                            break
-                        else:
-                            # If not 1, add to path and continue
-                            path.append((nr, nc))
-                        
-                        # Move to next position
-                        nr += dr
-                        nc += dc
+    # 各列について処理
+    for j in range(len(grid[0])):
+        # この列で1がある位置を探す
+        positions = [i for i in range(len(grid)) if grid[i][j] == 1]
+        
+        # 2個以上の1がある場合、端から端まで8で埋める（1以外の場所を）
+        if len(positions) >= 2:
+            min_pos = min(positions)
+            max_pos = max(positions)
+            for i in range(min_pos, max_pos + 1):
+                if result[i][j] != 1:  # 1でない場合のみ8に変更
+                    result[i][j] = 8
     
-    return grid
+    return result
