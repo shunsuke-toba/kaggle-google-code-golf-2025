@@ -1,13 +1,6 @@
-def p(j):
- A=range
- for c in A(3):
-  for E in A(3):
-   if sum(j[c*4+W][E*4+l]==0for W in A(3)for l in A(3))==5:
-    k=[[5if i%4==3or j%4==3else 0for j in A(11)]for i in A(11)]
-    for W in A(3):
-     for l in A(3):
-      J=j[c*4+W][E*4+l]
-      if J:
-       for a in A(3):
-        for C in A(3):k[W*4+a][l*4+C]=J
-    return k
+def p(g):
+ for I in 0,4,8:
+  for J in 0,4,8:
+   b=[r[J:J+3]for r in g[I:I+3]]
+   if 8 in sum(b,[]):continue
+   return [[5 if i%4==3 or j%4==3 else b[i//4][j//4]for j in range(11)]for i in range(11)]
