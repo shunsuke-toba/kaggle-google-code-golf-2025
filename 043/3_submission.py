@@ -1,8 +1,1 @@
-def p(j,A=enumerate):
- c=len(j)-1
- E=len(j[0])-1
- for k,W in A(j):
-  for l,J in A(W):
-   if k>0and l<c:
-    if j[k][E]==5and j[0][l]==5:j[k][l]=2
- return j
+def p(g):a=[i for i,v in enumerate(g[0])if v>4];[r.__setitem__(i,2)for r in g if r[-1]>4 for i in a];return g
