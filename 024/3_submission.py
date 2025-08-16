@@ -1,1 +1,1 @@
-def p(g,E=enumerate):Z={c for R in g for c,v in E(R)if v==2};return[[1 if 1 in R else 3 if 3 in R else 2 if v<1and c in Z else v for c,v in E(R)]for R in g]
+p=lambda g:(c:=[2 in z for z in zip(*g)],[(r:=next((v for v in R if v&1),0)) and [r]*len(R) or [2*i for i in c] for R in g])[1]
