@@ -1,40 +1,33 @@
 def p(g):
- h=len(g);w=len(g[0])
- v=set();S=[]
- for r in range(h):
-  for c in range(w):
-   if g[r][c]and(r,c)not in v:
-    q=[(r,c)];v.add((r,c));i=0;C=[];d={};m={}
-    while i<len(q):
-     y,x=q[i];i+=1;t=g[y][x];C+=[(y,x,t)];d[t]=d.get(t,0)+1;m.setdefault(t,[]).append((y,x))
-     for Y,X in((y+1,x),(y-1,x),(y,x+1),(y,x-1)):
-      if 0<=Y<h and 0<=X<w and g[Y][X]and(Y,X)not in v:v.add((Y,X));q.append((Y,X))
+ h=len(g);w=len(g[0]);R=range;I=int;C=complex.conjugate
+ u=set();S=[];o=[r[:]for r in g];sc=set()
+ for r in R(h):
+  for c in R(w):
+   z=r+c*1j
+   if g[r][c]and z not in u:
+    q=[z];u.add(z);D=[];d={};p={}
+    for z in q:
+     y,x=I(z.real),I(z.imag);t=g[y][x];D+=[(z,t)];d[t]=d.get(t,0)+1;p[t]=z
+     for d4 in 1,-1,1j,-1j:
+      n=z+d4;Y,X=I(n.real),I(n.imag)
+      if 0<=Y<h and 0<=X<w and g[Y][X]and n not in u:u.add(n);q.append(n)
     if len(d)>=4:
      L=[k for k in d if d[k]==1]
      if len(L)==3:
-      W=max(d,key=d.get);A={k:m[k][0]for k in L};Z=[(y,x)for y,x,t in C if t==W];S+=[(W,L,A,Z,C)]
- o=[r[:]for r in g]
- if not S:return o
- T=lambda x,y:[(x,y),(-y,x),(-x,-y),(y,-x),(x,-y),(y,x),(-x,y),(-y,-x)]
- sc=set()
- for W,L,A,Z,C in S:
-  for y,x,t in C:sc.add((y,x));o[y][x]=0
- for W,L,A,Z,C in S:
-  a,b,e=L;ar,ac=A[a];br,bc=A[b];cr,cc=A[e]
-  vab=(br-ar,bc-ac);vac=(cr-ar,cc-ac)
-  PA=[(r,c)for r in range(h)for c in range(w)if g[r][c]==a and(r,c)not in sc]
-  PB=[(r,c)for r in range(h)for c in range(w)if g[r][c]==b and(r,c)not in sc]
-  PC=[(r,c)for r in range(h)for c in range(w)if g[r][c]==e and(r,c)not in sc]
-  for ta in PA:
-   for tb in PB:
-    for tc in PC:
-     if ta==tb or ta==tc or tb==tc:continue
-     dab=(tb[0]-ta[0],tb[1]-ta[1]);dac=(tc[0]-ta[0],tc[1]-ta[1])
-     tv=T(*vab);tu=T(*vac);k=-1
-     for i in range(8):
-      if tv[i]==dab and tu[i]==dac:k=i;break
-     if k<0:continue
-     for yr,xc in Z:
-      dr,dc=T(yr-ar,xc-ac)[k];R=ta[0]+dr;C=ta[1]+dc
-      if 0<=R<h and 0<=C<w and(o[R][C]==0)and(R,C)!=ta and(R,C)!=tb and(R,C)!=tc:o[R][C]=W
+      a,b,c=L;f=max(d,key=d.get);za=p[a];S+=[(a,b,c,f,p[b]-za,p[c]-za,[z-za for z,t in D if t==f])]
+      for z,t in D:o[I(z.real)][I(z.imag)]=0;sc.add(z)
+ for a,b,c,f,B,v,Z in S:
+  P=[[r+c*1j for r in R(h)for c in R(w)if g[r][c]==x and r+c*1j not in sc]for x in(a,b,c)]
+  for ta in P[0]:
+   for tb in P[1]:
+    for tc in P[2]:
+     if len({ta,tb,tc})<3:continue
+     dab=tb-ta;dac=tc-ta
+     for s0 in 1,1j,-1,-1j:
+      for m in 0,1:
+       if dab==(C(B) if m else B)*s0 and dac==(C(v) if m else v)*s0:
+        for dz in Z:
+         dz=C(dz) if m else dz
+         nz=ta+dz*s0;Y,X=I(nz.real),I(nz.imag)
+         if 0<=Y<h and 0<=X<w and o[Y][X]==0 and nz not in(ta,tb,tc):o[Y][X]=f
  return o
