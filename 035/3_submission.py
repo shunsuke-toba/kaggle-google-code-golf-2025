@@ -1,10 +1,11 @@
 def p(g):
- g=[r[:]for r in g];h,w=len(g),len(g[0])
- c={(y,x)for y in range(h)for x in range(w)if g[y][x]==8}
- for y in range(h):
-  for x in range(w):
-   v=g[y][x]
-   if v and v-8:
-    b=min(((abs(j-x)if i==y else abs(i-y)if j==x else 999,i,j)for i,j in c),default=(999,0,0))
-    if b[0]<999:g[b[1]][b[2]]=v
+ for k,c in enumerate(sum(g,[])):
+  if c%8:
+   i=k//10;j=k%10
+   for a,b in(1,0),(0,1),(-1,0),(0,-1):
+    x=i+a;y=j+b
+    while 9>=x>=0<=y<=9 and g[x][y]<1:x+=a;y+=b
+    try:
+     if g[x][y]==8:g[x][y]=c
+    except:0
  return g
