@@ -1,9 +1,6 @@
-def p(j,u=enumerate):
-	A=range;c=len(j);E=len(j[0]);k=lambda W,l:W==l or W*l<1;J=next((K for K in A(1,E)if all(k(L,e)for w in j for(L,e)in zip(w,w[K:]))),E);a=next((K for K in A(1,c)if all(k(L,e)for(K,w)in zip(j,j[K:])for(L,e)in zip(K,w))),c);C={}
-	for(e,K)in u(j):
-		for(w,L)in u(K):
-			if L:C[e%a,w%J]=L
-	for(e,K)in u(j):
-		for(w,L)in u(K):
-			if not L:K[w]=C[e%a,w%J]
-	return j
+def p(g):
+ n=len(g)
+ for s in range(1,n+1):
+  d={}
+  if all((v:=g[k//n][k%n])<1 or d.setdefault((k//n%s,k%n%s),v)==v for k in range(n*n)):
+   return[[d[i%s,j%s]for j in range(n)]for i in range(n)]
