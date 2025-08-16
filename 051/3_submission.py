@@ -1,14 +1,14 @@
-def p(j):
-	A=range;c=[l[:]for l in j];E,k=len(j),len(j[0]);W={}
-	for l in A(E):
-		for J in A(k):
-			if j[l][J]:W[j[l][J]]=W.get(j[l][J],0)+1
-	l,J,a=next((l,J,j[l][J])for l in A(E)for J in A(k)if j[l][J]and W[j[l][J]]==1)
-	for(C,e)in[(0,1),(1,0),(0,-1),(-1,0)]:
-		K,w=l+C,J+e
-		if(K<0)|(K>=E)|(w<0)|(w>=k)|(j[K][w]==0):
-			L=1
-			while(0<=l-L*C<E)&(0<=J-L*e<k):
-				if j[l-L*C][J-L*e]==0:c[l-L*C][J-L*e]=a
-				L+=1
-	return c
+def p(g):
+ for y in range(1,len(g)-1):
+  r=g[y]
+  for x in range(1,len(r)-1):
+   c=r[x]
+   a,b=g[y-1][x],g[y+1][x]
+   if a!=c!=b and a*b<1<=a+b:
+    a=1-2*(a>0);k=y
+    while 0<=(k:=k+a)<len(g):g[k][x]=g[k][x]or c
+   a,b=r[x-1],r[x+1]
+   if a!=c!=b and a*b<1<=a+b:
+    a=1-2*(a>0);k=x
+    while 0<=(k:=k+a)<len(r):r[k]=r[k]or c
+ return g
