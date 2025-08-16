@@ -1,13 +1,8 @@
-def p(j,A=range):
-	c=[J[:]for J in j]
-	for E in A(1,10):
-		k=[(J,k)for J in A(len(j))for k in A(len(j[0]))if j[J][k]==E]
-		for W in A(len(k)):
-			for l in A(W+1,len(k)):
-				J,a=k[W];C,e=k[l]
-				if J==C:
-					for K in A(min(a,e),max(a,e)+1):c[J][K]=8
-				elif a==e:
-					for w in A(min(J,C),max(J,C)+1):c[w][a]=8
-		for(J,C)in k:c[J][C]=1
-	return c
+def p(g):
+ L=len;R=range;H=L(g);W=L(g[0])
+ for k in R(H+W):
+  t=k>=H;i=k-H*t;s=[j for j in R((W,H)[t])if g[i-i*t+j*t][j-j*t+i*t]==1]
+  for j in R(s[0],s[-1]+1)if s else[]:
+   x,y=i-i*t+j*t,j-j*t+i*t
+   if g[x][y]-1:g[x][y]=8
+ return g

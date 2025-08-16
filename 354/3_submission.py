@@ -1,7 +1,6 @@
 def p(j):
- A=range
- c=[x[:]for x in j]
- def d(E,k,W):
-  if 0<=E<10and 0<=k<10and c[E][k]==5:c[E][k]=W;[d(E+a,k+b,W)for a,b in[(-1,0),(1,0),(0,-1),(0,1)]]
- [[d(E,k,j[0][k])for E in A(1,10)if c[E][k]==5]for k in A(10)if j[0][k]]
+ c=[x[:]for x in j];T=range(10)
+ def d(r,s,w):
+  if-1<r<10>s>-1<5==c[r][s]:c[r][s]=w;[d(r+a,s+b,w)for a,b in[(-1,0),(1,0),(0,-1),(0,1)]]
+ [d(r,s,j[0][s])for s in T if j[0][s]for r in T if c[r][s]==5]
  return c

@@ -1,11 +1,6 @@
-def p(j,A=enumerate):
- c=[[l for J,l in A(k)]for k in j]
- for E,k in A(j):
-  for W,l in A(k):
-   if l==2:
-    for J in range(-1,2):
-     for a in range(-1,2):
-      try:
-       if[J,a]!=[0,0]and E+J>-1and W+a>-1:c[E+J][W+a]=1
-      except:0
- return c
+def p(g,L=len):
+ h,w=L(g),L(g[0])
+ for i in range(h*w*9):
+  k=i//9;n,m=k//w+i//3%3-1,k%w+i%3-1
+  if h>n>-1<m<w>1>g[n][m]<2==g[k//w][k%w]:g[n][m]=1
+ return g
