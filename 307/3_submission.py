@@ -1,2 +1,1 @@
-from numpy import *
-p=lambda a:kron(a,[[1]*2]*2).tolist()
+p=lambda g:[list(sum(zip(r,r),()))for r in g for _ in(0,1)]

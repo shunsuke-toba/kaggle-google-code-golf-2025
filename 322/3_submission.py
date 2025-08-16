@@ -1,1 +1,1 @@
-import numpy;p=lambda g:numpy.cumsum(g,0).tolist()
+p=lambda g:[g[0],*[[*map(sum,zip(*g[:i]))]for i in(2,3)]]
