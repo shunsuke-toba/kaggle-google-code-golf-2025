@@ -1,1 +1,1 @@
-p=lambda g,r=range:[[(g[i//3][j//3]==max(r(10),key=sum(g,[]).count))*g[i%3][j%3]for j in r(9)]for i in r(9)]
+p=lambda g:[[y*(x==max(range(10),key=sum(g,[]).count))for x in r for y in s]for r in g for s in g]
