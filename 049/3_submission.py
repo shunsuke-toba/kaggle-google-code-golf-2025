@@ -1,9 +1,1 @@
-from collections import*
-j=len
-A=range
-def p(c):
-	E=[x for A in c for x in A];k=Counter(E).most_common();k=[C for C in k if C[0]!=0][-1][0];W,l=j(c),j(c[0]);J=[]
-	for a in A(W):
-		for C in A(l):
-			if c[a][C]==k:J.append([a,C])
-	e=min([i[1]for i in J]);K=max([i[1]for i in J]);w=min([i[0]for i in J]);L=max([i[0]for i in J]);c=c[w:L+1];c=[A[e:K+1]for A in c];return c
+p=lambda g:(F:=sum(g,[]),c:=min({*F}-{0},key=F.count),n:=9e9,m:=n,x:=0,y:=0,[[v==c and(m:=min(m,i),n:=min(n,j),x:=max(x,i),y:=max(y,j))for j,v in enumerate(r)]for i,r in enumerate(g)],[r[n:y+1]for r in g[m:x+1]])[-1]
