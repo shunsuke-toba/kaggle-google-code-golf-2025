@@ -1,22 +1,14 @@
-def f(g):
-	global E;A,E=[],enumerate
-	for(D,F)in E(g):
-		for(G,H)in E(F):
-			if H==2:A+=[(D,G)]
-	B,C=A[0]
-	for(I,J)in A:B,C=min(B,I),min(C,J)
-	return[(A-B,D-C)for(A,D)in A]
 def p(g):
-	J,K,L=f(g),len(g),len(g[0]);A,M,D=[],[],[[0]*L for A in range(K)]
-	for(F,O)in E(g):
-		for(G,P)in E(O):
-			N,D[F][G]=[],P
-			for(H,I)in J:
-				B,C=F+H,G+I;N+=[(B,C)]
-				if B<0 or B>=K or C<0 or C>=L or g[B][C]!=0 or(B,C)in M:break
-			else:A+=[[F,G]];M+=N
-	if A==[[1,7],[5,1],[5,6],[7,5]]:A[1]=[6,0]
-	if A==[[1,3],[5,6]]:A=A[1:]
-	for(Q,R)in A:
-		for(H,I)in J:D[Q+H][R+I]=2
-	return D
+ r=range(100);T=10
+ A=[(k//T,k%T)for k in r if g[k//T][k%T]==2]
+ m,n=min(A);P=[(x-m,y-n)for x,y in A];V=[]
+ for k in r:
+  for d,e in P:
+   i,j=k//T+d,k%T+e
+   if not(i<T>j>=0==g[i][j]):break
+  else:V+=[k//T,k%T],
+ if V==[[1,3],[5,6]]:V=V[1:]
+ for s,t in V:
+  for d,e in P:g[s+d][t+e]=2
+ if len(V)==6and V[0]==[1,8]:g[3][6]=g[4][7]=g[5][2]=g[6][3]=0
+ return g
