@@ -1,1 +1,2 @@
-def p(j):import numpy as A;return A.kron(j,A.ones((2,2))).tolist()
+from numpy import *
+p=lambda a:kron(a,[[1]*2]*2).tolist()
