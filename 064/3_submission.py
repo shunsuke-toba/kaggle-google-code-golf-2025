@@ -1,21 +1,24 @@
 def p(g):
- h,w=len(g),len(g[0]);r=[x[:]for x in g];c={}
- for x in g:
-  for y in x:c[y]=c.get(y,0)+1
- b=max(c,key=c.get);v=set();R=[]
+ h=len(g);w=len(g[0]);r=[*map(list,g)];s=sum(g,[]);b=max(s,key=s.count);v=set();M=0;R=[]
  for i in range(h):
   for j in range(w):
-   if(i,j)not in v and g[i][j]-b:
-    o=g[i][j];a=A=i;d=D=j
-    while D<w-1 and g[i][D+1]==o:D+=1
-    while A<h-1 and all(g[A+1][x]==o for x in range(d,D+1)):A+=1
-    if all(g[x][y]==o for x in range(a,A+1)for y in range(d,D+1))and(a-A or d-D):v|={(x,y)for x in range(a,A+1)for y in range(d,D+1)};R+=[(A-a+1)*(D-d+1),a,d,A,D],
- if R:M=max(R)[0];R=[x for x in R if x[0]==M]
- for _,a,d,A,D in R:
+   if g[i][j]-b and(i,j)not in v:
+    o=g[i][j];A=i;D=j
+    while D+1<w and g[i][D+1]==o:D+=1
+    while A+1<h and g[A+1][j:D+1]==[o]*(D-j+1):A+=1
+    if(k:=(D-j+1)*(A-i+1))-1:
+     v|={(x,y)for x in range(i,A+1)for y in range(j,D+1)}
+     if k>M:M=k;R=[(i,j,A,D)]
+     elif k==M:R+=[(i,j,A,D)]
+ for a,d,A,D in R:
   for s in 0,1,2,3:
    for m in range(*[(d,D+1),(a,A+1)][s>1]):
-    E=[];L=C=0;i,j,p,q=[(a-1,m,-1,0),(A+1,m,1,0),(m,d-1,0,-1),(m,D+1,0,1)][s]
-    while(s<2 and-1<i<h)or(s>1 and-1<j<w):E+=(i,j),;L,C=(g[i][j],i if s<2 else j)if g[i][j]-b else(L,C);i+=p;j+=q
-    for x,y in E:
-     if L and((x if s<2 else y)>C if s%2<1 else(x if s<2 else y)<C)and g[x][y]==b:r[x][y]=L
+    i,j,p,q=o=[(a-1,m,-1,0),(A+1,m,1,0),(m,d-1,0,-1),(m,D+1,0,1)][s];L=u=v=0
+    while-1<i<h and-1<j<w:
+     if g[i][j]-b:L=g[i][j];u=i;v=j
+     i+=p;j+=q
+    i,j,p,q=o
+    while L and(i,j)!=(u,v):
+     if g[i][j]==b:r[i][j]=L
+     i+=p;j+=q
  return r
