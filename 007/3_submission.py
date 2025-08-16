@@ -1,1 +1,1 @@
-def p(g):R=range;L=len;d={(i+j)%3:c for i in R(L(g))for j in R(L(g[0]))for c in[g[i][j]]if c};return[[d.get((i+j)%3,0)for j in R(L(g[0]))]for i in R(L(g))]
+def p(g,r=range(7)):d={(i+j)%3:c for i in r for j in r if(c:=g[i][j])};return[[d[(i+j)%3]for j in r]for i in r]
