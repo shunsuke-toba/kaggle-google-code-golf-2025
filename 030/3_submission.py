@@ -1,6 +1,6 @@
 def p(g):
- h,w=len(g),len(g[0]);b=min([r for r in range(h)for c in range(w)if g[r][c]==1]or[h]);o=[[0]*w for _ in range(h)]
- for v in[1,2,4]:
-  t=[(r,c)for r in range(h)for c in range(w)if g[r][c]==v]
-  if t:s=b-min(r for r,c in t);[(r+s<h)and(o[r+s].__setitem__(c,v))for r,c in t]
- return o
+ t={};[t.setdefault(v,i)for i,r in enumerate(g)for v in set(r)if v];n=[[0]*len(g[0])for _ in g]
+ for i,r in enumerate(g):
+  for j,v in enumerate(r):
+   if v:n[i+t[1]-t[v]][j]=v
+ return n
