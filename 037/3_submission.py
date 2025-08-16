@@ -1,10 +1,9 @@
-def p(j,A=range):
-	c,E=len(j),len(j[0]);k,W={},[A[:]for A in j]
-	for l in A(c):
-		for J in A(E):
-			a=j[l][J]
-			if a:k.setdefault(a,[]).append((l,J))
-	for a in k:
-		(C,e),(K,w)=k[a];L=1 if K>C else-1;b=1 if w>e else-1
-		for d in A(abs(K-C)+1):W[C+d*L][e+d*b]=a
-	return W
+def p(g,R=range):
+ d={}
+ for y in R(10):
+  for x in R(10):
+   v=g[y][x]
+   if v:
+    try:a,b=d[v];s=1-2*(y<a);t=1-2*(x<b);[g[a+i*s].__setitem__(b+i*t,v)for i in R((y-a)*s+1)]
+    except:d[v]=(y,x)
+ return g
