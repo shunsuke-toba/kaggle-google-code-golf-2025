@@ -1,7 +1,4 @@
-def p(j,A=enumerate):
- for c,E in A(j):
-  for k,W in A(E):
-   if W and W^4:
-    j[c+1][k]=W
-    for l in range(c+1):j[l][k&1::2]=[4]*len(j[l][k&1::2])
-    return j
+def p(g):
+ for r,R in enumerate(g):
+  if v:=sum(R):c=R.index(v);g[r+1][c]=v;break
+ g[:r+1]=[[4*(j%2==c%2)for j in range(len(R))]]*-~r;return g
