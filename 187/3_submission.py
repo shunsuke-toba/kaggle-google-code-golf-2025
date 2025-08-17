@@ -1,9 +1,8 @@
-def p(j):
- A,c,E=len(j),len(j[0]),range;k=[(W,l)for W in(0,A-1)for l in E(c)if j[W][l]<1]+[(W,l)for W in E(A)for l in(0,c-1)if j[W][l]<1]
- while k:
-  W,l=k.pop()
-  if j[W][l]<1:j[W][l]=3;k+=[(x,y)for x,y in((W+1,l),(W-1,l),(W,l+1),(W,l-1))if 0<=x<A and 0<=y<c and j[x][y]<1]
- for W in E(A):
-  for l in E(c):
-   if j[W][l]<1:j[W][l]=2
- return j
+def p(g):
+ a=len(g);b=len(g[0])
+ def f(i,j):
+  if a>i>=0<=j<b and g[i][j]<1:
+   g[i][j]=3;f(i+1,j);f(i-1,j);f(i,j+1);f(i,j-1)
+ for i in range(a*b):j=i%b;i//=b;i*j*(i-a+1)*(j-b+1)<1 and f(i,j)
+ for r in g:r[:]=[x or 2 for x in r]
+ return g
