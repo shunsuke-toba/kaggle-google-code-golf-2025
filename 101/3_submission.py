@@ -1,47 +1,30 @@
 def p(g):
- H=len(g);W=len(g[0])
- from collections import deque as D
- V=[[0]*W for _ in g];B=None
- for i in range(H):
-  for j in range(W):
-   if g[i][j]>0 and not V[i][j]:
-    q=D([(i,j)]);V[i][j]=1;c=[];a=b=0
+ h=len(g);w=len(g[0]);R=range;E=enumerate;v=set();b=0
+ for i in R(h):
+  for j in R(w):
+   if g[i][j]>0and(i,j)not in v:
+    q=[(i,j)];v.add((i,j));c=[];a=d=0
     while q:
-     x,y=q.popleft();c+=x,y;v=g[x][y];a|=v==1;b|=v==2
+     x,y=q.pop(0);c+=x,y;u=g[x][y];a|=u<2;d|=u>1
      for X,Y in((x+1,y),(x-1,y),(x,y+1),(x,y-1)):
-      if 0<=X<H and 0<=Y<W and g[X][Y] and not V[X][Y]:V[X][Y]=1;q.append((X,Y))
-    if a and b and B is None:B=c
- if not B:return g
- xs=B[0::2];ys=B[1::2]
- x0,x1=min(xs),max(xs);y0,y1=min(ys),max(ys)
- P=[r[y0:y1+1] for r in g[x0:x1+1]]
- B1=[(i,j) for i,r in enumerate(P) for j,v in enumerate(r) if v==1]
- B2=[(i,j) for i,r in enumerate(P) for j,v in enumerate(r) if v==2]
- R={(i,j) for i in range(H) for j in range(W) if g[i][j]==2 and (i,j) not in {(B[i],B[i+1]) for i in range(0,len(B),2)}}
- xs2=[r for r,_ in B2];ys2=[c for _,c in B2]
- for k in range(max(H,W),0,-1):
-  for r0 in range(-min(xs2)*k,H-(max(xs2)+1)*k+1):
-   for c0 in range(-min(ys2)*k,W-(max(ys2)+1)*k+1):
-    U=[];ok=1
-    for r,c in B2:
-     for Rr in range(r0+r*k,r0+(r+1)*k):
-      for Cc in range(c0+c*k,c0+(c+1)*k):
-       if not(0<=Rr<H and 0<=Cc<W and g[Rr][Cc]==2 and (Rr,Cc) in R):ok=0;break
-       U.append((Rr,Cc))
-      if not ok:break
-     if not ok:break
-    if not ok:continue
-    for r,c in B1:
-     for Rr in range(r0+r*k,r0+(r+1)*k):
-      for Cc in range(c0+c*k,c0+(c+1)*k):
-       if 0<=Rr<H and 0<=Cc<W and g[Rr][Cc]!=0:ok=0;break
-      if not ok:break
-     if not ok:break
-    if not ok:continue
-    for r,row in enumerate(P):
-     for c,val in enumerate(row):
-      for Rr in range(r0+r*k,r0+(r+1)*k):
-       for Cc in range(c0+c*k,c0+(c+1)*k):
-        if 0<=Rr<H and 0<=Cc<W:g[Rr][Cc]=val
-    for cell in U:R.discard(cell)
+      if 0<=X<h and 0<=Y<w and g[X][Y]and(X,Y)not in v:v.add((X,Y));q+=[(X,Y)]
+    if a&d and not b:b=c
+ if not b:return g
+ x0,x1=min(X:=b[::2]),max(X);y0,y1=min(Y:=b[1::2]),max(Y)
+ P=[r[y0:y1+1]for r in g[x0:x1+1]]
+ B1=[(i,j)for i,r in E(P)for j,u in E(r)if u&1];B2=[(i,j)for i,r in E(P)for j,u in E(r)if u>1]
+ S={(i,j)for i in R(h)for j in R(w)if g[i][j]==2}-set(zip(b[::2],b[1::2]))
+ X,Y=zip(*B2);a,b=min(X),max(X);c,d=min(Y),max(Y)
+ for k in R(max(h,w),0,-1):
+  for r0 in R(-a*k,h-b*k-k+1):
+   for c0 in R(-c*k,w-d*k-k+1):
+    U={(i,j)for r,c in B2 for i in R(r0+r*k,r0+(r+1)*k) for j in R(c0+c*k,c0+(c+1)*k)}
+    if U-S:continue
+    if any(0<=i<h and 0<=j<w and g[i][j] for r,c in B1 for i in R(r0+r*k,r0+(r+1)*k) for j in R(c0+c*k,c0+(c+1)*k)):continue
+    for r,m in E(P):
+     for c,n in E(m):
+      for i in R(r0+r*k,r0+(r+1)*k):
+       for j in R(c0+c*k,c0+(c+1)*k):
+        if 0<=i<h and 0<=j<w:g[i][j]=n
+    S-=U
  return g
