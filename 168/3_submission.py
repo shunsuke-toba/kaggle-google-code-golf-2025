@@ -1,9 +1,8 @@
 def p(g):
- h,w=len(g),len(g[0]);L=[]
- for y in range(h-1):
-  for x in range(w-1):
-   if 0 in(b:=g[y][x:x+2]+g[y+1][x:x+2])and sum(b)==3*(c:=max(b))>0:L+=c,y+(k:=b.index(0))//2*3-1,x+k%2*3-1,k//2*2-1,k%2*2-1
- while L:
-  c,y,x,d,e,*L=L
-  while-1<y<h>-1<x<w:g[y][x]=c;y+=d;x+=e
+ n=len(g);N=n-1
+ for t in range(N*N):
+  r=t//N;c=t%N;q=g[r][c],g[r][c+1],g[r+1][c],g[r+1][c+1]
+  if(m:=max(q))and 0 in q and sum(q)==3*m:
+   k=q.index(0);a=k//2*2-1;b=k%2*2-1;r+=k//2+a;c+=k%2+b
+   while 0<=r<n>c>=0:g[r][c]=m;r+=a;c+=b
  return g
