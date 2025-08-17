@@ -1,16 +1,8 @@
 def p(g):
- R=range
- r=[x[:]for x in g]
- d=[(0,1),(1,0),(0,-1),(-1,0)]
- c=[(-1,-1),(-1,1),(1,1),(1,-1)]
- for i in R(10):
-  for j in R(10):
-   if g[i][j]and all(0<=i+x<10and 0<=j+y<10and g[i+x][j+y]==0for x,y in d):
-    for t in c:
-     x,y=i+t[0],j+t[1]
-     if 0<=x<10and 0<=y<10and g[x][y]:
-      a,b=-t[0],-t[1]
-      for m in R(1,10):
-       u,v=i+a*m,j+b*m
-       if 0<=u<10and 0<=v<10:r[u][v]=g[i][j]
- return r
+ n=len(g);s={(i,j)for i in range(n)for j in range(n)if g[i][j]}
+ for a,b in s:
+  if{(a+1,b),(a,b+1),(a+1,b+1)}<=s:break
+ c=g[a][b];A=a+1;B=b+1;s-={(a,b),(A,b),(a,B),(A,B)}
+ for i,j in s:
+  while n>(i:=i+((i>A)-(i<a)))>=0<= (j:=j+((j>B)-(j<b)))<n:g[i][j]=c
+ return g
