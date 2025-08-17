@@ -1,13 +1,11 @@
 def p(g):
- r=[*map(list,g)];B=[(y,x)for y,R in enumerate(g)for x,v in enumerate(R)if v]
- if B:
-  y,x=zip(*B);a=min(y);b=max(y);c=min(x);d=max(x)
-  for i in range(c,d+1):r[a][i]=r[a][i]or 2;r[b][i]=r[b][i]or 2
-  for i in range(a,b+1):r[i][c]=r[i][c]or 2;r[i][d]=r[i][d]or 2
-  L=[(0,y,sum(g[y][c+1:d]))for y in range(a+1,b)]+[(1,x,sum(g[y][x]for y in range(a+1,b)))for x in range(c+1,d)]
-  m=L and max(l[2]for l in L)
-  if m:
-   for t,p,n in L:
-    if n==m:
-     for i in range((a,c)[t<1],(b+1,d+1)[t<1]):j=(p,i)[t>0];k=(i,p)[t>0];r[j][k]=r[j][k]or 2
- return r
+ E=enumerate;R=range;t=[(i,j)for i,r in E(g)for j,v in E(r)if v==1];Y,X=zip(*t);a=min(Y);b=max(Y);c=min(X);d=max(X)
+ for i in R(a,b+1):g[i][c]=2-g[i][c]%2;g[i][d]=2-g[i][d]%2
+ for j in R(c,d+1):g[a][j]=2-g[a][j]%2;g[b][j]=2-g[b][j]%2
+ for j in R(c+1,d):
+  if 1<sum(g[i][j]for i in R(a+1,b)):
+   for i in R(a,b+1):g[i][j]=2-g[i][j]%2
+ for i in R(a+1,b):
+  if 1<sum(g[i][j]==1 for j in R(c+1,d)):
+   for j in R(c,d+1):g[i][j]=2-g[i][j]%2
+ return g
