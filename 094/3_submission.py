@@ -1,13 +1,8 @@
-j=len
-A=range
-def p(c):
-	E,k=[],[];W,l=j(c),j(c[0])
-	for J in A(W-4):
-		for a in A(l-4):
-			C=[[c[E+J][C+a]for E in A(5)]for C in A(5)];C=[a for J in C for a in J];C=sum([J for J in C if J==1])
-			if C==16:E.append(J+2);k.append(a+2)
-	for J in A(W):
-		for a in A(l):
-			if J in E or a in k:
-				if c[J][a]!=1:c[J][a]=6
-	return c
+R=range
+def p(g):
+ for y in R(len(g)-4):
+  for x in R(len(g[0])-4):
+   if sum(g[y+k//5][x+k%5]==1for k in R(25))>15:
+    for r in g:r[x+2]=r[x+2]==1 or 6
+    g[y+2]=[c==1 or 6 for c in g[y+2]]
+ return g
