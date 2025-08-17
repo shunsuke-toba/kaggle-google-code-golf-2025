@@ -1,13 +1,3 @@
 from collections import*
-j=len
-A=range
-def p(c):
-	E=[x for A in c for x in A];k=Counter(E).most_common();k=[C for C in k if C[1]==4][0][0];W,l=j(c),j(c[0]);J=[]
-	for a in A(W):
-		for C in A(l):
-			if c[a][C]==k:J.append([a,C])
-	e=min([i[1]for i in J]);K=max([i[1]for i in J]);w=min([i[0]for i in J]);L=max([i[0]for i in J]);c=c[w+1:L];c=[A[e+1:K]for A in c];W,l=j(c),j(c[0])
-	for a in A(W):
-		for C in A(l):
-			if c[a][C]>0:c[a][C]=k
-	return c
+def p(a):
+ c=Counter(sum(a,[]));k=[v for v in c if c[v]==4][0];y,x=zip(*[(i,j)for i,r in enumerate(a)for j,v in enumerate(r)if v==k]);return[[v and k for v in r[min(x)+1:max(x)]]for r in a[min(y)+1:max(y)]]
