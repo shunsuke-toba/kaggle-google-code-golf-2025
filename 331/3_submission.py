@@ -1,12 +1,1 @@
-def p(j,A=enumerate):
- c=[]
- for E,k in A(j):
-  for W,l in A(k):
-   if j[E][W]==1:c+=[[E,W]]
- for J in c:
-  a,C=J
-  if a>0:j[a-1][C]=2
-  if a<9:j[a+1][C]=8
-  if C>0:j[a][C-1]=7
-  if C<9:j[a][C+1]=6
- return j
+p=lambda g,e=enumerate:[[v or i<9and g[i+1][j]*2or i and g[i-1][j]*8or j and r[j-1]*6or j<9and r[j+1]*7for j,v in e(r)]for i,r in e(g)]
