@@ -1,8 +1,6 @@
 def p(g):
- d='[NGmDmKKPaiHSGmDmLLPgiZYGHnmPaimKBDSxFZZmPgimLCDYGmoVbtaVbtaVbrbhbtaVboVuSGmoVbcWVbcWVbsk8fbcWVboVuYGmaopatapataparmatapaocHSGmaopacWpacWpasg8fbacWpaocHYGmDmKBPaiHnSGmDmLCPgiZJYGnmDmKBPaiHSGnmDmLCPgiZYxbDmKKPaiHHSxbDmLLPgiZZYGjaDbharVarVarbjarVaDbhuSGjaDbhasVasVasW8fasVaDbhuYGnmPaimKKDnSxFZmPgimLLDnYGnmPaimKBDHSxFZmPgimLCDHYGmPaimKKDHSxFJmPgimLLDHYGmPaimKBDHnSxFJmPgimLCDHnYGmDmKrbhbBDHSGmDmLsk8fbCDHYGmaDhbarchbarchlchbarchbaDhuSGmaDhbaschbaschqqchbaschbaDhuYGjdoc5fdr5fdr5fla5fdr5fdoc5fuSGjdoc5fds5fds5fqqg5fds5fdoc5fuYGmoVbtaVbtaVdbVbtaVboVuSGmoVbcWVbcWVqkVbcWVboVuYGmDmBrcjdbapBDHSGmDmCscjqWpCDHYxlmDmKKPaiHnSxlmDmLLPgiZJYxbDmKBPaiHHnSxbDmLCPgiZZJYGHmPaimKBDnSxFZJmPgimLCDnYGjDbjrtjrtjclhrtjDbHSGjDbjstjstjsq8fstjDbHYxlmDmKBPaiHHSxlmDmLCPgiZZYGjaotjatatjatatjarbjatatjaotHSGjaotjacWtjacWtjasW8facWtjaotHYGjAo5fAta5fAta5fla5fAta5fAo5fuSGjAo5fAcW5fAcW5fqqg5fAcW5fAo5fuYGmaopatapatacjdbapatapaocHSGmaopacWpacWcjqWpacWpaocHYGjdochdtachdtachlchdtachdochuSGjdochdcWchdcWchqqchdcWchdochuYGHmPaimKKDSxFZJmPgimLLDYGjorhtarhtarhclhtarhorhuSGjorhcWrhcWrhsq8fcWrhorhuU]'
- m='JJZXNYU,XkgWthVT}Uz]TROSQ"RzeQicPMIN{"MCCLBBKjFJnnHxuGEbFAgEoiDspCrpBdaAy]za0yw[xv[w":vlnucbtcqscdrkkqcmpiiojlnjbmddlggkahjcci0fh8,ge[f],ebbd5,caab0,a'
- m=[[m[i:i+2],m[i+2]]for i in range(0,len(m),3)]
- for r in m:d=d.replace(r[1],r[0])
- d=eval(d)
- for k in d:
-  if k['I']==g:g=k['O'];return g
+ s=sum(g,[]);t,l=divmod(s.index(5),10);b,d=divmod(99-s[::-1].index(5),10)
+ for r in g[t+1:b]:r[l+1:d]=[8]*~(l-d)
+ i,j=next((i,j)for i in range(t,b+1)for j in range(l,d+1)if not g[i][j]);u=(i==b)-(i==t);v=(j==d)-(j==l)
+ while 10>i>-1<j<10:g[i][j]=8;i+=u;j+=v
+ return g
