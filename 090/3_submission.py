@@ -1,17 +1,7 @@
 def p(g):
- H,W=len(g),len(g[0]);m=0;B=0
- for i in range(H):
-  for j in range(W):
-   if g[i][j]<1:
-    for r in range(i+1,H):
-     for c in range(j+1,W):
-      h=r-i+1;w=c-j+1
-      if h>1 and w>1:
-       v=all(g[y][x]<1 for y in range(i,r+1)for x in range(j,c+1))
-       if v and h*w>m:m=h*w;B=i,j,r,c
- r=[x[:]for x in g]
- if B:
-  i,j,u,v=B
-  for y in range(i,u+1):
-   for x in range(j,v+1):r[y][x]=6
- return r
+ h=len(g);w=len(g[0]);r=range
+ l=[(a*b,y,x,a,b)for a in r(2,h+1)for b in r(2,w+1)for y in r(h-a+1)for x in r(w-b+1)if all(not any(R[x:x+b])for R in g[y:y+a])]
+ if l:
+  _,y,x,a,b=max(l)
+  for R in g[y:y+a]:R[x:x+b]=[6]*b
+ return g
