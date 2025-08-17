@@ -1,20 +1,12 @@
 def p(g):
- P={}
+ d={}
  for i in range(10):
   for j in range(10):
-   if g[i][j]:P[g[i][j]]=P.get(g[i][j],[])+[(i,j)]
- C=list(P)
- def n(s):r,c=zip(*s);m,M,n,N=min(r),max(r),min(c),max(c);return[(R-m,C-n)for R,C in s],M-m+1,N-n+1
- p1,h1,w1=n(P[C[0]]);p2,h2,w2=n(P[C[1]]);B=F=0
- for r1 in range(4-h1):
-  for c1 in range(4-w1):
-   for r2 in range(4-h2):
-    for c2 in range(4-w2):
-     T=[[0]*3for _ in range(3)]
-     for r,c in p1:
-      if-1<r+r1<3>c+c1>-1:T[r+r1][c+c1]=C[0]
-     for r,c in p2:
-      if-1<r+r2<3>c+c2>-1and not T[r+r2][c+c2]:T[r+r2][c+c2]=C[1]
-     f=sum(x>0for R in T for x in R)
-     if f>F:F,B=f,[R[:]for R in T]
- return B or[[0]*3for _ in range(3)]
+   if(v:=g[i][j]):d.setdefault(v,[]).append((i,j))
+ a=[]
+ for k,v in d.items():
+  I,J=zip(*v);i=min(I);j=min(J);h=max(I)-i+1;w=max(J)-j+1;m=sum(1<<(I-i)*3+J-j for I,J in v)
+  a.append((k,[m<<(3*y+x)for y in range(4-h)for x in range(4-w)]))
+ (c1,p1),(c2,p2)=a
+ t=max(((A,B)for A in p1 for B in p2 if A&B<1),key=lambda x:(x[0]|x[1]).bit_count())
+ return [[(t[0]>>3*y+x&1)*c1+(t[1]>>3*y+x&1)*c2 for x in range(3)]for y in range(3)]
