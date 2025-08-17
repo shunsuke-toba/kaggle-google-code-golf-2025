@@ -1,18 +1,9 @@
 def p(g):
- L=len;V={};G=V.get;H,W=L(g),L(g[0]);N=lambda x,y:[(x-1,y),(x+1,y),(x,y-1),(x,y+1)]
- for k in range(H*W):
-  r,c=k//W,k%W
-  if g[r][c]|G((r,c),0):continue
-  C=[];S=[(r,c)]
-  while S:
-   x,y=S.pop()
-   if G((x,y)):continue
-   V[x,y]=1;C+=(x,y),
-   for i,j in N(x,y):
-    if H>i>-1<j<W>1>g[i][j]==G((i,j),0):S+=(i,j),
-  R=[p[0]for p in C];Q=[p[1]for p in C];a,b,c,d=min(R),max(R),min(Q),max(Q)
-  for x,y,i,j in[(a,c,-1,-1),(a,d,-1,1),(b,c,1,-1),(b,d,1,1)]:
-   u,v=x+i,y+j;s=sum(H>p>-1<q<W>g[p][q]>4for p,q in N(u,v))
-   if s<3<H>u>-1<v<W>g[u][v]>4>0<L(C)==(b-a+1)*(d-c+1):
-    for x,y in C:g[x][y]=4
+ H,W=len(g),len(g[0]);D=(-1,0,1,0)
+ for k in range(9999):
+  r,c,s=k//(W*4)%H,k//4%W,k%4
+  n,u,v,t=[g[r+D[i]][c+D[i-3]]if H>r+D[i]>-1<c+D[i-3]<W else-1for i in(0,1,2,3)],r+D[s]+D[s-3],c+D[s-3]+D[s-2],g[r][c]
+  if n[s:]+n[:s]==[5,5,0,0]and k<4*H*W>t>4<H>u>-1<v<W:g[u][v]=4
+  a,b=r+D[s],c+D[s-3]
+  if H>a>-1<b<W>5>g[a][b]>t:g[r][c]=4
  return g

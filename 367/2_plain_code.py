@@ -4,66 +4,59 @@ def p(grid):
     g = copy.deepcopy(grid)
     H, W = len(g), len(g[0])
     
-    # 0の連結成分を見つけて、各成分が長方形かつ条件を満たすかチェック
-    visited = [[False] * W for _ in range(H)]
-    
+    # 1. 全ての5のマスで隣接する4マスが時計回りに(5,5,0,0)のパターンを見つける
+    # そのマスについて5で挟まれた斜めのマスを4に変える
     for r in range(H):
         for c in range(W):
-            if g[r][c] == 0 and not visited[r][c]:
-                # 連結成分を見つける
-                component = []
-                stack = [(r, c)]
-                while stack:
-                    cr, cc = stack.pop()
-                    if visited[cr][cc]:
-                        continue
-                    visited[cr][cc] = True
-                    component.append((cr, cc))
-                    
-                    for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                        nr, nc = cr + dr, cc + dc
-                        if (0 <= nr < H and 0 <= nc < W and 
-                            g[nr][nc] == 0 and not visited[nr][nc]):
-                            stack.append((nr, nc))
+            if g[r][c] == 5:
+                # 隣接する4マス（上、右、下、左）を時計回りでチェック
+                directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]  # 上、右、下、左
+                neighbors = []
                 
-                # この連結成分が長方形かどうかチェック（1マスも含む）
-                if len(component) > 0:
-                    min_r = min(pos[0] for pos in component)
-                    max_r = max(pos[0] for pos in component)
-                    min_c = min(pos[1] for pos in component)
-                    max_c = max(pos[1] for pos in component)
+                for dr, dc in directions:
+                    nr, nc = r + dr, c + dc
+                    if 0 <= nr < H and 0 <= nc < W:
+                        neighbors.append(g[nr][nc])
+                    else:
+                        neighbors.append(-1)  # 境界外
+                
+                # 時計回りに(5,5,0,0)のパターンを探す
+                # 各パターンと対応する斜めの方向
+                patterns_and_diagonals = [
+                    ([5, 5, 0, 0], -1, 1),   # 上と右が5、下と左が0 → 右上斜め
+                    ([5, 0, 0, 5], -1, -1),  # 右と下が5、左と上が0 → 左上斜め  
+                    ([0, 0, 5, 5], 1, -1),   # 下と左が5、上と右が0 → 左下斜め
+                    ([0, 5, 5, 0], 1, 1)     # 左と上が5、右と下が0 → 右下斜め
+                ]
+                
+                for pattern, dr, dc in patterns_and_diagonals:
+                    if neighbors == pattern:
+                        nr, nc = r + dr, c + dc
+                        if 0 <= nr < H and 0 <= nc < W:
+                            g[nr][nc] = 4
+    
+    # 2. 4に隣接している0のマスを4に変えることを99回繰り返す
+    for iteration in range(99):
+        changed = False
+        new_g = copy.deepcopy(g)
+        
+        for r in range(H):
+            for c in range(W):
+                if g[r][c] == 0:
+                    # 隣接に4があるかチェック
+                    has_4_neighbor = False
+                    for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                        nr, nc = r + dr, c + dc
+                        if 0 <= nr < H and 0 <= nc < W and g[nr][nc] == 4:
+                            has_4_neighbor = True
+                            break
                     
-                    # 長方形の場合、面積が一致するはず
-                    expected_area = (max_r - min_r + 1) * (max_c - min_c + 1)
-                    if len(component) == expected_area:
-                        # 各隅の特定の斜め隣接マスが5で、その5のマスの隣接する5のマスが2つかチェック
-                        should_convert = False
-                        
-                        # 各隅に対応する斜め方向のみをチェック
-                        diagonal_checks = [
-                            (min_r, min_c, -1, -1),  # 左上の隅の左上斜め
-                            (min_r, max_c, -1, 1),   # 右上の隅の右上斜め
-                            (max_r, min_c, 1, -1),   # 左下の隅の左下斜め
-                            (max_r, max_c, 1, 1)     # 右下の隅の右下斜め
-                        ]
-                        
-                        for corner_r, corner_c, dr, dc in diagonal_checks:
-                            nr, nc = corner_r + dr, corner_c + dc
-                            if (0 <= nr < H and 0 <= nc < W and g[nr][nc] == 5):
-                                # この5のマスの隣接する5のマスの数をカウント
-                                adjacent_5_count = 0
-                                for adr, adc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                                    anr, anc = nr + adr, nc + adc
-                                    if (0 <= anr < H and 0 <= anc < W and g[anr][anc] == 5):
-                                        adjacent_5_count += 1
-                                
-                                if adjacent_5_count == 2:
-                                    should_convert = True
-                                    break
-                        
-                        if should_convert:
-                            # この長方形領域を4に変更
-                            for cr, cc in component:
-                                g[cr][cc] = 4
+                    if has_4_neighbor:
+                        new_g[r][c] = 4
+                        changed = True
+        
+        g = new_g
+        if not changed:
+            break
     
     return g
