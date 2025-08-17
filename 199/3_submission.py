@@ -1,4 +1,3 @@
 def p(g):
- for r,R in enumerate(g):
-  if v:=sum(R):c=R.index(v);g[r+1][c]=v;break
- g[:r+1]=[[4*(j%2==c%2)for j in range(len(R))]]*-~r;return g
+ for r,R in enumerate(g,1):
+  if v:=sum(R):g[r][c:=R.index(v)]=v;g[:r]=[[4-4*(j+c&1)for j in range(len(R))]]*r;return g
