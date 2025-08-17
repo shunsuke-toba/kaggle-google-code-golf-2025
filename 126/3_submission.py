@@ -1,7 +1,1 @@
-def p(j):
- A=[o[:]for o in j]
- c,E=len(j),len(j[0])
- for k in range(1,c):
-  for W in range(1,E-1):
-   if j[k][W]==0and j[k][W-1]and j[k][W+1]and j[k][W-1]==j[k][W+1]and j[k-1][W]==j[k][W-1]:A[c-1][W]=4
- return A
+p=lambda g:([g[-1].__setitem__(x,4)for u,r in zip(g,g[1:])for x in range(1,len(r)-1)if u[x]==r[x-1]==r[x+1]!=r[x]],g)[1]
