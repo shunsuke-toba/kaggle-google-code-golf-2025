@@ -1,21 +1,14 @@
+R=range
 def p(g):
- m,n=len(g),len(g[0]);r=[*map(list,g)];V=set()
- for y in range(m):
-  for x in range(n):
-   if g[y][x]==6 and(y,x)not in V:
-    a=b=y;c=d=x;s=[(y,x)]
-    while s:
-     i,j=s.pop()
-     if(i,j)in V:continue
-     V.add((i,j));a=min(a,i);b=max(b,i);c=min(c,j);d=max(d,j)
-     for u,v in(1,0),(-1,0),(0,1),(0,-1):
-      Y,X=i+u,j+v
-      if 0<=Y<m and 0<=X<n and g[Y][X]==6:s.append((Y,X))
-    for i in range(a+1,b):
-     for j in range(c+1,d):
-      if r[i][j]==8:r[i][j]=4
- for y,x in V:
-  for i in range(max(0,y-1),min(m,y+2)):
-   for j in range(max(0,x-1),min(n,x+2)):
-    if r[i][j]==8:r[i][j]=3
+ r=[*map(list,g)];m=len(g);n=len(g[0])
+ for y in R(m):
+  for x in R(n):
+   if g[y][x]==6 and (y<1 or g[y-1][x]-6) and (x<1 or g[y][x-1]-6):
+    w=h=1
+    while x+w<n and g[y][x+w]==6:w+=1
+    while y+h<m and g[y+h][x]==6:h+=1
+    for i in R(y+1,y+h-1):r[i][x+1:x+w-1]=[(c,4)[c>7]for c in r[i][x+1:x+w-1]]
+ for y in R(m):
+  for x in R(n):
+   if r[y][x]>7 and any(m>i>=0<=j<n and r[i][j]==6 for i in R(y-1,y+2) for j in R(x-1,x+2)):r[y][x]=3
  return r
