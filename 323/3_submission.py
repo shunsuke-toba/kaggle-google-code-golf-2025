@@ -1,18 +1,11 @@
-def p(j):
- A,c=len(j),len(j[0]);E=[A[:]for A in j]
- k,W=next((k,W)for k in range(A)for W in range(c)if j[k][W])
- for l,J in(-1,1),(1,-1):
-  a,C=k,W
+def p(g):
+ i,j=divmod(sum(g,[]).index(8),13)
+ def w(s):
+  x,y=i,j
   while 1:
-   for e in[0]*2:
-    a+=l
-    if 0<=a<A:E[a][C]=5
-    else:break
-   else:
-    for e in[0]*2:
-     C+=J
-     if 0<=C<c:E[a][C]=5
-     else:break
-    else:continue
-   break
- return E
+   for dx,dy in(-s,0),(0,s):
+    for _ in 0,1:
+     if 13>(x:=x+dx)>-1<(y:=y+dy)<13:g[x][y]=5
+     else:return
+ w(1);w(-1)
+ return g
