@@ -1,8 +1,7 @@
-def p(j):
-	A=range;c=[A[:]for A in j];E,k=len(j),len(j[0])
-	for W in A(1,E,4):
-		for l in A(1,k,4):
-			J=j[W][l]+5
-			for a in A(3):
-				for C in A(3):c[W-1+a][l-1+C]=J
-	return c
+def p(g):
+ r=range
+ for i in r(1,len(g),4):
+  for j in r(1,len(g[0]),4):
+   v=g[i][j]+5
+   for a in g[i-1:i+2]:a[j-1:j+2]=[v]*3
+ return g
