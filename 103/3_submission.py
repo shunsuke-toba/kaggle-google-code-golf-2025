@@ -1,1 +1,1 @@
-p=lambda j:[[1if[j[i][0]for i in range(3)]==[j[i][2]for i in range(3)]else 7]]
+p=lambda g:[[1+6*any(a^c for a,_,c in g)]]
