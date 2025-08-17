@@ -1,10 +1,1 @@
-def p(j):
- A=range
- c=[[0]*3for _ in A(3)]
- for E in A(3):
-  for k in A(3):
-   W={}
-   for l in A(3):
-    for J in A(3):a=j[E*3+l][k*3+J];W[a]=W.get(a,0)+1
-   c[E][k]=max(W,key=W.get)
- return c
+t=0,3,6;p=lambda g:[[max(b:=sum((g[r+i][c:c+3]for i in(0,1,2)),[]),key=b.count)for c in t]for r in t]
