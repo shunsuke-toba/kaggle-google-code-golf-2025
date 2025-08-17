@@ -1,12 +1,1 @@
-def p(j):
-	A=range;c,E=len(j),len(j[0]);k=[k for k in A(c)if all(j[k][A]==0 for A in A(E))];W=[k for k in A(E)if all(j[A][k]==0 for A in A(c))];k=[-1]+k+[c];W=[-1]+W+[E];l=[]
-	for J in A(len(k)-1):
-		a=[]
-		for C in A(len(W)-1):
-			for e in A(k[J]+1,k[J+1]):
-				for K in A(W[C]+1,W[C+1]):
-					if j[e][K]:a.append(j[e][K]);break
-				else:continue
-				break
-		if a:l.append(a)
-	return l
+def p(g):f=lambda m:[0]+[i for i,a in enumerate(m,1)if sum(a)<1]+[len(m)];C=f([*zip(*g)]);R=f(g);return[[next(v for r in g[a:b] for v in r[c:d] if v)for c,d in zip(C,C[1:])]for a,b in zip(R,R[1:])]
