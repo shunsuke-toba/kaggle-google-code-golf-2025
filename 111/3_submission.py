@@ -1,1 +1,1 @@
-p=lambda g:next([g[i+k][j-1:j+2]for k in(1,2,3)]for i,r in enumerate(g)for j,x in enumerate(r)if x==5)
+p=lambda g:[g[(x:=sum(g,[]).index(5))//10+i][x%10-1:x%10+2]for i in(1,2,3)]
