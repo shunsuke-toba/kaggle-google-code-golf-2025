@@ -1,10 +1,8 @@
 def p(g,R=range):
- h,w=len(g),len(g[0])
- for s in R(3,6):
-  c=s+3
-  for i in R(h-s+1):
-   for j in R(w-s+1):
-    k=j+s-1;l=i+s-1
-    if g[i][j:j+s]==[5]*s==g[l][j:j+s]and all(g[y][j]==g[y][k]==5 for y in R(i,l+1)):
-     for y in R(i+1,l):g[y][j+1:k]=[c]*(s-2)
+ for s in 3,4,5:
+  for i in R(13-s):
+   for j in R(13-s):
+    u=g[i:][:s]
+    if u[0][j:j+s]==[5]*s==u[-1][j:j+s]*all(r[j]for r in u):
+     for r in u[1:-1]:r[j+1:j+s-1]=[s+3]*(s-2)
  return g

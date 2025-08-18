@@ -1,1 +1,1 @@
-p=lambda g:[[a if any(r)*any(c)else 2for a,c in zip(r,zip(*g))]for r in g]
+p=lambda g:[[(2,c[0])[any(r)&any(c)]for c in zip(r,*g)]for r in g]
