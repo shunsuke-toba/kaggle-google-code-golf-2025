@@ -1,4 +1,2 @@
 def p(g):
- n=len(g);h=n//2;R=[g[i][i]for i in range(h)]
- return[[R[h-1-min(r,c,n-1-r,n-1-c)]for c in range(n)]for r in range(n)]
-
+ n=len(g);r=range(n);c=[g[i][i]for i in r[:n//2]];return[[c[~min(i,j,n+~i,n+~j)]for j in r]for i in r]
