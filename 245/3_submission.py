@@ -1,10 +1,9 @@
 def p(g):
- y=[];x=[];s=t=0
+ R=[];o=[[0]*len(r)for r in g];c=d=99
  for i,r in enumerate(g):
   for j,v in enumerate(r):
-   if v==2:y+=i,;x+=j,
-   if v==3:s+=i;t+=j
- d=s//4-(min(y)+max(y))//2;e=t//4-(min(x)+max(x))//2
- for i,j in zip(y,x):g[i][j]=0
- for i,j in zip(y,x):g[i+d][j+e]=2
- return g
+   if v==2:R+=[(i,j)]
+   if v>2:o[i][j]=3;c=min(c,i);d=min(d,j)
+ a,b=map(min,zip(*R))
+ for i,j in R:o[i-~c-a][j-~d-b]=2
+ return o
