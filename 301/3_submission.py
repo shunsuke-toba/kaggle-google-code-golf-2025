@@ -1,1 +1,1 @@
-p=lambda g:sorted([sorted(r)for r in g],key=lambda r:sum(x>0 for x in r))
+p=lambda g,S=sorted:S(map(S,g))
