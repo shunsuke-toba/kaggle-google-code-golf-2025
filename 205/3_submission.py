@@ -1,14 +1,15 @@
 def p(g):
- R=range;l=len;E=enumerate;h=l(g);w=l(g[0]);m=0
+ R=range;E=enumerate;h=len(g);w=len(g[0]);m=0
  for a in R(h):
   for b in R(a+1,h+1):
    for c in R(w):
+    v=g[a][c]
     for d in R(c+1,w+1):
-     if(k:=l({v for r in g[a:b] for v in r[c:d]})==2 and(b-a)*(d-c))>m:m=k;A,B,C,D=a,b,c,d
- o=[r[C:D]for r in g[A:B]];g=[r[:]for r in o];h=B-A;w=D-C
+     if(t:=(b-a)*(d-c))>m and all(g[a][x]==v==g[b-1][x]for x in R(c,d))and all(g[y][c]==v==g[y][d-1]for y in R(a,b)):m=t;A,B,C,D,V=a,b,c,d,v
+ o=[r[C:D]for r in g[A:B]];g=[r[:]for r in o];c=V
  for i,r in E(o):
   for j,v in E(r):
-   if(i and o[i-1][j]==v)|(i<h-1 and o[i+1][j]==v)|(j and r[j-1]==v)|(j<w-1 and r[j+1]==v):continue
-   for k in g:k[j]=v
-   g[i]=[v]*w
+   if v-c:
+    for k in g:k[j]=v
+    g[i]=[v]*(D-C)
  return g
