@@ -1,1 +1,1 @@
-p=lambda g:(lambda t,f:(G:=g if(H:=f(g)>=f(zip(*g)))else t(g),d:={},[d.setdefault(next(filter(None,r),0),set()).update(i for i,x in enumerate(r)if x<1)for r in G],[r.__setitem__(i,0)for r in G for i in d[next(filter(None,r),0)]],H and G or t(G))[4])(lambda a:[*map(list,zip(*a))],lambda x:sum(len({*r}-{0})<2 for r in x))
+p=lambda g,t=lambda a:[*map(list,zip(*a))]:t(p(t(g)))if any({*r}-{0,max(r)}for r in g)else([r.__setitem__(i,0)for r in g for s in g if max(s)==max(r)for i,x in enumerate(s)if x<1],g)[1]
