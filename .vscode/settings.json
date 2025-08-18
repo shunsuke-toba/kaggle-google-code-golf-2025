@@ -15,5 +15,6 @@
                 { "patterns": ["9"], "color": "Blue"}
             ]
         }
-    ]
+    ],
+    "python.analysis.autoImportCompletions": true
 }
