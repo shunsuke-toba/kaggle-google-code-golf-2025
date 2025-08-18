@@ -1,6 +1,5 @@
-j=lambda A:[[A[E][c]for E in range(len(A))]for c in range(len(A[0]))]
-def J(A):c=[A for(A,c)in enumerate(A)if any(c)];return c[0],c[-1]
-def p(A):
-	c,E=J(A);k,W=J(j(A))
-	def F(l,J,a,C):A[l][J],A[a][C]=A[a][C],A[l][J]
-	F(c+1,k+1,E+1,W+1);F(c+1,W-1,E+1,k-1);F(E-1,k+1,c-1,W+1);F(E-1,W-1,c-1,k-1);return A
+J=lambda a:(b:=[i for i,r in enumerate(a)if any(r)])and(b[0],b[-1])
+def p(a):
+ c,e=J(a);k,w=J(zip(*a))
+ for i in 1,-1:a[c+i][k+i],a[e+i][w+i],a[c+i][w-i],a[e+i][k-i]=a[e+i][w+i],a[c+i][k+i],a[e+i][k-i],a[c+i][w-i]
+ return a
