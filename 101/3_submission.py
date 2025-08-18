@@ -1,30 +1,24 @@
-def p(g):
- h=len(g);w=len(g[0]);R=range;E=enumerate;v=set();b=0
- for i in R(h):
-  for j in R(w):
-   if g[i][j]>0and(i,j)not in v:
-    q=[(i,j)];v.add((i,j));c=[];a=d=0
-    while q:
-     x,y=q.pop(0);c+=x,y;u=g[x][y];a|=u<2;d|=u>1
-     for X,Y in((x+1,y),(x-1,y),(x,y+1),(x,y-1)):
-      if 0<=X<h and 0<=Y<w and g[X][Y]and(X,Y)not in v:v.add((X,Y));q+=[(X,Y)]
-    if a&d and not b:b=c
- if not b:return g
- x0,x1=min(X:=b[::2]),max(X);y0,y1=min(Y:=b[1::2]),max(Y)
- P=[r[y0:y1+1]for r in g[x0:x1+1]]
- B1=[(i,j)for i,r in E(P)for j,u in E(r)if u&1];B2=[(i,j)for i,r in E(P)for j,u in E(r)if u>1]
- S={(i,j)for i in R(h)for j in R(w)if g[i][j]==2}-set(zip(b[::2],b[1::2]))
- X,Y=zip(*B2);a,b=min(X),max(X);c,d=min(Y),max(Y)
- for k in R(max(h,w),0,-1):
-  for r0 in R(-a*k,h-b*k-k+1):
-   for c0 in R(-c*k,w-d*k-k+1):
-    U={(i,j)for r,c in B2 for i in R(r0+r*k,r0+(r+1)*k) for j in R(c0+c*k,c0+(c+1)*k)}
-    if U-S:continue
-    if any(0<=i<h and 0<=j<w and g[i][j] for r,c in B1 for i in R(r0+r*k,r0+(r+1)*k) for j in R(c0+c*k,c0+(c+1)*k)):continue
-    for r,m in E(P):
-     for c,n in E(m):
-      for i in R(r0+r*k,r0+(r+1)*k):
-       for j in R(c0+c*k,c0+(c+1)*k):
-        if 0<=i<h and 0<=j<w:g[i][j]=n
-    S-=U
+def p(g,R=range):
+ n,m=len(g),len(g[0]);x1,y1,x2,y2=99,99,0,0;d=1,0,-1,0;u=set()
+ for b in R(9**5):
+  i,j,k=b%97%n,b%89%m,b%4
+  def c(x,y): return 0<=x<n and 0<=y<m
+  r,q=d[k],d[k-3]
+  if g[i][j]==1or(g[i][j]==2and(c(i+r,j+q)and g[i+r][j+q]==1or(i+r,j+q)in u)):
+   x1,y1,x2,y2=min(x1,i),min(y1,j),max(x2,i),max(y2,j)
+   if g[i][j]==2:u.add((i,j))
+ P=[r[y1:y2+1]for r in g[x1:x2+1]];N=len(u)
+ for s in[3,2,1]:
+  P2=[[P[i//s][j//s]for j in R(len(P[0])*s)]for i in R(len(P)*s)];s1,s2=len(P2),len(P2[0])
+  for b in R(n*m*9):
+   i,j=b//(3*m)-n,b%(3*m)-m;o=1;c=0
+   for z in R(s1*s2):
+    x,y=z//s2,z%s2
+    if c(i+x,j+y)and(i+x,j+y)not in u:
+     if g[i+x][j+y]!=P2[x][y]//2*2:o=0
+     elif P2[x][y]==2:c+=1
+   if o and c==N*s*s:
+    for z in R(s1*s2):
+     x,y=z//s2,z%s2
+     if c(i+x,j+y):g[i+x][j+y]=P2[x][y];u.add((i+x,j+y))
  return g
