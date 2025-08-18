@@ -1,12 +1,10 @@
-def p(g):
- N,M,d=len(g),len(g[0]),(1,-1,-1,1,1)
- for r in range(N-1):
-  for c in range(M-1):
-   if g[r][c]!=g[r][c+1]and g[r][c]!=g[r+1][c]and g[r][c]!=g[r+1][c+1]:
-    for i in range(4):
-     nr,nc=int(r+.7+d[i]*.5),int(c+.7+d[i+1]*.5)
-     for x in range(2):
-      for y in range(2):
-       nnr,nnc=int(r+.7-d[i]*(1.5+x)),int(c+.7-d[i+1]*(1.5+y))
-       if 0<=nnr<N and 0<=nnc<M:g[nnr][nnc]=g[nr][nc]
-    return g
+def p(G,R=range(5)):
+ for y in R:
+  for x in R:
+   a,b,c,d=G[y][x:x+2]+G[y+1][x:x+2]
+   if a*b*c*d:
+    for Y,X,v in((y+2,x+2,a),(y-2,x-2,d),(y-2,x+2,c),(y+2,x-2,b)):
+     for i in Y,Y+1:
+      for j in X,X+1:
+       if-1<i<6>j>-1:G[i][j]=v
+    return G
