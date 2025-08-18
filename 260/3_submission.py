@@ -1,10 +1,10 @@
 def p(g):
- c,k=next((v,y-x)for y,r in enumerate(g)for x,v in enumerate(r)if v%5);a=b=0
- for y,r in enumerate(g):
-  for x,v in enumerate(r):
-   if v==5:
-    g[y][x]=0;d=y-x-k;b<d and(b:=d);a<-d and(a:=-d)
- for s,d in(-1,a),(1,b):
-  for y in range(len(g)):
-   if d>0 and 0<=(x:=y-k-s*(d+2))<len(g[0]):g[y][x]=c
+ a=9;b=-9
+ for n in range(100):
+  v=g[i:=n//10][j:=n%10]
+  if v==5:g[i][j]=0;a=min(a,j-i);b=max(b,j-i)
+  elif v%5:c=v;d=j-i
+ for e in[b+2]*(b>d)+[a-2]*(a<d):
+  for i in range(10):
+   if 0<=(j:=i+e)<10:g[i][j]=c
  return g
