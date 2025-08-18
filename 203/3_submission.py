@@ -1,2 +1,1 @@
-def p(g):
- n=len(g);r=range(n);c=[g[i][i]for i in r[:n//2]];return[[c[~min(i,j,n+~i,n+~j)]for j in r]for i in r]
+p=lambda j:(n:=len(j),R:=range(n))and[[j[k:=n//2-min(x+1,y+1,n-x,n-y)][k]for y in R]for x in R]
