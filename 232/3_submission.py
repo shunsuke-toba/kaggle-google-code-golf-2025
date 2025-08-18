@@ -1,7 +1,5 @@
-def p(j,A=enumerate):
- for c,E in A(j):
-  k,W,l=0,[],0
-  for J,a in A(E):
-   if a>0:W=[a,5]*20;l=1
-   if l:j[c][J]=W[k];k+=1
- return j
+def p(g):
+ for r in g:
+  for i in range(1,len(r)):
+   if(l:=r[i-1]):r[i]=[5,r[i-2]][l==5]
+ return g
