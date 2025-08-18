@@ -1,7 +1,4 @@
 def p(g):
- H,W=len(g)-1,len(g[0])
- w=W-1
- for b in range(H*W):
-  i,j=b//W,b%W
-  if g[i][j]!=0:g[i+(j==w)][j+(j<w)]=g[i][j]
+ a=0
+ for r in g:b=0;r[:]=[b:=c or b for c in r];a=r[-1]=r[-1]or a
  return g
