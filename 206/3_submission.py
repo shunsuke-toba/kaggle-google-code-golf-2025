@@ -1,24 +1,5 @@
 def p(g):
- R,C=len(g),len(g[0])
- for i in range(R):
-  for j in range(C):
-   if g[i][j]==5:m=(i,j)
- mr,mc=m
- b,M=None,0
- for t in range(R-2):
-  for l in range(C-2):
-   p=[]
-   n=0
-   for i in range(t,t+3):
-    for j in range(l,l+3):
-     v=g[i][j]
-     p.append(v)
-     n+=v!=0
-   if n>M:M,b=n,p
- s=mr-1
- t=mc-1
- for i in range(3):
-  for j in range(3):
-   nr,nc=s+i,t+j
-   g[nr][nc]=b[i*3+j]
+ W=len(g[0]);s,t=divmod(sum(g,[]).index(5),W)
+ i,j=max((sum(v>0 for r in g[y:y+3]for v in r[x:x+3]),y,x)for y in range(len(g)-2)for x in range(W-2))[1:]
+ for k in 0,1,2:g[s+k-1][t-1:t+2]=g[i+k][j:j+3]
  return g
