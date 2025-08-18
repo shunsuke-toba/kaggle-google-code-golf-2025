@@ -2,24 +2,21 @@ def p(grid):
     height = len(grid)
     width = len(grid[0])
     
-    # 行ベース: 各行の中央値で埋める
-    A = []
+    # グリッドをコピー
+    result = [row[:] for row in grid]
+    
+    # 各マスについて処理
     for r in range(height):
-        row_sorted = sorted(grid[r])
-        median = row_sorted[width//2]
-        A.append([median] * width)
+        for c in range(width):
+            # 同じ行と同じ列のマスをすべて取得
+            row_vals = result[r]
+            col_vals = [result[i][c] for i in range(height)]
+            
+            # 行と列の値を合わせて最も多い数字を取得
+            all_vals = row_vals + col_vals
+            most_common = max(all_vals, key=all_vals.count)
+            
+            # そのマスを最も多い数字に変える
+            result[r][c] = most_common
     
-    # 列ベース: 各列の中央値で埋める  
-    B = [[0] * width for _ in range(height)]
-    for c in range(width):
-        col = [grid[r][c] for r in range(height)]
-        col_sorted = sorted(col)
-        median = col_sorted[height//2]
-        for r in range(height):
-            B[r][c] = median
-    
-    # Aの左上と右下が一致しているならBを出力、そうでないならAを出力
-    if A[0][0] == A[height-1][width-1]:
-        return B
-    else:
-        return A
+    return result
