@@ -1,1 +1,1 @@
-p=lambda g:(s:=sum(g,[]),c:=next(x for x in s if x and s.count(x)==4),h:=len(g),w:=len(g[0]),r:=[[0]*w for _ in g],[r.__setitem__(i,[c]*w) for i in range(h) if g[i][0]==g[i][-1]==c],[r[k].__setitem__(j,c) for j in range(w) for k in range(h) if g[0][j]==g[-1][j]==c],r)[-1]
+p=lambda g:(s:=sum(g,[]),c:=next(x for x in s if s.count(x)==4),e:=enumerate)and[[((g[i][0]==g[i][-1]==c)|(g[0][j]==g[-1][j]==c))*c for j,x in e(r)]for i,r in e(g)]
