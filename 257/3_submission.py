@@ -1,1 +1,1 @@
-p=lambda g,A=range(4):[[g[i][j]or g[i][j+5]or g[i+5][j]or g[i+5][j+5]for j in A]for i in A]
+p=lambda g:[[r[j]or r[j+5]or s[j]or s[j+5]for j in range(4)]for r,s in zip(g,g[5:])]
