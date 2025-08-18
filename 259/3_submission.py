@@ -1,10 +1,2 @@
-def p(j,A=range):
- c,E=len(j),len(j[0]);k,W,l,J=c,0,E,0
- for a in A(c):
-  for C in A(E):
-   if j[a][C]-1:
-    if a<k:k=a
-    if a>W:W=a
-    if C<l:l=C
-    if C>J:J=C
- return[[x-(x==1)for x in r[l:J+1]]for r in j[k:W+1]]
+import numpy as n
+def p(g):g=n.array(g);y,x=n.where(z:=g>1);return (g*z)[y.min():y.max()+1,x.min():x.max()+1].tolist()
