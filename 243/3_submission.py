@@ -1,7 +1,6 @@
 def p(g):
- n=len(g);m=n*n
- for b in range(m*96):
-  r,c=b%m//n,b%m%n
-  if c>0and g[r][c-1]==1and g[r][c]==0:g[r][c]=1
-  if b%m==0:g=[list(row)for row in zip(*g[::-1])]
+ for _ in[0]*32:
+  for r in g:
+   for c in range(1,len(r)):r[c]+=r[c-1]==1>r[c]
+  g=[*map(list,zip(*g[::-1]))]
  return g
