@@ -1,20 +1,14 @@
-def p(g):
- h=len(g);w=len(g[0]);R=range;S=[]
- for i in R(h):
-  for j in R(w):
-   if g[i][j]==9 and (i<1 or g[i-1][j]-9) and (j<1 or g[i][j-1]-9):
-    x=i
-    while x<h and g[x][j]==9:x+=1
-    y=j
-    while y<w and g[i][y]==9:y+=1
-    S+=[(i,x,j,y)]
- for a,b,c,d in S:
-  for x in R(c,d):
-   y=b
-   while y<h and g[y][x]<1:g[y][x]=1;y+=1
- for a,b,c,d in S:
-  r=max(b-a,d-c)//2
-  for y in R(max(0,a-r),min(h,b+r)):
-   for x in R(max(0,c-r),min(w,d+r)):
-    if g[y][x]-9:g[y][x]=3
+def p(g,R=range):
+ n=len(g);s=[x[:]for x in g]
+ for i in R(n):
+  for j in R(n):
+   if 8<g[i][j]and(i<1or g[i-1][j]-9)*(j<1or g[i][j-1]-9):
+    a=c=0
+    while j+a<n>g[i][j+a]>8:a+=1
+    while i+c<n>g[i+c][j]>8:c+=1
+    for x in R(j,j+a):
+     y=i+c
+     while y<n>s[y][x]<1:g[y][x]=1;y+=1
+    r=max(a,c)//2;t=max(0,i-r);b=min(n,i+c+r);l=max(0,j-r);e=min(n,j+a+r)
+    for y in R(t,b):g[y][l:e]=[(9,3)[v<9]for v in g[y][l:e]]
  return g
