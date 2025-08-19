@@ -1,8 +1,6 @@
-R=range
 def p(g):
- for y in R(len(g)-4):
-  for x in R(len(g[0])-4):
-   if sum(g[y+k//5][x+k%5]==1for k in R(25))>15:
-    for r in g:r[x+2]=r[x+2]==1 or 6
-    g[y+2]=[c==1 or 6 for c in g[y+2]]
+ for z in range(288):
+  x,y=z//24,z%24//2
+  if g[x][y]==g[x][y+1]==g[x+1][y]<2:g[x+2]=[c-2*(c>7) for c in g[x+2]]
+  g=list(map(list,zip(*g)))
  return g
