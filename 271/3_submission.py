@@ -1,1 +1,2 @@
-p=lambda g:max(([r[c:c+3]for r in g[i:i+3]]for i in range(len(g)-2)for c in range(len(g[0])-2)),key=lambda t:sum(r.count(1)*9+r.count(8)for r in t))
+R=range(7)
+p=lambda g:max(([x[c:c+3]for x in g[i:i+3]]for i in R for c in R),key=lambda t:(r:=sum(t,[])).count(1)*2+r.count(8))

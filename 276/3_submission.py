@@ -1,1 +1,1 @@
-def p(j):A={6:2};return[[A.get(x,x)for x in r]for r in j]
+p=lambda g:eval(str(g).replace('6','2'))

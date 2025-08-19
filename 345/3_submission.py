@@ -1,8 +1,6 @@
-def p(j):
-	for A in range(len(j[0])):
-		if j[-1][A]==2:
-			c=0
-			for E in range(len(j)):
-				if j[-(E+1)][A+c]==5:c+=1;j[-E][A+c]=2
-				j[-(E+1)][A+c]=2
-	return j
+def p(g):
+ for x in range(10):
+  if g[9][x]:
+   y=9
+   while y:k=g[y-1][x]==5;g[y-1+k][x+k]=2;y-=1-k;x+=k
+ return g
