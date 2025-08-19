@@ -1,9 +1,4 @@
 def p(g):
- k=len(g)-2;r=g[k];w=len(r);c=g[-1][w//2]
- for x in range(w):
-  for d in-1,1:
-   i=x+d
-   if r[x]and-1<i<w and r[i]<1:
-    j=k-1
-    while j+1 and-1<i<w:g[j][i]=c;j-=1;i+=d
+ b=g[-1];c=len(b)>>1;j=b[c-1]==b[c]==b[c+1];k=j+1
+ while~c+k:r=g[-k-2+j];r[c-k]=r[c+k]=b[c];k+=1
  return g

@@ -1,1 +1,1 @@
-p=lambda g:[[v if v-4 else g[~i%len(g)][~j%len(r)]for j,v in enumerate(r)]for i,r in enumerate(g)]
+p=lambda g:[[(w,v)[4!=v]for v,w in zip(r,s[::-1])]for r,s in zip(g,g[::-1])]
