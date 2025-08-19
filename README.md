@@ -54,4 +54,18 @@ google-code-golf-2025
 
 
 
+## タスクのビジュアライザ
 
+```
+cd task-visualizer
+```
+
+httpサーバーを起動
+
+```
+npm run dev
+```
+
+`http://localhost:8080/task-visualizer/` にアクセスすると各タスクの入力がビジュアライズされます
+
+ARC-GEN exampleは展開するときに少し重い時があります。
