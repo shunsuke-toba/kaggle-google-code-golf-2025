@@ -1,15 +1,8 @@
 def p(j):
- R=range;h=len(j);w=len(j[0]);u=h;v=-1;x=w;y=-1;b=c=-1
- for i in R(h):
-  for k in R(w):
-   if(q:=j[i][k]):
-    if i<u:u=i
-    if i>v:v=i
-    if k<x:x=k
-    if k>y:y=k
-    if q-8:
-     if b<0:b=q
-     elif q-b:c=q
+ R=range;x=w=len(j[0]);u=len(j);v=y=b=c=0
+ for i in R(u*w):
+  k=i%w;i//=w
+  if(q:=j[i][k]):u=min(u,i);v=max(v,i);x=min(x,k);y=max(y,k);q%8and(b<1 and(b:=q)or(q-b and(c:=q)))
  for i in R(u,v+1):
-  for k in R(x,y+1):j[i][k]=[c,b][i in(u,v)or k in(x,y)]
+  for k in R(x,y+1):j[i][k]=[b,c][u<i<v and x<k<y]
  return j
