@@ -1,1 +1,1 @@
-def p(j):j=[j[-1]]+j[:len(j)-1];j=[[2 if C==8 else C for C in R]for R in j];return j
+p=lambda g:[[c/4for c in r]for r in[g.pop()]+g]
