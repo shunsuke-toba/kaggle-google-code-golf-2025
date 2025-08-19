@@ -1,8 +1,6 @@
 def p(g):
- r=[*map(list,g)];h=len(g)-1;w=len(g[0])-1
- for i in range(h):
-  a=g[i];b=g[i+1];s=r[i];t=r[i+1]
-  for j in range(w):
-   if a[j]==a[j+1]==b[j]==b[j+1]==0 and(j<1 or j+2>w or a[j-1]+b[j-1] or a[j+2]-5 or b[j+2]-5):
-    s[j]=s[j+1]=t[j]=t[j+1]=2
+ r=[*map(list,g)]
+ for a,b,s,t in zip(g,g[1:],r,r[1:]):
+  for j in range(17):
+   if(sum(a[j:j+2]+b[j:j+2])<1)*(j%16<1or a[j-1]+b[j-1]|a[j+2]-5|b[j+2]-5):s[j:j+2]=t[j:j+2]=2,2
  return r
