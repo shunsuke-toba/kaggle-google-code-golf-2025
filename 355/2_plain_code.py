@@ -1,29 +1,47 @@
 def p(grid):
-    # Find the least frequent digit (the target digit)
     from collections import Counter
-    flat = sum(grid, [])
+    import copy
+    
+    # グリッドのコピーを作成（元のグリッドを変更しないため）
+    g = copy.deepcopy(grid)
+    h, w = len(g), len(g[0])
+    
+    # 最頻出でない色（レアな色）を見つける
+    flat = sum(g, [])
     counts = Counter(flat)
-    target_digit = min(counts, key=counts.get)
+    target_color = min(counts, key=counts.get)
     
-    # Count target_digit occurrences in each region
-    region_counts = Counter()
+    # 各色のカウンター
+    color_counts = {}
     
-    # For each background digit, count how many target_digits are in its region
-    for i, row in enumerate(grid):
-        for j, cell in enumerate(row):
-            if cell == target_digit:
-                # Find what region this target_digit belongs to by looking at neighbors
-                # Check adjacent cells to determine the region
-                for di, dj in [(-1,0), (1,0), (0,-1), (0,1)]:
-                    ni, nj = i + di, j + dj
-                    if 0 <= ni < len(grid) and 0 <= nj < len(row):
-                        neighbor = grid[ni][nj]
-                        if neighbor != target_digit:
-                            region_counts[neighbor] += 1
+    # 全てのマスについて複数回処理（submission codeのように）
+    for k in range(9 * h * w):  # 十分な回数実行
+        i, j = k // w % h, k % w
+        
+        if g[i][j] == target_color:
+            # 周囲4マスの色を取得
+            neighbors = []
+            for di, dj in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                ni, nj = i + di, j + dj
+                if 0 <= ni < h and 0 <= nj < w and g[ni][nj] != target_color:
+                    neighbors.append(g[ni][nj])
+            
+            if neighbors:
+                # 周囲の色の出現回数をカウント
+                neighbor_counts = Counter(neighbors)
+                # 最も多く出現する色を取得
+                most_common_color = max(neighbor_counts, key=neighbor_counts.get)
+                
+                # 2回以上出現する場合
+                if neighbor_counts[most_common_color] >= 2:
+                    # グリッドの値を変更
+                    g[i][j] = most_common_color
+                    # カウンターを更新
+                    color_counts[most_common_color] = color_counts.get(most_common_color, 0) + 1
     
-    # Find the background digit with most target_digits in its region
-    if region_counts:
-        result = max(region_counts, key=region_counts.get)
+    # 最も多くカウントされた色を返す
+    if color_counts:
+        result = max(color_counts, key=color_counts.get)
         return [[result]]
     else:
-        return [[target_digit]]
+        return [[target_color]]
