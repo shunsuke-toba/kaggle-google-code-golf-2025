@@ -7,28 +7,19 @@ def p(g):
    while S:
     r,c=S.pop();A+=(r,c),;C|={g[r][c]}
     a=min(a,r);b=max(b,r);e=min(e,c);f=max(f,c)
-    for i in-1,0,1:
-     for j in-1,0,1:
-      if i|j and h>(x:=r+i)>=0<= (y:=c+j)<w and g[x][y]!=B and not V[x][y]:V[x][y]=1;S+=(x,y),
-   len(C)>2 and(T:=A)
-   len(C)<2 and (s:=b-a+1)==f-e+1 and m.setdefault(*C,[]).append((a,e,s))
- A=T
- L=[g[r][c]for r,c in A];b=max(L,key=L.count);p,q=set(L)-{b}
- for r,c in A:col=g[r][c];col==p and(pa:=(r,c));col==q and(pc:=(r,c))
- R=pc[0]-pa[0];C=pc[1]-pa[1];S=[(r-pa[0],c-pa[1])for r,c in A if g[r][c]==b];o=[r[:]for r in g]
- for ar,ac,s in m[p]:
-  for br,bc,t in m[q]:
-   if s==t:
-    dr=br-ar;dc=bc-ac
-    for u in 0,1:
-     for v in-1,1:
-      for w in-1,1:
-       x,y=R*v,C*w
-       if u:x,y=y,x
-       if x and (k:=dr//x)>0 and dr%x==0 and y*k==dc or y and (k:=dc//y)>0 and dc%y==0 and x*k==dr:
-        for r,c in S:
-         r*=v;c*=w
-         if u:r,c=c,r
-         rr=ar+r*k;cc=ac+c*k
-         for i in range(k):o[rr+i][cc:cc+k]=[b]*k
- return o
+    for q in range(9):
+     if q-4and h>(x:=r+q//3-1)>-1<(y:=c+q%3-1)<w>g[x][y]!=B>0==V[x][y]:V[x][y]=1;S+=(x,y),
+   if len(C)>2:T=A
+   if len(C)<2and(s:=b-a+1)==f-e+1:m.setdefault(*C,[]).append((a,e,s))
+ A=T;L=[g[r][c]for r,c in A];b=max(L,key=L.count);p,q=set(L)-{b}
+ for r,c in A:l=g[r][c];l==p and(z:=(r,c));l==q and(d:=(r,c))
+ R=d[0]-z[0];C=d[1]-z[1];S=[(r-z[0],c-z[1])for r,c in A if g[r][c]==b];g=[r[:]for r in g]
+ for o,n,s,v,u,w,r,c in[(o,n,s,v,u,w,r,c)for o,n,s in m[p]for v,u,t in m[q]for w in range(8)for r,c in S if s==t]:
+  j,k,l=w//4,w//2%2*2-1,w%2*2-1;E,F=v-o,u-n;x,y=R*k,C*l
+  if j:x,y=y,x
+  if x and(I:=E//x)>0==E%x<(y*I==F)or y and(I:=F//y)>0==F%y<(x*I==E):
+   r*=k;c*=l
+   if j:r,c=c,r
+   J,K=o+r*I,n+c*I
+   for i in range(I):g[J+i][K:K+I]=[b]*I
+ return g
