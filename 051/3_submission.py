@@ -1,14 +1,7 @@
-def p(g):
- for y in range(1,len(g)-1):
-  r=g[y]
-  for x in range(1,len(r)-1):
-   c=r[x]
-   a,b=g[y-1][x],g[y+1][x]
-   if a!=c!=b and a*b<1<=a+b:
-    a=1-2*(a>0);k=y
-    while 0<=(k:=k+a)<len(g):g[k][x]=g[k][x]or c
-   a,b=r[x-1],r[x+1]
-   if a!=c!=b and a*b<1<=a+b:
-    a=1-2*(a>0);k=x
-    while 0<=(k:=k+a)<len(r):r[k]=r[k]or c
+def p(g,R=range):
+ for _ in[0]*4:
+  for x in R(len(g)):
+   for y in R(len(g[0])-1):
+    if(sum(g,[])).count(c:=g[x][y])<2>1>g[x][y+1]:g[x][:y]=[(d:=g[x][i])+c*(d<1)for i in R(y)]
+  g=[*map(list,zip(*g[::-1]))]
  return g

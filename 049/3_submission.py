@@ -1,1 +1,7 @@
-p=lambda g:(F:=sum(g,[]),c:=min({*F}-{0},key=F.count),n:=9e9,m:=n,x:=0,y:=0,[[v==c and(m:=min(m,i),n:=min(n,j),x:=max(x,i),y:=max(y,j))for j,v in enumerate(r)]for i,r in enumerate(g)],[r[n:y+1]for r in g[m:x+1]])[-1]
+def p(g):
+ m,e=999,0
+ for c in range(10):
+  f=lambda r:r.count(c)
+  h=[*map(list,zip(*filter(f,zip(*list(filter(f,g))))))]
+  if h and(c:=len(h)*len(h[0]))<m:m,e=c,h
+ return e
