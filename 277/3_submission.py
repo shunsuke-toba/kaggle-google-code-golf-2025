@@ -1,15 +1,12 @@
 def p(g):
- r=range;h=len(g);w=len(g[0]);C=[]
- for i in r(h):
-  for j in r(w):
-   if g[i][j]:
-    c=[(i,j)];g[i][j]=0
-    for x,y in c:
-     for X in r(x-1,x+2):
-      for Y in r(y-1,y+2):
-       if-1<X<h and-1<Y<w and g[X][Y]:g[X][Y]=0;c+=[(X,Y)]
-    C+=c,
- m=max(map(len,C))
- for c in C:
-  for x,y in c:g[x][y]=1+(len(c)<m)
+ r=range;m=1e9;p=[]
+ for k in r(100):
+  if g[(i:=k//10)][(j:=k%10)]>7:
+   c=[(i,j)];g[i][j]=1
+   for i,j in c:
+    for s in r(9):
+     X=i+s//3-1;Y=j+s%3-1
+     if 0<=X<10>Y>=0<g[X][Y]+2>9:g[X][Y]=1;c+=[(X,Y)]
+   if(l:=len(c))<m:m=l;p=c
+ for i,j in p:g[i][j]=2
  return g
