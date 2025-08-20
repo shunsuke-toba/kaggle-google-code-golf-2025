@@ -1,34 +1,20 @@
-def p(g):
- b=g[0][0];h=len(g);w=len(g[0]);d=(1,0,-1,0,0,1,0,-1)
- v=[[0]*w for _ in g];c=[]
- for y in range(h):
-  for x in range(w):
-   if g[y][x]-b and not v[y][x]:
-    q=[(y,x)];v[y][x]=1;s=[]
-    while q:
-     y0,x0=q.pop();s+=[(y0,x0)]
-     for i in range(4):
-      ny=y0+d[i];nx=x0+d[i+4]
-      if 0<=ny<h and 0<=nx<w and g[ny][nx]-b and not v[ny][nx]:v[ny][nx]=1;q.append((ny,nx))
-    c+=s,
- P=[a for a in c if (max(y for y,_ in a)-min(y for y,_ in a)+1)*(max(x for _,x in a)-min(x for _,x in a)+1)-len(a)][0]
- R=[a for a in c if a is not P];S=set(P)
- pc={g[y][x] for y,x in P};rc={g[y][x] for a in R for y,x in a};B=[x for x in pc if x in rc][0]
- for y,x in P:
-  if g[y][x]==B and all((y+d[i],x+d[i+4]) in S for i in range(4)):
-   by,bx=y,x;break
- t={(y-by,x-bx):g[y][x] for y,x in P}
- for y,x in P:g[y][x]=b
- for a in R:
-  ys,xs=zip(*a);T,Bm=min(ys),max(ys);L,Rm=min(xs),max(xs)
-  bs=[(y,x) for y,x in a if g[y][x]==B]
-  for y,x in bs:
-   for (dy,dx),c0 in t.items():
-    Y,X=y+dy,x+dx
-    if T<=Y<=Bm and L<=X<=Rm:g[Y][X]=c0
-   for i in range(4):
-    dy,dx=d[i],d[i+4];c1=t.get((dy,dx));c2=t.get((2*dy,2*dx))
-    if c1==c2!=None:
-     Y,X=y+dy,x+dx
-     while T<=Y<=Bm and L<=X<=Rm:g[Y][X]=c1;Y+=dy;X+=dx
+def p(g,R=range):
+ C=sorted({*(s:=sum(g,[]))},key=s.count);D=1,0,-1,0;b,a=g[0][0],C[-1]
+ if C[-1]==b:a=C[-2]
+ for z in R(676):
+  i,j=z//26,z%26
+  p=[g[k][j:j+5]for k in R(i,i+5)]
+  if len({*sum(p,[])}|{b}|{a})>=4 and p[::-1]==p and [r[::-1]for r in p]==p:
+   for k in R(5):g[i+k][j:j+5]=[b]*5
+   break
+ for z in R(676):
+  i,j=z//26+2,z%26+2
+  if b!=g[i][j]==p[2][2]!=a==g[i][j-1]==g[i-1][j]:
+   for t in R(25):
+    k,l=t//5,t%5
+    if g[i+k-2][j+l-2]!=b!=p[k][l]!=a:g[i+k-2][j+l-2]=p[k][l]
+   for d in R(4):
+    x,y=i+D[d]*2,j+D[d-3]*2
+    if a!=(c:=g[x][y])!=b:
+     while g[x][y]!=b:g[x][y]=c;x+=D[d];y+=D[d-3]
  return g
