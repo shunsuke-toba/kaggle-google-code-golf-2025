@@ -1,13 +1,11 @@
 def p(g,A=range):
- H=10;r=[x[:]for x in g]
- for i in A(H):
-  for j in A(2,H-2):
-   if g[i][j]>1:
-    F=g[i][j]
-    for ni in A(i-2,i+3):
-     for nj in A(j-2,j+3):
-      if ni<H and g[ni][nj]^1:r[ni][nj]=F
-    if g[i-2][j-2]:
-     for nj in A(j-2,j+3):
-      if g[i-3][nj]^1:r[i-3][nj]=F
+ r=[x[:]for x in g]
+ for c in A(60):
+  i,j=c//6,c%6
+  F=g[i][j+2]
+  if F>1:
+   for y in A(i-2,min(i+3,9)):
+    for x in A(j,j+5):
+     if g[y][x]^1:r[y][x]=F
+     if g[i-2][j]:r[i-3][x]=F
  return r
