@@ -1,14 +1,7 @@
-R=range
 def p(g):
- r=[*map(list,g)];m=len(g);n=len(g[0])
- for y in R(m):
-  for x in R(n):
-   if g[y][x]==6 and (y<1 or g[y-1][x]-6) and (x<1 or g[y][x-1]-6):
-    w=h=1
-    while x+w<n and g[y][x+w]==6:w+=1
-    while y+h<m and g[y+h][x]==6:h+=1
-    for i in R(y+1,y+h-1):r[i][x+1:x+w-1]=[(c,4)[c>7]for c in r[i][x+1:x+w-1]]
- for y in R(m):
-  for x in R(n):
-   if r[y][x]>7 and any(m>i>=0<=j<n and r[i][j]==6 for i in R(y-1,y+2) for j in R(x-1,x+2)):r[y][x]=3
- return r
+ W=15
+ for i in range(225):
+  if g[i//W][i%W]==8>0<i%W:g[i//W][i%W]=4
+ for i in range(5**7):
+  x=i//135%W;y=i//9%W;a=i//3%3-1;b=i%3-1;t=g[x][y];u=g[(x+a)%W][(y+b)%W];g[x][y]=3if t>u>5else 8if 7<u==t*2else t
+ return g
