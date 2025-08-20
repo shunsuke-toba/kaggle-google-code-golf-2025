@@ -1,19 +1,19 @@
 def p(g):
- import numpy as n
- g=n.array(g);h,w=g.shape;a=g.copy()
- y,x=n.argwhere(g%2)[0]
- S=[(y,x)];a[y,x]=0;b=[]
- while S:
-  i,j=S.pop();b+=i,j,
-  for Y in range(i-1,i+2):
-   for X in range(j-1,j+2):
-    if 0<=Y<h and 0<=X<w and a[Y,X]:a[Y,X]=0;S.append((Y,X))
- T=g[min(b[::2]):max(b[::2])+1,min(b[1::2]):max(b[1::2])+1]
- for t in T,n.fliplr(T):
-  for k in 0,1,2,3:
-   s=n.rot90(t,k);H,W=s.shape
-   for y in range(h-H+1):
-    for x in range(w-W+1):
-     e=g[y:y+H,x:x+W];m=(s==2)|(s==4)
-     if (e[m]==s[m]).all():z=(e==0)&(s>0);e[z]=s[z]
- return g.tolist()
+ L=len;r,e=range,enumerate;H=L(g);W=L(g[0]);a=[*map(list,g)]
+ for k in r(H*W):
+  if g[y:=k//W][x:=k%W]%2:
+   S=[(y,x)];a[y][x]=0;c=[];d=[]
+   while S:
+    i,j=S.pop();c+=i,;d+=j,
+    for Y in r(i-1,i+2):
+     for X in r(j-1,j+2):
+      if H>Y>=0<=X<W and a[Y][X]:a[Y][X]=0;S+=(Y,X),
+   t=[q[min(d):max(d)+1]for q in g[min(c):max(c)+1]]
+   for _ in r(8):
+    for y in r(H+1-L(t)):
+     for x in r(W+1-L(t[0])):
+      if all(g[y+i][x+j]==u for i,R in e(t) for j,u in e(R) if u&1<1<u):
+       for i,R in e(t):G=g[y+i];G[x:x+L(R)]=[G[j]or u for j,u in e(R,x)]
+    t=[*zip(*t[::-1])]
+    if _==3:t=t[::-1]
+   return g
