@@ -1,0 +1,36 @@
+# Git関連
+.git
+.gitignore
+
+# Docker関連
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# IDE関連
+.vscode
+.idea
+*.swp
+*.swo
+
+# Python関連
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache
+
+# 一時ファイル
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# ログファイル
+*.log
+
+# その他
+node_modules
+.env

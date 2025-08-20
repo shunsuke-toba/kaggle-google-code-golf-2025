@@ -12,11 +12,15 @@ for i in range(1, 401):
     if len(content) <= 1:
         print(f"{i:03d} : unsolved")
         continue
-    score = verify_program(i, examples, code_path, verbose=False)
-    if score > 0:
-        print(f"{i:03d} : {score}")
-        score_sum += score
-    else:
-        print(f"{i:03d} : implemented but not correct")
+    try:
+        score = verify_program(i, examples, code_path, verbose=False)
+        if score > 0:
+            print(f"{i:03d} : {score}")
+            score_sum += score
+        else:
+            print(f"{i:03d} : implemented but not correct")
+    except Exception as e:
+        print(f"{i:03d} : error occurred - {str(e)}")
+        score = 0
 
 print(f"Total Score: {score_sum}")
