@@ -1,4 +1,3 @@
-from collections import Counter as C
 def p(g):
  R,C=len(g),len(g[0]);F=range;m=x=y=s=t=0
  for a in F(R*C):

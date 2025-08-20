@@ -1,5 +1,5 @@
 def p(g,E=enumerate):
- C=sorted({*sum(g,[])},key=lambda x:-sum(r.count(x)for r in g))
+ C=sorted({*(s:=sum(g,[]))},key=s.count,reverse=True)
  for _ in [0]*4:
   for r in g:
    a,b=[i for i,x in E(r)if x==C[2]],[i for i,x in E(r)if x==C[1]]
