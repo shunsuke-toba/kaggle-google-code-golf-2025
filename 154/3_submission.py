@@ -1,12 +1,11 @@
 def p(g):
- E=enumerate;f=lambda g:[i for i,e in E(g)if 2 in e];t=lambda z:[*map(list,zip(*z))]
- r=f(g);v=r[-1]-r[0]>len(r);v or(g:=t(g),r:=f(g))
- h=len(r)//2;a,b=r[0]+h,r[-1]-h
- S=[[],[]]
- for i,R in E(g):
-  for j,x in E(R):
-   if x==5:R[j]=0;S[i>a].append((i,j))
- for G,e in zip(S,(a,b)):
-  m=min(G)[0];M=max(G)[0]
-  for y,x in G:g[e+[M,m][e>a]-y][x]=5
- return(g,t(g))[v^1]
+ h=[*map(list,g)]
+ for k in range(225):
+  i=k//15;j=k%15
+  for y,x in((1,0),(-1,0),(0,1),(0,-1))*(g[i][j]>4):
+   d=1
+   try:
+    while g[i+y*d][j+x*d]-2:d+=1
+    h[i][j]=0;h[i+y*d*2][j+x*d*2]=5;break
+   except:0
+ return h
