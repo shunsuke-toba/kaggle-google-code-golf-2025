@@ -1,2 +1,1 @@
-from numpy import*
-p=lambda g:(a:=array(g),m:=pad(a==3,1),s:=slice(1,-1),a.__setitem__(m[s,s]&(m[2:,s]|m[:-2,s]|m[s,2:]|m[s,:-2]),8),a.tolist())[4]
+p=lambda g:[[8if c==3and 3in(i and g[i-1][j],-~i<len(g)and g[i+1][j],j and r[j-1],-~j<len(r)and r[j+1])else c for j,c in enumerate(r)]for i,r in enumerate(g)]
