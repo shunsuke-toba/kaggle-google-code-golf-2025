@@ -81,7 +81,7 @@ def verify_program(task_num, examples, task_path, verbose=True):
 
 if __name__ == "__main__":
   task_num = int(sys.argv[1])
-  code_type = str(sys.argv[2]) # "sub" or "plain"
+  code_type = str(sys.argv[2]) if len(sys.argv) > 2 else "sub"
   examples_path = f"{task_num:03d}/0_input.json"
   with open(examples_path, "r") as file:
     examples = json.load(file)
