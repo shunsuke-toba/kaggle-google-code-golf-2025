@@ -1,1 +1,1 @@
-def p(g):t,b=g[:3],g[3:];return[[2if t[r][c]==b[r][c]==0else 0for c in range(3)]for r in range(3)]
+p=lambda g:[[2*(x+y<1)for x,y in r]for r in map(zip,g,g[3:])]
