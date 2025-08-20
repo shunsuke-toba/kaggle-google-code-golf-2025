@@ -1,9 +1,6 @@
-def p(j,A=range):
- c=len(j)
- for E in A(c):
-  if j[E][0]==2:
-   k=0
-   while k<c and j[E][k]==2:k+=1
-   for W in A(c):
-    for l in A((k+E-W)*(W!=E)):j[W][l]=3-2*(W>E)
+def p(j,R=range):
+ for r in R(len(j)):
+  if j[r][0]:break
+ for y in R(len(j)):
+  for x in R(sum(j[r])//2+r-y):j[y][x]=2+(y<r)-(y>r)
  return j

@@ -1,31 +1,15 @@
-def p(j):
- h=len(j);w=len(j[0])
- S={(r,c)for r in range(h)for c in range(w)if j[r][c]==5}
- def f(S):
-  if not S:return 1
-  r,c=min(S)
-  t={(r,c),(r,c+1),(r+1,c),(r+1,c+1)}
-  if t<=S:
-   S-=t
-   for a,b in t:j[a][b]=8
-   if f(S):return 1
-   S|=t
-   for a,b in t:j[a][b]=5
-  t={(r,c),(r,c+1),(r,c+2)}
-  if t<=S:
-   S-=t
-   for a,b in t:j[a][b]=2
-   if f(S):return 1
-   S|=t
-   for a,b in t:j[a][b]=5
-  t={(r,c),(r+1,c),(r+2,c)}
-  if t<=S:
-   S-=t
-   for a,b in t:j[a][b]=2
-   if f(S):return 1
-   S|=t
-   for a,b in t:j[a][b]=5
+def p(g):
+ s={(i,j)for i,r in enumerate(g)for j,v in enumerate(r)if v}
+ def f(s):
+  if not s:return 1
+  r,c=min(s)
+  for d,v in(((0,0,0,1,1,0,1,1),8),((0,0,0,1,0,2,0,2),2),((0,0,1,0,2,0,2,0),2)):
+   t={(r+d[i],c+d[i+1])for i in(0,2,4,6)}
+   if t<=s:
+    for a,b in t:g[a][b]=v
+    if f(s-t):return 1
+    for a,b in t:g[a][b]=5
   return 0
- if not f(S):
-  for r,c in S:j[r][c]=8
- return j
+ if not f(s):
+  for a,b in s:g[a][b]=8
+ return g

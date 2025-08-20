@@ -1,2 +1,4 @@
-j=lambda A,c:sum(sum(i==c for i in r)for r in A)
-def p(A):E=max(j([r],8)for r in A);k=(j(A,5)-E-2)/2-j(A,8)/E;return[[8*(k>0),8*(k>1),8*(k>2)],[0,0,8*(k>3)],[0,0,0]]
+def p(g):
+ w=len(g[0]);s=sum(g,[]);a=[0]*9
+ for c in b"\0\1\2\5"[:s.index(8)//w-s.index(5)//w]:a[c]=8
+ return[a[:3],a[3:6],a[6:]]

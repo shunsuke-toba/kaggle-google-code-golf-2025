@@ -1,8 +1,6 @@
-def p(j,A=enumerate):
- for c,E in A(j):
-  for k,W in A(E):
-   if W==5:
-    for l in range(c-1,c+2):
-     for J in range(k-1,k+2):
-      if[l,J]!=[c,k]:j[l][J]=1
- return j
+def p(g,E=enumerate):
+ for i,r in E(g):
+  for j,v in E(r):
+   if v>4:
+    for x in g[i-1:i+2]:x[j-1:j+2]=1,1,1;r[j]=5
+ return g

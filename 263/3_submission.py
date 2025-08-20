@@ -1,4 +1,1 @@
-def p(j):
-	A=range;c=[[[j[D+c*3][A+E*3]for A in A(3)]for D in A(3)]for c in A(len(j)//3)for E in A(len(j[0])//3)]
-	for E in c:
-		if[tuple(tuple(c[E][A]==0 for A in A(3))for E in A(3))for c in c].count(tuple(tuple(E[c][A]==0 for A in A(3))for c in A(3)))==1:return E
+p=lambda g:[l:=len(g),b:=[[[r[i:i+3]for r in g],g[i:i+3]][l>3]for i in range(0,[len(g[0]),l][l>3],3)],m:=[[*map(bool,sum(t,[]))]for t in b],b[m.index(min(m,key=m.count))]][3]

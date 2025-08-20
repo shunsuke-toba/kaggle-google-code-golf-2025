@@ -1,12 +1,10 @@
 def p(g):
- R,C=len(g),len(g[0]);o=[[0]*C for _ in range(R)]
- for r in range(R):
-  for c in range(C):
-   for r2 in range(R-1,r,-1):
-    for c2 in range(C-1,c,-1):
-     if(r2-r+1)*(c2-c+1)<6:continue
-     v=g[r][c]
-     if v<1 or any(g[i][j]!=v for i in range(r,r2+1)for j in range(c,c2+1)):continue
-     for i in range(r,r2+1):
-      for j in range(c,c2+1):o[i][j]=v
-     return o
+ w=len(g[0])-1;d=[0]*10
+ for a,b in zip(g,g[1:]):
+  for x in range(w):
+   if(v:=a[x])==a[x+1]==b[x]==b[x+1]:d[v]+=1
+ o=[[0]*-~w for _ in g]
+ for a,b,c,e in zip(g,g[1:],o,o[1:]):
+  for x in range(w):
+   if(v:=a[x])==a[x+1]==b[x]==b[x+1]and d[v]>1:c[x]=c[x+1]=e[x]=e[x+1]=v
+ return o

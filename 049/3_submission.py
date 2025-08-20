@@ -1,9 +1,7 @@
-from collections import*
-j=len
-A=range
-def p(c):
-	E=[x for A in c for x in A];k=Counter(E).most_common();k=[C for C in k if C[0]!=0][-1][0];W,l=j(c),j(c[0]);J=[]
-	for a in A(W):
-		for C in A(l):
-			if c[a][C]==k:J.append([a,C])
-	e=min([i[1]for i in J]);K=max([i[1]for i in J]);w=min([i[0]for i in J]);L=max([i[0]for i in J]);c=c[w:L+1];c=[A[e:K+1]for A in c];return c
+def p(g):
+ m,e=999,0
+ for c in range(10):
+  f=lambda r:r.count(c)
+  h=[*map(list,zip(*filter(f,zip(*list(filter(f,g))))))]
+  if h and(c:=len(h)*len(h[0]))<m:m,e=c,h
+ return e

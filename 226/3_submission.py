@@ -1,9 +1,5 @@
-def f(j,A,c,E):
- if not(0<=A<len(j)and 0<=c<len(j[0])):return
- if j[A][c]:return
- j[A][c]=E
- for k,W in[(0,-1),(0,1),(-1,0),(1,0)]:f(j,A+k,c+W,E)
 def p(j):
- l,J=len(j),len(j[0]);f(j,0,0,1)
- for a in range(4):f(j,l//2-1+a%2,J//2-1+a//2,2)
- f(j,l-1,J-1,3);return j
+ l,J=len(j),len(j[0])
+ def f(a,b,e):
+  if l>a>-1<b<J and j[a][b]<1:j[a][b]=e;[f(a+d,b,e)or f(a,b+d,e)for d in(-1,1)]
+ f(0,0,1);[f(l//2-1+(i&1),J//2-1+i//2,2)for i in range(4)];f(l-1,J-1,3);return j

@@ -1,1 +1,4 @@
-def p(j):A=(j[3][3]<1)*6;[j[r].__setitem__(slice(A,A+3),j[r][3:6][::-1])for r in range(3)];return j
+def p(g):
+	a=g[3][3]<1
+	for r in g[:3]:r[a*6:a*6+3]=r[3:6][::-1]
+	return g

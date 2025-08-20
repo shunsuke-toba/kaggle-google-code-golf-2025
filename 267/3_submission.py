@@ -1,1 +1,1 @@
-def p(j):A=j[6][0];c=[[r and A for r in X]for X in j];c[6][0]=0;return c
+def p(g):c=g[6][0];g[6][0]=0;return[[c*(j>0)for j in i]for i in g]

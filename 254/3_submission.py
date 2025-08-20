@@ -1,11 +1,1 @@
-def p(j,A=range):
-	c,E=len(j),len(j[0]);k=[0 for W in A(E)]
-	for W in A(E):
-		for l in A(c):
-			if j[l][W]>0:k[W]+=1
-			j[l][W]=0
-	J=min([W for W in k if W>0]);W=k.index(J)
-	for l in A(k[W]):j[-(l+1)][W]=2
-	W=k.index(max(k))
-	for l in A(k[W]):j[-(l+1)][W]=1
-	return j
+def p(j):a=[r.count(5)for r in zip(*j)];return[[r[i]>4and(a[i]==max(a)or(a[i]==min({*a}-{0}))*2)for i in range(9)]for r in j]

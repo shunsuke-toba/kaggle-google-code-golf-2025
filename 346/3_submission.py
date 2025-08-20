@@ -1,6 +1,4 @@
-from collections import*
-def p(j):
- for A in range(0,len(j)-3+1,1):
-  for c in range(0,len(j[0])-3+1,1):
-   E=j[A:A+3];E=[R[c:c+3]for R in E];k=[i for s in E for i in s];W=Counter(k).most_common(1)
-   if min(k)>0and W[0][1]==8:return[[E[1][1]]]
+def p(g,R=range):
+ for i in R(1,len(g)-1):
+  for j in R(1,len(g[0])-1):
+   if g[i][j]*all(g[i+u][j+v]==g[i-1][j-1]>0for u in(-1,0,1)for v in(-1,0,1)if u|v):return[[g[i][j]]]

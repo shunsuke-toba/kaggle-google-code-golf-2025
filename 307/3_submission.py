@@ -1,1 +1,1 @@
-def p(j):import numpy as A;return A.kron(j,A.ones((2,2))).tolist()
+p=lambda g:[list(sum(zip(r,r),()))for r in g for _ in(0,1)]

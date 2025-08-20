@@ -1,7 +1,3 @@
-def p(j,A=range):
- c=len(j)
- for E in A(c):
-  for k,W in zip(A(1,c,2),A(E+1,c,2)):
-   if j[0][E]:j[k][W]=4
-   if j[E][0]:j[W][k]=4
- return j
+def p(a):
+ for r,s in zip(a,a[1:]):s[1:]=map(lambda x,y:4*(x==y>0)or y,r,s[1:])
+ return a

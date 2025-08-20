@@ -1,8 +1,4 @@
 def p(j):
- for r in j:r[:]=[x or 4for x in r]
- for _ in range(64):
-  for i,r in enumerate(j):
-   for k in range(len(r)):
-    if r[k]==4and(i<1or j[i-1][k]<1):r[k]=0
-  j[:]=[list(r)for r in zip(*j[::-1])]
+ c=len(j);j=[[x or 4 for x in r]for r in j];d=1-c,0,-1,0
+ for z in range(9**5):r,q=z%97%c,z%89%c;j[r][q]*=j[r+d[z%4]][q+d[z%4-3]]*r*q*(r-c+1)+(j[r][q]==3)!=0
  return j

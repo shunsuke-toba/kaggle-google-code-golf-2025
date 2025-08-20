@@ -1,0 +1,12 @@
+{
+  "name": "task-visualizer",
+  "version": "1.0.0",
+  "description": "Google Code Golf 2025 Task Visualizer",
+  "scripts": {
+    "dev": "uv run python -m http.server 8080 --directory ..",
+    "serve": "uv run python -m http.server 8080 --directory .."
+  },
+  "keywords": ["arc-agi", "visualization"],
+  "author": "",
+  "license": "MIT"
+}

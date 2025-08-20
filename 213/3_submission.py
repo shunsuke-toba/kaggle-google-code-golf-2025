@@ -1,10 +1,1 @@
-def Z(j,A):return len(set([J[A]for J in j]))
-def p(c):
-	E=enumerate;k,W=len(c),len(c[0]);l=Z(c,0)+Z(c,-1)<len(set(c[0]))+len(set(c[-1]));c=[[J if J!=5 else 0 for J in J]for J in c]
-	for(J,a)in E(c):
-		for(C,e)in E(a):
-			if l:c[J][C]=max([c[0][C],c[-1][C]])
-			else:c[J][C]=max([c[J][0],c[J][-1]])
-	if l:c=[[J for J in J if J>0]for J in c];c=c[:len(c[0])]
-	else:c=[J for J in c if sum(J)>0];c=[J[:len(c)]for J in c]
-	return c
+p=lambda g:(lambda d,t:(s:=max(t,key=t.count))and([[v]*d for v in s[1]]if s[0]else[s[1]]*d))(len({j for r in g for j,x in enumerate(r)if x==5}),[(k,s)for k,a in((0,g),(1,zip(*g)))for b in a if(s:=[v for v in b if v])])

@@ -1,8 +1,8 @@
 def p(g):
- n=len(g);f=range;R=f(n)
- for r in R:
-  for c in R:
-   for s in f(3,n):
-    if r+s<=n>=c+s and all({g[r][c+i],g[r+s-1][c+i],g[r+i][c],g[r+i][c+s-1]}=={1}for i in f(s)):
-     for i in f(r+1,r+s-1):g[i][c+1:c+s-1]=[2|s%2*5]*(s-2)
+ r=range
+ for d in r(n:=len(g)):
+  for y in r(m:=n-d-1):
+   for x in r(m):
+    if{g[y][x+i]*g[y+d+1][x+i]*g[y+i][x]*g[y+i][x+d+1]for i in r(d+2)}=={1}:
+     for j in g[y+1:y+d+1]:j[x+1:x+d+1]=[2|d%2*5]*d
  return g

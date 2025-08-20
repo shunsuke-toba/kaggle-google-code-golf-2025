@@ -1,6 +1,1 @@
-def p(j):
- A=[o[:]for o in j]
- for c in range(5):
-  for E in range(5):
-   if j[E][c]==1:A[E][c]=0;A[4][c]=1
- return A
+def p(g):g[4],g[2]=[5-4*x for x in g[2]],[0]*5;return g

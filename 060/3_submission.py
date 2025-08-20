@@ -1,7 +1,1 @@
-def p(j):
-	A=len(j[0]);c=int((A-1)/2);E=enumerate
-	for(k,W)in E(j):
-		if max(W)>0:
-			for l in range(c):j[k][l]=j[k][0];j[k][A-l-1]=j[k][A-1]
-			j[k][c]=5
-	return j
+p=lambda g:[r[0]*r[10]and r[:1]*5+[5]+r[10:]*5 or r for r in g]

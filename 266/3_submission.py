@@ -1,7 +1,6 @@
-def p(j):
- A=sum(j,[]).index(2);c,E=divmod(A,5);j[c][E]=0
- if c*E:j[c-1][E-1]=3
- if c<2and E:j[c+1][E-1]=8
- if E<4and c:j[c-1][E+1]=6
- if c<2and E<4:j[c+1][E+1]=7
- return j
+def p(g):
+ i=sum(g,[]).index(2)
+ for a,b,c in(-1,-1,3),(-1,1,6),(1,-1,8),(1,1,7),(0,0,0):
+  y=i//5+a;x=i%5+b
+  if-1<y<3>-1<x<5:g[y][x]=c
+ return g

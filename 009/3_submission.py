@@ -1,25 +1,8 @@
-def p(g,R=range,L=len):
- X=[r[:]for r in g]
- n,m=L(g),L(g[0])
- C=g[0][2]
- for i in R(n):
-  for j in R(m):
-    if g[i][j]==C:
-     X[i][j]=C
-     g[i][j]=0
-    else:X[i][j]=0
- Z=[r[:]for r in g]
- for c in R(n):
-  P=[(i,j)for i in R(n)for j in R(m)if g[i][j]==c]
-  for i in R(len(P)):
-   for j in R(i+1,len(P)):
-    u,J=P[i]
-    N,p=P[j]
-    if u==N:
-     for x in R(min(J,p),max(J,p)+1):Z[u][x]=c
-    elif J==p:
-     for y in R(min(u,N),max(u,N)+1):Z[y][J]=c
- for i in R(n):
-  for j in R(m):
-   if X[i][j]>0:Z[i][j]=C
- return Z
+def p(g):
+ b=g[0][2]
+ for c in range(20):
+  for r in g:
+   t=[i for i,x in enumerate(r)if x==(d:=c//2)]
+   if d>0<len(t)==4:r[t[1]+1:t[-2]]=[b+(d+10-b)*(r[i]!=b) for i in range(t[1]+1,t[-2])]
+  g=list(map(list,zip(*g)))
+ return [[x%10 for x in r] for r in g]

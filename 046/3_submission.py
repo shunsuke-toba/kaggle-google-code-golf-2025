@@ -1,23 +1,31 @@
-def p(g,Z=range):
- R=len(g);C=len(g[0]);A=Z(R);z=[c for c in Z(C)if all(g[r][c]==0for r in A)];s=[];t=0
- for e in z+[C]:
-  if t<e:s.append([g[r][t:e]for r in A]);t=e+1
- if not s:return[[0]*C for _ in A]
- f=lambda x:[(r,c)for r in Z(len(x))for c in Z(len(x[0]))if x[r][c]==5]
- r=[s[0]]
- for i in Z(1,len(s)):
-  c=[x[:]for x in s[i]];p=f(r[-1]);q=f(c);p=next((a for a,b in p if b==len(r[-1][0])-1),None);l=next((a for a,b in q if b==0),None)
-  if p is not None and l is not None:
-   h=p-l
-   if h:n=[[0]*len(c[0])for _ in A];[n.__setitem__(r+h,c[r][:])for r in A if 0<=r+h<R];c=n
-  r.append(c)
- o=[[]for _ in A]
- for x in r:
-  for i in A:o[i].extend(x[i])
- n=[row[:]for row in o]
- for j in A:
-  for k in Z(len(o[0])):
-   if o[j][k]==5:
-    b=[o[j+d][k+e]for d,e in[(-1,0),(1,0),(0,-1),(0,1)]if 0<=j+d<R and 0<=k+e<len(o[0])and o[j+d][k+e]not in[0,5]]
-    n[j][k]=b[0]if b else 0
- return[[n[j][k]for k in Z(len(n[0]))if any(n[i][k]for i in A)]for j in A]
+def p(g):
+ import random
+ def s(g):
+  z=[i for i in range(len(g[0]))if all(g[j][i]==0for j in range(3))]+[len(g[0])]
+  l=0
+  for r in z:
+   n=5
+   for _ in[1]*2:
+    for i in range(3):
+     for j in range(l,r):
+      if g[i][j]%5:n=g[i][j]
+      elif g[i][j]==5:g[i][j]=n
+   l=r+1
+  p=0;S=0;R=[[0]*(len(g[0])-len(z)+1)for _ in range(3)]
+  for j in range(len(g[0])):
+   if j in z:S=random.randint(0,2);continue
+   for i in range(3):R[i][p]=g[(i+S)%3][j]
+   p+=1
+  y=1
+  for j in range(p):
+   if R[0][j]and R[1][j]==0and R[2][j]:return
+   y1,y2=2,0
+   for i in range(3):
+    if R[i][j]:y1,y2=min(y1,i),max(y2,i)
+   if y1==y:y=y2
+   elif y2==y:y=y1
+   else:return
+  return R
+ for _ in[1]*999:
+  G=[[g[i][j]for j in range(len(g[0]))]for i in range(3)];r=s(G)
+  if r:return r

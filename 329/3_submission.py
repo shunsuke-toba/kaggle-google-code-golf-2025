@@ -1,4 +1,1 @@
-def p(j):
-	A=len(j[0])//2;c=[[0 for A in A]for A in j]
-	for E in range(len(j)):c[E][A]=j[E][A]
-	return c
+p=lambda g:[[0]*n+[r[n]]+[0]*n for n in[len(g)//2]for r in g]

@@ -1,1 +1,1 @@
-p=lambda j:(A:=sum(c>0for r in j for c in r),[sum(([x]*A for x in r),[])for r in j for _ in range(A)])[1]
+def p(g):n=9-str(g).count('0');r=range(3*n);return[[g[i//n][j//n]for j in r]for i in r]

@@ -1,1 +1,1 @@
-def p(g):q=range;c=sum(all(g[i+k][j+l]==1for k in q(2)for l in q(2))for i in q(8)for j in q(8));return[[1if i<c else 0for i in q(5)]]
+p=lambda g:[([1]*(sum(x*y==1 for r in g for x,y in zip(r,r[1:]))//2)+[0]*5)[:5]]

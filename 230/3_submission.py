@@ -1,10 +1,6 @@
-def p(j):
- A,c=len(j),len(j[0])
- for E in range(A-1):
-  for k in range(c-1):
-   if j[E][k]==j[E][k+1]==j[E+1][k]==j[E+1][k+1]==5:
-    if E>0and k>0:j[E-1][k-1]=1
-    if E>0and k+2<c:j[E-1][k+2]=2
-    if E+2<A and k>0:j[E+2][k-1]=3
-    if E+2<A and k+2<c:j[E+2][k+2]=4
- return j
+def p(g,R=range):
+ for y in R(len(g)-3):
+  a,b,c,d=g[y:y+4]
+  for x in R(len(g[0])-3):
+   if b[x+1:x+3]==c[x+1:x+3]==[5]*2:a[x:x+4:3]=1,2;d[x:x+4:3]=3,4
+ return g

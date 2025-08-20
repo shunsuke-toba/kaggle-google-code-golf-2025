@@ -1,6 +1,4 @@
-def p(j,A=range):
- c=len(j);E=len(j[0]);p=[J[:]for J in j]
- for k in A(E):
-  W=[J for J in A(c)if j[J][k]];l=len(W)//2
-  for J in A(l):p[W[-1-J]][k]=8
- return p
+def p(g):
+ for j in 1,3,5,7:
+  for r in g[(2-sum([*zip(*g)][j]))//4:]:r[j]=8
+ return g

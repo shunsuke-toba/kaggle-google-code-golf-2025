@@ -1,12 +1,7 @@
-def p(j,A=range):
- c=[r[:]for r in j]
- for E in A(1,10):
-  k=[(W,l)for W in A(len(j))for l in A(len(j[0]))if j[W][l]==E]
-  for W in A(len(k)):
-   for l in A(W+1,len(k)):
-    J,a=k[W];C,e=k[l]
-    if J==C:
-     for K in A(min(a,e),max(a,e)+1):c[J][K]=E
-    elif a==e:
-     for w in A(min(J,C),max(J,C)+1):c[w][a]=E
- return c
+def p(g):
+ for _ in g,g:
+  for r in g:
+   t=[i for i,x in enumerate(r)if x==8]
+   for a,b in zip(t,t[1:]):r[a+1:b]=[9]*(b+~a)
+  g=list(map(list,zip(*g)))
+ return[[x&8for x in r]for r in g]

@@ -1,6 +1,6 @@
-def p(j):
-	A=range;c=[J[:]for J in j];E=j[0][0]==j[0][9];k,W=(j[0][0],j[9][0])if E else(j[0][0],j[0][9]);l=next(J for a in j for J in a if J and J not in[k,W])
-	for J in A(10):
-		for a in A(10):
-			if j[J][a]==l:C=(J,9-J)if E else(a,9-a);c[J][a]=k if C[0]<C[1]else W
-	return c
+def p(g):
+ a=g[0][0];t=a==g[0][1];b=g[9*t][9-9*t];r=range(10)
+ for y in r:
+  for x in r:
+   if g[y][x]and 0<(x,y)[t]<9:g[y][x]=(a,b)[(x>4,y>4)[t]]
+ return g

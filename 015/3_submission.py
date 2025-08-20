@@ -1,11 +1,8 @@
-L=len
-R=range
 def p(g):
- h,w=L(g),L(g[0])
- for r in R(h):
-  for c in R(w):
-   if g[r][c]==2:
-    for i,j in[[1,1],[-1,-1],[-1,1],[1,-1]]:g[i+r][j+c]=4
-   if g[r][c]==1:
-    for i,j in[[0,1],[0,-1],[-1,0],[1,0]]:g[i+r][j+c]=7
+ for y,r in enumerate(g):
+  for x,v in enumerate(r):
+   if v==2:
+    for i in 1,-1:g[y+i][x+i]=g[y+i][x-i]=4
+   if v==1:
+    for i in 1,-1:g[y+i][x]=g[y][x+i]=7
  return g

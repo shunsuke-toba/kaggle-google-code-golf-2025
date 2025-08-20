@@ -1,0 +1,1 @@
+p=lambda g:[[g[~i][~j]for j in range(16)if g[i][j]==3]for i in range(16)if 3in g[i]]

@@ -1,17 +1,9 @@
 def p(g):
- H,W=len(g),len(g[0]);G=[(r,j)for r in range(H)for j in range(W)if g[r][j]==5];R=[[0]*W for _ in[0]*H]
- if G:
-  a=min(r for r,j in G);b=max(r for r,j in G);c=min(j for r,j in G);d=max(j for r,j in G)
-  for r in range(a,b+1):
-   for j in range(c,d+1):R[r][j]=5
-  for j in range(c,d+1):
-   n=sum(0<g[r][j]!=5 for r in range(a))
-   for i in range(n):R[a+~i][j]=5
-   n=sum(0<g[r][j]!=5 for r in range(b+1,H))
-   for i in range(n):R[b-~i][j]=5
-  for r in range(a,b+1):
-   n=sum(0<g[r][j]!=5 for j in range(c))
-   for i in range(n):R[r][c+~i]=5
-   n=sum(0<g[r][j]!=5 for j in range(d+1,W))
-   for i in range(n):R[r][d-~i]=5
- return R
+ f=lambda r:list(map(list,zip(*r)))
+ if T:=all(any(r)for r in g):g=f(g)
+ for z in range(9**5):
+  x,y=z//14%12+1,z%14
+  if g[x][y]>0:g[x][y]=5
+  else:g[x][y]=g[i:=(x+1-2*(x<7))][y];g[i][y]=0
+ if T:g=f(g)
+ return g

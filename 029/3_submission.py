@@ -1,7 +1,8 @@
-def p(g):
- h,w=len(g),len(g[0])
- for v in{*sum(g,[])}-{0}:
-  t=[(r,c)for r in range(h)for c in range(w)if g[r][c]==v]
-  if len(t)>3:
-   a=min(p[0]for p in t);b=max(p[0]for p in t);c=min(p[1]for p in t);d=max(p[1]for p in t)
-   if g[a][c]==v==g[a][d]==g[b][c]==g[b][d]and all(g[a][i]==v==g[b][i]for i in range(c,d+1))and all(g[i][c]==v==g[i][d]for i in range(a,b+1)):return[[g[r][c]for c in range(c+1,d)]for r in range(a+1,b)]
+def p(g,R=range,E=enumerate):
+ d={}
+ for i,r in E(g):
+  for j,v in E(r):
+   x,y,X,Y=d.get(v,(i,j,i,j));d[v]=min(x,i),min(y,j),max(X,i),max(Y,j)
+ for v,(a,c,b,d) in d.items():
+  if b-a>1 and d-c>1 and all(g[a][k]==v==g[b][k]for k in R(c,d+1))and all(g[k][c]==v==g[k][d]for k in R(a,b+1)):
+   return[r[c+1:d]for r in g[a+1:b]]

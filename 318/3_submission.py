@@ -1,1 +1,1 @@
-def p(j):return[[3 if j[r][c]or j[r+5][c]else 0 for c in range(4)]for r in range(4)]
+p=lambda j:[[x+y and 3for x,y in zip(a,b)]for a,b in zip(j,j[5:])]

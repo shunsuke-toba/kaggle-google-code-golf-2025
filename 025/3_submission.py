@@ -1,12 +1,16 @@
-def p(g):
- h,w=len(g),len(g[0]);o=[r[:]for r in g]
- for v in range(1,10):
-  l=[sum(g[i][j]==v for i in range(h))for j in range(w)];c=[sum(g[i][j]==v for j in range(w))for i in range(h)]
-  for y in range(h):
-   for x in range(w):
-    if g[y][x]==v and c[y]<w and l[x]<h:
-     o[y][x]=0
-     for d,e in(0,1),(1,0),(0,-1),(-1,0):
-      a,b=y,x
-      while-1<a+d<h and-1<b+e<w:a+=d;b+=e;o[a][b]==v and(c[a]==w or l[b]==h)and exec('o[a-d][b-e]=v')
+def p(g,E=enumerate):
+ w=len(g[0]);t=[*zip(*g)];o=[[0]*w for _ in g]
+ for c in{*sum(g,[])}-{0}:
+  for x,col in E(t):
+   if col.count(c)==len(g):
+    for y,r in E(g):
+     o[y][x]=c
+     if c in r[:x]:o[y][x-1]=c
+     if c in r[x+1:]:o[y][x+1]=c
+  for y,r in E(g):
+   if r.count(c)==w:
+    o[y]=[c]*w
+    for x,col in E(t):
+     if c in col[:y]:o[y-1][x]=c
+     if c in col[y+1:]:o[y+1][x]=c
  return o

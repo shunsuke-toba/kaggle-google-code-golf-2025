@@ -1,6 +1,6 @@
-def p(j,A=enumerate):
- for c,E in A(j):
-  for k,W in A(E):
-   for l,J in(c+1,k),(c-1,k),(c,k+1),(c,k-1):
-    if W==2and 0<=l<len(j)and 0<=J<len(E)and j[l][J]==3:j[c][k]=0;j[l][J]=8
- return j
+def p(g,e=enumerate):
+ for i,r in e(g):
+  for k,v in e(r):
+   for a,b in(i+1,k),(i,k+1):
+    if(len(g)>a)&(b<len(r))and g[a][b]*v==6:r[k],g[a][b]=8*(v>2),8*(v<3)
+ return g

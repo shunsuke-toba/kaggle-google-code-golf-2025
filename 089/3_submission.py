@@ -1,36 +1,30 @@
 def p(g):
- H,W=len(g),len(g[0]);v=[[0]*W for _ in[0]*H];P=[];M=[]
+ H,W=len(g),len(g[0]);v=[[0]*W for _ in g];P=[];M=[]
  def f(i,j):
-  if min(i,j)<0 or i>=H or j>=W or v[i][j]or g[i][j]<1:return[]
+  if min(i,j,H-1-i,W-1-j)<0 or v[i][j]or g[i][j]<1:return[]
   v[i][j]=1;c=[(i,j)]
   for a in-1,0,1:
    for b in-1,0,1:a|b and c.extend(f(i+a,j+b))
   return c
- for k in range(H*W):
-  i,j=divmod(k,W)
-  if v[i][j]<1 and g[i][j]:
-   c=f(i,j);l=len(c)
-   if l==1:g[i][j]in[2,3]and M.append((i,j,g[i][j]))
-   elif l>1:
-    I=[x[0]for x in c];J=[x[1]for x in c];h=max(I)-min(I)+1;w=max(J)-min(J)+1;p=[[0]*w for _ in[0]*h];r=s=R=S=0
-    for x,y in c:
-     p[x-min(I)][y-min(J)]=V=g[x][y]
-     if V==2:r=1;R=x-min(I),y-min(J)
-     if V==3:s=1;S=x-min(I),y-min(J)
-    P+=[(p,r,s,R,S)]
- r=[x[:]for x in g]
+ for i in range(H):
+  for j in range(W):
+   if (V:=g[i][j])>0>=v[i][j]:
+    c=f(i,j)
+    if len(c)<2<=(n:=V)<4:M+=[(i,j,n)]
+    else:
+     I,J=zip(*c);A=min(I);B=min(J);h=max(I)-A+1;w=max(J)-B+1;p=[[0]*w for _ in[0]*h];R=S=0
+     for x,y in c:
+      a=x-A;b=y-B;p[a][b]=V=g[x][y]
+      if V==2:R=a,b
+      if V==3:S=a,b
+     P+=[(p,R,S,h,w)]
  for i,j,c in M:
-  for p,q,t,R,S in P:
-   if c==2 and q and R:
-    h=len(p);w=len(p[0]);a,b=R;b=w+~b;o=i-a;u=j-b
+  for p,R,S,h,w in P:
+   d=c<3;T=(S,R)[d]
+   if T:
+    a,b=T;o=i-a;u=j-b+(2*b-w+1)*d
     for k in range(h*w):
-     x,y=divmod(k,w);V=p[x][w+~y]
-     if V:n=o+x;m=u+y;0<=n<H and 0<=m<W and exec("r[n][m]=V")
+     x,y=divmod(k,w);V=p[x][y+(w-2*y-1)*d]
+     if V:n=o+x;m=u+y;H>n>=0 and W>m>=0 and exec("g[n][m]=V")
     break
-   elif c==3 and t and S:
-    h=len(p);w=len(p[0]);a,b=S;o=i-a;u=j-b
-    for k in range(h*w):
-     x,y=divmod(k,w);V=p[x][y]
-     if V:n=o+x;m=u+y;0<=n<H and 0<=m<W and exec("r[n][m]=V")
-    break
- return r
+ return g
