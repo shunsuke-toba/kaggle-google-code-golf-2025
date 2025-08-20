@@ -1,2 +1,1 @@
-from numpy import*
-def p(g):g=array(g);s=sum(~all(g-2,1))-2;y,x=where(g%2+g//3);u,v=y.min(),x.min();h,w=ptp(y)+1,ptp(x)+1;return pad(kron(g[u:u+h,v:v+w],ones((s//h,s//w))),1,constant_values=2).tolist()
+def p(g):s=sum(2in R for R in g)-2;Y,X=zip(*[(i,j)for i,R in enumerate(g)for j,v in enumerate(R)if v%2+v//3]);a,b=min(Y),min(X);k,l=s//(-~max(Y)-a),s//(-~max(X)-b);R=range(s);M=[2]*(s+2);return[M,*[[2]+[g[a+i//k][b+j//l]for j in R]+[2]for i in R],M]
