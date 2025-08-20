@@ -1,1 +1,1 @@
-from numpy import*;p=lambda g:kron(g,[[1]*3]*3).tolist()
+p=lambda g,r=range(9):[[g[i//3][j//3]for j in r]for i in r]
