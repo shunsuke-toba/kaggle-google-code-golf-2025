@@ -1,1 +1,1 @@
-p=lambda g:(lambda a,b:[[next(v for v in(g[i][~j],g[~i][j],g[~i][~j])if v-1)for j in range(b,b+5)]for i in range(a,a+5)])(*next((i,j)for i,r in enumerate(g)for j,c in enumerate(r)if c==1))
+p=lambda g:(a:=sum(g,[]).index(1))and[[min({g[i][~j],g[~i][j],g[~i][~j]}-{1})for j in range(a%24,a%24+5)]for i in range(a//24,a//24+5)]

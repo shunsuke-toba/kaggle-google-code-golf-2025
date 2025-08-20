@@ -1,1 +1,1 @@
-p=lambda g:[[r] for r in *zip(*filter(any,zip(*filter(any,g))))]
+p=lambda g:[*map(list,zip(*filter(any,zip(*filter(any,g)))))]
