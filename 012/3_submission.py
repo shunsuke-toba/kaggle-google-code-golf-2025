@@ -1,1 +1,1 @@
-def p(j,A=range(-2,3),c=enumerate):k=[*map(list,j)];[k[I+D].__setitem__(C+F,[B[C-1],H][D*D==F*F])for I,B in c(j)for C,H in c(B)if H and B[C-1]*B[C+1]for D in A for F in A if D*D==F*F or D*F==0];return k
+def p(j,A=range(-2,3),c=enumerate):k=[*map(list,j)];[k[i+d].__setitem__(x+f,[b[x-1],h][e])for i,b in c(j)for x,h in c(b)if h!=0<b[x-1]*b[x+1]for d in A for f in A if(e:=d*d==f*f)or d*f==0];return k
