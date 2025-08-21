@@ -17,6 +17,5 @@ def p(g):
       if(v:=g[r+t//W][o+t%W]):n+=1;m+=v!=g[e+t//W//s][i+t%W//s]
     if m<1<n-z+1:z=n;k=s;P=r,o
  r,o=P
- for q in range(h*k):
-  for p in range(w*k):g[r+q][o+p]=g[e+q//k][i+p//k]
- return[g[r][c:d+1]for r in range(a,b+1)]
+ for q in range(h*k):g[r+q][o:o+w*k]=[g[e+q//k][i+p//k]for p in range(w*k)]
+ return[r[c:d+1]for r in g[a:b+1]]
