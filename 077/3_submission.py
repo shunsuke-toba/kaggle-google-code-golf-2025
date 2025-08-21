@@ -1,14 +1,10 @@
 def p(g):
- s={(i,j)for i,r in enumerate(g)for j,x in enumerate(r)if x==2}
+ s={(i,j)for i,r in enumerate(g)for j,v in enumerate(r)if v==2}
  while s:
-  t=[s.pop()];c=[]
+  t=[s.pop()];y,x=t[0];a=b=y;c=d=x
   while t:
-   y,x=t.pop();c+=[(y,x)]
-   for u in range(y-2,y+3):
-    for v in range(x-2,x+3):
-     if(u,v)in s:s.remove((u,v));t+=[(u,v)]
-  U,V=zip(*c)
-  for r in g[min(U):max(U)+1]:
-   for x in range(min(V),max(V)+1):
-    if r[x]-2:r[x]=4
+   y,x=t.pop()
+   a=min(a,y);b=max(b,y);c=min(c,x);d=max(d,x)
+   n=s&{(y-2+i//5,x-2+i%5)for i in range(25)};t+=n;s-=n
+  for r in g[a:b+1]:r[c:d+1]=[4-2*(x==2)for x in r[c:d+1]]
  return g
