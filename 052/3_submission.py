@@ -1,1 +1,1 @@
-p=lambda j:[[5]*3if len(set(r))==1else[0]*3for r in j]
+p=lambda g:[[5*(r==r[:1]*3)]*3for r in g]
