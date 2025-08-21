@@ -1,6 +1,4 @@
 def p(g):
- for I in 0,4,8:
-  for J in 0,4,8:
-   b=[r[J:J+3]for r in g[I:I+3]]
-   if 8 in sum(b,[]):continue
-   return [[5 if i%4==3 or j%4==3 else b[i//4][j//4]for j in range(11)]for i in range(11)]
+ for i in 0,4,8:
+  for j in 0,4,8:
+   if 8 not in sum([r[j:j+3]for r in g[i:i+3]],[]):R=range(11);return[[5*(x%4>2 or y%4>2)or g[i+x//4][j+y//4]for y in R]for x in R]
