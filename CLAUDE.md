@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## あなたの目的
 
 - 0_input.jsonを読む。（pattern: ""train"", path: "005/0_input.json", output_mode: "content", head_limit: 5）のようにする。
+- 0_gen.pyを読んで問題の性質を知る。
 - testcasesや1_solution.mdを参考にして、2_plain_code.pyを実装する。
     - 日本語のコメントを含むファイルを作成する際は、エンコーディングがUTF-8であることを確認する。(重要)
     - importは使ってはいけない。

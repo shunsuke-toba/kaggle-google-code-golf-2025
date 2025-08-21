@@ -9,6 +9,7 @@
 - Root: utility scripts and docs — `verify.py` (local validator), `generate_submission.py` (builds zip), `list_unsolved.py` (quick status), `README.md`, `CLAUDE.md`.
 - Tasks: numbered folders `001`–`400`, each containing:
   - `0_input.json`: ARC-AGI/ARC-GEN examples.
+  - `0_gen.py`: Python script to generate test cases.
   - `1_solution.md`: reasoning and approach notes.
   - `2_plain_code.py`: clear, readable reference solution.
   - `3_submission.py`: code-golfed solution used for submission.

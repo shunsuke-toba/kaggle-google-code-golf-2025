@@ -7,6 +7,7 @@ google-code-golf-2025
 ├── XXX（001~400）
 │   ├── testcases（テストケースのフォルダ）
 │   ├── 0_input.json（入力JSON）
+│   ├── 0_gen.py（テストケースの生成方法が書かれたPythonコード）
 │   ├── 1_solution.md（問題の考察ポイントや解くための手続きを自然言語で記述）
 │   ├── 2_plain_code.py（平易なPythonで記載されたコード）
 │   └── 3_submission.py（コードゴルフ用のコード）
