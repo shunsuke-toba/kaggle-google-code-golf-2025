@@ -1,4 +1,5 @@
-def p(j,A=enumerate):
- c,E=zip(*((i,j)for i,r in A(j)for j,W in A(r)if W))
- for k,W in((0,0),(-1,0),(1,0),(0,-1),(0,1)):j[sum(c)//2+k][sum(E)//2+W]=3
- return j
+def p(g,A=enumerate):
+ y,x=zip(*((i,j)for i,r in A(g)for j,v in A(r)if v))
+ y=sum(y)>>1;x=sum(x)>>1
+ for k in-1,0,1:g[y+k][x]=g[y][x+k]=3
+ return g
