@@ -1,6 +1,5 @@
-def p(j,e=enumerate):
- o=[[0]*len(j[0])for _ in j]
- for v in {*sum(j,[])}-{0}:
-  k=[(r,c)for r,R in e(j)for c,V in e(R)if V==v];w,l=map(max,zip(*k))
-  for r,c in k:o[r][c+(r<w)*(c<l)]=v
- return o
+def p(g,e=enumerate):
+ for v in {*sum(g,[])}-{0}:
+  k=[(r,c)for r,R in e(g)for c,b in e(R)if b==v][::-1];r,c=k[0]
+  for R,C in k:g[R][C]=0;g[R][C+(R<r)*(C<c)]=v
+ return g
