@@ -1,7 +1,7 @@
 def p(g):
- for _ in g,g:
+ for _ in 0,1:
   for r in g:
-   t=[i for i,x in enumerate(r)if x>7]
-   if t[1:]:r[t[0]+1:t[1]]=[3]*(t[1]+~t[0])
-  g=list(map(list,zip(*g)))
+   try:a=r.index(8);b=r.index(8,a+1);r[a+1:b]=[3]*(b+~a)
+   except:0
+  g=[*map(list,zip(*g))]
  return g
