@@ -1,6 +1,1 @@
-def p(a):
-	b={}
-	for r in a:
-		for i in range(9):
-			if r[i]:r[i]=b.setdefault(i,-~len(b))
-	return a
+def p(a):b={};a[:]=[[r[i]and b.setdefault(i,-~len(b))for i in range(9)]for r in a];return a
