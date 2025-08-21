@@ -1,18 +1,13 @@
 def p(g):
- d={}
- for k in range(100):
-  i=k//10;j=k%10;r=g[i]
-  if r[j]==3>g[i-1][j]*(i>0)and 3>r[j-1]*(j>0):
-   n=1
-   while r[j+n:j+n+1]==[3]:n+=1
-   d[i,j]=n
- for (i,j),n in d.items():
-  for s in 1,-1:
-   if(i-n,j-s*n)not in d and(i+n,j+s*n)in d:
-    a=i;b=j
-    while(a+n,b+s*n)in d:a+=n;b+=s*n
-    for u in range(n*n):
-     for P,Q in((i-n+u//n,b+s*n+u%n),(a+n+u//n,j-s*n+u%n)):
-      if-1<P<10>Q>-1:g[P][Q]=8
-    break
+ for r,a in enumerate(g):
+  for c in range(10):
+   if a[c]==3 and(r<1 or g[r-1][c]-3)and(c<1 or a[c-1]-3):
+    k=1
+    while c+k<10 and a[c+k]==3:k+=1
+    for C in c-k,c+k:
+     if 0<=C<10>r+k and g[r+k][C]==3:
+      for R,C in((r-k,2*C-c),(r+2*k,2*c-C)):
+       for i in range(k*k):
+        x=R+i//k;y=C+i%k
+        if 0<=x<10>y>=0:g[x][y]=8
  return g
