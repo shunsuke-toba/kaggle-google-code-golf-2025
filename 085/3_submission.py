@@ -1,7 +1,5 @@
-def p(g,R=range):
- h=len(g)
- for y in R(1,h-1):
-  for x in R(1,len(g[0])):
-   c=g[y][x]
-   if c and g[y][x-1]==c and g[y-1][x]==c==g[y+1][x]:g[y][x]=0
+def p(g,r=range):
+ for a,b,c in zip(g,g[1:],g[2:]):
+  for i in r(len(b)-1):
+   if a[i]==b[i]==c[i]==b[i+1]:b[i+1]=0
  return g
