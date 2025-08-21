@@ -1,1 +1,1 @@
-p=lambda g:[[x+2*(x==0)*any(r)*any(s[i] for s in g)for i,x in enumerate(r)]for r in g]
+p=lambda g:[[max(2*any(r)*any(c),c[0])for c in zip(r,*g)]for r in g]
