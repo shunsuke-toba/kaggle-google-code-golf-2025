@@ -1,11 +1,5 @@
 def p(g):
- for k,c in enumerate(sum(g,[])):
-  if c%8:
-   i=k//10;j=k%10
-   for a,b in(1,0),(0,1),(-1,0),(0,-1):
-    x=i+a;y=j+b
-    while 9>=x>=0<=y<=9 and g[x][y]<1:x+=a;y+=b
-    try:
-     if g[x][y]==8:g[x][y]=c
-    except:0
+ l=g[3].index(8);b=2+sum(8 in r for r in g)
+ for k in range(100):
+  if x:=g[i:=k//10][j:=k%10]:g[max(min(i,b),3)][max(min(j,5),l)]=x
  return g
