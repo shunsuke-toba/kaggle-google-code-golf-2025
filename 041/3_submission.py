@@ -1,6 +1,3 @@
-def p(j,A=0):
- for c in j:
-  for E,k in enumerate(c):
-   if k:A=(not A)*k
-   else:c[E]=A
- return j
+def p(g):
+ for r in g:a=0;r[:]=[x and(a:=a-x and x)or x or a for x in r]
+ return g
