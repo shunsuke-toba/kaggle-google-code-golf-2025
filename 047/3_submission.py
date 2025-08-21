@@ -1,1 +1,1 @@
-p=lambda g:(r:=[{*a}-{0}for a in g],c:=[{*a}-{0}for a in zip(*g)],[[(s:=r[i]|c[j])and[2,sum(s)][len(s)<2]or 0 for j in range(len(c))]for i in range(len(r))])[2]
+p=lambda g:[[(sum(r)|sum(c))%13for c in zip(*g)]for r in g]
