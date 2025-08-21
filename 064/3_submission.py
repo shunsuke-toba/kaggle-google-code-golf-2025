@@ -1,8 +1,8 @@
-def p(g,E=enumerate):
- C=sorted({*(s:=sum(g,[]))},key=s.count,reverse=True)
- for _ in [0]*4:
+def p(g):
+ s=sum(g,[]);c=sorted({*s},key=s.count,reverse=True);b,d=c[1:3]
+ for _ in[0]*4:
   for r in g:
-   a,b=[i for i,x in E(r)if x==C[2]],[i for i,x in E(r)if x==C[1]]
-   if a and b and a[0]<b[0]:r[a[0]:b[0]]=[C[2]]*(b[0]-a[0])
+   try:i=r.index(d);j=r.index(b);r[i:j]=[d]*(j-i)
+   except:0
   g=[*map(list,zip(*g[::-1]))]
  return g
