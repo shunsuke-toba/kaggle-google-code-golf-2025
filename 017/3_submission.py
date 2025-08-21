@@ -1,6 +1,6 @@
 def p(g):
- n=len(g)
- for s in range(1,n+1):
-  d={}
-  if all((v:=g[k//n][k%n])<1 or d.setdefault((k//n%s,k%n%s),v)==v for k in range(n*n)):
-   return[[d[i%s,j%s]for j in range(n)]for i in range(n)]
+ q=range(n:=len(g));s=0
+ while s<n:
+  s+=1;d={}
+  if all((v:=g[i][j])<1 or d.setdefault((i%s,j%s),v)==v for j in q for i in q):
+   return[[d[i%s,j%s]for j in q]for i in q]
