@@ -1,13 +1,10 @@
 def p(g):
- n=len(g);z=[*map(list,g)]
+ n=len(g:=eval(str(h:=g)))
  for t in range(n*n):
-  y,x=divmod(t,n)
-  if g[y][x] and g[y-1][x]==g[y][x-1]==0:
-   b=g[y][x];s=1
-   while g[y][x+s]==b:s+=1
-   a=g[y+1][x+1];B=y+s-1;E=x+s-1
-   for i in range(y-s+2,B+s-1):
-    for j in range(x-s+2,E+s-1):
-     if y<=i<=B or x<=j<=E:
-      z[i][j]=[b,a][y<=i<=B and x<=j<=E and (i in(y,B) or j in(x,E))]
- return z
+  y,x=divmod(t,n);b=h[y][x]
+  if b>0==h[y-1][x]==h[y][x-1]:
+   s=h[y][x:].index(0);a=h[y+1][x+1];Y=y+s;X=x+s;S=s-2
+   for r in g[y-S:Y+S]:r[x:X]=[b]*s
+   for r in g[y:Y]:r[x-S:X+S]=[b]*(S*3+2)
+   for i in range(s):g[y][x+i]=g[Y-1][x+i]=g[y+i][x]=g[y+i][X-1]=a
+ return g
