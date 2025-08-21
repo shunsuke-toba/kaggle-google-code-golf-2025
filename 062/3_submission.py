@@ -1,16 +1,11 @@
 def p(g):
- d={}
- for y,r in enumerate(g):
-  for x,v in enumerate(r):
-   if v:d.setdefault(v,[]).append((y,x))
- a,b=sorted(d.values(),key=len);c=g[b[0][0]][b[0][1]]
- y,x=zip(*b);Y=min(y);Z=max(y);X=min(x);W=max(x)
- y,x=zip(*a);A=min(y);B=max(y);C=min(x)
- o=[[3]*len(g[0])for _ in g]
- if Z>=A<=B>=Y:
-  L=2*W+1 if C>W else 2*X-1
-  for y,x in b:o[y][x]=o[y][L-x]=c
- else:
-  L=2*Z+1 if A>Z else 2*Y-1
-  for y,x in b:o[y][x]=o[L-y][x]=c
+ o=[[3]*10 for _ in g]
+ for i,r in enumerate(g):
+  for j,v in enumerate(r):
+   if v==2:x,y=i,j
+   elif v and v-2:k=v
+ b=k in g[x][y-1:y+2];a=b and y+(g[x][y-1]!=k) or x+(g[x-1][y]!=k)
+ for i,r in enumerate(g):
+  for j,v in enumerate(r):
+   if v==k:o[i][j]=o[b and i or 2*a-i-1][b and 2*a-j-1 or j]=k
  return o
