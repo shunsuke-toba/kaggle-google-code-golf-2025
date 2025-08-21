@@ -7,10 +7,9 @@ def p(g):
    else:c+=1
    h=max(h,c)
   R=range(h)
-  F=p[0];b=[*map(list,g[F:F+h])]
+  b=[*map(list,g[p[0]:p[0]+h])]
   for s in p[1:]:
-   r=s+o
-   if r<0 or r+h>H:return
+   if 0>(r:=s+o) or r+h>H:return
    for i in range(W+~t,-1,-1):
     if i+t+1<W and sum(sum(g[r+j][i+t:i+t+2])for j in R):continue
     T=range(t);a=sum(g[r+j][i+x]<<(x*h+j)for j in R for x in T)
@@ -28,4 +27,4 @@ def p(g):
  for t in 3,2:
   for m in 1,0:
    for o in 0,-1:
-    if v:=f(t,o,m,[*map(list,u)]):return v
+    if f(t,o,m,a:=[*map(list,u)]):return a
