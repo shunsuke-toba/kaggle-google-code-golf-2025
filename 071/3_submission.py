@@ -1,12 +1,10 @@
-def p(g,F=filter):
- for c in{*sum(g,[])}:
-  f=lambda r:r.count(c)
-  h=[*map(list,zip(*F(f,zip(*list(F(f,g))))))]
-  if sum(h,[]).count(c)==len(h)*len(h[0]):e=c
+def p(g,E=enumerate):
+ a=sum(g,[])
+ for b in{*a}-{0}:
+  if a.count(b)==sum(b in r for r in g)*sum(b in c for c in zip(*g)):break
+ r=next(r for r in g if sum(r)and b not in r)
+ t=[i for i,x in E(r)if x];s=t[0]+t[-1]
  for r in g:
-  if r.count(e)or sum(r)<1:continue
-  M=min(z:=[i for i,x in enumerate(r)if x>0])+max(z)
- for z in range(256):
-  x,y=z//16,z%16
-  if 0<=M-y<16and (c:=g[x][y])!=e:g[x][M-y]=c
+  for c,x in E(r):
+   if x==b:r[c]=r[s-c]
  return g
