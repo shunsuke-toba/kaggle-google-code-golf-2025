@@ -1,1 +1,1 @@
-p=lambda g,r=range(9):[[g[i//3][j//3]for j in r]for i in r]
+p=lambda g:[[*sum(zip(r,r,r),())]for r in g for _ in r]
