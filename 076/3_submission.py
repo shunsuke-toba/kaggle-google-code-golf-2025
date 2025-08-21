@@ -13,7 +13,8 @@ def p(g):
     for y in r(H+1-L(t)):
      for x in r(W+1-L(t[0])):
       if all(g[y+i][x+j]==u for i,R in e(t) for j,u in e(R) if u&1<1<u):
-       for i,R in e(t):G=g[y+i];G[x:x+L(R)]=[G[j]or u for j,u in e(R,x)]
+       for i,R in e(t):
+        for j,u in e(R):g[y+i][x+j]|=u
     t=[*zip(*t[::-1])]
     if _==3:t=t[::-1]
    return g
