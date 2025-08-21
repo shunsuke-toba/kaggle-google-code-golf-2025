@@ -1,12 +1,10 @@
-def f(j,A,c,E,k):
- W=j[A][c]
- if W==0:return
- if not sum(j[A][c+i]==W for i in(1,-1))==sum(j[A+i][c]==W for i in(1,-1))==1:return
- l,J,p,a=2*(j[A+1][c]==W)-1,2*(j[A][c+1]==W)-1,c,A
- if j[A+l][c+J]==W:return
- while 1<=p<k-1and 1<=a<E-1:a-=l;p-=J;j[a][p]=j[A+2*l][c+2*J]
-def p(j):
- E,k=len(j),len(j[0])
- for A in range(1,E-1):
-  for c in range(1,k-1):f(j,A,c,E,k)
- return j
+def p(g):
+ n,m=len(g)-1,len(g[0])-1
+ for i in range(1,n):
+  for j in range(1,m):
+   if(c:=g[i][j]):
+    d=(g[i+1][j]==c)-(g[i-1][j]==c);e=(g[i][j+1]==c)-(g[i][j-1]==c)
+    if d*e and g[i+d][j+e]^c:
+     y,x=i,j
+     while 0<y<n>0<x<m:y-=d;x-=e;g[y][x]=g[i+2*d][j+2*e]
+ return g
