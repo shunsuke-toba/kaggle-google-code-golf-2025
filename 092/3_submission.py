@@ -1,9 +1,8 @@
 def p(g):
  for _ in 0,1:
   for R in g:
-   A=R[:]
-   for c in{*A}-{0}:
-    a=A.index(c);b=len(A)-A[::-1].index(c)-1
-    if a<b:R[a:b+1]=[c]*(b-a+1)
+   for c in{*R}-{0}:
+    try:a=R.index(c);b=len(R)-R[::-1].index(c);R[a:b]=[c]*(b-a)
+    except:0
   g=[*map(list,zip(*g))]
  return g
