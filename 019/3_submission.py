@@ -1,13 +1,9 @@
-L=len
-R=range
 def p(g):
- g=[r[:]+r[:]for r in g]+[r[:]+r[:]for r in g]
- h,w=L(g),L(g[0])
- for r in R(h):
-  for c in R(w):
-   C=g[r][c]
-   if C>0 and C!=8:
-    for i,j in[[1,1],[-1,-1],[-1,1],[1,-1]]:
-     if i+r>=0 and j+c>=0 and i+r<h and j+c<w:
-      if g[i+r][j+c]==0:g[i+r][j+c]=8
+ g=[r*2 for _ in(0,1)for r in g]
+ h=len(g);w=len(g[0])
+ for k in range(h*w):
+  if g[r:=k//w][c:=k%w]%8:
+   for i in r-1,r+1:
+    for j in c-1,c+1:
+     if h>i>-1<w>j>-1 and g[i][j]<1:g[i][j]=8
  return g
