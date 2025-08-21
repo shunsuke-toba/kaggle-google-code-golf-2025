@@ -1,3 +1,3 @@
 def p(j):
- for A in range(len(j)):j[A][A]=j[-A-1][A]=0
+ for i,r in enumerate(j):r[i]=r[~i]=0
  return j
