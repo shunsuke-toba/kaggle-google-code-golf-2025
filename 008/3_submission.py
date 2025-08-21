@@ -1,8 +1,8 @@
 def p(g):
- i,f,k=0,0,0
- while k<4:
-  f+=(r:=g[i]).count(8)
-  if sum(r)<f:g=g[:i]+g[i+1:]+[r]
+ i=f=0;k=4
+ while k:
+  f+=8in g[i]
+  if f>sum(g[i]):g+=g.pop(i),
   else:i+=1
-  if g[i].count(2):g=[*map(list,zip(*g[::-1]))];k+=1;i=f=0
+  if 2in g[i]:g=[*map(list,zip(*g[::-1]))];k-=1;i=f=0
  return g
