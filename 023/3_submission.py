@@ -1,15 +1,12 @@
 def p(g):
- s={(i,j)for i,r in enumerate(g)for j,v in enumerate(r)if v}
+ s={(i,j)for i,r in enumerate(g)for j,c in enumerate(r)if c==5}
  def f(s):
   if not s:return 1
   r,c=min(s)
-  for d,v in(((0,0,0,1,1,0,1,1),8),((0,0,0,1,0,2,0,2),2),((0,0,1,0,2,0,2,0),2)):
-   t={(r+d[i],c+d[i+1])for i in(0,2,4,6)}
-   if t<=s:
-    for a,b in t:g[a][b]=v
-    if f(s-t):return 1
-    for a,b in t:g[a][b]=5
-  return 0
- if not f(s):
-  for a,b in s:g[a][b]=8
+  for *q,k in(((0,0),(1,0),(2,0),2),((0,0),(0,1),(0,2),2),((0,0),(1,0),(0,1),(1,1),8)):
+   q={(r+i,c+j)for i,j in q}
+   if q<=s and f(s-q):
+    for r,c in q:g[r][c]=k
+    return 1
+ f(s)
  return g
