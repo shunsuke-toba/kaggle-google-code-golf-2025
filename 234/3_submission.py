@@ -5,6 +5,5 @@ def p(g):
    if(m:=g[i][j])and(g[i-1][j]+g[i+1][j]<1or g[i][j-1]+g[i][j+1]<1):c+=1;n=m;g[i][j]=0;[r:=k for k in R(4)if(v:=g[i+d[k]][j+d[k+1]])*(v-n)]
  for i in R(N)[::1-2*(r<1)]:
   for j in R(M)[::1-2*(r>2)]:
-   if g[i][j]==n:
-    if g[a:=i+d[r]*c][b:=j+d[r+1]*c]<1:g[a][b]=n;g[i][j]=0
+   if g[i][j]==n and g[a:=i+d[r]*c][b:=j+d[r+1]*c]<1:g[a][b]=n;g[i][j]=0
  return g
