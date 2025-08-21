@@ -1,17 +1,19 @@
 def p(g):
- h=len(g)
- c=t=h;l=99;b=r=0
- for y,R in enumerate(g):
-  for x,v in enumerate(R):
-   if v:c=v;t=min(t,y);b=max(b,y);l=min(l,x);r=max(r,x)
- for y in range(t+1,b):g[y][l+1:r]=[4]*(r-l-1)
- def f(y,x,dy,dx):
-  y+=dy;x+=dx
-  while-1<y<h and-1<x<len(g[0])and g[y][x]<1:g[y][x]=4;y+=dy;x+=dx
- for y,dy in (t,-1),(b,1):
-  for x in range(l,r+1):
-   if g[y][x]^c:g[y][x]=4;f(y,x,dy,0);(x<=l or g[y][x-1]==c)and f(y,x,dy,-1);(x>=r or g[y][x+1]==c)and f(y,x,dy,1)
- for x,dx in (l,-1),(r,1):
-  for y in range(t,b+1):
-   if g[y][x]^c:g[y][x]=4;f(y,x,0,dx);(y<=t or g[y-1][x]==c)and f(y,x,-1,dx);(y>=b or g[y+1][x]==c)and f(y,x,1,dx)
- return g
+ t=lambda z:list(map(list,zip(*z)));R=range;n=len(g)
+ x,y=zip(*[(i,j)for i,r in enumerate(g)for j,v in enumerate(r)if v])
+ a=min(x);b=max(x);c=min(y);d=max(y)
+ if 0 in g[a][c+2:d-1]:o=0
+ elif 0 in g[b][c+2:d-1]:o=1
+ elif 0 in(r[c]for r in g[a+2:b-1]):o=2
+ else:o=3
+ if o==1:g=g[::-1];a,b=n-1-b,n-1-a
+ elif o==2:g=t(g);a,b,c,d=c,d,a,b
+ elif o==3:g=t(g)[::-1];a,b,c,d=n-1-d,n-1-c,a,b
+ h=[r[:]for r in g]
+ for i in R(a+1,b):h[i][c+1:d]=[4]*(d-c-1)
+ for i in R(b):h[i][c+2:d-1]=[4]*(d-c-3)
+ for k in R(a):
+  i=a-1-k;L=c+1-k;R=d-1+k
+  if L>=0:h[i][L]=4
+  if R<n:h[i][R]=4
+ return[h,h[::-1],t(h),t(h[::-1])][o]
