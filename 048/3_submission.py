@@ -1,9 +1,10 @@
 def p(g):
- h=len(g);w=len(g[0]);k=sum(g,[]).index(2);i=k//w;j=k%w;q=[(i,j)]
- for x,y in q:
-  if g[x][y]==2 and (abs(x-i)>2 or abs(y-j)>2):return[[8]]
-  g[x][y]=0
-  for a,b in((1,0),(0,1),(-1,0),(0,-1)):
-   nx,ny=x+a,y+b
-   if 0<=nx<h and 0<=ny<w and g[nx][ny]:q+=[(nx,ny)]
- return[[0]]
+ i=sum(g,[]).index(2)
+ s=[divmod(i,len(g[0]))]
+ o=0
+ while s:
+  y,x=s.pop()
+  if y|x<0:continue
+  try:v=g[y][x];g[y][x]=0;v and(s.extend(((y-1,x),(y+1,x),(y,x-1),(y,x+1))),v<3 and(o:=o+1))
+  except:0
+ return[[[0]],[[8]]][o>4]
