@@ -1,7 +1,1 @@
-def p(j):
- for A in range(4):
-  for c in range(3):
-   j[A][c]+=j[A][c+4]
-   if j[A][c]>0:j[A][c]=0
-   else:j[A][c]=3
- return[R[:3]for R in j]
+p=lambda g:[[3*(r[c]|r[c+4]<1)for c in(0,1,2)]for r in g]
