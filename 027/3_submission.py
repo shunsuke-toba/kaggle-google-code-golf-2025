@@ -1,1 +1,5 @@
-p=lambda g:(lambda h=len(g),w=len(g[0]),a=[(i,j)for i,r in enumerate(g)for j,c in enumerate(r)if c]:(lambda f:min(f(h-1,w-1),f(h,w),key=lambda x:x[0])[1])(lambda S,T:(r:=[u[:]for u in g],l:=[r[x].__setitem__(y,2)for i,j in a if 0<=(x:=S-i)<h and 0<=(y:=T-j)<w and r[x][y]<1],(len(l),r))[2]))()
+def p(g):
+ x=[(r,c)for r in range(10)for c in range(10)if g[r][c]];k=min((9,10),key=lambda k:sum(-1<k-r<10 and g[c][k-r]<1 for r,c in x))
+ for r,c in x:
+  if -1<k-r<10:g[c][k-r]=g[c][k-r]or 2
+ return g
