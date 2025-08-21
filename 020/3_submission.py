@@ -1,10 +1,5 @@
 def p(g):
- m=n=99
- for i,r in enumerate(g):
-  for j,v in enumerate(r):
-   if v:m=min(m,i);n=min(n,j)
+ m,n=map(min,zip(*[(k//10,k%10)for k,v in enumerate(sum(g,[]))if v]))
  r=range(5)
- a=[g[m+i][n:n+5]for i in r]
- for _ in[0]*3:a=[[a[i][j]or a[4-j][i]for j in r]for i in r]
- for i in r:g[m+i][n:n+5]=a[i]
+ for i in r:g[m+i][n:n+5]=[max(g[m+i][n+j],g[m+4-j][n+i],g[m+4-i][n+4-j],g[m+j][n+4-i])for j in r]
  return g
