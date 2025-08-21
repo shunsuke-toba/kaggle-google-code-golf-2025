@@ -1,14 +1,11 @@
-def p(j):
-	A=range;c,E=len(j),len(j[0]);k={}
-	for W in A(c):
-		for l in A(E):
-			if j[W][l]:k[j[W][l]]=k.get(j[W][l],0)+1
-	J,a=max(k,key=k.get),min(k,key=k.get);C,e=0,None
-	for K in A(c-2):
-		for w in A(E-2):
-			for L in A(K+2,c):
-				for b in A(w+2,E):
-					if all(j[K][A]==J for A in A(w,b+1))and all(j[L][A]==J for A in A(w,b+1))and all(j[A][w]==J for A in A(K,L+1))and all(j[A][b]==J for A in A(K,L+1)):
-						d=(L-K+1)*(b-w+1)
-						if d>C:C,e=d,(K,w,L,b)
-	K,w,L,b=e;return[[a if j[K+L][w+A]==J else j[K+L][w+A]for A in A(b-w+1)]for L in A(L-K+1)]
+def p(g):
+ R=range;s=sum(g,[]);A,B={c for c in s if c};f=[A,B][s.count(A)<s.count(B)];o=A+B-f;h=len(g);w=len(g[0]);m=0
+ for y in R(h):
+  r=g[y]
+  for x in R(w):
+   if r[x]==f:
+    X=x
+    while X<w and r[X]==f:X+=1;Y=y
+    while Y<h and g[Y][x]==f:Y+=1
+    if(u:=(Y-y)*(X-x))>m:m=u;a,b,c,d=y,x,Y,X
+ return[[o]*(w:=d-b)]+[[o]+[o*(g[y][x]==o)for x in R(b+1,d-1)]+[o]for y in R(a+1,c-1)]+[[o]*w]
