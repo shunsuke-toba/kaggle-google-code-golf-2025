@@ -1,6 +1,8 @@
-def p(g,A=range):
- E=[[g[r][c]if r<30and c<30else 9for c in A(32)]for r in A(32)]
- for _ in A(2):
-  for r in A(32):
-   for c in A(32):E[r][c]=min(E[r][c],E[31-r][c],E[c][r])
- return[E[r][:30]for r in A(30)]
+E=enumerate
+def p(g):
+ n=len(g);m=n+1
+ for y,r in E(g):
+  for x,v in E(r):
+   if v>8:
+    r[x]=min(g[A][B]for Y in (y,m-y) for X in (x,m-x) for A,B in((Y,X),(X,Y))if 0<=A<n> B)
+ return g
