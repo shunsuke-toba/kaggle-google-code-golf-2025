@@ -1,1 +1,5 @@
-def p(g):C,D=len(g),len(g[0]);return[[g[A][B]if g[A][B]and any(A<0 or A>=C or B<0 or B>=D or g[A][B]==0 for(A,B)in[(A-1,B),(A+1,B),(A,B-1),(A,B+1)])else 0 for B in range(D)]for A in range(C)]
+def p(g):
+ h=[r[:]for r in g]
+ for a,b,c,d in zip(h,h[1:],h[2:],g[1:-1]):
+  for j in range(1,len(b)-1):d[j]=b[j]*(a[j]+c[j]+b[j-1]+b[j+1]!=4*b[j])
+ return g
