@@ -1,11 +1,8 @@
 def p(g):
+ f=sum(g,[]);k=(set(f)-{0,2}).pop();x,y=divmod(f.index(2),10)
+ b=k in g[x][y-1:y+2];a=(x,y)[b]+(g[x-1+b][y-b]!=k)
  o=[[3]*10 for _ in g]
- for i,r in enumerate(g):
-  for j,v in enumerate(r):
-   if v==2:x,y=i,j
-   elif v and v-2:k=v
- b=k in g[x][y-1:y+2];a=b and y+(g[x][y-1]!=k) or x+(g[x-1][y]!=k)
- for i,r in enumerate(g):
-  for j,v in enumerate(r):
-   if v==k:o[i][j]=o[b and i or 2*a-i-1][b and 2*a-j-1 or j]=k
+ for n in range(100):
+  i,j=divmod(n,10)
+  if g[i][j]==k:o[i][j]=o[b and i or 2*a+~i][b and 2*a+~j or j]=k
  return o
