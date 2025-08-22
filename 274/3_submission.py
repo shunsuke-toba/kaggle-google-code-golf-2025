@@ -1,4 +1,1 @@
-def p(g):
- w=len(g[0]);s=sum(g,[]);a=[0]*9
- for c in b"\0\1\2\5"[:s.index(8)//w-s.index(5)//w]:a[c]=8
- return[a[:3],a[3:6],a[6:]]
+def p(g):s=sum(g,[]);d=(s.index(8)-s.index(5))//len(g[0]);return[([8]*4+[0]*3)[4-d:7-d],[0,0,8*(d>3)],[0]*3]
