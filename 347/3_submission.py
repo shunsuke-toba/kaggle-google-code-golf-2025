@@ -1,1 +1,1 @@
-p=lambda g:[[6*(r[i]+r[i+3]>0)for i in range(3)]for r in g]
+p=lambda g:[[6*any(x)for x in zip(r,r[3:])]for r in g]
