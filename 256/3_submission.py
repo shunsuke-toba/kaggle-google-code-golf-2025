@@ -1,6 +1,5 @@
-def p(j,R=range):
- for r in R(len(j)):
-  if j[r][0]:break
- for y in R(len(j)):
-  for x in R(sum(j[r])//2+r-y):j[y][x]=2+(y<r)-(y>r)
- return j
+def p(g):
+ a=0
+ while g[a][0]<1:a+=1;b=sum(g[a])//2+a
+ for y in range(b):g[y][:b-y]=[2+(y<a)-(y>a)]*(b-y)
+ return g
