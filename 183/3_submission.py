@@ -1,1 +1,1 @@
-p=lambda g:(n:=len(g)-1,d:=n//2-1,c:=g[::n],e:=enumerate,[[c[i>=d][-(j>=d)]if v>7 else v for j,v in e(r[2:-2])]for i,r in e(g[2:-2])])[-1]
+p=lambda g:(n:=len(g)-4,c:=g[::n+3],r:=range(n),[[c[i>=n/2][-(j>=n/2)]*(g[i+2][j+2]>7)for j in r]for i in r])[-1]
