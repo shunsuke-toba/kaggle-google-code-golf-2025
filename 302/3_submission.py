@@ -1,8 +1,7 @@
-def p(g,R=range):
- for s in 3,4,5:
-  for i in R(13-s):
-   for j in R(13-s):
-    u=g[i:][:s]
-    if u[0][j:j+s]==[5]*s==u[-1][j:j+s]*all(r[j]for r in u):
-     for r in u[1:-1]:r[j+1:j+s-1]=[s+3]*(s-2)
+def p(g):
+ for y in range(1,12):
+  for x in range(1,12):
+   if g[y][x]<1<g[y][x-1]==g[y-1][x]:
+    s=g[y][x:].index(5)
+    for t in g[y:y+s]:t[x:x+s]=[s+5]*s
  return g
