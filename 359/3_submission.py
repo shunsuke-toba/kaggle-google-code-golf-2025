@@ -1,4 +1,2 @@
-def p(g):
- h=len(g)
- for k in range(h*len(g[0])):i,j=k%h,k//h;v=g[i]+[r[j]for r in g];g[i][j]=max(v,key=v.count)
- return g
+p=lambda g:[[max((v:=r+[q[j]for q in g]),key=v.count)for j in range(len(r))]for r in g]
+
