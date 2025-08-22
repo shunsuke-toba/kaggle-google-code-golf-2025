@@ -1,1 +1,1 @@
-p=lambda g:eval(str(g).replace('6','2'))
+p=lambda g:eval(str(g).replace(*'62'))
