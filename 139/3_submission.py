@@ -1,7 +1,7 @@
-def p(g,r=range):
- for c in r(7):
-  for E in r(7):
-   q=[s[E:E+3]for s in g[c:c+3]];t=[*zip(*q)]
-   if all(4 in u for u in(q[0],q[2],t[0],t[2])):
-    for w in r(3):g[c+w][E:E+3]=[x or 7 for x in q[w]]
+def p(g):
+ for k in range(49):
+  y=k//7;x=k%7
+  q=[s[x:x+3]for s in g[y:y+3]];t=[*zip(*q)]
+  if min(map(max,q[::2]+t[::2])):
+   for w in 0,1,2:g[y+w][x:x+3]=[v or 7 for v in q[w]]
  return g
