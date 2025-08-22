@@ -1,1 +1,1 @@
-def p(g):a=sum(g,[]);y,x=divmod(a.index(v:=max(a)),len(g[0]));return[[[b,v][i-j==y-x or i+j==y+x]for j,b in enumerate(r)]for i,r in enumerate(g)]
+def p(g):n=len(g);a=sum(g,[]);y,x=divmod(a.index(v:=max(a)),n);a=range(n);return[[[g[i][j],v][i-j==y-x or i+j==y+x]for j in a]for i in a]
