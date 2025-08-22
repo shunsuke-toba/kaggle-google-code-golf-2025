@@ -1,17 +1,16 @@
 def p(g,R=range):
- C=sorted({*(s:=sum(g,[]))},key=s.count);D=1,0,-1,0;b,a=g[0][0],C[-1]
- if C[-1]==b:a=C[-2]
+ s=sum(g,[]);b=s[0];a=max({*s}-{b},key=s.count);D=1,0,-1,0
  for z in R(676):
   i,j=z//26,z%26
-  p=[g[k][j:j+5]for k in R(i,i+5)]
-  if len({*sum(p,[])}|{b}|{a})>=4 and p[::-1]==p and [r[::-1]for r in p]==p:
-   for k in R(5):g[i+k][j:j+5]=[b]*5
+  p=[r[j:j+5]for r in g[i:i+5]]
+  if len({*sum(p,[])}-{b,a})>1 and p==p[::-1]==[r[::-1]for r in p]:
+   for r in g[i:i+5]:r[j:j+5]=[b]*5
    break
  for z in R(676):
   i,j=z//26+2,z%26+2
   if b!=g[i][j]==p[2][2]!=a==g[i][j-1]==g[i-1][j]:
    for t in R(25):
-    k,l=t//5,t%5
+    k,l=divmod(t,5)
     if g[i+k-2][j+l-2]!=b!=p[k][l]!=a:g[i+k-2][j+l-2]=p[k][l]
    for d in R(4):
     x,y=i+D[d]*2,j+D[d-3]*2
