@@ -1,1 +1,1 @@
-def p(g):s=sum(2in R for R in g)-2;Y,X=zip(*[(i,j)for i,R in enumerate(g)for j,v in enumerate(R)if v%2+v//3]);a,b=min(Y),min(X);k,l=s//(-~max(Y)-a),s//(-~max(X)-b);R=range(s);M=[2]*(s+2);return[M,*[[2]+[g[a+i//k][b+j//l]for j in R]+[2]for i in R],M]
+def p(g):s=sum(2in r for r in g)-2;y,x=zip(*[(i,j)for i,r in enumerate(g)for j,v in enumerate(r)if v&2<v]);a,b=min(y),min(x);k=s//(-~max(y)-a);r=range(s);m=[2]*(s+2);return[m,*[[2]+[g[a+i//k][b+j//k]for j in r]+[2]for i in r],m]
