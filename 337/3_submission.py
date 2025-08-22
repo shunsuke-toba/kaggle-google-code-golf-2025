@@ -1,1 +1,1 @@
-p=lambda j:[[A^13*(4<A^13<9)for A in A]for A in j]
+p=lambda g:eval(str(g).translate({53:56,56:53}))

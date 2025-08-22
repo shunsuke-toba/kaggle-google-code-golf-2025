@@ -1,1 +1,1 @@
-p=lambda g:[list(sum(zip(r,r),()))for r in g for _ in(0,1)]
+p=lambda g:[[*sum(zip(r,r),())]for r in g for _ in'[]']

@@ -1,22 +1,20 @@
 def p(g,R=range):
- for i in R(10):
-  for j in R(10):
-   if g[i][j]<1:
-    q=[(i,j)];g[i][j]=1;a=b=i;c=d=j;k=0
-    while q:
-     x,y=q.pop();k+=1;a=min(a,x);b=max(b,x);c=min(c,y);d=max(d,y)
-     for u,v in((1,0),(0,1),(-1,0),(0,-1)):
-      X=x+u;Y=y+v
-      if 0<=X<10 and 0<=Y<10 and g[X][Y]<1:g[X][Y]=1;q.append((X,Y))
-    h=b-a+1;w=d-c+1
-    if h*w==k and max(h,w)<9:r=a;C=c;H=b;W=d;break
-  else:continue
-  break
- n=max(H-r+1,W-C+1)
- for x,y in((r-1,C),(H+1,C),(r,C-1),(r,W+1)):
-  if 0<=x<10 and 0<=y<10 and g[x][y]:f=g[x][y];break
- for i in R(10):
-  for j in R(10):
-   dr=max(r-i,0,i-H);dc=max(C-j,0,j-W);d=max(dr,dc)
-   g[i][j]=f if d%(n+1)==1 else 5
- return g
+ n=len(g);f=max(map(max,g))
+ def d(o,r,c,t,m):
+  for i in R(m):
+   s=(t+1)*i;a=r-s+t;b=r+s;C=c-s+t;D=c+s-1
+   for y in R(a,b):
+    if-1<y<n:
+     if-1<C<n:o[y][C]=f
+     if-1<D<n:o[y][D]=f
+   for x in R(C,D+1):
+    if-1<x<n:
+     if-1<a<n:o[a][x]=f
+     if 0<b<n+1:o[b-1][x]=f
+  return o
+ for o in 0,1:
+  for k in R(n):
+   r,c=(k,0)if o else(0,k)
+   for t in 1,2:
+    for s in 2,3:
+     if d([[0]*n for _ in g],r,c,t,s+1)==g:return d([[5]*n for _ in g],r,c,t,n)

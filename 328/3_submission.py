@@ -1,1 +1,1 @@
-def p(g):r=range(len(g));return[[((s:=sorted(((u:=abs(y-i))+(w:=abs(x-j)),max(u,w)&1,v)for i in r for j in r if(v:=g[i][j])))[0][2]*(s[0][0]<s[1][0]and s[0][1]<1))for x in r]for y in r]
+def p(g):r=range(len(g));return[[(s:=sorted(((u:=abs(y-i))+(w:=abs(x-j)),max(u,w)&1,v)for i in r for j in r if(v:=g[i][j])))[0][2]*(s[1][0]>s[0][0])*(s[0][1]<1)for x in r]for y in r]

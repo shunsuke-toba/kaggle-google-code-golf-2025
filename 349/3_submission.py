@@ -1,14 +1,12 @@
 def p(g,R=range):
- n=len(g);s=[x[:]for x in g]
+ n=len(g);s=[r[:]for r in g]
  for i in R(n):
   for j in R(n):
-   if 8<g[i][j]and(i<1or g[i-1][j]-9)*(j<1or g[i][j-1]-9):
+   if 8<s[i][j]and(i<1 or s[i-1][j]-9)*(j<1 or s[i][j-1]-9):
     a=c=0
-    while j+a<n>g[i][j+a]>8:a+=1
-    while i+c<n>g[i+c][j]>8:c+=1
-    for x in R(j,j+a):
-     y=i+c
-     while y<n>s[y][x]<1:g[y][x]=1;y+=1
-    r=max(a,c)//2;t=max(0,i-r);b=min(n,i+c+r);l=max(0,j-r);e=min(n,j+a+r)
-    for y in R(t,b):g[y][l:e]=[(9,3)[v<9]for v in g[y][l:e]]
+    while j+a<n>s[i][j+a]>8:a+=1
+    while i+c<n>s[i+c][j]>8:c+=1
+    r=a//2;t=i-r;b=i+c+r;l=j-r;e=j+a+r;z=[1]*a;T=max(t,0);B=min(b,n);L=max(l,0);E=min(e,n)
+    for y in R(i+c,n):g[y][j:j+a]=z
+    for y in R(T,B):g[y][L:E]=[(9,3)[s[y][x]<9]for x in R(L,E)]
  return g

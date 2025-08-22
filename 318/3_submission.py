@@ -1,1 +1,1 @@
-p=lambda j:[[x+y and 3for x,y in zip(a,b)]for a,b in zip(j,j[5:])]
+p=lambda j:[[any(k)*3for k in zip(*r)]for r in zip(j,j[5:])]

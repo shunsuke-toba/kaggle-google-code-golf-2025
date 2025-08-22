@@ -1,4 +1,4 @@
 def p(g):
- s=sum(g,[]);r,c=divmod(s.index(8),10);a=[-8]*4;C=8-c
- for q in range(100):a[(q//10>r)*2+(q%10>c)]+=s[q]
- z=[[0]*10];return z*r+[[0]*c+a[:2]+[0]*C,[0]*c+a[2:]+[0]*C]+z*(8-r)
+ r,c=divmod(sum(g,[]).index(8),10);a=[-8]*4
+ for q in range(100):y,x=q//10,q%10;v=g[y][x];a[(y>r)*2+(x>c)]+=v;g[y][x]=0
+ g[r][c],g[r][c+1],g[r+1][c],g[r+1][c+1]=a;return g

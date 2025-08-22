@@ -1,1 +1,5 @@
-def p(g,E=enumerate):m=len(g[0]);i=sum(g,[]).index;a,b=divmod(i(2),m);c,d=divmod(i(8),m);return[[y or((j==a)*((x-b)*(x-d)<0)|(x==d)*((j-a)*(j-c)<=0))*4for x,y in E(r)]for j,r in E(g)]
+def p(g):
+ m=len(g[0]);f=sum(g,[]);a,b=divmod(f.index(2),m);c,d=divmod(f.index(8),m)
+ while b-d:b+=1-2*(b>d);g[a][b]=4
+ while a-c:g[a][d]=4;a+=1-2*(a>c)
+ return g

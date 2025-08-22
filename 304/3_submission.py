@@ -1,1 +1,1 @@
-p=lambda g:[[y*(x==max(range(10),key=sum(g,[]).count))for x in r for y in s]for r in g for s in g]
+p=lambda g:[[y*(x==max(c:=sum(g,[]),key=c.count))for x in r for y in s]for r in g for s in g]

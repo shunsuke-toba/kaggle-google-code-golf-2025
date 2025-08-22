@@ -1,4 +1,1 @@
-def p(g,R=range):
- for i in R(1,len(g)-1):
-  for j in R(1,len(g[0])-1):
-   if g[i][j]*all(g[i+u][j+v]==g[i-1][j-1]>0for u in(-1,0,1)for v in(-1,0,1)if u|v):return[[g[i][j]]]
+p=lambda g,R=range:next([[b+c]]for i in R(len(g)-2)for j in R(len(g[0])-2)if(b:=g[i][j])*(c:=g[i+1][j+1]-b)and{g[i+u//3][j+u%3]for u in R(9)if u-4}=={b})

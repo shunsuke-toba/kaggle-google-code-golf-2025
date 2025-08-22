@@ -1,12 +1,4 @@
 def p(g):
- E=enumerate
- for y,x in[(y,x)for y,r in E(g)for x,v in E(r)if v>4]:
-  m=9
-  for a,b in(1,0),(0,1),(-1,0),(0,-1):
-   try:
-    d=1
-    while g[y+a*d][x+b*d]-2:d+=1
-    if d<m:m,P,Q=d,y+2*a*d,x+2*b*d
-   except:0
-  g[y][x]=0;g[P][Q]=5
+ e=enumerate;R=[(i,j)for i,r in e(g)for j,v in e(r)if v==2]
+ for y,x in[(i,j)for i,r in e(g)for j,v in e(r)if v>2]:i,j=min((abs(x-j+y-i),i,j)for i,j in R if i==y or j==x)[1:];g[y][x],g[2*i-y][2*j-x]=0,5
  return g

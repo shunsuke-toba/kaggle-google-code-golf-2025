@@ -1,5 +1,9 @@
 def p(g):
- z=[*zip(*g)]
- for r in g[1:-1]:a=r[1:-1];r[1:-1]=[0]*len(a);r[1]=r[0]*(r[0]in a);r[-2]=r[-1]*(r[-1]in a)
- for j,c in enumerate(z[1:-1],1):g[1][j]=(c[0]in c[1:])*c[0];g[-2][j]=(c[-1]in c[:-1])*c[-1]
+ for r in g[1:-1]:
+  for j in range(1,len(r)-1):
+   c=r[j];r[j]=0
+   if c==r[0]:r[1]=c
+   if c==r[-1]:r[-2]=c
+   if c==g[0][j]:g[1][j]=c
+   if c==g[-1][j]:g[-2][j]=c
  return g

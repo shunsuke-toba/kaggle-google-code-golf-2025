@@ -1,4 +1,1 @@
-def p(g):
- r=[[0]*3,[0]*3,[0]*3]
- for i in range(sum(sum(g,[]))//8):r[i*2//3][-i%3]=1
- return r
+p=lambda g:(k:=sum(sum(g,[]))>>3,[[k>0,0,k>1],[0,k>2,0],[k>3,0,k>4]])[1]

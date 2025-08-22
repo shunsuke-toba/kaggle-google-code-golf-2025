@@ -1,1 +1,1 @@
-p=lambda g:[[g[i-j%2][0]for j in range(6)]for i in(0,1)]
+p=lambda g:[[g[i][0],g[~i][0]]*3 for i in(0,1)]
