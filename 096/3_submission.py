@@ -1,31 +1,27 @@
 def p(g):
  import re
- X=range
- r,c=len(g),len(g[0])
- C=[0]*10
- for i in X(r):
-  for j in X(c):C[g[i][j]]+=1
- b=C.index(max(C))
+ R=range
+ f=sum(g,[])
+ b=max(f,key=f.count)
  I=[]
- for x in X(10):
+ for x in set(f):
   if x==b:continue
   s=None
-  for w in X(2,9):
-   for d in X(1,15):
-    for _ in X(4):
-     if any(re.search(str(x)*w+f"[^{x}]"*d+str(x),"".join(map(str,R)))for R in g):s=(x,w,d)
-     g=[list(R)for R in zip(*g[::-1])]
-  if not s and C[x]==1:s=(x,1,-1)
-  if not s and C[x]:s=(x,3,-3)
-  if s:I.append(s)
- I.sort(key=lambda y:y[1]*2+y[2])
+  for w in R(2,9):
+   for d in R(1,15):
+    for _ in R(4):
+     if any(re.search(str(x)*w+f"[^{x}]"*d+str(x),"".join(map(str,r)))for r in g):s=w,d
+     g=[list(r)for r in zip(*g[::-1])]
+  if not s:s=(1,-1) if f.count(x)==1 else (3,-3)
+  I+=[(x,*s)]
+ I.sort(key=lambda t:t[1]*2+t[2])
  z=I[-1][1]*2+I[-1][2]
- R=[[b]*z for _ in X(z)]
+ o=[[b]*z for _ in R(z)]
  i=0
  while I:
-  J=I.pop()
-  for _ in X(4):
-   for k in X(J[1]):R[i][i+k]=R[i+k][i]=J[0]
-   R=[list(row)for row in zip(*R[::-1])]
+  x,w,d=I.pop()
+  for _ in R(4):
+   for k in R(w):o[i][i+k]=o[i+k][i]=x
+   o=[list(r)for r in zip(*o[::-1])]
   i+=1
- return R
+ return o
