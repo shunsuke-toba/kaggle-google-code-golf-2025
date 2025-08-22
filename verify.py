@@ -35,7 +35,9 @@ def verify_program(task_num, examples, task_path, verbose=True):
         else:
           expected = copy.deepcopy(example)
           wrong += 1
-      except:
+      except Exception as e:
+        if verbose:
+          print(f"Error processing example: {e}")
         wrong += 1
     return right, wrong, expected
   arc_agi_right, arc_agi_wrong, arc_agi_expected = verify(examples["train"] + examples["test"])
