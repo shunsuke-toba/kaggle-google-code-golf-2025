@@ -1,7 +1,1 @@
-def p(g):
- t=[0]*(len(g[0])+2);G=[t,*[[0]+r+[0]for r in g],t];E=enumerate
- for i,r in E(g):
-  for j,v in E(r):
-   a,b,c,e=G[i][j+1],G[i+2][j+1],G[i+1][j],G[i+1][j+2];d=sorted((a,b,c,e))
-   if v*(v not in d):r[j]=[max(d[::-1],key=d.count),0][a==b!=c==e]
- return g
+p=lambda g:(t:=[x for x in sum(g,[])if x],c:=max(t,key=t.count),s:=min(t,key=t.count),[[v*(v!=s)+c*(v==s and((i and g[i-1][j]==c or i+1<len(g)and g[i+1][j]==c)and(j and r[j-1]==c or j+1<len(r)and r[j+1]==c)))for j,v in enumerate(r)]for i,r in enumerate(g)])[3]
