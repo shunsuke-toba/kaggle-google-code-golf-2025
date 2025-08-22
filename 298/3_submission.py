@@ -1,1 +1,1 @@
-def p(j):a=len(j)//2;return[[*map({j[i][i]:j[(t:=(i-1)%a)][t]for i in range(a)}.get,r)]for r in j]
+p=lambda g:(c:=[g[i][i]for i in(0,1,2)],[[c[c.index(v)-1]for v in r]for r in g])[1]
