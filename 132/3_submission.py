@@ -1,7 +1,10 @@
-def p(g,e=enumerate):
- o=[[0]*len(g[0])for _ in g]
- for k in {*sum(g,[])}-{0}:
-  a,b=zip(*((i,j)for i,r in e(g)for j,x in e(r)if x==k))
-  m,M=min(b),max(b)+1
-  for i in range(min(a),-~max(a)):o[i][m:M]=[k]*(M-m)
- return o
+def p(g):
+ m={};e=enumerate;s=sorted
+ for y,R in e(g):
+  for x,v in e(R):
+   if v:
+    try:
+     Y,X=m[v];a,b=s((y,Y));c,d=s((x,X))
+     for Y in range(a,b+1):g[Y][c:d+1]=[v]*(d-c+1)
+    except:m[v]=(y,x)
+ return g
