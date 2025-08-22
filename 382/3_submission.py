@@ -1,10 +1,16 @@
 def p(g):
- h=len(g);w=len(g[0]);v=any(2 in(r[0],r[-1])for r in g)
- if v:d=[(r[0]==2)-(r[-1]==2)for r in g];s=[(0,j,1,0)for j in range(w)if g[0][j]>7]+[(h-1,j,-1,0)for j in range(w)if g[-1][j]>7]
- else:d=[(g[0][j]==2)-(g[-1][j]==2)for j in range(w)];s=[(i,0,0,1)for i in range(h)if g[i][0]>7]+[(i,w-1,0,-1)for i in range(h)if g[i][-1]>7]
- for r,c,e,f in s:
-  while h>r>=0<=c<w:
-   g[r][c]=8;r+=e;c+=f
-   if h>r>=0<=c<w:(c:=c+d[r])if v else(r:=r+d[c])
-   else:break
+ v=2 in{r[0]+r[-1]for r in g}
+ if not v:g=[*map(list,zip(*g))]
+ a=2 in[r[-1]for r in g];b=8 in g[-1]
+ if a:g=[r[::-1]for r in g]
+ if b:g=g[::-1]
+ w=len(g[0])
+ t=[i for i in range(w)if 7<g[0][i]];s=0
+ for i in range(1,len(g)):
+  s+=g[i][0]>1
+  for j in t:
+   if j+s<w:g[i][j+s]=8
+ if b:g=g[::-1]
+ if a:g=[r[::-1]for r in g]
+ if not v:g=[*map(list,zip(*g))]
  return g
