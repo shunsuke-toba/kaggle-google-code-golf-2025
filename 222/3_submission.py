@@ -1,10 +1,4 @@
 def p(g):
- w=len(g[0])-1;d=[0]*10
- for a,b in zip(g,g[1:]):
-  for x in range(w):
-   if(v:=a[x])==a[x+1]==b[x]==b[x+1]:d[v]+=1
- o=[[0]*-~w for _ in g]
- for a,b,c,e in zip(g,g[1:],o,o[1:]):
-  for x in range(w):
-   if(v:=a[x])==a[x+1]==b[x]==b[x+1]and d[v]>1:c[x]=c[x+1]=e[x]=e[x+1]=v
- return o
+ R=range;h=len(g);w=len(g[0])
+ _,a,b,c,d,v=max(((c-a+1)*(d-b+1),a,b,c,d,v)for a in R(h)for b in R(w)if(v:=g[a][b])for c in R(a,h)for d in R(b,w)if all(g[x][y]==v for x in R(a,c+1)for y in R(b,d+1)))
+ return[[v*(a<=i<=c)*(b<=j<=d)for j in R(w)]for i in R(h)]
