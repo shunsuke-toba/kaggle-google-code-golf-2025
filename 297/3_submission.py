@@ -1,1 +1,1 @@
-def p(j):j[2:]=[[i]*len(j[0])for i in j[0]*9][:len(j)-2];return j
+p=lambda g:g[:2]+[[c]*len(g[0])for c in g[0]*2]
