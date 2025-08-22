@@ -1,5 +1,1 @@
-def p(g):
- for i in range(len(g[0])):
-  for r,m in zip(g,(224,65,2051)):
-   if m>>i%12&1:r[i]=4
- return g
+p=lambda g:[m>>i%12&1 and r.__setitem__(i,4)for r,m in zip(g,(224,65,2051))for i in range(len(r))]and g
