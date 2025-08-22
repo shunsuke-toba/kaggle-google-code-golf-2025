@@ -1,4 +1,4 @@
-def p(j):
- A=min(len(j),len(j[0]));p,c=[r[:A]for r in j[:A]],[r[-A:]for r in j[-A:]]
- if 8 in sum(p,[]):p,c=c,p
- return[[c[y%A][x%A]and p[y//A][x//A]for x in range(A*A)]for y in range(A*A)]
+def p(g):
+ n=min(len(g),len(g[0]));p,c=[r[:n]for r in g[:n]],[r[-n:]for r in g[-n:]]
+ if'8'in str(p):p,c=c,p
+ g=range(n*n);return[[p[i//n][j//n]*c[i%n][j%n]//8 for j in g]for i in g]
