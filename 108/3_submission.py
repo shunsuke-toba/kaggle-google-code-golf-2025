@@ -1,1 +1,1 @@
-p=lambda g:[[c for c in r[1::2]for _ in'0000']for r in g[1::2]for _ in'0000']
+p=lambda g:[[g[i//4*2+1][j//4*2+1] for j in range(20)]for i in range(20)]
