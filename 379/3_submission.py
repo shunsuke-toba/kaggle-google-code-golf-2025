@@ -1,12 +1,11 @@
 def p(g):
- h=len(g);w=len(g[0]);R=range
- for i,j in[(i,j)for i in R(h)for j in R(w)if g[i][j]==2]:
-  for d,e in((1,0),(-1,0),(0,1),(0,-1)):
-   r=i+d;c=j+e
-   while h>r>-1<=c<w and g[r][c]==0:r+=d;c+=e
-   if h>r>-1<=c<w and g[r][c]==8:
+ h=len(g);w=len(g[0]);t=1,0,-1,0,1
+ for i,j in[(i,j)for i in range(h)for j in range(w)if g[i][j]==2]:
+  for d,e in zip(t,t[1:]):
+   y,x=i+d,j+e
+   while h>y>-1<=x<w and g[y][x]<1:y+=d;x+=e
+   if h>y>-1<=x<w and g[y][x]>7:
     a,b=i,j
-    while(a,b)!=(r,c):a+=d;b+=e;g[a][b]=2
-    for m in R(r-1,r+2):g[m][c-1:c+2]=[8]*3
-    g[r][c]=2
+    while(a,b)!=(y,x):a+=d;b+=e;g[a][b]=2
+    for m in y-1,y,y+1:g[m][x-1:x+2]=[8]*3;g[y][x]=2
  return g

@@ -2,7 +2,7 @@ def p(g):
  L=len;r,e=range,enumerate;H=L(g);W=L(g[0]);a=[*map(list,g)]
  for k in r(H*W):
   if g[y:=k//W][x:=k%W]%2:
-   S=[(y,x)];a[y][x]=0;c=[];d=[]
+   S=[(y,x)];a[y][x]=0;c=d=()
    while S:
     i,j=S.pop();c+=i,;d+=j,
     for Y in r(i-1,i+2):

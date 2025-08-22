@@ -4,6 +4,6 @@ def p(g):
  for j in P:
   for d,a,b in T:
    if G[j]==b:
-    for x in d:G[j+x]=G[j+x] or a
-   elif G[j]==0 and all(G[j+x]==a for x in d):G[j]=b
+    for x in d:G[j+x]=G[j+x]or a
+   elif all(G[j+x]==a for x in d):G[j]=b
  return[G[j:j+w]for j in P[::w]]
