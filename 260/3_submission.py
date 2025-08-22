@@ -3,8 +3,8 @@ def p(g):
  for n in range(100):
   v=g[i:=n//10][j:=n%10]
   if v==5:g[i][j]=0;a=min(a,j-i);b=max(b,j-i)
-  elif v%5:c=v;d=j-i
+  elif v:c=v;d=j-i
  for e in[b+2]*(b>d)+[a-2]*(a<d):
   for i in range(10):
-   if 0<=(j:=i+e)<10:g[i][j]=c
+   if 0<=i+e<10:g[i][i+e]=c
  return g
