@@ -1,6 +1,6 @@
-def p(j):
- n=len(j[0]);s=sum(a:=j,[])
- y,j,Y,J=divmod(s.index(2),n)+divmod(s.index(3),n)
- while j-J:a[y][j:=j+(J>j)*2-1]=8
- while(y:=y+(Y>y)*2-1)-Y:a[y][J]=8
+def p(a):
+ b=len(a[0]);c=sum(a,[])
+ y,x,Y,X=divmod(c.index(2),b)+divmod(c.index(3),b)
+ while x-X:a[y][x:=x+(X>x)*2-1]=8
+ while(y:=y+(Y>y)*2-1)-Y:a[y][X]=8
  return a
