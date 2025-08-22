@@ -1,1 +1,1 @@
-p=lambda g,a=range(8):[[(2<j<5and(g[i][j-3]==g[i][j+3]>1)*g[i][j-3])|(2<i<5and(g[i-3][j]==g[i+3][j]>1)*g[i-3][j])or g[i][j]for j in a]for i in a]
+p=lambda g,r=range(8):[[(2<j<5and(a:=g[i][j-3])==g[i][j+3]>1and a)+(2<i<5and(a:=g[i-3][j])==g[i+3][j]>1and a)or g[i][j]for j in r]for i in r]
