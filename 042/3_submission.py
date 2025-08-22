@@ -5,7 +5,7 @@ def p(g):
     k=1
     while c+k<10 and a[c+k]==3:k+=1
     for C in c-k,c+k:
-     if 0<=C<10>r+k and g[r+k][C]==3:
+     if -1<C<10 and g[r+k][C]==3:
       for R,C in((r-k,2*C-c),(r+2*k,2*c-C)):
        for i in range(k*k):
         x=R+i//k;y=C+i%k
