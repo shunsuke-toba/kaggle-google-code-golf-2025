@@ -1,1 +1,1 @@
-p=lambda m:(q:=[*filter(None,map(max,zip(*m)))]+[0]*9)and[q[:3],q[5:2:-1],q[6:9]]
+p=lambda g:(q:=[*map(max,filter(max,zip(*g)))]+[0]*9)and[q[:3],q[5:2:-1],q[6:9]]
