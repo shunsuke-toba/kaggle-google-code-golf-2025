@@ -1,1 +1,1 @@
-p=lambda g:[[e for e in r if e][::-1]for r in g if sum(r)]
+p=lambda g:[[*filter(None,r[::-1])]for r in g if any(r)]
