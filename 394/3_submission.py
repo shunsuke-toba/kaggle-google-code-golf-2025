@@ -1,6 +1,1 @@
-def p(g):
- w=len(g);r=range;p=[(i//w,i%w)for i in r(w*w)];z=[(i,j)for i,j in p if g[i][j]<1];a,b,c,d=z[0]+z[-1];R=C=2
- while any((g[i][j]-g[i%R][j])*g[i][j]*g[i%R][j]for i,j in p):R+=1
- while any((g[i][j]-g[i][j%C])*g[i][j]*g[i][j%C]for i,j in p):C+=1
- t={(i%R,j%C):k for i,j in p if(k:=g[i][j])}
- return[[t[i%R,j%C]for j in r(b,d+1)]for i in r(a,c+1)]
+def p(g):w=len(g);r=range;z=[(i,j)for i in r(w)for j in r(w)if g[i][j]<1];a,b=z[0];c,d=z[-1];s=2+(w>6);t={(i%s,j%s):g[i][j]for i in r(w)for j in r(w)if g[i][j]};return[[t[i%s,j%s]for j in r(b,d+1)]for i in r(a,c+1)]
