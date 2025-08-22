@@ -1,10 +1,9 @@
 def p(g):
- f=[divmod(i,len(g[0]))for i,v in enumerate(sum(g,[]))if v==4];(a,b),(c,d)=f[0],f[-1];L,R=g[a+1][b],g[a+1][d];h=c-a-1;w=d-b-1
- i,j=map(min,zip(*[(i,j)for i,r in enumerate(g)for j,u in enumerate(r)if u and u-4 and not(a<=i<=c and j in(b,d))]));S=i
- while g[i][j]<1:i+=1
- f=g[i][j]==R
- o=[[0]*(w+2)for _ in range(h+2)]
- o[0][0]=o[0][-1]=o[-1][0]=o[-1][-1]=4
- for i in range(h):
-  o[i+1][0]=L;o[i+1][-1]=R;r=g[S+i][j:j+w];o[i+1][1:-1]=r[::-1]if f else r
+ W=len(g[0]);f=sum(g,[])
+ t=[divmod(i,W)for i,v in enumerate(f)if v==4];(a,b),(c,d)=t[0],t[-1];R=g[a+1][d]
+ s=[divmod(i,W)for i,v in enumerate(f)if v and v-4 and not(a<=i//W<=c and b<=i%W<=d)]
+ S,J=map(min,zip(*s))
+ o=[r[b:d+1]for r in g[a:c+1]]
+ f=g[min(i for i,j in s if j==J)][J]==R
+ for k in range(c-a-1):r=g[S+k][J:J+d-b-1];o[k+1][1:-1]=r[::-1]if f else r
  return o
