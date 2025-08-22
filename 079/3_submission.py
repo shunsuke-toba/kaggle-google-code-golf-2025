@@ -1,8 +1,7 @@
 def p(g):
- d={};r=range
- for i in r(len(g)-2):
-  for j in r(len(g[0])-2):
-   t=tuple(tuple(r[j:j+3])for r in g[i:i+3])
-   if 0 not in[*map(sum,t),*map(sum,zip(*t))]:
-    d[t]=d.get(t,0)+1
+ d={};r=range;T=tuple
+ for i in r(12):
+  for j in r(12):
+   t=T(T(r[j:j+3])for r in g[i:i+3])
+   if 0not in[*map(sum,t+T(zip(*t)))]:d[t]=d.get(t,0)+1
  return [*map(list,max(d,key=d.get))]
