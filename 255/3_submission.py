@@ -11,7 +11,7 @@ def p(a):
      if f(y,x,Y,X)*f(y-(y>0),x-(x>0),Y+(Y<30),X+(X<30))*(t:=max(Y-y,X-x)<<10|(Y-y)*(X-x))>b:b=t;B=y,x,Y,X
  y,x,Y,X=B
  for r in a[y:Y]:r[x:X]=[3]*(X-x)
- O=[32*[0]]+[[0]+r*1+[0]for r in a]+[32*[0]]
+ O=[[0]*32]+[[0]+r+[0]for r in a]+[[0]*32]
  for i in R(y,Y):
   for j in R(x,X):
    for U,V in(1,0),(-1,0),(0,1),(0,-1):
