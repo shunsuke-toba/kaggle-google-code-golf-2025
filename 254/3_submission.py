@@ -1,1 +1,1 @@
-def p(j):a=[r.count(5)for r in zip(*j)];return[[r[i]>4and(a[i]==max(a)or(a[i]==min({*a}-{0}))*2)for i in range(9)]for r in j]
+def p(g):a=[*map(sum,zip(*g))];return[[c//5*(h==max(a)or(h==min({*a}-{0}))*2)for c,h in zip(r,a)]for r in g]
