@@ -1,10 +1,5 @@
 def p(g):
- for y,r in enumerate(g):
-  if 2 in r:break
- x=r.index(2)
- d=3in g[y+1][x+3:x+4]
- for r in g[y:y+3]:r[x:x+3]=0,0,0
- X,Y=x+2*d,y+2-2*d
- for r in g[Y:Y+3]:r[X:X+3]=2,2,2
- g[y+1][x+1]=g[Y+1][X+1]=3
+ h=any(r.count(3)>1 for r in g);s=[(i,j)for i,r in enumerate(g)for j,v in enumerate(r)if v==2];d=2*h
+ for i,j in s:g[i][j]=0
+ for i,j in s:g[i+2-d][j+d]=2
  return g
