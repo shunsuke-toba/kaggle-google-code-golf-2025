@@ -4,8 +4,8 @@ def p(g):
   for r in g:
    for v in r[d],r[~d]:
     c[v]+=v>0
-    if c[v]>1:r[d:-d or 19:2]=[v]*(10-d)
- for i,r in enumerate(g):
-  for j,v in enumerate(r):
-   if v:g[j][~i]=g[~i][~j]=g[~j][i]=v
+    if c[v]>1:r[d:19-d:2]=[v]*(10-d)
+ for i in range(19):
+  for j in range(19):
+   if v:=g[i][j]:g[j][~i]=g[~i][~j]=g[~j][i]=v
  return g

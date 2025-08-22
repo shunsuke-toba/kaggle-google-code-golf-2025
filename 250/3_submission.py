@@ -1,12 +1,9 @@
-def p(j):
- d=-1,0,1;E=enumerate;z=[(i,k)for i,r in E(j)for k,v in E(r)if v>4]
- for i,k in z:
-  for a in d:
-   for b in d:
-    if a|b:
-     x=i+a;y=k+b
-     while 0<=x<len(j)and 0<=y<len(j[0]):
-      if j[x][y]-2:x+=a;y+=b
-      else:j[x-a][y-b]=5;break
-  j[i][k]=0
- return j
+def p(g):
+ r=0
+ while 2 not in g[r]:r+=1
+ c=g[r].index(2);o=[[0]*len(g[0])for _ in g]
+ for i,R in enumerate(g):
+  for j,v in enumerate(R):
+   if v>4:o[min(max(i,r-1),r+2)][min(max(j,c-1),c+2)]=5
+   if v==2:o[i][j]=2
+ return o

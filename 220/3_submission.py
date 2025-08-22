@@ -1,9 +1,1 @@
-def p(g):
- h,w=len(g),len(g[0])
- for y,x,c in [(i,j,c)for i in range(h)for j in range(w)if(c:=g[i][j])]:
-  v=[c*2%10,c//2][~c&1]
-  for k in range(9):
-   i=y+k//3-1;j=x+k%3-1
-   if h>i>=0<=j<w:g[i][j]=v
-  g[y][x]=c
- return g
+p=lambda g,m={2:1,3:6,8:4},t=(-1,0,1),e=enumerate:[g[a+u].__setitem__(b+v,m[c])or g[a].__setitem__(b,c)for a,b,c in[(i,j,k)for i,r in e(g)for j,k in e(r)if k]for u in t for v in t]and g

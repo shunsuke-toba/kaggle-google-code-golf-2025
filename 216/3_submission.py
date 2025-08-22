@@ -1,14 +1,14 @@
 def p(g):
- m=t=0;R=range
- for r in R(20):
-  for c in R(20):
-   for x in R(r,20):
-    for y in R(c,20):
-     v=0
-     for i in R(r,x+1):
-      for j in g[i][c:y+1]:
-       if j<1:v=-1;break
-       v+=99*j-98
-      if v<0:break
-     if v>m:m=v;t=r,c,x,y
- r,c,x,y=t;return[g[i][c:y+1]for i in R(r,x+1)]
+ R=range;b=o=0
+ for i in R(20):
+  for j in R(20):
+   if g[i][j]:
+    x=j
+    while x<20 and g[i][x]:x+=1
+    y=i
+    while y<20 and g[y][j]:y+=1
+    A=g[i:y];w=x-j;r=sum(k[j:x].count(2)for k in A)
+    if r>b:o=[k[j:x]for k in A];b=r
+    for k in A:k[j:x]=[0]*w
+ return o
+

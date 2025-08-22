@@ -1,1 +1,1 @@
-p=lambda g:(lambda d,t:(s:=max(t,key=t.count))and([[v]*d for v in s[1]]if s[0]else[s[1]]*d))(len({j for r in g for j,x in enumerate(r)if x==5}),[(k,s)for k,a in((0,g),(1,zip(*g)))for b in a if(s:=[v for v in b if v])])
+p=lambda g:(t:=any(len({v for v in r if v%5})>1 for r in g),g:=[*zip(*g)]if t else g,c:=[next(v for v in r if v%5)for r in g if any(v%5 for v in r)],[c]*len(c) if t else[[v]*len(c) for v in c])[-1]
