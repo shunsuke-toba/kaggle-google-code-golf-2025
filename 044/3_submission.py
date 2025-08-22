@@ -1,5 +1,5 @@
 def p(g):
- v,A,B=set(),[],{}
+ v,A,B=set(),{},{};r=[*map(list,g)]
  for k in range(100):
   y,x=divmod(k,10)
   if(y,x)in v:continue
@@ -12,15 +12,13 @@ def p(g):
       if(Y,X)not in S:S.add((Y,X));q.append((Y,X))
      elif f and g[Y][X]-5:f=0
     elif f:f=0
-  v|=S;y,x=map(min,zip(*S));s={(i-y,j-x)for i,j in S}
-  if f:A.append((s,y,x))
-  elif c-5:B[c]=B.get(c,[])+[(s,S,y,x)]
- r=[*map(list,g)]
- for c,b in B.items():
-  if b[1:]:continue
-  s,b,y,x=b[0]
-  for t,Y,X in A:
-   if s==t:
-    for i,j in b:r[i][j]=0;r[i-y+Y][j-x+X]=c
-    break
+  v|=S;y,x=map(min,zip(*S));s=frozenset((i-y,j-x)for i,j in S)
+  if f:A[s]=y,x
+  elif c-5:B[c]=c in B and 1 or(s,S,y,x)
+ for c,v in B.items():
+  if v!=1:
+   s,S,y,x=v
+   if s in A:
+    Y,X=A.pop(s)
+    for i,j in S:r[i][j]=0;r[i-y+Y][j-x+X]=c
  return r
