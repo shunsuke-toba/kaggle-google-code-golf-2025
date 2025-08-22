@@ -1,1 +1,1 @@
-p=lambda g,R=range(6):[[sum(g[i-k][j-k]for k in R if 3>i-k>-1<j-k<3)for j in R]for i in R]
+p=lambda g,r=range(6):[[sum(g[i-k][j-k]for k in r if k<=i<k+3>j>=k)for j in r]for i in r]
