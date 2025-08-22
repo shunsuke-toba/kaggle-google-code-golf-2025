@@ -1,1 +1,1 @@
-p=lambda g:[[2*(a|b<1)for a,b in zip(*r)]for r in zip(g,g[4:])]
+p=lambda g:[[2*(a+b<1)for a,b in r]for r in map(zip,g,g[4:])]
