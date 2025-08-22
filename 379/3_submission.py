@@ -7,8 +7,6 @@ def p(g):
    if h>r>-1<=c<w and g[r][c]==8:
     a,b=i,j
     while(a,b)!=(r,c):a+=d;b+=e;g[a][b]=2
-    for m in R(r-1,r+2):
-     for n in R(c-1,c+2):
-      if h>m>-1<=n<w:g[m][n]=8
+    for m in R(r-1,r+2):g[m][c-1:c+2]=[8]*3
     g[r][c]=2
  return g

@@ -1,3 +1,1 @@
-def p(g):
- for _ in"__":a=[g[0]];[a.append(r)for r in g if a[-1]!=r];g=[*map(list,zip(*a))]
- return a
+def p(g):h=g[:1];[h.append(r)for r in g if r!=h[-1]];return g==h and h or p([*map(list,zip(*h))])
