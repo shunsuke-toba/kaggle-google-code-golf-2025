@@ -1,19 +1,16 @@
 def p(g):
- t=lambda z:list(map(list,zip(*z)));R=range;n=len(g)
- x,y=zip(*[(i,j)for i,r in enumerate(g)for j,v in enumerate(r)if v])
- a=min(x);b=max(x);c=min(y);d=max(y)
- if 0 in g[a][c+2:d-1]:o=0
- elif 0 in g[b][c+2:d-1]:o=1
- elif 0 in(r[c]for r in g[a+2:b-1]):o=2
- else:o=3
- if o==1:g=g[::-1];a,b=n-1-b,n-1-a
- elif o==2:g=t(g);a,b,c,d=c,d,a,b
- elif o==3:g=t(g)[::-1];a,b,c,d=n-1-d,n-1-c,a,b
- h=[r[:]for r in g]
- for i in R(a+1,b):h[i][c+1:d]=[4]*(d-c-1)
- for i in R(b):h[i][c+2:d-1]=[4]*(d-c-3)
- for k in R(a):
-  i=a-1-k;L=c+1-k;R=d-1+k
+ R=range;r=lambda z:list(map(list,zip(*z[::-1])))
+ for k in R(4):
+  x,y=zip(*[(i,j)for i,s in enumerate(g)for j,v in enumerate(s)if v])
+  a,b=min(x),max(x);c,d=min(y),max(y)
+  if 0 in g[a][c+2:d-1]:break
+  g=r(g)
+ h=[s[:]for s in g];w=d-c-1
+ for e in h[a+1:b]:e[c+1:d]=[4]*w
+ for e in h[:b]:e[c+2:d-1]=[4]*(w-2)
+ for j in R(a):
+  i=a-1-j;L=c+1-j;E=d-1+j
   if L>=0:h[i][L]=4
-  if R<n:h[i][R]=4
- return[h,h[::-1],t(h),t(h[::-1])][o]
+  if E<len(g):h[i][E]=4
+ for k in R(-k%4):h=r(h)
+ return h
