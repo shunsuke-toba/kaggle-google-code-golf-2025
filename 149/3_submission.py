@@ -1,1 +1,1 @@
-R=range(3);p=lambda g:[[sum(g[4*i+u][4*j+v]for u in R for v in R)>11 for j in R]for i in R]
+p=lambda g:[[sum(r[c:c+3].count(6)for r in g[i:i+3])>1 for c in(0,4,8)]for i in(0,4,8)]
