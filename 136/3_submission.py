@@ -1,8 +1,6 @@
 def p(g):
- r=range(9)
- for y in r:
-  for x in r:
-   if(c:=g[y][x])==g[y+1][x+1]>0:
-    i,j=y,x
-    while-1<i<10>-1<j<10:g[i][j]=c;i+=c*2-3;j+=c*2-3
+ n=len(g)
+ for k in 1,2:
+  r,c=divmod(next(i for i in range(n*n)if g[i//n][i%n]==k),n)
+  while-1<r<n>c>-1:g[r][c]=k;r+=2*k-3;c+=2*k-3
  return g
