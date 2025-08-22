@@ -1,6 +1,1 @@
-def p(g):
- h=len(g);a=[[0]*len(g[0])for _ in g];f={}
- for y in range(h):
-  for x,c in enumerate(g[y]):
-   if c:a[y+f.setdefault(c,y)-h][x]=c
- return a
+def p(g):n=len(g);r=range(n);t=[v and c.count(v)for c,v in zip(zip(*g),g[-1])];g+=[[0]*n]*n;return[[g[i+t[c]][c]for c in r]for i in r]
