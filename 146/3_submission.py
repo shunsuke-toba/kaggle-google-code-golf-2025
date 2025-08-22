@@ -1,3 +1,1 @@
-def p(g):
- while(b:=g[:3])==[*map(list,zip(*b))]:g=g[3:]
- return b
+p=lambda g:(b:=g[:3])==[*map(list,zip(*b))]and p(g[3:])or b
