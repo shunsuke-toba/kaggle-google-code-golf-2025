@@ -1,18 +1,18 @@
 def p(g):
- h=len(g);w=len(g[0]);r=range;d=1,0,-1,0,1;c=[]
+ h=10;w=15;r=range;d=1,0,-1,0,1;c=[]
  for z in r(h*w):
   y=z//w;x=z%w
   if g[y][x]>4:
-   q=[y,x];t=[];g[y][x]=0
+   q=[(y,x)];g[y][x]=0;t=[]
    while q:
-    x=q.pop();y=q.pop();t+=y,x
+    y,x=q.pop();t+=[(y,x)]
     for i in r(4):
      Y=y+d[i];X=x+d[i+1]
-     if h>Y>=0<=X<w and g[Y][X]>4:g[Y][X]=0;q+=Y,X
-   m=min(t[::2]);n=min(t[1::2]);c+=[[[t[i]-m,t[i+1]-n]for i in r(0,len(t),2)]]
- i=Y0=X0=0
+     if h>Y>=0<=X<w and g[Y][X]>4:q+=[(Y,X)];g[Y][X]=0
+   m=min(t)[0];n=min(t,key=lambda p:p[1])[1]
+   c+=[[(y-m,x-n)for y,x in t]]
  while c:
-  b=0
+  b=i=0;P=0,0
   for I,T in enumerate(c):
    for Y in r(3):
     for X in r(w):
@@ -23,6 +23,6 @@ def p(g):
       for j in r(4):
        a=u+d[j];z=v+d[j+1];s+=h>a>=0<=z<w and g[a][z]==2
      else:
-      if s>b:b=s;i=I;Y0=Y;X0=X
-  for y,x in c.pop(i):g[Y0+y][X0+x]=1
+      if s>b:b=s;i=I;P=Y,X
+  for y,x in c.pop(i):g[P[0]+y][P[1]+x]=1
  return g
