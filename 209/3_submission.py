@@ -7,7 +7,7 @@ def p(g):
   if a<=r<=b and c<=o<=d:I+=(r,o),
   else:e=min(e,r);f=max(f,r);i=min(i,o);j=max(j,o)
  h=f-e+1;w=j-i+1
- for k in(2,3,4):
+ for k in 2,3,4:
   for R in Y(a,b-h*k+2):
    for O in Y(c,d-w*k+2):
     try:
