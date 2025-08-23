@@ -1,11 +1,8 @@
 def p(g):
  t=2 in g[0]+g[-1]
  if t:g=[*map(list,zip(*g))]
- a=2 in(r[-1]for r in g);b=8 in g[-1];g=[r[::1-2*a]for r in g][::1-2*b];s=0
+ A,B=1-2*(2 in(r[-1]for r in g)),1-2*(8 in g[-1]);g=[r[::A]for r in g][::B];s=0
  for r in g[1:]:
-  s+=r[0]>1
-  for j in range(len(r)-s):
-   if g[0][j]>7:r[j+s]=8
- g=[r[::1-2*a]for r in g][::1-2*b]
- if t:g=[*map(list,zip(*g))]
- return g
+  s+=r[0]>1;r[s:]=[x|y for x,y in zip(r[s:],g[0])]
+ g=[r[::A]for r in g][::B]
+ return[*map(list,zip(*g))]if t else g
