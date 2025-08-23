@@ -12,8 +12,8 @@ def p(g):
    s+=[[(y-m[0],x-n[1])for y,x in t]]
  while s:
   b=-1
-  for i,t in enumerate(s):
-   for Y in r(1,3):
+  for t in s:
+   for Y in(1,2):
     for X in r(w):
      s2=0
      for y,x in t:
@@ -22,6 +22,7 @@ def p(g):
       for j in r(4):
        a=u+d[j];z=v+d[j+1];s2+=h>a>=0<=z<w and g[a][z]==2
      else:
-      if s2>b:b=s2;I=i;P=Y,X
-  for y,x in s.pop(I):g[P[0]+y][P[1]+x]=1
+      if s2>b:b=s2;T=t;P=Y,X
+  for y,x in T:g[P[0]+y][P[1]+x]=1
+  s.remove(T)
  return g
