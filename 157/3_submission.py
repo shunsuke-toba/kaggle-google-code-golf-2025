@@ -3,12 +3,12 @@ def p(g):
  for y in R(10):
   for x in R(15):
    if g[y][x]>4:
-    t=[(y,x)];g[y][x]=0
-    for y,x in t:
+    t=[(0,0)];g[y][x]=0
+    for Y,X in t:
      for k in R(4):
-      Y=y+D[k];X=x+D[k+1]
-      if-1<Y<10 and-1<X<15 and g[Y][X]>4:g[Y][X]=0;t+=[(Y,X)]
-    a,b=map(min,zip(*t));s+=[[(y-a,x-b)for y,x in t]]
+      U=y+Y+D[k];V=x+X+D[k+1]
+      if-1<U<10 and-1<V<15 and g[U][V]>4:g[U][V]=0;t+=[(U-y,V-x)]
+    s+=t,
  while s:
   b=T=U=V=0
   for t in s:
