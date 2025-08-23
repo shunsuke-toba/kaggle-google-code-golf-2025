@@ -1,6 +1,6 @@
 def p(g):
- R=range;S=R(6,11);_,a,b,c,d=max((i*j,y,y+i,x,x+j)for i in S for j in S for y in R(len(g)-i+1)for x in R(len(g[0])-j+1)if sum(g[Y][X]!=g[y][x] for Y in R(y,y+i)for X in R(x,x+j))<4);g=[r[c:d]for r in g[a:b]];B=g[0][0]
- for y,x,v in[(y,x,v)for y,r in enumerate(g)for x,v in enumerate(r)if v!=B]:
-  for r in g:r[x]=v
+ r=range;e=enumerate;S=r(6,11);_,a,b,c,d=max((i*j,y,y+i,x,x+j)for i in S for j in S for y in r(len(g)-i+1)for x in r(len(g[0])-j+1)if len({g[Y][X]for Y in r(y,y+i)for X in r(x,x+j)})<3);g=[R[c:d]for R in g[a:b]];b=g[0][0]
+ for y,x,v in[(y,x,v)for y,R in e(g)for x,v in e(R)if v-b]:
+  for L in g:L[x]=v
   g[y]=[v]*(d-c)
  return g
