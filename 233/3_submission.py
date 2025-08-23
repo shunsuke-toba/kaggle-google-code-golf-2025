@@ -1,13 +1,12 @@
 def p(g):
- R=range;T=R(3);t=[]
+ R=range;T=R(3);f=filter;t=[]
  for y in R(len(g)-2):
   for x in R(len(g[0])-2):
-   b=[r[x:x+3]for r in g[y:y+3]]
-   s={*sum(b,[])}
+   b=[g[y+i][x:x+3]for i in T];s={*sum(b,[])}
    if{2}<s!=s|{0}:
     t+=b,
     for i in T:g[y+i][x:x+3]=0,0,0
- g=[*map(list,zip(*filter(any,zip(*filter(any,g)))))]
+ g=[*map(list,zip(*f(any,zip(*f(any,g)))))]
  t.sort(key=lambda b:-str(b).count('2'))
  for b in t:
   for _ in R(4):
