@@ -1,11 +1,10 @@
 def p(g):
- h=len(g);w=len(g[0]);r=range;t=[]
+ h=len(g);w=len(g[0]);t=[]
  def f(y,x):
-  if h>y>=0<=x<w>g[y][x]<1:
+  if h>y>-1<x<w>g[y][x]==0:
    g[y][x]=v;t[-1]+=1
    for d in 1,-1:f(y+d,x);f(y,x+d)
- for y in r(h):
-  for x in r(w):
-   if g[y][x]<1:t+=0,;v=len(t)+2;f(y,x)
+ for i in range(h*w):
+  if g[i//w][i%w]==0:v=~len(t);t+=0,;f(i//w,i%w)
  M=max(t);m=min(t)
- return [[2*(c==2)or((a:=t[c-3])==M or(a==m)*8)for c in R]for R in g]
+ return [[2*(c==2)or((a:=t[~c])==M or(a==m)*8)for c in R]for R in g]
