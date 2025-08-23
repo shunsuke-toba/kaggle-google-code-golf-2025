@@ -1,5 +1,5 @@
 def p(g,R=range):
- h=len(g);w=len(g[0]);b=d=0
+ h=len(g);w=len(g[0]);b=0
  for k in R(h*w):
   if (v:=g[y:=k//w][x:=k%w]):b or(a:=y,c:=x,t:=v);b=y;d=x
  for y in R(a,b+1):
