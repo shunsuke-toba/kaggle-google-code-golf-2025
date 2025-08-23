@@ -9,13 +9,11 @@ def p(g):
  t.sort(key=lambda b:-str(b).count('2'))
  for b in t:
   for _ in R(4):
-   for y in R(len(g)-2):
-    for x in R(len(g[0])-2):
-     if all((b[i][j]==2)==(g[y+i][x+j]<1)for i in T for j in T):
-      for i in T:g[y+i][x:x+3]=b[i]
-      break
-    else:continue
+   try:
+    y,x=next((y,x)for y in R(len(g)-2)for x in R(len(g[0])-2)if all((b[i][j]==2)==(g[y+i][x+j]<1)for i in T for j in T))
+   except:
+    b=[*zip(*b[::-1])]
+   else:
+    for i in T:g[y+i][x:x+3]=b[i]
     break
-   else:b=[*zip(*b[::-1])];continue
-   break
  return g
