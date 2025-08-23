@@ -1,6 +1,6 @@
 def p(g):
  f=lambda x:[*map(list,zip(*x))]
- if T:=all(map(any,g)):g=f(g)
+ if T:=5 in g[0]:g=f(g)
  for z in range(9**5):
   x,y=z//14%12+1,z%14
   if g[x][y]:g[x][y]=5
