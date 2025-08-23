@@ -1,10 +1,9 @@
 def p(g):
- c=0;d=1,0,-1,0,1;r=range;H=len(g);R=r(len(g[0]))
- for i in r(H):
-  a=g[i]
-  for j in R:
-   if a[j]>0==(g[i-1][j]|g[i+1][j])*(a[j-1]|a[j+1]):c+=1;n=a[j];a[j]=0;[k:=t for t in r(4)if(v:=g[i+d[t]][j+d[t+1]])*(v-n)]
- for i in r(H)[::k>0 or-1]:
-  for j in R[::k<3 or-1]:
-   if g[i][j]==n:g[i+d[k]*c][j+d[k+1]*c]=n;g[i][j]=0
+ for _ in"    ":
+  h,z=[],[];s=set()
+  for r in g:
+   s|=set(r)-{0}
+   if len(s)==2and sum(map(bool,r))==1:z+=[[0]*len(r)]
+   else:h+=[r[:]]
+  g=h+z;g=[*map(list,zip(*g[::-1]))]
  return g
