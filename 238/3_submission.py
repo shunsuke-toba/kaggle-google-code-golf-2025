@@ -1,5 +1,5 @@
 def p(g):
- a=c=d=e=99;b=0;f=enumerate
+ a=c=d=e=99;f=enumerate
  for i,r in f(g):
   for j,v in f(r):
    if v&7:a=min(a,i);b=i;c=min(c,j)
