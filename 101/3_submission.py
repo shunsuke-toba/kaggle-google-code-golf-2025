@@ -5,7 +5,7 @@ def p(g):
    if p:break
    for s in R(r+1,h+1):
     for t in R(c+1,w+1):
-     if all(map(any,x:=[g[i][c:t]for i in R(r,s)]))and all(map(any,zip(*x)))and{1,2}<={*sum(x,[])}:p=x
+     if all(map(any,x:=[g[i][c:t]for i in R(r,s)]))*all(map(any,zip(*x)))*({1,2}<={*sum(x,[])}):p=x
  for s in 3,2,1:
   H=len(p)*s;W=len(p[0])*s
   for y in R(-H,h):
