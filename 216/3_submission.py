@@ -1,13 +1,13 @@
 def p(g):
  b=o=0
  for n in range(400):
-  i,j=divmod(n,20)
+  j=n%20;i=n//20
   if g[i][j]:
    x=j
-   while x<20 and g[i][x]:x+=1
+   while g[i][x:x+1]>[0]:x+=1
    y=i
    while y<20 and g[y][j]:y+=1
-   A=g[i:y];w=x-j;r=sum(k[j:x].count(2)for k in A)
-   if r>b:o=[k[j:x]for k in A];b=r
-   for k in A:k[j:x]=[0]*w
+   w=x-j;A=[];r=0
+   for k in g[i:y]:s=k[j:x];A+=s,;r+=s.count(2);k[j:x]=[0]*w
+   if r>b:o=A;b=r
  return o
