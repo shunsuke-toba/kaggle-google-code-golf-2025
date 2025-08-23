@@ -1,1 +1,1 @@
-def p(g):f=lambda a:zip(*filter(lambda r:max({*(s:=sum(g,[]))}-{0},key=s.count)in r,a));return[*map(list,f(f(g)))]
+def p(g):f=lambda a,s=sum(g,[]):zip(*filter(lambda r:max({*s}-{0},key=s.count)in r,a));return[*map(list,f(f(g)))]

@@ -1,2 +1,1 @@
-def p(g,F=filter):
- s=sum(g,[]);f=lambda r:min({*s}-{0},key=s.count)in r;return[*map(list,zip(*F(f,zip(*F(f,g)))))]
+def p(g):f=lambda a,s=sum(g,[]):zip(*filter(lambda r:min({*s}-{0},key=s.count)in r,a));return[*map(list,f(f(g)))]
