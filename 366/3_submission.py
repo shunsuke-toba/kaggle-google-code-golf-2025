@@ -1,12 +1,12 @@
 def p(g,E=enumerate,R=range,L=len,F=filter):
  s=sum(g,[]);z,y,X=sorted({*s},key=s.count)[-3:];t=lambda q:[*map(list,zip(*F(q,zip(*F(q,g)))))]
- a=t(lambda r:y in r);b=t(lambda r:X in r);n,m,p=L(a),L(a[0]),[]
- for i in R(n-1):
-  for j in R(m-1):
+ a=t(lambda r:y in r);b=t(lambda r:X in r);n,m,p=L(a)-1,L(a[0])-1,[]
+ for i in R(n):
+  for j in R(m):
    if y not in(a[i][j],a[i+1][j],a[i][j+1]):
     k,l=i,j
-    while k<n-1 and a[k+1][l]-y:k+=1
-    while l<m-1 and a[k][l+1]-y:l+=1
+    while k<n and a[k+1][l]-y:k+=1
+    while l<m and a[k][l+1]-y:l+=1
     p+=[[r[j:l+1]for r in a[i:k+1]]]
     for r in a[i:k+1]:r[j:l+1]=[y]*(l-j+1)
  p.sort(key=lambda r:sum(r,[]).count(z)-L(r)*L(r[0]))
