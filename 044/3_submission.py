@@ -1,21 +1,21 @@
 def p(g):
- r=[*map(list,g)]
- a={};b={}
- for k in range(100):
-  y,x=divmod(k,10);c=g[y][x]
-  if c-5:
-   q=[(y,x)];g[y][x]=5;f=c<1
-   for y,x in q:
-    for Y,X in(y+1,x),(y-1,x),(y,x+1),(y,x-1):
-     if-1<Y<10> X>-1:
-      if(d:=g[Y][X])==c:g[Y][X]=5;q+=[(Y,X)]
-      elif f and d-5:f=0
+ g=sum(g,[]);r=g[:];a={};b={}
+ for i,c in enumerate(g):
+  if c^5:
+   q=[i];g[i]=5;f=c<1
+   for n in q:
+    for o in 1,-1,10,-10:
+     m=n+o
+     if 100>m>-1 and 2>m%10-n%10>-2:
+      d=g[m]
+      if d==c:g[m]=5;q+=m,
+      elif f and d^5:f=0
      elif f:f=0
-   Y,X=q[0];s=tuple((i-Y)*10+j-X for i,j in q)
-   if f:a[s]=Y,X
-   elif c:b[c]=(c in b or not q[1:])and[0]or(s,q,Y,X)
+   s=tuple(j-i for j in q)
+   if f and q[1:]:a[s]=i
+   elif c:b[c]=(c in b or q[1:]<=[])and[0]or(s,q,i)
  for c,v in b.items():
   if v and v[0] in a:
-   s,q,y,x=v;Y,X=a[s]
-   for i,j in q:r[i][j]=0;r[i-y+Y][j-x+X]=c
- return r
+   s,q,i=v
+   for n in q:r[n]=0;r[n-i+a[s]]=c
+ return[r[i*10:][:10]for i in range(10)]
