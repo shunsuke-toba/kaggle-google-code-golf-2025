@@ -1,16 +1,16 @@
 def p(g):
- L=len;r,e=range,enumerate;H=L(g);W=L(g[0]);y,x=next((i//W,i%W)for i,v in e(sum(g,[]))if v%2);a=[*map(list,g)];S=[(y,x)];a[y][x]=0;c=d=()
- for i,j in S:
-  c+=i,;d+=j,
-  for Y in r(i-1,i+2):
-   for X in r(j-1,j+2):
-    if H>Y>=0<=X<W and a[Y][X]:a[Y][X]=0;S+=(Y,X),
- t=[q[min(d):max(d)+1]for q in g[min(c):max(c)+1]]
- for _ in r(8):
-  for y in r(H+1-L(t)):
-   for x in r(W+1-L(t[0])):
-    if all(g[y+i][x+j]==u for i,R in e(t)for j,u in e(R)if u>1>u&1):
-     for i,R in e(t):
-      for j,u in e(R):g[y+i][x+j]|=u
-  t=[*zip(*t[::-1])];2<_<4 and t.reverse()
+ L=len;R=range;E=enumerate;W=L(g[0]);y,x=next((i//W,i%W)for i,v in E(sum(g,[]))if v&1)
+ a=[*map(list,g)];S=[(y,x)];a[y][x]=0
+ for y,x in S:
+  for Y in R(y-1,y+2):
+   for X in R(x-1,x+2):
+    if L(g)>Y>=0<=X<W and a[Y][X]:a[Y][X]=0;S+=(Y,X),
+ c,d=zip(*S);t=[r[min(d):max(d)+1]for r in g[min(c):max(c)+1]]
+ for _ in R(8):
+  for y in R(L(g)+1-L(t)):
+   for x in R(W+1-L(t[0])):
+    if all(g[y+i][x+j]==u for i,r in E(t)for j,u in E(r)if u&1<1<u):
+     for i,r in E(t):
+      for j,u in E(r):g[y+i][x+j]|=u
+  t=[*zip(*t[::-1])];3==_ and t.reverse()
  return g
