@@ -1,5 +1,5 @@
-def p(g):
- R=range;h=len(g);w=len(g[0]);a=h;c=w;b=d=0
+def p(g,R=range):
+ a=h=len(g);c=w=len(g[0]);b=d=0
  for k in R(h*w):
   if g[y:=k//w][x:=k%w]:a=min(a,y);b=max(b,y);c=min(c,x);d=max(d,x)
  t=g[a][c]
