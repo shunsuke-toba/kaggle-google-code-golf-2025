@@ -1,7 +1,7 @@
 def p(g,R=range):
- w=len(g[0])
+ w=len(g[0]);u=w-2
  for t in R(999):
-  x,y=divmod(t,w-2);l=sum(p:=[r[x:x+3]for r in g[y:y+3]],[])
+  l=sum(p:=[r[t//u:t//u+3]for r in g[t%u:t%u+3]],[])
   if len({*l})>3:break
  for s in 3,2,1:
   u=R(z:=3*s);r=[[p[i//s][j//s]for j in u]for i in u]
