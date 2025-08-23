@@ -1,8 +1,8 @@
-def p(j):
- R=range;x=w=len(j[0]);u=len(j);v=y=b=c=0
- for i in R(u*w):
-  k=i%w;i//=w
-  if(q:=j[i][k]):u=min(u,i);v=max(v,i);x=min(x,k);y=max(y,k);q%8and(b or(b:=q))and q-b and(c:=q)
- for i in R(u,v+1):
-  for k in R(x,y+1):j[i][k]=[b,c][u<i<v and x<k<y]
- return j
+def p(g):
+ R=range;a=c=99;b=d=e=f=0
+ for i,r in enumerate(g):
+  for j,k in enumerate(r):
+   if k:a=min(a,i);b=max(b,i);c=min(c,j);d=max(d,j);k-8and(e or(e:=k))and k-e and(f:=k)
+ for i in R(a,b+1):
+  for j in R(c,d+1):g[i][j]=[e,f][a<i<b and c<j<d]
+ return g
