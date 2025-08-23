@@ -1,4 +1,4 @@
-f=lambda x:5 in x and x.index(5)
+f=lambda x:(x+(5,)).index(5)%3
 def p(g):
  c=[*filter(any,zip(*g))];r=[[0]*len(c)for _ in g];o=e=i=0
  while c:
