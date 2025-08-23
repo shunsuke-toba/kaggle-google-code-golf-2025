@@ -8,16 +8,15 @@ def p(g):
    for y,x in q:
     for Y,X in(y+1,x),(y-1,x),(y,x+1),(y,x-1):
      if-1<Y<10> X>-1:
-      d=g[Y][X]
-      if d==c:g[Y][X]=5;q+=[(Y,X)]
+      if(d:=g[Y][X])==c:g[Y][X]=5;q+=[(Y,X)]
       elif f and d-5:f=0
      elif f:f=0
-   Y,X=map(min,zip(*q));s=frozenset((i-Y,j-X)for i,j in q)
+   Y,X=map(min,zip(*q));s=tuple((i-Y)*10+j-X for i,j in q)
    if f:a[s]=Y,X
    elif c:b[c]=(c in b or not q[1:])and[0]or(s,q,Y,X)
  for c,v in b.items():
   if v and v[0] in a:
-   s,q,y,x=v
-   Y,X=a[s]
+   s,q,y,x=v;Y,X=a[s]
    for i,j in q:r[i][j]=0;r[i-y+Y][j-x+X]=c
  return r
+
