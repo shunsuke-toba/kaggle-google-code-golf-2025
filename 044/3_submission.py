@@ -11,7 +11,7 @@ def p(g):
       if(d:=g[Y][X])==c:g[Y][X]=5;q+=[(Y,X)]
       elif f and d-5:f=0
      elif f:f=0
-   Y,X=map(min,zip(*q));s=tuple((i-Y)*10+j-X for i,j in q)
+   Y,X=q[0];s=tuple((i-Y)*10+j-X for i,j in q)
    if f:a[s]=Y,X
    elif c:b[c]=(c in b or not q[1:])and[0]or(s,q,Y,X)
  for c,v in b.items():
@@ -19,4 +19,3 @@ def p(g):
    s,q,y,x=v;Y,X=a[s]
    for i,j in q:r[i][j]=0;r[i-y+Y][j-x+X]=c
  return r
-
