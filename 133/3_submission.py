@@ -7,15 +7,10 @@ def p(g):
    if h>Y>=0<=X<w and g[Y][X]:c+=f(Y,X)
   return c
  C=[f(y,x)for y in r(h)for x in r(w)if g[y][x]]
- B=()
+ B=min((c for c in C if l(c)>2),key=l)
+ d=[*zip(*B)][2];p=min(d,key=d.count);a,b=B[d.index(p)][:2];B=[(y-a,x-b)for y,x,v in B if v^p]
  for c in C:
-  d=[*zip(*c)][2]
-  if l(c)>l(B)and 1 in map(d.count,d):B=c;p=min(d,key=d.count);Y,X=c[d.index(p)][:2]
- O=[(y-Y,x-X)for y,x,v in B if v^p]
- for c in C:
-  if(A:=[(y,x)for y,x,v in c if v==p]):
-   a,b=min(A);m=int(l(A)**.5);L=next(v for *_,v in c if v^p)
-   for u,v in O:
-    for i in r(m):o[a+u*m+i][b+v*m:b+v*m+m]=[L]*m
+  A=[(y,x)for y,x,v in c if v==p];a,b=min(A);m=int(l(A)**.5);L=next(v for *_,v in c if v^p)
+  for u,v in B:
+   for i in r(m):o[a+u*m+i][b+v*m:b+v*m+m]=[L]*m
  return o
-
