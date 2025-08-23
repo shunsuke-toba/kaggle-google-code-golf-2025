@@ -1,5 +1,5 @@
 def p(g):
- m=len(g[0]);a=e=len(g);c=i=m;b=d=f=j=0;S=[];I=[]
+ m=len(g[0]);a=e=len(g);c=i=m;b=d=f=j=0;S=I=()
  for t in range(e*m):
   if (v:=g[r:=t//m][o:=t%m])==4:a=min(a,r);b=max(b,r);c=min(c,o);d=max(d,o)
   elif v:S+=(r,o),
