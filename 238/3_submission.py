@@ -6,6 +6,5 @@ def p(g):
    elif v:A=min(A,i);C=min(C,j)
  n=b-a-1;G=[r[c:d+1]for r in g[a:b+1]];k=G[0][1],G[1][-1],G[1][0],G[-1][1]
  for i in R(n):
-  for j in R(n):
-   v=g[A+i][C+j];G[i+1][j+1]=v==8 and(i-j)*(i+j+1-n)and k[(i>j)*2+(i+j>n-1)]or v
+  for j in R(n):v=g[A+i][C+j];G[i+1][j+1]=v==8 and(i-j)*(i+j+1-n)and k[(i>j)*2+(i+j>n-1)]or v
  return G
