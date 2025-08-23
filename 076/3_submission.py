@@ -1,6 +1,5 @@
 def p(g):
- L=len;r,e=range,enumerate;H=L(g);W=L(g[0]);s=sum(g,[])
- k=next(i for i,v in e(s)if v%2);y,x=divmod(k,W);a=[*map(list,g)];S=[(y,x)];a[y][x]=0;c=d=()
+ L=len;r,e=range,enumerate;H=L(g);W=L(g[0]);y,x=next((i//W,i%W)for i,v in e(sum(g,[]))if v%2);a=[*map(list,g)];S=[(y,x)];a[y][x]=0;c=d=()
  for i,j in S:
   c+=i,;d+=j,
   for Y in r(i-1,i+2):
@@ -10,7 +9,7 @@ def p(g):
  for _ in r(8):
   for y in r(H+1-L(t)):
    for x in r(W+1-L(t[0])):
-    if all(g[y+i][x+j]==u for i,R in e(t)for j,u in e(R)if u&1<1<u):
+    if all(g[y+i][x+j]==u for i,R in e(t)for j,u in e(R)if u>1>u&1):
      for i,R in e(t):
       for j,u in e(R):g[y+i][x+j]|=u
   t=[*zip(*t[::-1])];2<_<4 and t.reverse()
