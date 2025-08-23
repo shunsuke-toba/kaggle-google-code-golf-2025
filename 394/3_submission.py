@@ -1,1 +1,1 @@
-def p(g):w=len(g);r=range;z=[(i,j)for i in r(w)for j in r(w)if g[i][j]<1];a,b=z[0];c,d=z[-1];s=2+(w>6);t={(i%s,j%s):g[i][j]for i in r(w)for j in r(w)if g[i][j]};return[[t[i%s,j%s]for j in r(b,d+1)]for i in r(a,c+1)]
+def p(g):n=len(g);x=sum(g,[]);a=x.index(0);c=n*n+~x[::-1].index(0);t=2+(n>6);return[[g[i+(i<t)*2*t-t][j]for j in range(a%n,1+c%n)]for i in range(a//n,1+c//n)]
