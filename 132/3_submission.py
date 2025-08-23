@@ -1,9 +1,6 @@
 def p(g):
- m={};e=enumerate;s=sorted
- for y,R in e(g):
-  for x,v in e(R):
-   if v in m:
-    Y,X=m[v];a,b=s((y,Y));c,d=s((x,X))
-    for R in g[a:b+1]:R[c:d+1]=[v]*(d-c+1)
-   elif v:m[v]=y,x
+ f=sum(g,[]);w=len(g[0]);s=sorted
+ for v in {*f}-{0}:
+  i=f.index(v);j=f.index(v,-~i);a,b=s((i//w,j//w));c,d=s((i%w,j%w))
+  for R in g[a:b+1]:R[c:d+1]=[v]*-~(d-c)
  return g
