@@ -1,1 +1,1 @@
-def p(g):r,c=divmod(sum(g,[]).index(3),10);s=lambda i,j,I,J:10>(i:=i+I)>-1<(j:=j+J)<10 and(g[i][j]or g[i].__setitem__(j,s(i,j,I,J))or g[i][j]);[s(r+a,c+b,2*a-1,0)+s(r+a,c+b,0,2*b-1)for a in(0,1)for b in(0,1)];return g
+def p(g):r,c=divmod(sum(g,[]).index(3),10);s=lambda i,j,x,y:10>(i:=i+x)>-1<(j:=j+y)<10 and((t:=g[i])[j]or t.__setitem__(j,s(i,j,x,y))or t[j]);[s(r+a,c+b,2*a-1,0)+s(r+a,c+b,0,2*b-1)for a in(0,1)for b in(0,1)];return g
