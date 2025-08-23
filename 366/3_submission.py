@@ -7,8 +7,8 @@ def p(g,E=enumerate,R=range,L=len,F=filter):
   for j in R(m-1):
    if Y not in(a[i][j],a[i+1][j],a[i][j+1]):
     k,l=i,j
-    while k+1<n and a[k+1][l]!=Y:k+=1
-    while l+1<m and a[k][l+1]!=Y:l+=1
+    while k<n-1 and a[k+1][l]-Y:k+=1
+    while l<m-1 and a[k][l+1]-Y:l+=1
     p+=[[r[j:l+1]for r in a[i:k+1]]]
     for r in a[i:k+1]:r[j:l+1]=[Y]*(l-j+1)
  p.sort(key=lambda r:sum(r,[]).count(Z)-L(r)*L(r[0]))
