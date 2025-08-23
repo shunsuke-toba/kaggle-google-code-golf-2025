@@ -9,9 +9,9 @@ def p(g):
    m=max(A,key=A.count);s=[*zip(q,A)]
    for(y,x),v in s:
     if m==v*any(n>y+a>-1<x+b<n and 0<abs(o[y+a][x+b])!=m for a,b in d if a*b==0):
-     P=[(r-y,c-x)for(r,c),v in s if v==m];break
+     p=[(r-y,c-x)for(r,c),v in s if v==m];break
    for a,b in d:
     if n>(Y:=y+a)>-1<(X:=x+b)<n and 0<(c:=abs(o[Y][X]))!=m:
-     for u,v in P:
+     for u,v in p:
       if n>(V:=X+(v,-v)[b&1])>-1<(U:=Y+(u,-u)[a&1])<n:g[U][V]=c
  return g
