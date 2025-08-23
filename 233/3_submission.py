@@ -2,7 +2,9 @@ def p(g):
  R=range;T=R(3);t=[]
  for y in R(len(g)-2):
   for x in R(len(g[0])-2):
-   if 3>len(s:={*sum(b:=[r[x:x+3]for r in g[y:y+3]],[])})and s>{2}>s&{0}:
+   b=[r[x:x+3]for r in g[y:y+3]]
+   s={*sum(b,[])}
+   if{2}<s!=s|{0}:
     t+=b,
     for i in T:g[y+i][x:x+3]=0,0,0
  g=[*map(list,zip(*filter(any,zip(*filter(any,g)))))]
