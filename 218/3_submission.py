@@ -1,2 +1,1 @@
-from itertools import groupby as g
-p=lambda m:(m:=[r for r,_ in g(m) if any(r)],m:=list(zip(*m)),m:=[r for r,_ in g(m) if any(r)],list(map(list,zip(*m))))[-1]
+p=lambda g,f=dict.fromkeys,F=filter:[*map(list,zip(*F(any,f(zip(*F(any,f(map(tuple,g))))))))]
