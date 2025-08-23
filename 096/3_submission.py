@@ -1,9 +1,7 @@
 def p(g):
- import re
- r=range
+ import re;r=range
  f=sum(g,[]);b=max(f,key=f.count)
- t=lambda m:[*map(list,zip(*m[::-1]))]
- L=[]
+ t=lambda m:[*map(list,zip(*m[::-1]))];L=[]
  for x in{*f}-{b}:
   s=str(x);y=0
   for w in r(2,9):
