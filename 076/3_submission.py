@@ -1,5 +1,5 @@
 def p(g):
- L=len;R=range;E=enumerate;H,W=L(g),L(g[0]);i=next(i for i,v in E(sum(g,[]))if v&1);S=[divmod(i,W)]
+ L=len;R=range;E=enumerate;H,W=L(g),L(g[0]);S=[divmod(next(i for i,v in E(sum(g,[]))if v&1),W)]
  for y,x in S:
   for Y in R(y-1,y+2):
    for X in R(x-1,x+2):
@@ -13,4 +13,3 @@ def p(g):
       for j,u in E(r):g[y+i][x+j]|=u
   t=[*zip(*t[::-1])];3==_ and t.reverse()
  return g
-
