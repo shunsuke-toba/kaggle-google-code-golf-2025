@@ -1,7 +1,7 @@
 def p(g,R=range):
- a=h=len(g);c=w=len(g[0]);b=d=0
+ h=len(g);w=len(g[0]);b=d=0
  for k in R(h*w):
-  if g[y:=k//w][x:=k%w]:a=min(a,y);b=max(b,y);c=min(c,x);d=max(d,x)
+  if g[y:=k//w][x:=k%w]:b<1and(a:=y,c:=x);b=y;d=x
  t=g[a][c]
  for y in R(a,b+1):
   for x in R(c,d+1):
