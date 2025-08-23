@@ -1,9 +1,9 @@
-R=range
+r=range(20)
 def p(g):
- b=min(k for y in R(1,20)for x in R(1,19)if(k:=g[y][x])==g[y-1][x]==g[y][x-1]==g[y][x+1]>0)
- for x in R(20):
+ b=min(k for y in r[1:]for x in r[1:-1]if(k:=g[y][x])==g[y-1][x]==g[y][x-1]==g[y][x+1]>0)
+ for x in r:
   j=i=20
   while i and g[i-1][x]^b:i-=1
   while j>i and(c:=g[j-1][x])in(0,b):j-=1
-  for r in g[i:]*(0<i<j):r[x]=c
+  for R in g[i:]*(0<i<j):R[x]=c
  return g
