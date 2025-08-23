@@ -1,7 +1,7 @@
 def p(g):
  for r,a in enumerate(g):
   for c in range(10):
-   if a[c]==3 and(r<1 or g[r-1][c]-3)and(c<1 or a[c-1]-3):
+   if a[c]==3 and(r<1or g[r-1][c]-3)and(c<1or a[c-1]-3):
     k=1
     while a[c+k]==3:k+=1
     for C in c-k,c+k:
