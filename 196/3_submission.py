@@ -1,7 +1,7 @@
 def p(g):
  n=len(g)
  def f(i,j):
-  if-1<i<n>j>=0==g[i][j]-1:g[i][j]=0;return[(i,j)]+f(i+1,j)+f(i-1,j)+f(i,j+1)+f(i,j-1)
+  if-1<i<n>j>=0<g[i][j]<2:g[i][j]=0;return[(i,j)]+f(i+1,j)+f(i-1,j)+f(i,j+1)+f(i,j-1)
   return[]
  for k in range(n*n):
   if c:=f(k//n,k%n):
