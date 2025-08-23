@@ -6,6 +6,6 @@ def p(g):
    while g[y-a*k][x-b*k]>2:k+=1
   except:0
   while n>y>-1<x<n:
-   for t in range(1-k,k):g[y+b*t][x+a*t]=3
-   g[y][x]=2;y+=a;x+=b
+   for t in range(1-k,k):g[y+b*t][x+a*t]=2+(t!=0)
+   y+=a;x+=b
  return g
