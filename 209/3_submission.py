@@ -1,8 +1,8 @@
 def p(g):
- y=len(g);x=len(g[0]);a=y;c=x;b=d=0
+ a=y=len(g);c=x=len(g[0]);b=d=0
  for t in range(y*x):
-  r=t//x;j=t%x
-  if g[r][j]==4:a=min(a,r);b=max(b,r);c=min(c,j);d=max(d,j)
+  r=t//x;o=t%x
+  if g[r][o]==4:a=min(a,r);b=max(b,r);c=min(c,o);d=max(d,o)
  e=y;i=x;f=j=0
  for t in range(y*x):
   r=t//x;o=t%x
