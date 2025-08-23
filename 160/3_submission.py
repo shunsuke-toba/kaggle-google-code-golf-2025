@@ -1,6 +1,5 @@
 def p(g):
- for y in range(len(g)-2):
-  a,b,c=g[y:y+3]
-  for x in range(len(b)-2):
-   if b[x+1]<1 and sum(a[x:x+3]+b[x:x+3]+c[x:x+3])>7:a[x+1]=c[x+1]=b[x+1]=b[x]=b[x+2]=2;a[x]=a[x+2]=c[x]=c[x+2]=0
+ for a,b,c in zip(g,g[1:],g[2:]):
+  for x in range(8):
+   if b[x+1]<1<sum(sum(r[x:x+3])for r in (a,b,c))-6:a[x:x+3]=0,2,0;b[x:x+3]=2,2,2;c[x:x+3]=0,2,0
  return g
