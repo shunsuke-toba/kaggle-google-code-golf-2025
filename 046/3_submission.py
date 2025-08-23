@@ -1,12 +1,11 @@
-f=lambda x:(x+(5,)).index(5)%3
 def p(g):
  c=[*filter(any,zip(*g))];r=[[0]*len(c)for _ in g];o=e=i=0
  while c:
   j=1
-  while j<len(c)and 5 not in c[j]:j+=1
-  s,c=c[:j+1],c[j+1:];d=max({*sum(s,())}-{0,5});o+=f(s[0])-e;e=f(s[-1])
+  while c[j:j+1]and 5 not in c[j]:j+=1
+  s,c=c[:j+1],c[j+1:];d=sum({*sum(s,())})-5;o+=(s[0]+(5,)).index(5)%3-e;e=(s[-1]+(5,)).index(5)%3
   for t in s:
-   for y,v in enumerate(t):
-    if v:r[y-o][i]=d
+   for y in 0,1,2:
+    if t[y]:r[y-o][i]=d
    i+=1
  return r
