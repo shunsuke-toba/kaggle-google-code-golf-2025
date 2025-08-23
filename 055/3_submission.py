@@ -1,5 +1,7 @@
 def p(g):
- a,b=[i for i,r in enumerate(g)if r[0]];c,d=[i for i,v in enumerate(g[0])if v];w=d-c-1
- for i,r in enumerate(g[:a]+g[b+1:]):r[c+1:d]=[1+(i<a)]*w
- for r in g[a+1:b]:r[:c]=[4]*c;r[c+1:d]=[6]*w;r[d+1:]=[3]*(len(r)+~d)
+ c=g[0].index(8);d=g[0].index(8,c+1);w=d+~c;k=0
+ for r in g:
+  if r[0]:k+=1;continue
+  r[c+1:d]=[2,6,1][k:k+1]*w
+  if k%2:r[:c]=[4]*c;r[d+1:]=[3]*(len(r)+~d)
  return g
