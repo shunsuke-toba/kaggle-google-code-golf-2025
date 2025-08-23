@@ -1,8 +1,8 @@
 def p(g):
- R=range;a=c=99;b=d=e=f=0
- for i,r in enumerate(g):
-  for j,k in enumerate(r):
-   if k:a=min(a,i);b=max(b,i);c=min(c,j);d=max(d,j);k-8and(e or(e:=k))and k-e and(f:=k)
- for i in R(a,b+1):
-  for j in R(c,d+1):g[i][j]=[e,f][a<i<b and c<j<d]
+ a=c=9;b=d=o=i=0
+ for y,r in enumerate(g):
+  for x,k in enumerate(r):
+   if k:a=min(a,y);b=y;c=min(c,x);d=max(d,x);k-8 and(o or(o:=k))and k-o and(i:=k)
+ for y in range(a,b+1):
+  for x in range(c,d+1):g[y][x]=[o,i][a<y<b and c<x<d]
  return g
