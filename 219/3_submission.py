@@ -26,5 +26,4 @@ def p(g):
  for t in 3,2:
   for m in 1,0:
    for o in 0,-1:
-    a=[*map(list,g)]
-    if f(t,o,m,a):return a
+    if f(t,o,m,a:=[*map(list,g)]):return a
