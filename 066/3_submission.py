@@ -6,9 +6,8 @@ def p(g):
   v=g[y][x]
   if v==2:return[(y-a,x-b)]
   if v<8:r=f(y,x,a,b,t)
-  else:
-   if t>1:return
-   r=f(y-a,x-b,-b,a,t+1)or f(y-a,x-b,b,-a,t+1)
+  elif t<2:r=f(y-a,x-b,-b,a,t+1)or f(y-a,x-b,b,-a,t+1)
+  else:return
   return r and [(y-a,x-b)]+r
  (y,x),(Y,X)=sorted(s)
  for y,x,a,b in(((y,x,0,-1),(Y,X,0,1)),((y,x,-1,0),(Y,X,1,0)))[y!=Y]:
