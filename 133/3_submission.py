@@ -6,7 +6,7 @@ def p(g):
    Y+=y;X+=x
    if h>Y>=0<=X<w and g[Y][X]:c+=f(Y,X)
   return c
- C=[f(y,x)for i in range(h*w)if g[y:=i//w][x:=i%w]]
+ C=[f(y,x)for y in range(h)for x in range(w)if g[y][x]]
  B=[];K=0
  for c in C:
   d=[v for _,_,v in c]
@@ -17,6 +17,5 @@ def p(g):
   if(A:=[(y,x)for y,x,v in c if v==K]):
    Y,X=zip(*A);a=min(Y);b=min(X);Y=max(Y)+1-a;X=max(X)+1-b;L=next(v for y,x,v in c if v^K)
    for u,v in O:
-    for y in range(s:=a+u*Y,s+Y):
-     for x in range(t:=b+v*X,t+X):o[y][x]=L
+    for y in range(a+u*Y,a+u*Y+Y):o[y][b+v*X:b+v*X+X]=[L]*X
  return o
