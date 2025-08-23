@@ -1,6 +1,8 @@
 def p(g):
- T=range(10)
- def d(r,s,w):
-  if-1<r<10>s>-1<5==g[r][s]:g[r][s]=w;d(r+1,s,w);d(r-1,s,w);d(r,s+1,w);d(r,s-1,w)
- [d(r,s,g[0][s])for s in T if g[0][s]for r in T if g[r][s]==5]
+ for r in g:
+  for c in range(10):
+   if r[c]==5:
+    d=c
+    while d<10>r[d]==5:d+=1
+    r[c:d]=[max(g[0][c:d])]*(d-c)
  return g
