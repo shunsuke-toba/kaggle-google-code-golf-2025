@@ -1,15 +1,4 @@
 def p(g):
- R=range;h=len(g);w=len(g[0]);m=0
- for a in R(h):
-  for b in R(a+1,h+1):
-   for c in R(w):
-    v=g[a][c]
-    for d in R(c+1,w+1):
-     t=(b-a)*(d-c)
-     if t>m and sum(g[y][x]!=v for y in R(a,b) for x in R(c,d))<4:m=t;A,B,C,D,V=a,b,c,d,v
- g=[r[C:D]for r in g[A:B]]
- P=[(y,x,v)for y,r in enumerate(g)for x,v in enumerate(r)if v!=V]
- for y,x,v in P:
-  for r in g:r[x]=v
-  g[y]=[v]*(D-C)
+ R=range;h=len(g);w=len(g[0]);_,a,b,c,d,B=max((i*j,y,y+i,x,x+j,g[y][x])for i in R(6,11)for j in R(6,11)for y in R(h-i+1)for x in R(w-j+1)if sum(g[Y][X]!=g[y][x]for Y in R(y,y+i)for X in R(x,x+j))<4);g=[r[c:d]for r in g[a:b]];w=d-c
+ for y,x,v in[(y,x,v)for y,r in enumerate(g)for x,v in enumerate(r)if v!=B]:[r.__setitem__(x,v)for r in g];g[y]=[v]*w
  return g
