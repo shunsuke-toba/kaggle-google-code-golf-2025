@@ -1,17 +1,18 @@
 def p(g):
- l=len;A=all;h=l(g);w=l(g[0]);R=range;S=[]
+ L=len;A=all;R=range;S=[]
+ h=L(g);w=L(g[0])
  for y in R(h):
   for x in R(w):
    a=b=0
-   for s in R(y+1,h+1):
-    for t in R(x+1,w+1):
-     if (m:=[r[x:t]for r in g[y:s]])and A(map(any,m))and A(map(any,zip(*m)))and l({0,*sum(m,[])})>4:a,b,M=s,t,m
+   for Y in R(y+1,h+1):
+    for X in R(x+1,w+1):
+     if (m:=[r[x:X]for r in g[y:Y]])and A(map(any,m+[*zip(*m)]))and L({0,*sum(m,[])})>4:a,b,M=Y,X,m
    if a:S+=M,
    for r in g[y:a]:r[x:b]=[0]*(b-x)
  for r in S:
   u=sum(r,[])
   for z in R(8):
-   a=l(r);b=l(r[0])
+   a=L(r);b=L(r[0])
    for y in R(h-a+1):
     for x in R(w-b+1):
      if A(r[i][j]*(u.count(r[i][j])<2)==g[y+i][x+j]for i in R(a)for j in R(b)):
