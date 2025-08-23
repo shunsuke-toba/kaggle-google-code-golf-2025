@@ -1,1 +1,1 @@
-p=lambda g:(R:=range,X:=len(g[0]),s:={(i,j)for i in R(len(g))for j in R(X)if g[i][j]>1},[g[y].__setitem__(x,3)for i,j in s if {(i+1,j),(i-1,j),(i,j+1),(i,j-1)}&s for y in R(i-1,i+2)for x in R(j-1,j+2)if X>x>=0<=y<len(g)>g[y][x]<1],g)[-1]
+p=lambda g:(R:=range,H:=len(g),W:=len(g[0]),S:={(i,j)for i in R(H)for j in R(W)if g[i][j]},[g[y].__setitem__(x,3)for i,j in S if {(i+1,j),(i-1,j),(i,j+1),(i,j-1)}&S for y in R(i-1,i+2)for x in R(j-1,j+2)if H>y>=0<=x<W>g[y][x]<2],g)[-1]
