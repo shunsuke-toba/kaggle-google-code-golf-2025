@@ -3,11 +3,10 @@ def p(g):
  for k in 2,3:
   a=[(i,j)for i in r for j in r if g[i][j]==k];m=k*2-5;B=s=()
   for i,j in a:
-   t=[(x,y,g[i+x][j+y])for x in R for y in R if n>i+x>=0<=j+y<n and 0<(v:=g[i+x][j+y])!=k]
+   t=[(x,y,g[i+x][j+y])for x in R for y in R if n>i+x>-1<j+y<n and 0<(v:=g[i+x][j+y])!=k]
    if len(t)>len(B):
     V=[v for*_,v in t];c=max(V,key=V.count);B=[(x,y)for x,y,v in t if v==c];s=i,j
-  if B:
-   a.remove(s)
-   for i,j in a:
+  for i,j in a:
+   if(i,j)!=s:
     for x,y in B:g[i+x][j+y*m]=c
  return g
