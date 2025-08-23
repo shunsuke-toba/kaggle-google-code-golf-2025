@@ -6,5 +6,5 @@ def p(g):
  for k in range(w*w):
   if c:=f(k//w,k%w):
    h,l=[max(t)-min(t)for t in zip(*c)]
-   for y,x in c:g[y][x]=1+2*(len(c)/2==h+l and h>1<l)
+   for y,x in c:g[y][x]=1+2*(len(c)/2==h+l)*(h>1<l)
  return g
