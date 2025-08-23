@@ -1,11 +1,11 @@
 def p(g):
- for r,a in enumerate(g):
+ h=[*map(list,g)]
+ for r,a in enumerate(h):
   for c in range(10):
-   if a[c]==3>a[c-1]|g[r-1][c]:
-    k=1
-    while a[c+k]==3:k+=1
-    for C in c-k,c+k:
-     if g[r+k][C:C+1]==[3]:
-      for R,C in((r-k,2*C-c),(r+2*k,2*c-C)):
-       for i in range(k*k):x=R+i//k;y=C+i%k;0<=x<10>y>=0 and g[x].__setitem__(y,8)
+   if a[c]==3>a[c-1]|h[r-1][c]:
+    k=a[c:].index(0)
+    for d in-1,1:
+     if h[r+k][c+d*k]>2:
+      for s,t in(-k,2*d*k),(2*k,-d*k):
+       for i in range(k*k):x=r+s+i//k;y=c+t+i%k;0<=x<10>y>=0 and g[x].__setitem__(y,8)
  return g
