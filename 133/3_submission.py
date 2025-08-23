@@ -7,15 +7,14 @@ def p(g):
    if h>Y>=0<=X<w and g[Y][X]:c+=f(Y,X)
   return c
  C=[f(y,x)for y in range(h)for x in range(w)if g[y][x]]
- B=[];P=0
+ B=()
  for c in C:
-  d=[v for *_,v in c]
-  for k in{*d}:
-   if d.count(k)==1 and len(c)>len(B):B=c;P=k;y0,x0=B[d.index(k)][:2]
- O=[(y-y0,x-x0)for y,x,v in B if v^P]
+  d=[*zip(*c)][2]
+  if len(c)>len(B) and 1 in{*map(d.count,d)}:B=c;p=min(d,key=d.count);y0,x0=c[d.index(p)][:2]
+ O=[(y-y0,x-x0)for y,x,v in B if v^p]
  for c in C:
-  if(A:=[(y,x)for y,x,v in c if v==P]):
-   h,w=zip(*A);a=min(h);b=min(w);h=max(h)+1-a;w=max(w)+1-b;L=next(v for *_,v in c if v^P)
+  if(A:=[(y,x)for y,x,v in c if v==p]):
+   a,b=min(A);m=int(len(A)**.5);L=next(v for *_,v in c if v^p)
    for u,v in O:
-    for i in range(h):o[a+u*h+i][b+v*w:b+v*w+w]=[L]*w
+    for i in range(m):o[a+u*m+i][b+v*m:b+v*m+m]=[L]*m
  return o
