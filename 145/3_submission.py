@@ -6,5 +6,4 @@ def p(g):
    for d in 1,-1:f(y+d,x);f(y,x+d)
  for i in range(h*w):
   if g[i//w][i%w]==0:v=~len(t);t+=0,;f(i//w,i%w)
- M=max(t);m=min(t)
- return [[2*(c==2)or((a:=t[~c])==M or(a==m)*8)for c in R]for R in g]
+ return[[2*(c>1)or(t[~c]==max(t) or(t[~c]==min(t))*8)for c in r]for r in g]
