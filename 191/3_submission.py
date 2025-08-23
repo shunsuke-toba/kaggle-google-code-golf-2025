@@ -7,6 +7,6 @@ def p(g,R=range,n=23):
     if[g[x:x+w]for g in g[y:y+h]]in(m,r):
      for V in R(y-1,y+h+1):
       for U in R(x-1,x+w+1):
-       if-1<V<n>U>-1:g[V][U]=g[V][U]or 1
+       if-1<V<n>U>-1:g[V][U]+=g[V][U]<1
   m=[*map(list,zip(*r))]
  return g
