@@ -10,7 +10,7 @@ def p(g):
       elif f*d^5:f=0
      elif f:f=0
    s=tuple(x-i for x in q)
-   if f*q[1:]:a[s]=i
+   if f:a[s]=i
    elif c:b[c]=(c in b or 2>len(q))and[0]or(s,q)
  for c in b:
   if(v:=b[c])and v[0]in a:
