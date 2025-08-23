@@ -5,8 +5,7 @@ def p(g,R=range):
   if{*q}-{b,a,q[12]}and p==p[::-1]==[r[::-1]for r in p]:
    for r in g[i:i+5]:r[j:j+5]=[b]*5
    p=q;break
- C=[(i,j)for i in R(30)for j in R(30)if a!=g[i][j]!=b]
- for i,j in C:
+ for i,j in[(i,j)for i in R(30)for j in R(30)if a!=g[i][j]!=b]:
   for t in R(25):
    c=p[t];x=i+t//5-2;y=j+t%5-2
    if g[x][y]!=b!=c:g[x][y]=c
