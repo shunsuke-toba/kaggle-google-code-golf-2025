@@ -1,5 +1,5 @@
 def p(g):
- c=n=k=0;d=1,0,-1,0,1;r=range;H=len(g);R=r(len(g[0]))
+ c=0;d=1,0,-1,0,1;r=range;H=len(g);R=r(len(g[0]))
  for i in r(H):
   a=g[i]
   for j in R:
