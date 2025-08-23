@@ -9,8 +9,7 @@ def p(g,E=enumerate,R=range,L=len,F=filter):
     while l<m and a[k][l+1]-y:l+=1
     p+=[[r[j:l+1]for r in a[i:k+1]]]
     for r in a[i:k+1]:r[j:l+1]=[y]*(l-j+1)
- p.sort(key=lambda r:sum(r,[]).count(z)-L(r)*L(r[0]))
- for r in p:
+ for r in sorted(p,key=lambda r:sum(r,[]).count(z)-L(r)*L(r[0])):
   n,m=L(r),L(r[0])
   for i in R(L(b)-n+1):
    for j in R(L(b[0])-m+1):
