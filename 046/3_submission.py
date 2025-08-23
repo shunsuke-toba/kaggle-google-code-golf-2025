@@ -6,7 +6,7 @@ def p(g):
  while c:
   j=1
   while j<len(c)and 5 not in c[j]:j+=1
-  s,c=c[:j+1],c[j+1:];d=next(v for t in s for v in t if v%5)
+  s,c=c[:j+1],c[j+1:];d=max({*sum(s,())}-{0,5})
   o+=f(s[0])-e;e=f(s[-1])
   for t in s:
    for y,v in enumerate(t):
