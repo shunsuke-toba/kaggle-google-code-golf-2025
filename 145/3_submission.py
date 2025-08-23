@@ -8,7 +8,4 @@ def p(g):
   for x in r(w):
    if g[y][x]<1:s+=0,;v=len(s)+2;F(y,x)
  m=max(s);n=min(s)
- for R in g:
-  for x in r(w):
-   if (v:=R[x])>2:a=s[v-3];R[x]=(a==m)+8*(a==n)
- return g
+ return [[2if v==2else (a:=s[v-3])==m or a==n and 8 for v in R]for R in g]
