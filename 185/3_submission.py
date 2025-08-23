@@ -1,1 +1,1 @@
-def p(g):r,e=range,enumerate;c=max({*g[0]}-{0},key=g[0].count);y,x=zip(*((i,j)for i,R in e(g)for j,v in e(R)if c!=v>0));s,t=min(x),min(y);d=(max(x)-s)//3;return[[((v:=g[y][x])==g[y][x+d]==g[y+d][x]==g[y+d][x+d]!=c)*v for x in r(s,s+3*d,d)]for y in r(t,t+3*d,d)]
+def p(g):E=enumerate;l=max(g[0]);R,C=map(sorted,map(set,zip(*[(i,j)for i,R in E(g)for j,v in E(R)if 0<v!=l])));return [[(v:=g[a][b])*(v==g[a][d]==g[c][b]==g[c][d]!=l)for b,d in zip(C,C[1:])]for a,c in zip(R,R[1:])]
