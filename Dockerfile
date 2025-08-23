@@ -7,6 +7,9 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
+# Pythonパッケージのインストール
+RUN pip install --no-cache-dir numpy
+
 # プロジェクトファイルをコピー
 COPY . .
 

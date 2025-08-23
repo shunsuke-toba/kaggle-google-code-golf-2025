@@ -47,6 +47,28 @@ google-code-golf-2025
 }
 ```
 
+## Docker Composeを使った実行方法
+
+### 環境構築
+
+```bash
+# Dockerコンテナをビルド
+docker compose build
+```
+
+### ワンライナーで実行
+
+```bash
+# タスク1のsubmissionコードをテスト
+docker compose run --rm code-golf python verify.py 1 sub
+
+# タスク1のplainコードをテスト
+docker compose run --rm code-golf python verify.py 1 plain
+
+# 全タスクのテスト
+docker compose run --rm code-golf python verify_all.py
+```
+
 ## 進め方
 
 - 問題を読んで1_solution.mdを頑張って書く
