@@ -1,5 +1,5 @@
 def p(g):
- s=sum(g,[]);A,B=sorted((i//10,j//10,i%10,j%10)for k in{*s}-{0}for i,j in[(s.index(k),99-s[::-1].index(k))])
+ s=sum(g,[]);A,B=sorted(((i:=s.index(k))//10,(j:=99-s[::-1].index(k))//10,i%10,j%10)for k in{*s}-{0})
  if A[1]<B[0]:x,y=A[1]+1,B[0];c=max(A[2],B[2])+1;d=min(A[3],B[3])
  else:
   if A[2]>B[2]:A,B=B,A
