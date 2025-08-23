@@ -1,8 +1,8 @@
 def p(g):
- R=range;r=R(5);m=R(len(g)-4)
- t=next({(i,j)for i in r for j in r if(v:=g[y+i+1][x+j+1])and(c:=v)}for y in m for x in m if g[y][x]&g[y][x+1]&g[y+1][x]>4)
+ r=range(25);m=range(len(g)-4)
+ t=next([k for k in r if(v:=g[y+1+k//5][x+1+k%5])and(c:=v)]for y in m for x in m if g[y][x]&g[y][x+1]&g[y+1][x]>4)
  for y in m:
   for x in m:
-   if{(i,j)for i in r for j in r if g[y+i][x+j]}==t:
-    for i,j in t:g[y+i][x+j]=c
+   if[k for k in r if g[y+k//5][x+k%5]]==t:
+    for k in t:g[y+k//5][x+k%5]=c
  return g
