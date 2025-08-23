@@ -2,7 +2,7 @@ def p(g,R=range):
  s=sum(g,[]);b=s[0];a=max({*s}-{b},key=s.count);D=1,0,-1,0
  for z in R(676):
   i,j=z//26,z%26;p=[r[j:j+5]for r in g[i:i+5]]
-  if len({*sum(p,[])}-{b,a,p[2][2]}) and p==p[::-1]==[r[::-1]for r in p]:
+  if{*sum(p,[])}-{b,a,p[2][2]}and p==p[::-1]==[r[::-1]for r in p]:
    for r in g[i:i+5]:r[j:j+5]=[b]*5
    break
  for z in R(676):
