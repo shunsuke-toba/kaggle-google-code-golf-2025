@@ -1,7 +1,7 @@
 def p(g):
  from re import search as S
  r=range
- f=sum(g,[]);s=set(f);b=max(s,key=f.count)
+ f=sum(g,[]);b=max(s:=set(f),key=f.count)
  t=lambda m:[*map(list,zip(*m[::-1]))]
  L=[]
  for x in s-{b}:
@@ -11,8 +11,7 @@ def p(g):
     for _ in r(4):
      if any(S(s*w+f"[^{s}]"*d+s,"".join(map(str,R)))for R in g):y=2*w+d,x,w
      g=t(g)
-  if not y:y=(1,x,1)if f.count(x)==1 else(3,x,3)
-  L+=y,
+  L+=y or ((1,x,1)if f.count(x)==1 else(3,x,3)),
  L.sort()
  z=L[-1][0]
  o=[[b]*z for _ in r(z)]
