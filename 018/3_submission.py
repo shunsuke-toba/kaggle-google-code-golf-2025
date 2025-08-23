@@ -5,7 +5,7 @@ def p(g):
    a=b=0
    for s in R(y+1,h+1):
     for t in R(x+1,w+1):
-     if (m:=[g[i][x:t]for i in R(y,s)])==[*map(list,zip(*f(any,zip(*f(any,m)))))]and l({0,*sum(m,[])})>4:a,b,M=s,t,m
+     if (m:=[r[x:t]for r in g[y:s]])==[*map(list,zip(*f(any,zip(*f(any,m)))))]and l({0,*sum(m,[])})>4:a,b,M=s,t,m
    if a:S+=M,
    for r in g[y:a]:r[x:b]=[0]*(b-x)
  for r in S:
