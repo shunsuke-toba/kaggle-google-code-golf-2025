@@ -1,5 +1,5 @@
 def p(g):
- h=len(g);w=len(g[0]);u=[[0]*w for _ in g];f=lambda y,x:(g[y][x]==2)-(g[y][x]<1)*10-u[y][x]*99;m=5;R=range
+ h=len(g);w=len(g[0]);u=set();f=lambda y,x:(g[y][x]==2)-(g[y][x]<1)*10-((y,x)in u)*99;m=5;R=range
  while 1:
   B=S=I=J=0
   for s in 7,5:
@@ -13,4 +13,4 @@ def p(g):
   m=S;r=m//2
   for d in R(-r,r+1):
    for y,x in((I+d,J),(I,J+d)):
-    u[y][x]=1;g[y][x]+=3*(g[y][x]==5)
+    u|={(y,x)};g[y][x]+=3*(g[y][x]==5)
