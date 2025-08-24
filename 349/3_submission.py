@@ -1,9 +1,8 @@
 def p(g,R=range):
  n=len(g);o=[*map(list,g)]
  for m in R(n*n):
-  i,j=divmod(m,n)
+  i,j=divmod(m,n);a=0;b=i
   if 8<g[i][j]>g[i-1][j]*i|g[i][j-1]*j:
-   a=0;b=i
    while j+a<n>g[i][j+a]>8:a+=1
    while b<n>g[b][j]>8:b+=1
    r=a>>1;L=max(j-r,0)
