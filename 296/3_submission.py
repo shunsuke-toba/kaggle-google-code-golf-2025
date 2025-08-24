@@ -1,1 +1,1 @@
-p=lambda j,g=([0],[1,-2],[-1]):[[max(j[a][b]for a in A for b in B)for B in g]for A in g]
+p=lambda g:[[r[0],r[1]|r[5],r[6]]for r in(g[0],[*map(int.__or__,g[1],g[3])],g[4])]
