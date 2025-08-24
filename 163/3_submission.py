@@ -1,9 +1,4 @@
 def p(g):
- for i,r in enumerate(g):
-  if 4 in r:j=r.index(4);break
- a=i&-4;b=j&-4;i%=4;j%=4
- h=[[0]*11 for _ in g]
- h[3]=h[7]=g[3]
- for r in h:r[3]=r[7]=5
- for k in range(3):h[i*4+k][j*4:j*4+3]=g[a+k][b:b+3]
+ i,k=divmod(sum(g,[]).index(4),11);x=i&3;y=k&3;h=[[5*(r%4>2 or c%4>2)for c in range(11)]for r in range(11)]
+ for t in 0,1,2:h[x*4+t][y*4:y*4+3]=g[i-x+t][k-y:k-y+3]
  return h
