@@ -1,2 +1,1 @@
-p=lambda g:[[max((v:=r+[q[j]for q in g]),key=v.count)for j in range(len(r))]for r in g]
-
+p=lambda g:[[max((v:=r+[*c]),key=v.count)for c in zip(*g)]for r in g]
