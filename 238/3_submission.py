@@ -2,7 +2,7 @@ def p(g):
  a=c=d=e=99;f=enumerate
  for i,r in f(g):
   for j,v in f(r):
-   if v&7:a=min(a,i);b=i;c=min(c,j)
+   if v&7:a=min(a,b:=i);c=min(c,j)
    elif v:d=min(d,i);e=min(e,j)
  r=range(n:=b+~a);G=[x[c:c+n+2]for x in g[a:b+1]]
  for i in r:
