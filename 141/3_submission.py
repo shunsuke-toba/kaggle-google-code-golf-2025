@@ -1,1 +1,1 @@
-def p(g):n=len(g);a=sum(g,[]);y,x=divmod(a.index(v:=max(a)),n);a=range(n);return[[[g[i][j],v][i-j==y-x or i+j==y+x]for j in a]for i in a]
+def p(g):a=sum(g,[]);b=a.index(v:=max(a));a=range(n:=len(g));return[[v*(j in{i+b%n-b//n,b//n+b%n-i})for j in a]for i in a]
