@@ -2,9 +2,9 @@ def p(g):
  R=range;T=R(3);f=filter;L=len;t=[]
  for y in R(L(g)-2):
   for x in R(L(g[0])-2):
-   b=[g[y+i][x:x+3]for i in T];s={*sum(b,[])}
+   b=[g[y+i][x:x+3]for i in T];z=sum(b,[]);s={*z}
    if{2}<s<s|{0}:
-    t+=(-str(b).count('2'),b),
+    t+=(-z.count(2),b),
     for i in T:g[y+i][x:x+3]=0,0,0
  g=[*map(list,zip(*f(any,zip(*f(any,g)))))]
  for _,b in sorted(t):
