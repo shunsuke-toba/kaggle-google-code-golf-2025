@@ -1,5 +1,5 @@
 def p(g,r=range,l=len):
- s=sum(g,[]);C=sorted({*s},key=s.count);z=C.pop()
+ s=sum(g,[]);*C,z=sorted({*s},key=s.count)
  def F(c,h=g):
   for _ in r(4):
    while c not in h[0]:h=h[1:]
