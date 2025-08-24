@@ -1,1 +1,1 @@
-p=lambda g:[[(x,sum((j and r[j-1],j-9 and r[j+1],i and g[i-1][j],i-9 and g[i+1][j]))//5*3%5)[x>4]for j,x in enumerate(r)]for i,r in enumerate(g)]
+p=lambda g:[[(a,(b+c+u+d)//5*3%5)[a>4]for a,b,c,u,d in zip(r,r[1:]+[0],[0]+r,u,d)]for r,u,d in zip(g,[[0]*10]+g[:-1],g[1:]+[[0]*10])]
