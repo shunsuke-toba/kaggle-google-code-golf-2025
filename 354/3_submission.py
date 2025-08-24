@@ -1,8 +1,7 @@
 def p(g):
  for r in g:
-  for c in range(10):
-   if r[c]==5:
-    d=c
-    while d<10>r[d]==5:d+=1
-    r[c:d]=[max(g[0][c:d])]*(d-c)
+  while 5 in r:
+   b=a=r.index(5)
+   while b<10>r[b]==5:b+=1
+   r[a:b]=[max(g[0][a:b])]*(b-a)
  return g
