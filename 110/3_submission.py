@@ -1,8 +1,8 @@
 def p(g):
- t=[]
- for i,r in enumerate(g):
+ t=[];o=[]
+ for r in g:
   for s in t:
-   if all(a==b or a*b<1 for a,b in zip(r,s)):break
-  else:t+=r,;s=r
-  s[:]=[x or y for x,y in zip(s,r)];g[i]=s
- return g
+   if all((a^b)*a*b<1 for a,b in zip(r,s)):break
+  else:t+=[s:=r]
+  o+=s,;s[:]=map(int.__or__,s,r)
+ return o
