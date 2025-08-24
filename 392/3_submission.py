@@ -1,1 +1,1 @@
-def p(g,R=range(10)):v=max(sum(g,[]));f=lambda r,c,s,m,b=0:[[v*((d:=max(abs(2*i-2*r-s+2),abs(2*j-2*c-s+2)))%s<1 and d//s&1 and d<m*2*s+s)or b for j in R]for i in R];return next(f(*p,s,10,5)for k in R for p in((k,0),(0,k))for s in(2,3)for m in(2,3)if f(*p,s,m)==g)
+def p(g,R=range(10)):v=max(sum(g,[]));f=lambda r,c,s,m,b=0:[[v*((d:=max(abs(2*i-2*r-s+2),abs(2*j-2*c-s+2)))%s<1)*(d//s&1)*(d<m*2*s+s)or b for j in R]for i in R];return next(f(r,c,s,10,5)for r in R for c in R for s in(2,3)for m in(2,3)if f(r,c,s,m)==g)
