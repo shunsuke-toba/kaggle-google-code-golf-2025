@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[v<2 and any(2in s[j-1+(j<1):j+2]for s in g[i-1+(i<1):i+2]) or v for j,v in e(r)]for i,r in e(g)]
+p=lambda g,e=enumerate:[[max(v,any(2in s[j-(j>0):j+2]for s in g[i-(i>0):i+2])) for j,v in e(r)]for i,r in e(g)]
