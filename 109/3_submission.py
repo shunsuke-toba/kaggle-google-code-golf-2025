@@ -1,2 +1,2 @@
 def p(g):
- n=len(g)//2;g=[r+r[::-1]for r in[[e and g[0][n]for e in r[:n]]for r in g[:n]]];return g+g[::-1]
+ n=len(g)//2;return[[g[0][n]*(e>0)for e in r[:n]+r[n-1::-1]]for r in g[:n]+g[:n][::-1]]
