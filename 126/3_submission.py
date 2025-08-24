@@ -1,1 +1,1 @@
-p=lambda g:0*[g[-1].__setitem__(j+1,4)for r in g for j in range(len(r)-2)if r[j]==r[j+1]==r[j+2]>0]or g
+p=lambda g:[0 for j in range(len(g[0]))if sum(r[j]>0 for r in g)%2 for g[-1][j]in[4]]and g
