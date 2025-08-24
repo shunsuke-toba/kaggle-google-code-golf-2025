@@ -1,5 +1,4 @@
 def p(g):
- s=sum(g,[]);o,f,_=sorted({*s},key=s.count)
- w,c,b=max((len(e),-j,t.find(e))for j,r in enumerate(g)for t in[bytes(x==f for x in r)]for e in t.split(b'\0'));t=-c
- while g[t:]and g[t][b]==f:t+=1
- return[[o]*w,*[[o,*r[b+1:b+w-1],o]for r in g[-c+1:t-1]],[o]*w]
+ s=sum(g,[]);o,f,_=sorted({*s},key=s.count);H=len(g[0])+1;b=bytes(i==f for r in g for i in r+[0])
+ w=len(e:=max(b.split(b'\0'),key=len));t=b.find(e);u=b.rfind(e);c=t%H
+ return[[o]*w,*[[o,*r[c+1:c+w-1],o]for r in g[t//H+1:u//H]],[o]*w]
