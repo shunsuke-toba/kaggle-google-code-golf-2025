@@ -4,8 +4,8 @@ def p(g):
   if g[i:=k//w][j:=k%w]:
    s=[(i,j)];m=t=g[i][j]=0
    for x,y in s:
-    for a,b in (x+1,y),(x-1,y),(x,y+1),(x,y-1):
+    for a,b in(x+1,y),(x-1,y),(x,y+1),(x,y-1):
      if h>a>-1<b<w>0<g[a][b]:g[a][b]=0;s+=(a,b),
     a=((x+1,y)in s)+((x-1,y)in s);b=((x,y+1)in s)+((x,y-1)in s);m|=a+b>2;t+=a==b==1
-   for x,y in s:g[x][y]=m*2 or 1+5*(t>1)
+   for x,y in s:g[x][y]=m*2or 1+5*(t>1)
  return g
