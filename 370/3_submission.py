@@ -1,16 +1,13 @@
 def p(g):
- h=len(g);w=len(g[0])
- a=sum(g,[]);b=max(a,key=a.count)
- Z=[]
- for i,r in enumerate(g):
-  for j,v in enumerate(r):
-   if v<1:Z+=i+1j*j,
-   elif v!=b:P=i+1j*j;D=v
- s=P-max(Z,key=lambda x:(abs((P-x).real),abs((P-x).imag)))
- while 1:
-  Z=[z+s for z in Z];f=0
+ w=len(g[0]);b=g[0][0];Z=[]
+ for k,v in enumerate(sum(g,[])):
+  z=k//w+1j*(k%w)
+  if v<1:Z+=z,
+  elif v-b:P=z;D=v
+ s=P-max(Z,key=lambda z:(abs((z:=P-z).real),abs(z.imag)))
+ for _ in[0]*w+g:
+  Z=[z+s for z in Z]
   for z in Z:
-   i=int(z.real);j=int(z.imag)
-   if h>i>=0<=j<w:g[i][j]=D;f=1
-  if not f:break
+   if len(g)>z.real>=0<=z.imag<w:g[int(z.real)][int(z.imag)]=D
  return g
+
