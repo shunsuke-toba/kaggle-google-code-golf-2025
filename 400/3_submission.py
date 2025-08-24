@@ -1,1 +1,1 @@
-p=lambda g:((a:=sum(g,[]).index(1)),[[g[~(a//24+i)][~(a%24+j)]for j in range(5)]for i in range(5)])[1]
+R=range(5);p=lambda g:(k:=sum(g,[]),a:=k.index(1),[[k[~(a+24*i+j)]for j in R]for i in R])[2]
