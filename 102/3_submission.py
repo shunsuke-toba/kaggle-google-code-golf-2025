@@ -4,6 +4,6 @@ def p(g):
   for y in(R:=r(12-s)):
    H=g[y+1:y+s]
    for x in R:
-    if all(g[y][x+i]+g[y+s][x+i]+g[y+i][x]+g[y+i][x+s]>19for i in r(s+1))>any(5 in m[x+1:x+s]for m in H):
+    if all(g[y][x+i]&g[y+s][x+i]&g[y+i][x]&g[y+i][x+s]>4for i in r(s+1))>any(5 in m[x+1:x+s]for m in H):
      for m in H:m[x+1:x+s]=[2]*~-s
  return g

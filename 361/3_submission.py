@@ -1,13 +1,13 @@
-def p(g,R=range):
+def p(g,r=range):
  s=len(g)
  for k in 3,2:
   t=s-k+1
-  for n in R(t*t):
+  for n in r(t*t):
    i,j=divmod(n,t)
-   if all(min(r[j:j+k])for r in g[i:i+k]):
-    r=k/2-.5;i+=r;j+=r
-    for n in R(s*s):
+   if all(min(R[j:j+k])for R in g[i:i+k]):
+    h=k/2-.5;i+=h;j+=h
+    for n in r(s*s):
      if v:=g[y:=n//s][x:=n%s]:
       a,b=y-i,x-j
-      for m,n in(-b,a),(-a,-b),(b,-a):g[int(i+m)][int(j+n)]=v
+      for _ in 0,0,0:a,b=-b,a;g[int(i+a)][int(j+b)]=v
     return g

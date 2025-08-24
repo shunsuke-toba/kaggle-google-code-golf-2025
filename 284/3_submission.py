@@ -4,5 +4,5 @@ def p(g):
  for x,y,z in(b,e,c),(e,b,f):
   s=1-2*(y<x);u=x+y-3*s>>1
   g[a][x:u+s:s]=[z]*-~((u-x)*s)
-  for r in g[a-2:a+3]:r[u]=z;g[a-2][u+s]=g[a+2][u+s]=z
+  for r in g[a-2:a+3]:r[u]=g[a-2][u+s]=g[a+2][u+s]=z
  return t and _()or g

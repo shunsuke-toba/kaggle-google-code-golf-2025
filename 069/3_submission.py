@@ -1,14 +1,11 @@
 def p(g):
- r=range(10);p=[]
+ g=sum(g,[]);r=range(100);p=[]
  for i in r:
-  for j in r:
-   if(v:=g[i][j])%8:
-    if not p:a,b=i,j
-    p+=[(i-a,j-b,v)];g[i][j]=0
+  if(v:=g[i])%8:p+=[(i,v)];g[i]=0
+ a=p[0][0]
  for i in r:
-  for j in r:
-   try:
-    if{g[i+x][j+y]for x,y,_ in p}=={8}:
-     for x,y,v in p:g[i+x][j+y]=v
-   except:0
- return g
+  try:
+   if{g[i+d-a]for d,_ in p}=={8}:
+    for d,v in p:g[i+d-a]=v
+  except:0
+ return[g[i:i+10]for i in r[::10]]
