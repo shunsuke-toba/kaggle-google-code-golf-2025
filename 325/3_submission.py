@@ -1,5 +1,7 @@
-def p(g,A=range):
- c=len(g);E=len(g[0])
- def f(x,y):g[x][y]=0;[f(x+a,y+b)for a,b in((1,0),(-1,0),(0,1),(0,-1))if c>x+a>-1<y+b<E and g[x+a][y+b]]
- k=sum(f(i,j)or 1 for i in A(c)for j in A(E)if g[i][j])
- return[[8*(i==j)for j in A(k)]for i in A(k)]
+def p(g,R=range):
+ def f(x,y):
+  try:
+   if x>-1<y and g[x][y]:g[x][y]=0;f(x+1,y);f(x-1,y);f(x,y+1);f(x,y-1)
+  except:0
+ n=sum(f(i,j)or 1 for i in R(len(g))for j in R(len(g[0]))if g[i][j])
+ return[[8*(i==j)for j in R(n)]for i in R(n)]
