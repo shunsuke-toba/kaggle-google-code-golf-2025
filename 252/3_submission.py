@@ -1,3 +1,1 @@
-def p(a):
- for r in a:r[1::2]=[4*(x>0)for x in r[1::2]]
- return a
+p=lambda g:[[(x,4*(x>0))[i&1]for i,x in enumerate(r)]for r in g]
