@@ -1,9 +1,7 @@
 def p(g):
- d={}
- for k in range(100):
-  if v:=g[y:=k//10][x:=k%10]:
-   try:
-    a,b=d[v];n=y-a
-    while n+1:g[a+n][b+n*(1-2*(x<b))]=v;n-=1
-   except:d[v]=y,x
+ f=sum(g,[]);d=f.index
+ for v in {*f}-{0}:
+  i=d(v);j=d(v,i+1);s=9+2*(j%10>i%10)
+  while j>=i:g[j//10][j%10]=v;j-=s
  return g
+
