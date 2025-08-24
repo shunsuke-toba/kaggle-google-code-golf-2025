@@ -1,1 +1,1 @@
-p=lambda g:[[g[6][0]*(j>0)for j in i]for i in g[:6]]+[[0]*7]
+p=lambda g:[[g[6][0]*(j>0)*(i<g[6])for j in i]for i in g]
