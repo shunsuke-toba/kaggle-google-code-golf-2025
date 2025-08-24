@@ -1,1 +1,1 @@
-p=lambda g:[[c]*10 if(c:=r[0])==r[9]>0 else r for r in g]
+p=lambda g:[(r[:1]*10,r)[r[0]!=r[9]]for r in g]
