@@ -1,1 +1,1 @@
-p=lambda g:[[g[r//3*3+1][c//3*3+1]>4for c in range(9)]for r in range(9)]
+p=lambda g,R=range(9):[[g[-~r-r%3][-~c-c%3]>0for c in R]for r in R]
