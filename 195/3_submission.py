@@ -1,1 +1,1 @@
-p=lambda g,A=range(9):(r:=min(i for i,R in enumerate(g)if 5 in R),c:=min(R.index(5)for R in g if 5 in R),[[g[r+x//3*3][c+y//3*3]and g[r+x%3*3][c+y%3*3]for y in A]for x in A])[2]
+p=lambda g,A=range(9):(x:=min(i for i,r in enumerate(g)if 5 in r),y:=min([*r,5].index(5)for r in g),[[g[x+i-i%3][y+j-j%3]&g[x+i*3%9][y+j*3%9]for j in A]for i in A])[2]
