@@ -1,5 +1,8 @@
-def p(g,e=enumerate):
- for v in{*sum(g,[])}-{0}:
-  k=[(r,c)for r,R in e(g)for c,b in e(R)if b==v][::-1];r,c=k[0]
-  for R,C in k:g[R][C]=0;g[R][C+(R<r)*(C<c)]=v
+def p(g):
+ d={}
+ for r in g[::-1]:
+  for j in range(len(r))[::-1]:
+   if v:=r[j]:
+    R,c=d.setdefault(v,(r,j))
+    r[j]=0;r[j+(r!=R)*(j<c)]=v
  return g
