@@ -1,11 +1,11 @@
 def p(g,r=range):
  s=len(g)
- for k in 3,2:
+ for k,h in(3,1),(2,.5):
   t=s-k+1
   for n in r(t*t):
-   i,j=divmod(n,t)
+   i=n//t;j=n%t
    if all(min(R[j:j+k])for R in g[i:i+k]):
-    h=k/2-.5;i+=h;j+=h
+    i+=h;j+=h
     for n in r(s*s):
      if v:=g[y:=n//s][x:=n%s]:
       a,b=y-i,x-j
