@@ -1,3 +1,1 @@
-def p(g):
- for r in g:
-  if 0 in r:a=r.index(0);return[g[~g.index(r)-k][~a:~a-3:-1]for k in(0,1,2)]
+def p(g):i=sum(g,[]).index(0);c=~i&15;return[g[~i//16-k][c:c-3:-1]for k in(0,1,2)]
