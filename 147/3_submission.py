@@ -1,1 +1,1 @@
-p=lambda g:[[c+5*(c==3and 3in(r[j-1:j]+r[j+1:j+2]+[y[j]for y in g[i-1:i]+g[i+1:i+2]]))for j,c in enumerate(r)]for i,r in enumerate(g)]
+p=lambda g:[[c+5*(0<c<sum(r[j-(j>0):j+2]+[y[j]for y in g[i-(i>0):i+2]])-5)for j,c in enumerate(r)]for i,r in enumerate(g)]
