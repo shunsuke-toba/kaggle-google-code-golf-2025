@@ -1,1 +1,1 @@
-p=lambda g:(c:=max(range(1,10),key=sum(g,[]).count),[[c*(v==c or (c in r[j-1:j]+r[j+1:j+2])*(c in[R[j]for R in g[i-1:i]+g[i+1:i+2]])*v>0)for j,v in enumerate(r)]for i,r in enumerate(g)])[1]
+p=lambda g:(c:=max(range(1,10),key=sum(g,[]).count),[[c*(v and c in r[j-(j>0):j+2] and c in[R[j]for R in g[i-(i>0):i+2]])for j,v in enumerate(r)]for i,r in enumerate(g)])[1]
