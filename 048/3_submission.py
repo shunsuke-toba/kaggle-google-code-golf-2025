@@ -4,4 +4,4 @@ def p(g):
  f+=f[:w];s=[f.index(2)]
  for i in s:
   if f[i]:f[i]=0;s+=i+1,i-1,i+w,i-w
- return[[8-(2 in f)*8]]
+ return[[8-8*(2in f)]]
