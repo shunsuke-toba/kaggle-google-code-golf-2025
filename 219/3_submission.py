@@ -10,12 +10,12 @@ def p(g,A=range):
   for s in p[1:]:
    if 0>(r:=s+o)or r+h>15:return
    for i in A(w+~t,-1,-1):
-    if(i+t+1<w)and any(g[r+j][i+t]|g[r+j][i+t+1]for j in R):continue
+    if i+t+1<w and sum(sum(g[r+j][i+t:i+t+2])for j in R):continue
     for j in A(w-t):
-     if m*(j-i):continue
+     if(j-i)*m:continue
      if(c:=j+t)+2<w and all(g[r+y][i:i+t]==b[y][j:j+t]for y in R)and all(r[c]==r[c+2]for r in b):
       for d in A(w-i-t):
-       for y in R:g[r+y][i+t+d]=b[y][c+d%2]>>3
+       for y in R:g[r+y][i+t+d]=b[y][c+d%2]>0
       break
     else:continue
     break
