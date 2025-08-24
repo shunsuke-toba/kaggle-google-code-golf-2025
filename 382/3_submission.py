@@ -3,4 +3,4 @@ def p(g):
  if t:=2in g[0]+g[-1]:g=z(g)
  a=2in z(g)[-1];b=8in g[-1];f=lambda g:[r[::1-2*a]for r in g[::1-2*b]];g=f(g)
  for r in g:s+=r[0]>0;r[s:]=g[0][:-s or 99]
- return[z(g:=f(g)),g][1-t]
+ return(g:=f(g),z(g))[t]
