@@ -1,4 +1,4 @@
 def p(g):
- h=len({*g[0]})>1;r=[]
- for a in(g,g:=zip(*g))[h]:r+=[a[:1]]*(r[-1:]!=[a[:1]])
- return (r,[*zip(*r)])[h]
+ h=g[1:]==g[:-1];r=[]
+ for a in(g,zip(*g))[h]:r+=[a[0]]*(r[-1:]!=[a[0]])
+ return([*zip(r)],[r])[h]
