@@ -8,4 +8,4 @@ def p(g,r=range,l=len):
  for c in C:
   for d in C:
    q,u=F(c),F(d)
-   if c-d and any(all(q[i+x>>1][j+y>>1]==u[x][y]for x in r(l(u))for y in r(l(u[0])))for i in r(l(q)*2-l(u)+1)for j in r(l(q[0])*2-l(u[0])+1)):return[[[z,c][x]for x in t]for t in q]
+   if(c-d)*any(all(q[i+x>>1][j+y>>1]==u[x][y]for x in r(l(u))for y in r(l(u[0])))for i in r(l(q)*2-l(u)+1)for j in r(l(q[0])*2-l(u[0])+1)):return[[[z,c][x]for x in t]for t in q]
