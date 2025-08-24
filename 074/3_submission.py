@@ -1,8 +1,1 @@
-E=enumerate
-def p(g):
- n=len(g);m=n+1
- for y,r in E(g):
-  for x,v in E(r):
-   if v>8:
-    r[x]=min(g[A][B]for Y in (y,m-y) for X in (x,m-x) for A,B in((Y,X),(X,Y))if 0<=A<n> B)
- return g
+def p(g):R=range(30);return[[min(g[a][b]for Y in(y,31^y)for X in(x,31^x)for a,b in((Y,X),(X,Y))if a<30>b)for x in R]for y in R]
