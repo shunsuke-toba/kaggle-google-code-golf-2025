@@ -1,1 +1,1 @@
-p=lambda g:(b:=eval(str(g)),[exec('g[r][c]=8')for r in range(1,len(g)-1)for c in range(1,len(g[0])-1)if b[r][c]==b[r][c+1]==b[r][c-1]==b[r+1][c]==b[r-1][c]>0])and g
+p=lambda g:[[8 if 0<r<len(g)-1 and 0<c<len(row)-1 and g[r-1][c]==g[r+1][c]==row[c-1]==row[c+1]==a>0 else a for c,a in enumerate(row)]for r,row in enumerate(g)]
