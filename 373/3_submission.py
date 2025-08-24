@@ -1,1 +1,1 @@
-p=lambda g:[[g[i][0],g[~i][0]]*3 for i in(0,1)]
+p=lambda g:((t:=next(zip(*g))*3),t[::-1])
