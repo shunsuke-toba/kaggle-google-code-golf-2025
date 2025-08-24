@@ -1,15 +1,11 @@
-def p(g,R=range,L=len):
- s=sum(g,[])
- C=sorted({*s},key=s.count);z=C.pop()
+def p(g,r=range,l=len):
+ s=sum(g,[]);C=sorted({*s},key=s.count);z=C.pop()
  def F(c,h=g):
-  for _ in R(4):
+  for _ in r(4):
    while c not in h[0]:h=h[1:]
    h=[*zip(*h[::-1])]
-  return[[x==c for x in r]for r in h]
+  return[[x==c for x in t]for t in h]
  for c in C:
   for d in C:
-   q,r=F(c),F(d);A=L(r);B=L(r[0])
-   for i in R(L(q)*2-A+1):
-    for j in R(L(q[0])*2-B+1):
-     if c-d and all(q[i+x>>1][j+y>>1]==r[x][y]for x in R(A)for y in R(B)):
-      return[[[z,c][x]for x in t]for t in q]
+   q,u=F(c),F(d)
+   if c-d and any(all(q[i+x>>1][j+y>>1]==u[x][y]for x in r(l(u))for y in r(l(u[0])))for i in r(l(q)*2-l(u)+1)for j in r(l(q[0])*2-l(u[0])+1)):return[[[z,c][x]for x in t]for t in q]
