@@ -1,8 +1,6 @@
-def p(g,e=enumerate):
- y=0
- while 3not in g[y]:y+=1
- X=g[y].index(3)*2+1;y=y*2+1
- for Y,r in e(g):
-  for x,c in e(r):
-   if c%3:r[X-x]=g[y-Y][x]=g[y-Y][X-x]=2
+def p(g):
+ w=len(g[0]);s=sum(g,[]);i=s.index(3);Y,X=i//w*2|1,i%w*2|1;i=0
+ for c in s:
+  r=i//w;x=i%w;i+=1
+  if c%3:g[r][X-x]=g[Y-r][x]=g[Y-r][X-x]=2
  return g
