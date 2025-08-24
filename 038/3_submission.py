@@ -1,1 +1,1 @@
-p=lambda g:[([1]*(sum(x*y==1 for r in g for x,y in zip(r,r[1:]))//2)+[0]*5)[:5]]
+p=lambda g:[([1]*(str(g).count('1, 1')//2)+[0]*5)[:5]]
