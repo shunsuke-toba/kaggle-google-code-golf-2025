@@ -1,1 +1,1 @@
-p=lambda g:[sum(zip(r,r),())for r in zip(*filter(any,zip(*filter(any,g))))for _ in'00']
+f=filter;z=zip;p=lambda g:[sum(z(r,r),())for r in z(*f(any,z(*f(any,g))))for _ in'00']
