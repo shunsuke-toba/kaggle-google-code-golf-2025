@@ -1,7 +1,6 @@
 def p(g):
- f=sum(g,[]);k=sum({*f})-2;x,y=divmod(f.index(2),10)
- b=k in g[x];a=(x,y)[b]+(g[x-1+b][y-b]!=k);g=[[3]*10 for _ in g];n=100
+ f=sum(g,[]);k=sum({*f})-2;i=f.index(2)
+ a=(i//10,i%10)[b:=k in g[i//10]]+(f[i-10+9*b]!=k);g=[[3]*10 for _ in g];n=100
  while n:=n-1:
-  i,j=divmod(n,10)
-  if f[n]==k:g[i][j]=g[(2*a+~i,i)[b]][(j,2*a+~j)[b]]=k
+  if f[n]==k:g[(i:=n//10)][(j:=n%10)]=g[(2*a+~i,i)[b]][(j,2*a+~j)[b]]=k
  return g
