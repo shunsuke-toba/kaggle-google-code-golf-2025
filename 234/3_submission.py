@@ -1,9 +1,6 @@
 def p(g):
- for _ in"    ":
-  h,z=[],[];s=set()
-  for r in g:
-   s|=set(r)-{0}
-   if len(s)==2and sum(map(bool,r))==1:z+=[[0]*len(r)]
-   else:h+=[r[:]]
-  g=h+z;g=[*map(list,zip(*g[::-1]))]
+ for _ in[0]*16:
+  s={0}
+  for r in g:s|=set(r);len(s)==3*sum(map(bool,r))and[g.remove(r),g.append([0]*len(r))]
+  g=[*map(list,zip(*g[::-1]))]
  return g
