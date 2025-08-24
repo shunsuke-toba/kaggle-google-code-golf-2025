@@ -1,5 +1,1 @@
-def p(g):
- c=[0]*10
- for v in sum(g,[]):c[v]+=v>0
- m=max(c)
- return[[*dict.fromkeys(v for v in sum(zip(*g),()) if m==c[v]>0)]]*m
+def p(g):s=sum(zip(*g),());m=max(map(s.count,range(1,10)));return[[i for i in dict.fromkeys(s) if s.count(i)==m]]*m
