@@ -1,7 +1,7 @@
 def p(g):
- r=range(9);s={i for i in r if g[i//3][i%3]};n=0
- while 1:
-  n+=1;y=n//8;x=n%8
-  if{j for j in r if g[y+j//3][x+j%3]}==s and len(c:={g[y+j//3][x+j%3]for j in s})<2<str(g).count(str(c:=c.pop()))==len(s):
-   for j in s:g[y+j//3][x+j%3]=5
+ s=[i for i in range(9)if g[i//3][i%3]];a=s[0]
+ for n in range(1,64):
+  y,x=divmod(n,8)
+  if{g[y+i//3][x+i%3]for i in s}=={c:=g[y+a//3][x+a%3]}and str(g).count(str(c))==len(s):
+   for i in s:g[y+i//3][x+i%3]=5
    return g
