@@ -4,8 +4,8 @@ def p(g):
   s=[(i,j)for i in R(n)for j in R(n)if g[i][j]];a,c=s[0];b,d=s[-1]
   if 0 in g[a][c:d]:break
   g=r(g)
- for e in g[a+1:b]:e[c+1:d]=[4]*(d-c-1)
- for e in g[:b]:e[c+2:d-1]=[4]*(d-c-3)
+ y=d-c-1
+ for i in R(b):t=i>a;g[i][c+2-t:d+t-1]=[4]*(y-2+2*t)
  for j in R(a):
   h=g[a+~j]
   if j<c+2:h[c+1-j]=4
