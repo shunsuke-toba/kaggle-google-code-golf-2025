@@ -1,1 +1,1 @@
-p=lambda g:[g[(x:=sum(g,[]).index(5))//10+i][x%10-1:x%10+2]for i in(1,2,3)]
+p=lambda g:(g:=sum(g,[]),g:=g[g.index(5)+9:])and[g[:3],g[10:13],g[20:23]]
