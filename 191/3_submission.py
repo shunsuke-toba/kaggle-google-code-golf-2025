@@ -3,10 +3,7 @@ def p(g,R=range,n=23):
  for _ in R(4):
   h=len(r:=m[::-1]);w=len(r[0])
   for t in R(529):
-   y=t//n;x=t%n
-   if[g[x:x+w]for g in g[y:y+h]]in(m,r):
-    for V in R(y-1,y+h+1):
-     for U in R(x-1,x+w+1):
-      if-1<V<n>U>-1:g[V][U]+=g[V][U]<1
+   y,x=divmod(t,n)
+   [g[x:x+w]for g in g[y:y+h]]in(m,r)and[g[V].__setitem__(U,g[V][U]or 1)for V in R(y-1,y+h+1)for U in R(x-1,x+w+1)if-1<V<n>U>-1]
   m=[*map(list,zip(*r))]
  return g
