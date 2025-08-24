@@ -1,16 +1,9 @@
 def p(g,R=range):
- h,w=len(g),len(g[0]);C=[0]*10
- for r in g:
-  for t in r:C[t]+=1
- a,b=sorted(R(10),key=C.__getitem__)[8:]
- D=[0]*10;S=[];T=[];F={}
- for i in R(h):
-  for j in R(w):
-   if(q:=g[i][j])in(a,b):continue
-   F[q]=1;S+=i+j,;T+=i-j,
-   for x in R(i-1,i+2):
-    for y in R(j-1,j+2):
-     if(0<=x<h)*(0<=y<w)*(x+y-i-j):D[q]+=g[x][y]==a or-(g[x][y]==b)
- p,q=F
- if D[q]>D[p]:a,b=b,a
- return [[(d:=g[i][j])in(a,b)and(i+j in S or i-j in T)and[p,q][d==b]or d for j in R(w)]for i in R(h)]
+ f=sum(g,[]);a=max(g[0][:2]+g[1][:2],key=f.count);b=max({*f}-{a},key=f.count)
+ s=[];m=[0]*10
+ for i,r in enumerate(g):
+  for j,d in enumerate(r):
+   if d in(a,b):continue
+   s+=i+j,60+i-j,
+   m[a if a in r and a in[t[j]for t in g]else b]=d
+ return [[(d,m[d])[d in(a,b)and(i+j in s or 60+i-j in s)]for j,d in enumerate(g[i])]for i in R(len(g))]
