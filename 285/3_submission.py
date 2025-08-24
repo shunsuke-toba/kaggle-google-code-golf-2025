@@ -6,12 +6,11 @@ def p(g):
    for y,x in q:
     for a,b in d:
      if n>(Y:=y+a)>-1<(X:=x+b)<n and o[Y][X]==c:o[Y][X]=-c;q+=(Y,X),
-   if len(q)<2:continue
-   for y,x in q:
-    if any(-c!=o[y+a][x+b]!=0 for a,b in d if a*b==0):
-     p=[(r-y,c-x)for r,c in q];break
-   for a,b in d:
-    if(v:=o[y+a][x+b])and v!=-c:
-     if v>0:o[y+a][x+b]=-v
-     for u,w in p:g[y+a+(u,-u)[a&1]][x+b+(w,-w)[b&1]]=abs(v)
+   if q[1:]:
+    for y,x in q:
+     if any(-c!=o[y+a][x+b]!=0 for a,b in d if a*b==0):
+      p=[(r-y,c-x)for r,c in q];break
+    for a,b in d:
+     if(v:=o[y+a][x+b])and v+c:
+      for u,w in p:g[y+a+(u,-u)[a&1]][x+b+(w,-w)[b&1]]=abs(v)
  return g
