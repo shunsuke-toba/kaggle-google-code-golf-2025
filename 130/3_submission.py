@@ -1,1 +1,1 @@
-t=0,3,6;p=lambda g:[[max(b:=sum((r[c:c+3]for r in g[i:i+3]),[]),key=b.count)for c in t]for i in t]
+t=0,3,6;p=lambda g:[[sorted(sum((r[c:c+3]for r in g[i:i+3]),[]))[4]for c in t]for i in t]
