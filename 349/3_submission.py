@@ -1,9 +1,9 @@
 def p(g,R=range):
- n=len(g);o=[*map(list,g)]
+ o=eval(str(g));n=len(g)
  for m in R(n*n):
-  i=m//n;j=m%n;a=0;b=i
-  if g[i][j]>g[i-1][j]*i|g[i][j-1]*j:
-   while j+a<n>g[i][j+a]>0:a+=1
+  i=m//n;u=g[i];j=m%n;a=b=i
+  if u[j]>g[i-1][j]*i|u[j-1]*j:
+   a=(u+[0]).index(0,j)-j
    while b<n>g[b][j]>0:b+=1
    r=a>>1;l=max(j-r,0)
    for y in o[b:]:y[j:j+a]=[1]*a
