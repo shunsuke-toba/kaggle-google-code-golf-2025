@@ -1,7 +1,7 @@
 def p(g):
- f=sum(g,[]);k=min(f,key=f.count);a=f.index(k);u,l=divmod(a,21);d=462-f[::-1].index(k)-a;H=d//21;W=d%21;R=range
- for y in R(22-H):
-  for x in R(22-W):
-   if(x-l|y-u)and not sum(sum(r[x+1:x+W-1])for r in g[y+1:y+H-1]):
-    for t in R(H):g[y+t][x:x+W]=g[u+t][l:l+W]
+ f=sum(g,[]);k=min(f,key=f.count);a=f.index(k);y,x=divmod(a,21);H,W=divmod(462-f[::-1].index(k)-a,21);r=range
+ for Y in r(22-H):
+  for X in r(22-W):
+   if(X-x|Y-y)and not sum(sum(z[X+1:X+W-1])for z in g[Y+1:Y+H-1]):
+    for t in r(H):g[Y+t][X:X+W]=g[y+t][x:x+W]
     return g
