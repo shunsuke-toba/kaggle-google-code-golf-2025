@@ -1,1 +1,1 @@
-def p(g):return[[v or 8*any(k) for v,k in zip(r,zip(*g))]*2 for r in g]*2
+p=lambda g:[[z or any(t)*8 for z,*t in zip(r,*g)]*2for r in g*2]
