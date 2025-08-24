@@ -1,1 +1,1 @@
-p=lambda g:[[(a,(b+c+u+d)//5*3%5)[a>4]for a,b,c,u,d in zip(r,r[1:]+[0],[0]+r,u,d)]for r,u,d in zip(g,[[0]*10]+g[:-1],g[1:]+[[0]*10])]
+p=lambda g,z=[[0]*10]:[[a and(b+c+u+d)//5*3%5 for a,b,c,u,d in zip(r,r[1:]+[0],[0]+r,u,d)]for u,r,d in zip(z+g,g,g[1:]+z)]
