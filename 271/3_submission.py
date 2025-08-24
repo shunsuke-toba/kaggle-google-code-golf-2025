@@ -1,1 +1,1 @@
-R=range(7);p=lambda g:max(([x[c:c+3]for x in g[i:i+3]]for i in R for c in R),key=lambda t:sum(x%2*2+x//8for x in sum(t,[])))
+p=lambda g:max(([r[k%7:k%7+3]for r in g[k//7:k//7+3]]for k in range(49)),key=lambda t:sum(x%2+(x>0)for x in sum(t,[])))
