@@ -1,6 +1,5 @@
 def p(g):
- w=len(g[0]);n=w*len(g);s=[*range(w),*range(0,n,w)]
+ r=range;w=len(g[0]);h=len(g);s=[*r(w),*r(0,h*w,w)]
  for p in s:
-  l=g[p%n//w];i=p%w
-  if l[i]<1:l[i]=3;s+=p+1,p-1,p+w,p-w
- return eval(f'{g}'.replace(*'02'))
+  if(l:=g[p//w%h])[p%w]<1:l[p%w]=3;s+=p+1,p-1,p+w,p-w
+ return eval(str(g).replace(*'02'))
