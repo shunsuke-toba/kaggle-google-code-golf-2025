@@ -1,1 +1,1 @@
-p=lambda g:[g[0]]+[[a[0]]+[x*(a[j-1]+a[j+1]+b[j]+c[j]!=4*x)for j,x in enumerate(a[1:-1],1)]+[a[-1]]for a,b,c in zip(g[1:-1],g,g[2:])]+[g[-1]]
+p=lambda g:g[:1]+[b[:1]+[x*(b[j-1]+b[j+1]+a[j]+c[j]!=4*x)for j,x in enumerate(b[1:-1],1)]+b[:1]for a,b,c in zip(g,g[1:],g[2:])]+g[:1]
