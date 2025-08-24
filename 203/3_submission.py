@@ -1,1 +1,1 @@
-p=lambda j:(n:=len(j),R:=range(n))and[[j[k:=n//2-min(x+1,y+1,n-x,n-y)][k]for y in R]for x in R]
+p=lambda g:(c:=[g[i][i]for i in range(len(g)//2)])and[[c[~c.index(x)]for x in r]for r in g]
