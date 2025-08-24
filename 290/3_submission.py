@@ -1,1 +1,1 @@
-def p(g):e=enumerate;y,x,v=zip(*((i,j,k)for i,r in e(g)for j,k in e(r)if k));a,b={*v};return[[a^b^k for k in r[x[0]:x[-1]+1]]for r in g[y[0]:y[-1]+1]]
+def p(g):g=[*filter(sum,zip(*filter(sum,g)))];a,b={*sum(g,())};return[[a^b^k for k in r]for r in zip(*g)]
