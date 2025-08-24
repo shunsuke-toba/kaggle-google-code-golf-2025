@@ -1,1 +1,1 @@
-p=lambda g:5 in g[0]and[*map(list,zip(*p([*map(list,zip(*g))])))]or(exec('for z in range(9**5):x,y=z//14%12+1,z%14;i=x+1-2*(x<7);u=g[x][y]>0;g[x][y]=u and 5 or g[i][y];g[i][y]*=u'),g)[1]
+p=lambda g:5 in g[0]and[*zip(*p([*map(list,zip(*g))]))]or(exec('for z in range(9**5):x,y=z//14%12+1,z%14;i=x+1-2*(x<7);u=g[x][y]>0;g[x][y]=u and 5 or g[i][y];g[i][y]*=u'),g)[1]
