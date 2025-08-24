@@ -1,1 +1,1 @@
-p=lambda g:[[1+6*any(a^c for a,_,c in g)]]
+p=lambda g:[[7**(g[0]!=g[2])]]
