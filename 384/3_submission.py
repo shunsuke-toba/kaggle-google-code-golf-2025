@@ -1,1 +1,1 @@
-def p(g):y,x=zip(*[(i//9,i%9)for i in range(81)if g[i//9][i%9]]);return[sum(zip(s,s),())for r in g[min(y):-~max(y)]for s in(r[min(x):-~max(x)],)*2]
+def p(g):y,x=zip(*[(i//9,i%9)for i in range(81)if g[i//9][i%9]]);return[sum(zip(s,s),())for r in g[min(y):-~max(y)]for s in[r[min(x):-~max(x)]]*2]
