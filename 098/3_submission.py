@@ -1,4 +1,1 @@
-def p(g):
- for a,b,c,d in zip(h:=eval(str(g)),h[1:],h[2:],g[1:-1]):
-  for j,x in enumerate(b[1:-1],1):d[j]=x*(a[j]+c[j]+b[j-1]+b[j+1]!=4*x)
- return g
+p=lambda g:[g[0]]+[[a[0]]+[x*(a[j-1]+a[j+1]+b[j]+c[j]!=4*x)for j,x in enumerate(a[1:-1],1)]+[a[-1]]for a,b,c in zip(g[1:-1],g,g[2:])]+[g[-1]]
