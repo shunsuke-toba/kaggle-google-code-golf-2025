@@ -1,4 +1,4 @@
 def p(g):
- r=not any(g[0]);c=not any(r[0]for r in g);d=r==c;o=[[0]*9 for _ in g*3];p=c+4*(d^1);q=c+4*d
+ r=g[0][1]<1;c=g[1][0]<1;o=[[0]*9for _ in g*3];p=c*5^r*4;q=p^4
  for i in range(4):o[r+i][p:p+4]=o[r+4+i][q:q+4]=[3]*4
  return o
