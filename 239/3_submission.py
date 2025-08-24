@@ -1,1 +1,1 @@
-def p(g):c=__import__('collections').Counter(sum(g,[])).most_common();return[[k*(v>i)for k,v in c]for i in range(c[0][1])]
+def p(g):x=sum(g,[]);k=x.count;c=sorted({*x},key=k)[::-1];return[[j*(k(j)>i)for j in c]for i in range(k(c[0]))]
