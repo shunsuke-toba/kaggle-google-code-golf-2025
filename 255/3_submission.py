@@ -1,11 +1,11 @@
 def p(a):
- w=range(31);S=[[0]*31for _ in w]
+ w=range(31);v=w[:30];S=[[0]*31for _ in w]
  for t,u,r in zip(S[1:],S,a):
-  for j in w[:30]:t[j+1]=t[j]+u[j+1]-u[j]+(r[j]>0)
+  for j in v:t[j+1]=t[j]+u[j+1]-u[j]+(r[j]>0)
  f=lambda y,x,Y,X:S[Y][X]-S[y][X]-S[Y][x]+S[y][x]<1
  b=0
- for y in w[:30]:
-  for x in w[:30]:
+ for y in v:
+  for x in v:
    for Y in w[y+3:]:
     for X in w[x+3:]:
      if f(y,x,Y,X)*f(y-(y>0),x-(x>0),Y+(Y<30),X+(X<30))*(t:=max(Y-y,X-x)<<10|(Y-y)*(X-x))>b:b=t;A=y;B=x;C=Y;D=X
