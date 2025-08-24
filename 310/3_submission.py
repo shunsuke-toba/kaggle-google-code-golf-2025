@@ -1,2 +1,1 @@
-p=lambda g:(s:=sum(g,[]),k:=s.count,c:=min(s,key=k),n:=k(c)//4+1,l:=len(g),i:=s.index(c))and[r[i%l:][:n]for r in g[i//l:][:n]]
-
+def p(g):a=sum(g,[]);k=a.count;c=min(a,key=k);i=a.index(c);t=k(c)//4+1;l=len(g);return[r[i%l:][:t]for r in g[i//l:][:t]]
