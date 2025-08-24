@@ -3,5 +3,5 @@ def p(g):
  for s in-1,1:
   for t in-1,1:
    x=n*(i+s+1)+s//2;y=n*(j+t+1)+t//2
-   while-1<x<m>y>-1<g[x][y]<1:g[x][y]=2;x+=s;y+=t
+   while g[x][y]<1:g[x][y]=2;x+=s;y+=t
  return g
