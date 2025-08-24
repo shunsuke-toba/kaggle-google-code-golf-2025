@@ -1,2 +1,2 @@
 t=lambda a:[*map(list,zip(*a))]
-p=lambda a:(w:=len(a[0]))>len(a)and t(p(t(a)))or((r:=a.index([2]*w)),(g:=[x for x in a if 3 in x]),g[0]in a[:r]and p(a[::-1])[::-1]or a[:r+1]+g+[[8]*w]+[[0]*w]*(len(a)-r-len(g)-2))[-1]
+p=lambda g:(w:=len(g[0]))>len(g)and t(p(t(g)))or((r:=g.index([2]*w)),(h:=[x for x in g if 3 in x]),h[0]in g[:r]and p(g[::-1])[::-1]or g[:r+1]+h+[[8]*w]+g[:1]*(len(g)-r-len(h)-2))[-1]
