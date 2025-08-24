@@ -1,7 +1,6 @@
 def p(g):
+ h=len({*g[0]})>1
+ if h:g=[*zip(*g)]
  r=[]
  for a in g:r+=[a[:1]]*(r[-1:]!=[a[:1]])
- if r[1:]:return r
- r=[]
- for a in g[0]:r+=[a]*(r[-1:]!=[a])
- return[r]
+ return[sum(r,())]if h else r
