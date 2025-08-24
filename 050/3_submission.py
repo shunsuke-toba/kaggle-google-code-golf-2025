@@ -1,7 +1,7 @@
 def p(g):
- for _ in 0,1:
-  for r in g:
-   try:a=r.index(8);b=r.index(8,a+1);r[a+1:b]=[3]*(b+~a)
-   except:0
+ for _ in g,g:
   g=[*map(list,zip(*g))]
+  for r in g:
+   try:a=r.index(8)+1;b=r.index(8,a);r[a:b]=[3]*(b-a)
+   except:0
  return g
