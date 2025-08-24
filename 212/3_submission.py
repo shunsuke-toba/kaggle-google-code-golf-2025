@@ -1,6 +1,6 @@
-def p(g):
+def p(g,b=100):
  l=g.index([5]*10)
- for b in range(100):
-  v=g[r:=b//10][c:=b%10]
-  while v%5*(r-l)*~r*(10-r):g[r][c]=v;r+=(r<l)^(v<2)or-1
+ while b:
+  b-=1;v=g[r:=b//10][b%10]
+  while v%5*(r-l)*~r*(10-r):g[r][b%10]=v;r+=(r<l)^(v<2)or-1
  return g
