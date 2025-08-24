@@ -5,5 +5,6 @@ def p(g):
   elif t:t=b
  if len(a)*a[2]>len(b)*b[2]:a,b=b,a
  for t,c in(a,1),(b,2):
-  for y in range(-~t[0],t[-3]):g[y][-~t[1]:t[1]+t[2]-1]=[c]*(t[2]-2)
+  x=t[1]+1;w=t[2]-2
+  for y in range(-~t[0],t[-3]):g[y][x:x+w]=[c]*w
  return g
