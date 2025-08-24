@@ -5,7 +5,7 @@ def p(g):
   h=len(P)*S;w=len(P[0])*S
   for y in R(-h,H):
    for x in R(-w,W):
-    if all((P[i//S][j//S]>1)==(W>x+j>-1<y+i<H>g[y+i][x+j]==2)for i in R(h)for j in R(w)):
+    if all((P[i//S][j//S]>1)==(W>x+j>-1<y+i<H>g[y+i][x+j]>1)for i in R(h)for j in R(w)):
      for i in R(h):
       for j in R(w):
        if W>x+j>-1<y+i<H:g[y+i][x+j]=-P[i//S][j//S]
