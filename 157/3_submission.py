@@ -7,7 +7,7 @@ def p(g):
     for Y,X in t:
      for k in R(4):
       U=y+Y+D[k];V=x+X+D[k+1]
-      if-1<U<10 and-1<V<15 and g[U][V]>4:g[U][V]=0;t+=[(U-y,V-x)]
+      if 10>U>-1<V<15 and g[U][V]>4:g[U][V]=0;t+=[(U-y,V-x)]
     s+=t,
  while s:
   b=T=U=V=0
