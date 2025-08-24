@@ -1,12 +1,12 @@
 def p(g):
- h=len(g);w=len(g[0]);R=range
- P=next(x for r in R(h)for c in R(w)for s in R(h,r,-1)for t in R(w,c,-1)if all(map(any,(x:=[g[i][c:t]for i in R(r,s)])+[*zip(*x)]))*sum({*sum(x,[])})>2)
+ H=len(g);W=len(g[0]);R=range
+ P=next(x for r in R(H)for c in R(W)for s in R(H,r,-1)for t in R(W,c,-1)if all(map(any,(x:=[a[c:t]for a in g[r:s]])+[*zip(*x)]))*sum({*sum(x,[])})>2)
  for S in 3,2,1:
-  H=len(P)*S;W=len(P[0])*S
-  for y in R(-H,h):
-   for x in R(-W,w):
-    if all((P[i//S][j//S]>1)==(w>x+j>-1<y+i<h>g[y+i][x+j]==2)for i in R(H)for j in R(W)):
-     for i in R(H):
-      for j in R(W):
-       if w>x+j>-1<y+i<h:g[y+i][x+j]=-P[i//S][j//S]
- return [list(map(abs,r))for r in g]
+  h=len(P)*S;w=len(P[0])*S
+  for y in R(-h,H):
+   for x in R(-w,W):
+    if all((P[i//S][j//S]>1)==(W>x+j>-1<y+i<H>g[y+i][x+j]==2)for i in R(h)for j in R(w)):
+     for i in R(h):
+      for j in R(w):
+       if W>x+j>-1<y+i<H:g[y+i][x+j]=-P[i//S][j//S]
+ return[[*map(abs,r)]for r in g]
