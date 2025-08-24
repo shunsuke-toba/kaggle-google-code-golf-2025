@@ -1,1 +1,1 @@
-def p(g):k=len(g);t=[(i,j)for i in range(k)for j in range(k)if g[i][j]];r=sorted(i for i,_ in t);a=r[1];b=sum(j for _,j in t)//3;s=a-r[0];return [[g[a][b]*(max(a-i,i-a,b-j,j-b)%s<1)for j in range(k)]for i in range(k)]
+def p(g):k=range(len(g));p,q,_=sorted((i,j)for i in k for j in k if g[i][j]);a,b=q;return[[g[a][b]*(max(a-i,i-a,b-j,j-b)%(a-p[0])<1)for j in k]for i in k]
