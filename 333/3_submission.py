@@ -1,1 +1,1 @@
-f=lambda a:[*zip(*[[x or((3in r[j:])*max(r[:j+1])+(3in r[:j])*max(r[j:]))for j,x in enumerate(r)]for r in a])];p=lambda g:f(f(g))
+f=lambda a:[*zip(*[[x or(3in r[j:])*max(r[:j+1])+(3in r[:j])*max(r[j:])for j,x in enumerate(r)]for r in a])];p=lambda g:f(f(g))
