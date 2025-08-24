@@ -1,1 +1,1 @@
-def p(g):E=enumerate;l=max(g[0]);R,C=map(sorted,map(set,zip(*[(i,j)for i,R in E(g)for j,v in E(R)if 0<v!=l])));return[[(v:=g[a][b])*(v==g[a][d]==g[c][b]==g[c][d]!=l)for b,d in zip(C,C[1:])]for a,c in zip(R,R[1:])]
+def p(g):E=enumerate;Z=zip;l=max(g[0]);R,C=map(sorted,map(set,Z(*[(i,j)for i,R in E(g)for j,v in E(R)if 0<v!=l])));return[[(v:=g[a][b])*(v==g[a][d]==g[c][b]==g[c][d]!=l)for b,d in Z(C,C[1:])]for a,c in Z(R,R[1:])]
