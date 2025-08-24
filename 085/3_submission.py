@@ -1,5 +1,4 @@
-def p(g,r=range):
+def p(g):
  for a,b,c in zip(g,g[1:],g[2:]):
-  for i in r(len(b)-1):
-   if a[i]==b[i]==c[i]==b[i+1]:b[i+1]=0
+  for i in range(len(b)-1):b[i+1]*=(a[i]==b[i]==c[i]==b[i+1])^1
  return g
