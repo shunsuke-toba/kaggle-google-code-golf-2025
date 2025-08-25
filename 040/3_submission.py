@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[(c,(g[0][0],b:=g[9][9])[(y,x)[b in g[0]]>4])[c==3]for x,c in e(r)]for y,r in e(g)]
+p=lambda g,R=range(10):[[(c:=g[y][x],(g[0][0],b:=g[9][9])[(y,x)[b in g[0]]>4])[c==3]for x in R]for y in R]
