@@ -1,5 +1,5 @@
 def p(g):
  l=g[3].index(8);b=2+sum(8in r for r in g)
- for k in range(99):
-  if x:=g[i:=k//10][j:=k%10]:g[max(min(i,b),3)][max(min(j,5),l)]=x
+ for k,x in enumerate(sum(g,[])):
+  if x&7:g[max(min(k//10,b),3)][max(min(k%10,5),l)]=x
  return g
