@@ -1,4 +1,4 @@
 def p(g):
- x=[(r,c)for r in range(1,10)for c in range(9)if g[r][c]];k=9+(sum(g[c][-r]-g[c][~r]for r,c in x)>0)
- for r,c in x:g[c][k-r]=g[c][k-r]or 2
+ r=range(10);x=[(a,b)for a in r for b in r if g[a][b]];k=9+(sum(g[b][-a]-g[b][~a]for a,b in x)>0)
+ for a,b in x:g[b][k-a]=g[b][k-a]or 2
  return g
