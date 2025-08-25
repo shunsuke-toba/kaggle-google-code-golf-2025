@@ -7,5 +7,5 @@ def p(g):
     for n in range(100):
      if v:=g[y:=n//10][x:=n%10]:
       y-=i;x-=j
-      for _ in 0,0,0:x,y=-y,x;g[int(i+y)][int(j+x)]=v
+      for _ in"-"*3:x,y=-y,x;g[int(i+y)][int(j+x)]=v
     return g
