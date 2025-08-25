@@ -1,6 +1,5 @@
 def p(g):
  g=sum(g,[])
  for t in 3,7:
-  p=g.index(7//t)
-  while t in g:j=g.index(t);g[p+(k:=j-p)//(abs(k)//15 or abs(k))]=-t;g[j]=0
+  while t in g:p=g.index(8%t);j=g.index(t);g[p+(j-p)//((k:=abs(j-p))//15 or k)],g[j]=-t,0
  return[*zip(*[map(abs,g)]*15)]
