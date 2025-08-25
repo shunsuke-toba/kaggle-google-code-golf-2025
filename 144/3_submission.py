@@ -1,1 +1,1 @@
-p=lambda g:[[3*(x+y<1)for x,y in zip(*v)]for v in zip(g,g[5:])]
+p=lambda g:[[3*(x+y<1)for x,y in r]for r in map(zip,g,g[5:])]
