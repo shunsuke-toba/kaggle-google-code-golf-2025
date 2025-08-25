@@ -1,5 +1,5 @@
 def p(g):
- h=g[9];j=h.index(max(h));k=0
- for r in g:r[j::2]=[h[j]]*(5-j//2)
+ j=g[9].index(c:=max(g[9]));k=0
+ for r in g:r[j::2]=[c]*(5-j//2)
  while j<9:g[k][j+1]=5;k=~k;j+=2
  return g
