@@ -1,6 +1,6 @@
 def p(g):
  (a,b,c),(d,e,f)=[(i,j,v)for i,r in enumerate(g)for j,v in enumerate(r)if v]
- if a-d:_=lambda g:[*map(list,zip(*g))];return _(p(_(g)))
+ if a-d:return[*zip(*p([*map(list,zip(*g))]))]
  for x,y,z in(b,e,c),(e,b,f):
   s=y>x or-1;u=x+y-3*s>>1
   g[a][x:u+s:s]=[z]*-~((u-x)*s)
