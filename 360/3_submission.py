@@ -1,1 +1,1 @@
-p=lambda g:[[r[j]|r[~j]for j in(0,1,2,3)]for r in g]
+p=lambda g:[[*map(max,r,r[:4:-1])]for r in g]
