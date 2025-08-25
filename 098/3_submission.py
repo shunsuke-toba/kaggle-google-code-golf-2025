@@ -1,1 +1,1 @@
-p=lambda g:g[:1]+[[0]+[x*(a[j]*b[j-1]*b[j+1]*c[j]<1)for j,x in enumerate(b[1:-1],1)]+[0]for a,b,c in zip(g,g[1:],g[2:])]+g[:1]
+p=lambda g:[[r[j]*(g[i-1][j]*g[(i+1)%len(g)][j]*r[j-1]*r[(j+1)%len(r)]<1)for j in range(len(r))]for i,r in enumerate(g)]
