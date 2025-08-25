@@ -1,6 +1,5 @@
 def p(g):
- R=range;L=len;S=[]
- h=L(g);w=L(g[0])
+ R=range;L=len;h,w=L(g),L(g[0]);S=[]
  for y in R(h):
   for x in R(w):
    a=b=0
@@ -17,5 +16,5 @@ def p(g):
      if all(r[i][j]*(u.count(r[i][j])<2)==g[y+i][x+j]for i in R(a)for j in R(b)):
       for i in R(a):g[y+i][x:x+b]=r[i]
    r=[*zip(*r[::-1])]
-   if z%4>2:r=r[::-1]
+   if z==3:r=r[::-1]
  return g

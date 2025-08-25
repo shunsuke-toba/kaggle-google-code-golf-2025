@@ -1,7 +1,6 @@
 def p(g):
  for _ in 0,1:
   for r in g:
-   for c in r:
-    if c:a=r.index(c);b=len(r)-r[::-1].index(c);r[a:b]=[c]*(b-a)
+   if c:=sum(r)-sum({*r}):a=r.index(c);b=r.index(c,a+1)+1;r[a:b]=[c]*(b-a)
   g=[*map(list,zip(*g))]
  return g
