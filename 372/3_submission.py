@@ -1,1 +1,1 @@
-p=lambda g:[[*map(sum,zip(*z))]for z in zip(g,g[6:])]
+p=lambda g:[[*map(max,*z)]for z in zip(g,g[6:])]
