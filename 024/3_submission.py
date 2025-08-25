@@ -1,1 +1,1 @@
-p=lambda g:[(m:=max(r))%2*[m]*len(r)or[2*(2in z)for z in zip(*g)]for r in g]
+p=lambda g:[[max(r)%2*max(r) or 2*(2in c)for c in zip(*g)]for r in g]
