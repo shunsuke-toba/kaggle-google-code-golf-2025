@@ -1,1 +1,1 @@
-def p(g):s=sum(g,[]);s=[max(s[k::3])for k in(0,1,2)]*5;return[s[i:i+7]for i in range(7)]
+def p(g):s=sum(g,[]);return[[max(s[(i+j)%3::3])for j in range(7)]for i in range(7)]
