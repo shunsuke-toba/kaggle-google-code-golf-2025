@@ -1,1 +1,1 @@
-p=lambda g:[[(x,4*(x>0))[i&1]for i,x in enumerate(r)]for r in g]
+p=lambda g:[(t:=1)and[(x,x and 4)[t:=1-t]for x in r]for r in g]
