@@ -1,1 +1,1 @@
-def p(g):[r.__setitem__(i,2)for r in g for i in range(10)if g[0][i]*r[9]];return g
+p=lambda g:[[a+b*r[9]//25*2 for a,b in zip(r,g[0])]for r in g]
