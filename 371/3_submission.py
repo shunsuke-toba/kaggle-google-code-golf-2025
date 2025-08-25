@@ -1,6 +1,6 @@
-def p(g,A=enumerate):
- Y=X=0
- for y,r in A(g):
-  for x,v in A(r):Y+=y*v;X+=x*v
- for k in-1,0,1:g[Y//2+k][X//2]=g[Y//2][X//2+k]=3
+def p(g):
+ a=sum(g,[])
+ i=a.index(1);y,x=divmod(i+a.index(1,i+1)>>1,len(g[0]))
+ for k in-1,0,1:g[y+k][x]=g[y][x+k]=3
  return g
+
