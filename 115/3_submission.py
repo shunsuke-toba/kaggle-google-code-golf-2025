@@ -1,1 +1,1 @@
-p=lambda g,d={}.fromkeys:(x:=[*d(g[0])],x[1:]and[x]or[*zip(d(next(zip(*g))))])[1]
+p=lambda g,d={}.fromkeys:(k:=[*d(g[0])])[1:]and[k]or[*zip(d(next(zip(*g))))]
