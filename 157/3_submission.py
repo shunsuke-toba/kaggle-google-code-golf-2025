@@ -7,14 +7,14 @@ def p(g):
     for Y,X in t:
      for k in R(4):
       u=y+Y+D[k];v=x+X+D[k+1]
-      if 10>u>-1<v<15 and g[u][v]>4:g[u][v]=0;t+=[(u-y,v-x)]
+      if u<10 and-1<v<15 and g[u][v]>4:g[u][v]=0;t+=((u-y,v-x),)
     s+=t,
  while s:
   b=-1
   for t in s:
    for Y in 1,2:
     for X in R(15):
-     if all(10>(u:=Y+y)>-1<(v:=X+x)<15 and g[u][v]<1 for y,x in t) and (f:=sum(Y+y<3 for y,x in t))>b:
+     if all(15>X+x and g[Y+y][X+x]<1 for y,x in t) and (f:=sum(Y+y<3 for y,x in t))>b:
       b=f;T,U,V=t,Y,X
   for y,x in T:g[U+y][V+x]=1
   s.remove(T)
