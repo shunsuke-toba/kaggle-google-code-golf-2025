@@ -5,4 +5,4 @@ def p(g):
    for i in range(10):
     if r[i]==8:r[a:i]=[9]*(i-a);a=i+1
   g=[*map(list,zip(*g))]
- return[[x&8 for x in r]for r in g]
+ return[[x&8for x in r]for r in g]
