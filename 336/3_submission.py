@@ -1,6 +1,1 @@
-def p(g):
- s=sum(g,[]);a,b=divmod(s.index(5),10);c,d=divmod(99-s[::-1].index(5),10)
- for r in g[a+1:c]:r[b+1:d]=[8]*~(b-d)
- a=[5,c,a][u:=(g[a][5]-g[c][5])//5];b=[5,d,b][v:=(g[5][b]-g[5][d])//5]
- while b<10>a>-1<b:g[a][b]=8;a+=u;b+=v
- return g
+f=lambda a:[*zip(*[[x or 8*((5in{*r[:j]}&{*r[j:]})+(r.count(5)<2)*(5in r[(j<5)*5:10-(j>4)*5]))for j,x in enumerate(r)]for r in a])];p=lambda g:f(f(g))
