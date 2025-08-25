@@ -1,7 +1,7 @@
 def p(g):
- n=len(g);x,y,v=n-1,0,1;g[0]=[3]*n
- for n in range(n-1,0,-2):
-  for _ in[0]*n:g[y:=y+v][x]=3
-  for _ in[0]*n:g[y][x:=x-v]=3
-  v=-v
+ n=x=len(g)-1;y=0;d=1;g[0]=[3]*-~n
+ while n>0:
+  for _ in[0]*n:y+=d;g[y][x]=3
+  for _ in[0]*n:x-=d;g[y][x]=3
+  n-=2;d=-d
  return g
