@@ -1,1 +1,1 @@
-p=lambda g,R=range:next([[s[4]]]for i in R(len(g)-2)for j in R(len(g[0])-2)if(s:=[g[i+u//3][j+u%3]for u in R(9)])[0]and s[4]-s[0]and s.count(s[0])>7)
+p=lambda g,R=range:next([[s[4]]]for i in R(len(g)-2)for j in R(len(g[0])-2)if(s:=[g[i+u//3][j+u%3]for u in R(9)])[4]!=s[0]>0<8==s.count(s[0]))
