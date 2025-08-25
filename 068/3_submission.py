@@ -1,4 +1,4 @@
 def p(g):
- a=sum(g,[]);b=min(a,key=a.count);y,x=divmod(a.index(b),10);g=[[0]*10 for _ in g]
+ a=sum(g,[]);y,x=divmod(a.index(b:=min(a,key=a.count)),10);g=[[0]*10 for _ in g]
  for R in g[y-1:y+2]:R[x-1:x+2]=2,2,2
  g[y][x]=b;return g
