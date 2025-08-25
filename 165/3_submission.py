@@ -3,5 +3,5 @@ def p(g):
  for i in range(20):
   y=20;c=0
   while y and(b:=g[y-1][i])^k:y-=1;c|=b
-  for r in g[y:]*c*y:r[i]=c
+  for r in g[y:]*y:r[i]=c
  return g
