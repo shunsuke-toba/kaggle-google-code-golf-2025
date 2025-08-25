@@ -1,1 +1,1 @@
-p=lambda g:(t:=next(filter(all,g)))and[[r[t.index(c)]for c in t]for r in g]
+p=lambda g:[[r[g[1].index(c)]for c in g[1]]for r in g]
