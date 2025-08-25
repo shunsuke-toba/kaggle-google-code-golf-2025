@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[v+(i<9)*g[i-9][j]*2+(j<9)*r[j-9]*7+(i>0)*g[i-1][j]*8+(j>0)*r[j-1]*6for j,v in e(r)]for i,r in e(g)]
+p=lambda g,z=[0]*10:[[x+u*8+d*2+l*6+r*7 for x,u,d,l,r in zip(a,b,c,[0]+a,a[1:]+[0])]for a,b,c in zip(g,[z]+g,g[1:]+[z])]
