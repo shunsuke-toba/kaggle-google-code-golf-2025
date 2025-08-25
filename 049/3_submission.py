@@ -1,1 +1,1 @@
-p=lambda g:(s:=sum(g,[]),f:=s.count,c:=min({*s}-{0},key=f),m:=sum(c in r for r in g),[[c]*(f(c)//m)]*m)[4]
+p=lambda g:(s:=sum(g,[]),f:=s.count,c:=min({*s}-{0},key=f),m:=sum(c in r for r in g))and[[c]*(f(c)//m)]*m
