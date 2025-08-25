@@ -1,1 +1,1 @@
-p=lambda g:[0 for j in range(len(g[0]))if sum(r[j]>0 for r in g)%2 for g[-1][j]in[4]]and g
+p=lambda g:g[:-1]+[[4*(sum(r)<2*max(r))for r in zip(*g)]]
