@@ -1,1 +1,1 @@
-p=lambda g:[exec("n=(a+[0])[x:].index(0)-2\nfor j in g[y+1:y+n+1]:j[x+1:x+n+1]=[2|n%2*5]*n")for y,a in enumerate(g)for x,v in enumerate(a)if y*g[y-1][x]+x*a[x-1]<v<2]and g
+p=lambda g,e=enumerate:[exec("n=(*a,0)[x:].index(0)-2\nfor j in g[y+1:][:n]:j[x+1:x+n+1]=[2|n%2*5]*n")for y,a in e(g)for x,v in e(a)if y*g[y-1][x]+x*a[x-1]<v<2]and g
