@@ -1,1 +1,1 @@
-p=lambda g,R=range(30):[[min(g[a][b]for Y in(y,31^y)for X in(x,31^x)for a,b in((Y,X),(X,Y))if a<30>b)for x in R]for y in R]
+p=lambda g,R=range(30):[[min(min(g[a][b],g[b][a])for a in(y,31^y)for b in(x,31^x)if a<30>b)for x in R]for y in R]
