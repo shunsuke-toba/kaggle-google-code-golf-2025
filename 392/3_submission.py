@@ -1,1 +1,1 @@
-p=lambda g,R=range(10):next(o for r in R for c in R for s in(2,3)for v in [max(sum(g,[]))]if(o:=[[v*(max(abs(2*i-2*r-s+2),abs(2*j-2*c-s+2))%(s*2)==s)or 5 for j in R]for i in R])and all((t:=g[i][j])<1 or t==o[i][j]for i in R for j in R))
+p=lambda g,R=range(10):next(o for r in R for c in R for s in(2,3)if(o:=[[max(sum(g,[]))*(max(abs(2*i-2*r-s+2),abs(2*j-2*c-s+2))%(s*2)==s)or 5 for j in R]for i in R])and all((t:=g[i][j])<1 or t==o[i][j]for i in R for j in R))
