@@ -1,5 +1,5 @@
 def p(g):
- z=zip;o=[[0]*len(g[0])for _ in g]
+ z=zip;o=[[0]*len(g)for g in g]
  for _ in 0,1:
   for x,k in enumerate(z(*g)):
    if{*k}=={c:=k[0]}!={0}:
