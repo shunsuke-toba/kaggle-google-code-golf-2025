@@ -1,1 +1,1 @@
-p=lambda g:(n:=len(g)-4,c:=g[::n+3],r:=range(n))and[[c[i>=n/2][(j<n/2)-1]*(g[i+2][j+2]>7)for j in r]for i in r]
+p=lambda g:(r:=range(n:=len(g)-4))and[[g[i+2][j+2]//8*g[-(i>=n/2)][-(j>=n/2)]for j in r]for i in r]
