@@ -1,1 +1,1 @@
-def p(g):r=range(16);_,a,b,c,d,v=max(((c-a)*(d-b),a,b,c,d,v)for a in r for b in r if(v:=g[a][b])for c in r[a+1:]for d in r[b+1:]if all(v==j for i in g[a:c]for j in i[b:d]));return[[v*(a<=i<c)*(b<=j<d)for j in r]for i in r]
+def p(g):r=range(16);_,a,b,c,d,v=max(((c-a)*(d-b),a,b,c,d,v)for a in r for b in r if(v:=g[a][b])for c in r[a+1:]for d in r[b+1:]if all({*i[b:d]}=={v}for i in g[a:c]));return[[v*(a<=i<c)*(b<=j<d)for j in r]for i in r]
