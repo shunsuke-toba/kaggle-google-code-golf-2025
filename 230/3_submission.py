@@ -1,5 +1,5 @@
 def p(g):
- for a,b,c,d in zip(g,g[1:],g[2:],g[3:]):
-  for x in range(15):
-   if b[x+1:x+3]==c[x+1:x+3]==[5,5]:a[x:x+4:3]=1,2;d[x:x+4:3]=3,4
+ for r,a in enumerate(g):
+  for c,v in enumerate(a):
+   if v>4>g[r-1][c]+a[c-1]:g[r-1][c-1:c+3:3]=1,2;g[r+2][c-1:c+3:3]=3,4
  return g
