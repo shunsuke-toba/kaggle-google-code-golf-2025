@@ -1,11 +1,14 @@
 def p(g):
- A=min;B=max;a=e=len(g);c=i=m=len(g[0]);b=d=f=j=0;S=I=();Y=range
+ A=min;B=max;Y=range
+ m=len(g[0]);e=len(g)
+ a=e;c=i=m;b=d=f=j=0;I=()
  for t in Y(e*m):
-  if (v:=g[r:=t//m][o:=t%m])==4:a=A(a,r);b=B(b,r);c=A(c,o);d=B(d,o)
-  elif v:S+=(r,o,v),
- for r,o,v in S:
-  if a<=r<=b and c<=o<=d:I+=(r,o,v),
-  else:e=A(e,r);f=B(f,r);i=A(i,o);j=B(j,o)
+  v=g[r:=t//m][o:=t%m]
+  if v==4:a=A(a,r);b=B(b,r);c=A(c,o);d=B(d,o)
+  elif v:
+   if b>a and r<b:I+=(r,o,v),
+   elif b>a:e=A(e,r);f=B(f,r);i=A(i,o);j=B(j,o)
+   else:I+=(r,o,v),
  h=f-e+1;w=j-i+1
  for k in 2,3,4:
   for r in Y(a,b-h*k+2):
