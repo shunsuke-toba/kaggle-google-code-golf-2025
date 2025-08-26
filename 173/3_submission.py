@@ -1,9 +1,9 @@
 def p(g):
- W=len(g[0])+2;G=[0]*W+sum(([0,*r,0]for r in g),[])+[0]*W;P=range(W+1,~W+len(G))
+ w=len(g[0])+2;g=sum(([0]+r+[0]for r in g),[0]*w)+[0]*w;P=range(w+1,~w+len(g))
  for j in P:
-  for d in 1,W,W+1,W-1:
-   if(a:=G[j+d])==G[j-d]>0!=(c:=G[j]):
+  for d in 1,w,w+1,w-1:
+   if(a:=g[j+d])==g[j-d]>0<(c:=g[j]):
     for k in P:
-     if G[k]==c:G[k+d]=G[k-d]=a
-     if G[k+d]==G[k-d]==a:G[k]=c
- return[G[i:i+W-2]for i in P[::W]]
+     if g[k]==c:g[k+d]=g[k-d]=a
+     if g[k+d]==g[k-d]==a:g[k]=c
+ return[g[i:i+w-2]for i in P[::w]]
