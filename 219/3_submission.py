@@ -1,11 +1,11 @@
 def p(g,R=range):
- i=0;a=0
- while not any(g[i]):i+=1
+ i=a=0
+ while~-any(g[i]):i+=1
  f=i
  while any(g[i]):a+=1;i+=1
  while i<14:
   i+=1
-  if 1-any(g[i]):continue
+  if~-any(g[i]):continue
   s=i;n=0
   while any(g[i]):n+=1;i+=1
   M=0
@@ -17,7 +17,7 @@ def p(g,R=range):
     if m:
      if S>g[S][2]==g[12][0]==a*4>1>g[12][1]:g[12][4]=g[12][6]=g[12][8]=1
      else:
-      for j in R(a*10):k=j%10;j//=10;g[S+j][k]|=g[f+j][k-t]>1>g[S+j][k]<=k-t;i=S+a
+      for j in R(a*10):k=j%10;j//=10;g[S+j][k]|=g[f+j][k-t]>1>g[S+j][k]<=k-t
      M=1;break
    if M:break
  return g
