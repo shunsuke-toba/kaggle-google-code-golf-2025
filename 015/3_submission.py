@@ -1,4 +1,5 @@
 def p(g):
  for i in range(81):
-  if -1<(w:=g[y:=i//9][x:=i%9]-1)<2:g[y+1][x+w]=g[y-1][x-w]=g[y+w][x-1]=g[y-w][x+1]=7-3*w
+  if -1<(w:=g[y:=i//9][x:=i%9]-1)<2:
+   for X in-1,1:g[y+X][x+w*X]=g[y-w*X][x+X]=7-3*w
  return g
