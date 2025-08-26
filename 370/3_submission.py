@@ -8,6 +8,5 @@ def p(g):
  for _ in[0]*w+g:
   Z=[z+s for z in Z]
   for z in Z:
-   if len(g)>z.real>=0<=z.imag<w:g[int(z.real)][int(z.imag)]=D
+   if len(g)>z.real>-1<z.imag<w:g[int(z.real)][int(z.imag)]=D
  return g
-
