@@ -1,1 +1,1 @@
-p=lambda g,R=range:[[max(max(r[j%10::10])for r in g[i%10::10])for j in R(len(g[0]))]for i in R(len(g))]
+p=lambda g,r=range:[(v:=max(g[i%10::10]))and[max(v[j%10::10])for j in r(len(g[0]))]for i in r(len(g))]
