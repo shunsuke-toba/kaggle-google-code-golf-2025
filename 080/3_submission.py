@@ -7,5 +7,5 @@ def p(g):
    for k in R(9):
     u,v=y+k//3-1,x+k%3-1
     if-1<u<m>v>-1:
-     for j in R(n):g[u*s+j][v*s:v*s+n]=[p[k]]*n
+     for j in R(n*n):g[u*s+j//n][v*s+j%n]=p[k]
  return g
