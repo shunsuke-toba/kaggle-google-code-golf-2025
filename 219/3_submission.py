@@ -12,12 +12,11 @@ def p(g,R=range):
   for t in R(3):
    for S in R(s-a+n,s+1):
     m=1
+    if S>g[S][2]==g[12][0]==a*4>1>g[12][1]:g[12][4]=g[12][6]=g[12][8]=1;m=0
     for j in R(a*10):
      if g[S+j//10][j%10]>1>g[f+j//10][j%10-t]<=j%10-t:m=0
     if m:
-     if S>g[S][2]==g[12][0]==a*4>1>g[12][1]:g[12][4]=g[12][6]=g[12][8]=1
-     else:
-      for j in R(a*10):k=j%10;j//=10;g[S+j][k]|=g[f+j][k-t]>1>g[S+j][k]<=k-t
-     M=1;break
+     for j in R(a*10):k=j%10;j//=10;g[S+j][k]|=g[f+j][k-t]>1>g[S+j][k]<=k-t;M=1
+     break
    if M:break
  return g
