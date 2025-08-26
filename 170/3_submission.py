@@ -1,1 +1,1 @@
-p=lambda g:(e:=enumerate,s:=[(i,j)for i,r in e(g)for j,v in e(r)if v],b:=s[-1][0],n:=len(c:=[j for i,j in s if i==b]),m:=(s[~n**2][0]-(t:=s[0][0])+1)//n,r:=range(n))and[[g[t+u*m][min(j for i,j in s if i<b-n+1)+v*m]and g[b-n-~u][c[v]]for v in r]for u in r]
+p=lambda g:(e:=enumerate,s:=[(i,j)for i,r in e(g)for j,v in e(r)if v],b:=s[-1][0],n:=sum(i==b for i,_ in s),m:=(s[~n**2][0]-(t:=s[0][0])+1)//n,r:=range(n))and[[g[t+u*m][min(j for i,j in s[:-n**2])+v*m]and g[b-n-~u][s[v-n][1]]for v in r]for u in r]
