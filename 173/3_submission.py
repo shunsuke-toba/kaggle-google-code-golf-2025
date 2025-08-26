@@ -4,6 +4,5 @@ def p(g):
   for d in 1,w,w+1,w-1:
    if(a:=g[j+d])==g[j-d]>0<(c:=g[j]):
     for k in P:
-     if g[k]==c:g[k+d]=g[k-d]=a
-     if g[k+d]==g[k-d]==a:g[k]=c
+     if g[k]==c or g[k+d]==g[k-d]==a:g[k]=c;g[k+d]=g[k-d]=a
  return[g[i:i+w-2]for i in P[::w]]
