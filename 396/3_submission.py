@@ -1,1 +1,1 @@
-def p(g):s=sum(g,[]);o,f,_=sorted({*s},key=s.count);H=len(g[0])+1;b=bytes(i==f for r in g for i in r+[0]);w=len(e:=max(b.split(b'\0'),key=len));t=b.find(e);return[[j and o for j in r[t%H:][:w]]for r in g[t//H:b.rfind(e)//H+1]]
+def p(g):s=sum(g,[]);o,f,_=sorted({*s},key=s.count);h=len(g[0])+1;b=bytes(i==f for r in g for i in r+[0]);t=b.find(e:=max(b.split(b'\0')));return[[j and o for j in r[t%h:][:len(e)]]for r in g[t//h:b.rfind(e)//h+1]]
