@@ -1,6 +1,5 @@
 def p(g):
- R=range(19)
- for i in R:
+ for i in(R:=range(19)):
   for j in R:
    if v:=g[i][j]:g[j][~i]=g[~i][~j]=g[~j][i]=v
  for i in 1,3,5:
