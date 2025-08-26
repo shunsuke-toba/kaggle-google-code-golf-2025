@@ -1,1 +1,1 @@
-p=lambda g:[[r[j]*(g[i-1][j]*g[(i+1)%len(g)][j]*r[j-1]*r[(j+1)%len(r)]<1)for j in range(len(r))]for i,r in enumerate(g)]
+p=lambda g:[[c*(g[i-1][j]*g[(i+1)%len(g)][j]*r[j-1]*r[(j+1)%len(r)]<1)for j,c in enumerate(r)]for i,r in enumerate(g)]
