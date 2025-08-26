@@ -1,1 +1,1 @@
-p=lambda g:(c:=g[2][:3])and[[c[c.index(v)-1]for v in r]for r in g]
+p=lambda g:[[(c:=g[2][:3])[c.index(v)-1]for v in r]for r in g]
