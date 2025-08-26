@@ -1,1 +1,1 @@
-def p(g):r=[8]*sum((5 in r)-(8 in r)for r in g)+[0]*3;return r[1:4],(0,0,r[4]),r[-3:]
+def p(g):g=[8]*sum(max(g)^5<3 for g in g)+[0]*3;return g[1:4],(0,0,g[4]),[0]*3
