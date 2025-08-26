@@ -1,1 +1,1 @@
-p=lambda g,R=range(10):[[(c:=g[y][x],(g[0][0],b:=g[9][9])[(y,x)[b in g[0]]>4])[c==3]for x in R]for y in R]
+p=lambda g,R=range(10):[[(c:=g[y][x],g[(y>4)*9][(x>4)*9])[c==3]for x in R]for y in R]
