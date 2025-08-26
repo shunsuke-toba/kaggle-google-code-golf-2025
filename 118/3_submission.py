@@ -1,5 +1,5 @@
 def p(g):
- h=len(g);w=len(g[0]);u=set();f=lambda y,x:((a:=g[y][x])==2)-2*(a<1 or (y,x)in u);R=range;t=2
+ h=len(g);w=len(g[0]);u=set();f=lambda y,x:((a:=g[y][x])==2)-2*(a<1 or(y,x)in u);R=range;t=2
  while 1:
   B=0
   for r in(3,2)[::t-1]:
