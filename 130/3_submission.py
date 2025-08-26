@@ -1,1 +1,1 @@
-t=0,3,6;p=lambda g:[[sorted(sum((r[c:c+3]for r in g[i:i+3]),[]))[4]for c in t]for i in t]
+t=0,3,6;p=lambda g:[[sorted(g[i+j//3][c+j%3]for j in range(9))[4]for c in t]for i in t]
