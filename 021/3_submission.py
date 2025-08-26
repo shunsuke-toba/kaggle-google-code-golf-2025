@@ -1,1 +1,1 @@
-def p(g):a,*f=g[0];return[[a]*(-~len(f)-f.count(a))]*(len(g)+1-g.count(g[0]))
+def p(g):q=lambda x:len(x)-x.count(x[0])+1;return[[g[0][0]]*q(g[0])]*q(g)
