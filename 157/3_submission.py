@@ -1,21 +1,16 @@
 def p(g):
  R=range;D=1,0,-1,0,1;s=[]
- for y in R(10):
-  for x in R(15):
-   if g[y][x]>4:
-    t=[(0,0)];g[y][x]=0
-    for Y,X in t:
+ for Y in R(10):
+  for X in R(15):
+   if g[Y][X]>4:
+    t=[(0,0)];g[Y][X]=0
+    for y,x in t:
      for k in R(4):
-      u=y+Y+D[k];v=x+X+D[k+1]
-      if u<10 and-1<v<15 and g[u][v]>4:g[u][v]=0;t+=((u-y,v-x),)
+      u=Y+y+D[k];v=X+x+D[k+1]
+      if u<10 and-1<v<15 and g[u][v]>4:g[u][v]=0;t+=(u-Y,v-X),
     s+=t,
  while s:
-  b=-1
-  for t in s:
-   for Y in 1,2:
-    for X in R(15):
-     if all(15>X+x and g[Y+y][X+x]<1 for y,x in t) and (f:=sum(Y+y<3 for y,x in t))>b:
-      b=f;T,U,V=t,Y,X
+  T,U,V=max(((t,Y,X,sum(Y+y<3 for y,x in t))for t in s for Y in(1,2)for X in R(15)if all(15>X+x and g[Y+y][X+x]<1 for y,x in t)),key=lambda q:q[3])[:3]
   for y,x in T:g[U+y][V+x]=1
   s.remove(T)
  return g
