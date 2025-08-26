@@ -14,6 +14,5 @@ def p(g):
    elif r.count(c)==len(q)>1:s+=[(t,q,c)]
  for t,q,c in s:
   if t in a:
-   j=a[t]-q[0]
-   for n in q:r[n]=0;r[n+j]=c
+   for n in q:r[n]=0;r[n+a[t]-q[0]]=c
  return[*zip(*[iter(r)]*10)]
