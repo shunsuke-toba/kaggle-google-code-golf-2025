@@ -1,1 +1,1 @@
-p=lambda g,R=range:next([[c]]for i in R(len(g)-2)for j in R(len(g[0])-2)if(c:=g[i+1][j+1])and all(c!=g[i+u//3][j+u%3]>0 for u in R(9)if u-4))
+p=lambda g,R=range:next([[c]]for i in R(len(g)-2)for j in R(len(g[0])-2)if(c:=g[i+1][j+1])and sum(0<g[i+u//3][j+u%3]!=c for u in R(9))>7)
