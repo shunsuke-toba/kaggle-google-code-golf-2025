@@ -1,1 +1,1 @@
-def p(g,r=range(7)):s=sum(g,[]);return[[max(s[(i+j)%3::3])for j in r]for i in r]
+p=lambda g,r=range(7):[[max(sum(g,[])[(i+j)%3::3])for j in r]for i in r]
