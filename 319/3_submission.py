@@ -7,5 +7,5 @@ def p(g,r=range,l=len):
   return[[x==c for x in t]for t in h]
  for c in C:
   for d in C:
-   q,u=f(c),f(d);X,Y=l(u),l(u[0])
+   q=f(c);X,Y=l(u:=f(d)),l(u[0])
    if(c-d)*any(all(q[i+x>>1][j+y>>1]==u[x][y]for x in r(X)for y in r(Y))for i in r(l(q)*2-X+1)for j in r(l(q[0])*2-Y+1)):return[[[B,c][x]for x in t]for t in q]
