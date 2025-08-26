@@ -1,1 +1,1 @@
-p=lambda g:[[b'0564312798'[x]&15for x in g[0]]]*3
+p=lambda g:3*[[b'\0	'[x]for x in g[0]]]
