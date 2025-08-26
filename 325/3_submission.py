@@ -1,2 +1,1 @@
-def p(g):
- h=len(g);w=len(g[0]);f=lambda x,y:h>x>-1<y<w and g[x][y]and(g[x].__setitem__(y,0)or f(x+1,y)|f(x-1,y)|f(x,y+1)|f(x,y-1)|1);n=sum(f(t//w,t%w)for t in range(h*w));return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
+def p(g):e=enumerate;s={i+1j*j for i,r in e(g)for j,v in e(r)if v};f=lambda z:z in s and(s.remove(z)or f(z+1)|f(z-1)|f(z+1j)|f(z-1j)|1);n=sum(map(f,{*s}));return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
