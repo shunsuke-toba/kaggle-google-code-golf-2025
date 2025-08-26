@@ -1,1 +1,1 @@
-def p(g):d=sum((5 in r)-(8 in r)for r in g)-1;return([8]*d+[0]*3)[:3],[0,0,d//4*8],[0]*3
+def p(g):r=[8]*sum((5 in r)-(8 in r)for r in g)+[0]*3;return r[1:4],(0,0,r[4]),r[-3:]
