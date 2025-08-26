@@ -7,7 +7,7 @@ def p(g,E=enumerate,R=range,L=len,F=filter):
     k,l=i,j
     while k<n and a[k+1][l]-y:k+=1
     while l<m and a[k][l+1]-y:l+=1
-    q=a[i:k+1];p+=[[r[j:l+1]for r in q]]
+    q=a[i:k+1];p+=[r[j:l+1]for r in q],
     for r in q:r[j:l+1]=[y]*(l-j+1)
  for r in sorted(p,key=lambda r:-sum(c!=z for c in sum(r,[]))):
   n,m=L(r),L(r[0])
