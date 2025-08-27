@@ -1,5 +1,5 @@
 def p(g):
- h=eval(str(g));n=len(g)
+ n=len(h:=eval(str(g)))
  for y in range(n*n):
   x=y%n;y//=n;b=h[y][x]
   if b>h[y-1][x]+h[y][x-1]<1:
