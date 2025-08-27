@@ -1,1 +1,1 @@
-p=lambda g,r=range(8):[[(x:=g[i])[j-3]==x[j-5]>1 and x[j-3]or g[i-3][j]==g[i-5][j]>1 and g[i-3][j]or x[j]for j in r]for i in r]
+p=lambda g,r=range(8):[[(y:=g[i-3][j])*(y==g[i-5][j]>1)or(x:=g[i])[j-3]*(x[j-3]==x[j-5]>1)or x[j]for j in r]for i in r]
