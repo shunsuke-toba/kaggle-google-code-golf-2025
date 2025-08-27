@@ -1,1 +1,1 @@
-p=lambda g:[exec('g[x+y-1][z-1:z+2]=g[y][:3]')for x in[1,4,7] for z in[5,8,11] for y in(0,1,2)*g[x][z]]and g
+p=lambda g:[exec('g[a+i-1][b-1:b+2]=g[i][:3]')for a in[1,4,7]for b in[5,8,11]for i in(0,1,2)*g[a][b]]and g
