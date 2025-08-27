@@ -10,9 +10,9 @@ def p(g):
      if n>Y>-1<X<n:
       v=o[Y][X]
       if v==c:o[Y][X]=-c;q+=(Y,X),
-      if v and c-abs(v) and a*b==0:s,t=y,x
-   p=[(r-s,c-t)for r,c in q]
+      if v*(c-abs(v))*(a*b==0):s,t=y,x
+   q=[(r-s,c-t)for r,c in q]
    for a,b in d:
     if(v:=o[s+a][t+b])*(v+c):
-     for u,w in p:g[s+a+(u,-u)[a&1]][t+b+(w,-w)[b&1]]=abs(v)
+     for u,w in q:g[s+a+(u,-u)[a&1]][t+b+(w,-w)[b&1]]=abs(v)
  return g
