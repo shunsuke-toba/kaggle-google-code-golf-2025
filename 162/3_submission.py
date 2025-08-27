@@ -1,6 +1,6 @@
 def p(g):
- for t in zip(g,g[1:],g[2:]):
-  for l in range(18):
-   if sum(sum(r[l:l+3])for r in t)<1:
-    for r in t:r[l:l+3]=1,1,1
+ for n in range(324):
+  i=n//18;j=n%18;t=g[i:i+3]
+  if sum(sum(r[j:j+3])for r in t)<1:
+   for r in t:r[j:j+3]=1,1,1
  return g
