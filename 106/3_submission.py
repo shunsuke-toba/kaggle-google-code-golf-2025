@@ -1,1 +1,1 @@
-p=lambda g:(G:=[i+[*j]for i,j in zip(g,zip(*g[::-1]))])+[r[::-1]for r in G[::-1]]
+p=lambda g:([*map(list.extend,g,zip(*g[::-1]))],g+[r[::-1]for r in g[::-1]])[1]
