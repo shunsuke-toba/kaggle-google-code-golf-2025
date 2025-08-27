@@ -1,6 +1,4 @@
 def p(g):
- r,c=divmod(sum(g,[]).index(8),10)
- for q in range(100):
-  d=q%10;q//=10;v=g[q][d];g[q][d]=0
-  if v&7:g[r+(q>r)][c+(d>c)]=v
+ a=sum(g,[]);r,c=divmod(a.index(8),10);g=[10*[0]for _ in g]
+ for i,v in enumerate(a):g[r+(i//10>r)][c+(i%10>c)]+=v*(v!=8)
  return g
