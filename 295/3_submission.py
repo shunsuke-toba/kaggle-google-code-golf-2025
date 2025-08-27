@@ -1,1 +1,1 @@
-p=lambda g:(x:=g[0])and[(x,x:=x[:1]+x[:-1])[0]for _ in x[::2]]
+p=lambda g:[x:=g[0]]+[x:=x[:1]+x[:-1]for _ in x[2::2]]
