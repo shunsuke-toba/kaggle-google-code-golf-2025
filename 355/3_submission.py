@@ -1,1 +1,1 @@
-def p(g):s=sum(g,[]);c=s.count;return[[max({*s}-{min(s,key=c)},key=lambda b:sum(b in r for r in g)*sum(b in r for r in zip(*g))-c(b))]]
+p=lambda g:(s:=sum(g,[]),f:=lambda b:sum(b in r for r in g)*sum(b in r for r in zip(*g))-s.count(b))and[[sorted({*s},key=f)[-2]]]
