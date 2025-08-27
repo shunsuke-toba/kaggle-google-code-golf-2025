@@ -1,6 +1,6 @@
 def p(g):
  R=0,1,2;r=c=0
- while 0in map(sum,(P:=[g[r+i][c:c+3]for i in R])+[*zip(*P)]):c=(c+1)%19;r+=c<1
+ while 0in map(sum,(P:=[g[r+i][c:c+3]for i in R])+[*zip(*P)]):c=-~c%19;r+=c<1
  for Y in-4,0,4:
   for X in-4,0,4:
    t=max(max(g[r+Y+i][c+X:c+X+3])for i in R);y,x=r,c
