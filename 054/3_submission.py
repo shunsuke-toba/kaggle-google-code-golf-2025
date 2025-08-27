@@ -7,8 +7,8 @@ def p(g,R=range):
  for i,j in[(i,j)for i in R(30)for j in R(30)if g[i][j]==q[12]]:
   for d in R(4):
    v=q[(22,10,2,14)[d]];x=i;y=j
-   while v^b and g[x][y]^b:g[x][y]=v;x+=D[d];y+=D[d-3]
+   while(v^b)*(g[x][y]^b):g[x][y]=v;x+=D[d];y+=D[d-3]
   for t in R(25):
    v=q[t];x=i+t//5-2;y=j+t%5-2
-   if v^b and g[x][y]^b:g[x][y]=v
+   if(v^b)*(g[x][y]^b):g[x][y]=v
  return g
