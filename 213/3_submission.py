@@ -1,1 +1,1 @@
-p=lambda g:(t:=len({*g[0],*g[-1]})<4,c:=[s.pop()for r in[zip(*g),g][t]if(s:={*r}-{0,5})],h:=[c]*len(c))and[h,[*zip(*h)]][t]
+p=lambda g:(t:=len({*g[0]+g[-1]})>3,h:=[c:=[s.pop()for r in[g,zip(*g)][t]if(s:={*r}-{0,5})]]*len(c),[*zip(*h)],h)[2+t]
