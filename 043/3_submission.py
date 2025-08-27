@@ -1,1 +1,1 @@
-p=lambda g:[[a+b*r[9]//25*2 for a,b in zip(r,g[0])]for r in g]
+p=lambda g:[[a+r[9]*b//9 for a,b in zip(r,g[0])]for r in g]
