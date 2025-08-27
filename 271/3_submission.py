@@ -1,1 +1,1 @@
-p=lambda g:min((sum(x or 9 for x in sum(t,[])),t)for k in range(49)if(t:=[r[k%7:][:3]for r in g[k//7:][:3]]))[1]
+p=lambda g:min((sum(s),t)for k in range(49)if min(s:=sum(t:=[r[k%7:][:3]for r in g[k//7:][:3]],[])))[1]
