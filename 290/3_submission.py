@@ -1,1 +1,1 @@
-def p(g):a,b={*{*sum(g,[])}-{0}};return[[a^b^k for k in r if k]for r in g if sum(r)]
+def p(g):s=sum({*sum(g,[])});return[[s-k for k in r if k]for r in g if sum(r)]
