@@ -1,1 +1,1 @@
-p=lambda g,k=lambda g:[r[0]and[r[0]]*len(r)or r for r in g]:[k(g),[*zip(*k(zip(*g)))]][g==k(g)]
+p=lambda g:(h:=[r[0]and r[:1]*len(r)or r for r in g],(g!=h)*h or [*zip(*p(zip(*g)))])[1]
