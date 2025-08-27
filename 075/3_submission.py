@@ -1,5 +1,1 @@
-def p(g):
- for r in 1,4,7:
-  for c in 5,8,11:
-   for i in(0,1,2)*g[r][c]:g[r+i-1][c-1:c+2]=g[i][:3]
- return g
+p=lambda g:[exec('g[x+y-1][z-1:z+2]=g[y][:3]')for x in[1,4,7] for z in[5,8,11] for y in(0,1,2)*g[x][z]]and g
