@@ -1,1 +1,1 @@
-p=lambda g:(a:=[r[:len(r)//2]for r in g],g[:len(g)//2])[g!=[r*2for r in a]]
+p=lambda g:(b:=[r[:len(r)//2]for r in g],a:=g[:len(g)//2])[a*2==g>g[:3]]
