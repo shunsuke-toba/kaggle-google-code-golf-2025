@@ -1,1 +1,1 @@
-p=lambda g:[[3*(x^y//2)for x,y in zip(*p)]for p in zip(g,g[5:])]
+p=lambda g:[[3*(x^y//2)for x,y in z]for z in map(zip,g,g[5:])]
