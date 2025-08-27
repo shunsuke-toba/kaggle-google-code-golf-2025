@@ -1,1 +1,1 @@
-p=lambda g:[b:=[g[3:]and g[i:i+3]or[r[i:i+3]for r in g]for i in range(0,len(g+g[0])-3,3)],m:=[str(x).count('0')for x in b],b[m.index(min(m,key=m.count))]][2]
+def p(g):b=[g[3:]and g[i:i+3]or[r[i:i+3]for r in g]for i in range(0,len(g+g[0])-3,3)];m=[str(x).count('0')for x in b];return b[m.index(min(m,key=m.count))]
