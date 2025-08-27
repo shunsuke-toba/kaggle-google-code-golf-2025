@@ -1,6 +1,8 @@
 def p(g):
  for _ in 0,0:
   for r in g:
-   for a,b in zip(t:=[i for i,x in enumerate(r)if x&1],t[1:]):r[a+1:b]=[8]*(b+~a)
+   b=99
+   for i,x in enumerate(r):
+    if x&1:r[b:i]=[8]*(i-b);b=i+1
   g=[*map(list,zip(*g))]
  return g
