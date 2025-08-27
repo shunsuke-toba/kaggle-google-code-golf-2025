@@ -1,8 +1,8 @@
 def p(g):
- t=[];o=[]
+ o=[]
  for r in g:
-  for s in t:
-   if all((a^b)*a*b<1for a,b in zip(r,s)):break
-  else:t+=[s:=r]
-  o+=s,;s[:]=map(max,s,r)
+  o+=r,
+  for s in o:
+   if all((a^b)*a*b<1for a,b in zip(r,s)):
+    s[:]=map(max,s,r);o[-1]=s;break
  return o
