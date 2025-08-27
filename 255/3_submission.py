@@ -4,7 +4,7 @@ def p(g,E=enumerate,n=30,T=lambda x:[*map(list,zip(*x[::-1]))]):
   a=[i for i in R if k in g[i][5:]]
   for i in R:
    d=next((t for t in a if t>i),0);u=next((t for t in a[::-1]if t<i),n)
-   if(d-i>1<i-u)*(d-u>6):g[i][5:]=[n]*25
+   if(d-i>1<i-u)*d-u>6:g[i][5:]=[n]*25
   g=T(g)
  for _ in[0]*4:
   for i in R:
