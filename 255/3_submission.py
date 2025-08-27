@@ -9,7 +9,7 @@ def p(g):
     for X in w[x+3:]:
      if f(y,x,Y,X)*f(y-(y>0),x-(x>0),Y+(Y<30),X+(X<30))*(t:=max(h:=Y-y,W:=X-x)<<10|h*W)>b:b=t;A=y;B=x;C=Y;D=X
  for r in g[A:C]:r[B:D]=[3]*(D-B)
- o=[[0]*32]+[[0,*r,0]for r in g]+[[0]*32]
+ O=[0]*32;o=[O]+[[0,*r,0]for r in g]+[O]
  for i in w[A:C]:
   for j in w[B:D]:
    for U,V in(1,0),(-1,0),(0,1),(0,-1):
