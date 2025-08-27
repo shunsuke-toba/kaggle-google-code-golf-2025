@@ -1,1 +1,1 @@
-def p(g):a,b={*sum(g:=[*filter(sum,zip(*filter(sum,g)))],())};return[[a^b^k for k in r]for r in zip(*g)]
+def p(g):a,b={*{*sum(g,[])}-{0}};return[[a^b^k for k in r if k]for r in g if sum(r)]
