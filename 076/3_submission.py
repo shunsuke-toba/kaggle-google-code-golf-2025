@@ -7,6 +7,6 @@ def p(g):
    for x in R(w-L(t[0])+1):
     if all(g[y+a][x+b]==u for a,r in e(t)for b,u in e(r)if u&1<1<u):
      for a,r in e(t):
-      for b,u in e(r):g[y+a][x+b]|=u
+      for b,u in e(r):g[y+a][x+b]=u
   t=[*zip(*t[::-1])];i-3 or t.reverse()
  return g
