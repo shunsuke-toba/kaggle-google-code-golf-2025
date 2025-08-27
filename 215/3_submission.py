@@ -1,1 +1,1 @@
-p=lambda g:(g[3+(o:=max(g[3])<1):6+o]*8)[o+o:][:len(g)]
+p=lambda g:(g[3+(o:=g[3]==g[0]):6+o]*8)[o+o:][:len(g)]
