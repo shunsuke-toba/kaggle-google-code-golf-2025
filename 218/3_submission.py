@@ -1,1 +1,1 @@
-p=lambda g,f={}.fromkeys,F=filter:[*F(any,f(zip(*F(any,f(zip(*g))))))]
+p=lambda g,h=lambda x:dict.fromkeys(zip(*filter(sum,x))):[*h(h(g))]
