@@ -1,1 +1,1 @@
-p=lambda g,E=enumerate:[[c*(c and g[i-1][j]*g[i+1][j]*r[j-1]*r[j+1]<1)for j,c in E(r)]for i,r in E(g)]
+p=lambda g,E=enumerate:[[c*(0<c>g[i-1][j]*g[i+1][j]*r[j-1]*r[j+1])for j,c in E(r)]for i,r in E(g)]
