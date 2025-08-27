@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[c+5*(0<c<sum(r[j-(j>0):j+2]+[y[j]for y in g[i-(i>0):i+2]])-5)for j,c in e(r)]for i,r in e(g)]
+p=lambda g,e=enumerate:[[c+5*(c*sum(r[j-(j>0):j+2]+[y[j]for y in g[i-(i>0):i+2]])>18)for j,c in e(r)]for i,r in e(g)]
