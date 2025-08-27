@@ -1,5 +1,5 @@
 def p(g,E=enumerate,R=range,L=len,F=filter):
- s=sum(g,[]);z,y,X=sorted({*s},key=s.count)[-3:];t=lambda q:[*map(list,zip(*F(q,zip(*F(q,g)))))]
+ s=sum(g,[]);*_,z,y,X=sorted({*s},key=s.count);t=lambda q:[*map(list,zip(*F(q,zip(*F(q,g)))))]
  a,b=[t(lambda r:c in r)for c in(y,X)];n,m,p=L(a)-1,L(a[0])-1,[]
  for i in R(n):
   for j in R(m):
