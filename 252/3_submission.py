@@ -1,1 +1,1 @@
-p=lambda g:[(t:=1)and[(x,x and 4)[t:=1-t]for x in r]for r in g]
+p=lambda g:[(t:=0)or[(x and 4,x)[t:=1-t]for x in r]for r in g]
