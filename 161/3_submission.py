@@ -1,1 +1,1 @@
-p=lambda g:(c:=min(s:=sum(g,[]),key=s.count))and[[c*(r[0]==c or u==c)for u in g[0]]for r in g]
+p=lambda g:(c:=min(s:=sum(g,[]),key=s.count))and[[c*(c in[r[0],u])for u in g[0]]for r in g]
