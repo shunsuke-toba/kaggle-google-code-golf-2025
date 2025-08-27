@@ -1,1 +1,1 @@
-p=lambda g:[r*2for r in zip(*filter(sum,zip(*g)))if sum(r)]
+p=lambda g:[*zip(*filter(sum,[*zip(*filter(sum,g))]*2))]
