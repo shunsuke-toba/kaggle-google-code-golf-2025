@@ -11,8 +11,8 @@ def p(g):
      else:b=0
    t=tuple(x-i for x in q)
    if b:a[t]=i
-   elif r.count(c)==len(q)>1:s+=[(t,q,c)]
- for t,q,c in s:
+   elif r.count(c)==len(t)>1:s+=[(t,i,c)]
+ for t,i,c in s:
   if t in a:
-   for n in q:r[n]=0;r[n+a[t]-q[0]]=c
+   for o in t:r[i+o]=0;r[a[t]+o]=c
  return[*zip(*[iter(r)]*10)]
