@@ -1,1 +1,1 @@
-E=enumerate;f=lambda s:next(filter(int,s),0);h=lambda a:[*zip(*[[(x>7)&(2in{u:=f(r[j+1:]),v:=f(r[:j][::-1])})or x or(u^v>8)*2for j,x in E(r)]for r in a])];p=lambda g:(a:=h(h(g)))and[[(x&1)*2or(any(1in y[j-(j>0):j+2]for y in a[i-(i>0):i+2])*8)or x for j,x in E(r)]for i,r in E(a)]
+E=enumerate;f=lambda s:next(filter(int,s),0);h=lambda a:[*zip(*[[x//8&(2in{u:=f(r[j+1:]),v:=f(r[:j][::-1])})or x or(u^v>8)*2for j,x in E(r)]for r in a])];p=lambda g:(a:=h(h(g)))and[[(x&1)*2or(any(1in y[j-(j>0):j+2]for y in a[i-(i>0):i+2])*8)or x for j,x in E(r)]for i,r in E(a)]
