@@ -1,7 +1,7 @@
 def p(g):
  L=len;h=L(g);w=L(g[0]);R=range;E=enumerate
  s=[divmod(sum(g,[]).index(3),w)]
- for y,x in s:s+=[(Y,X)for Y in R(y-1,y+2)for X in R(x-1,x+2)if h>Y>-1<X<w>g[Y][X]>0 and(Y,X)not in s]
+ for y,x in s:s+=[(Y,X)for Y in R(y-1,y+2)for X in R(x-1,x+2)if h>Y>-1<X<w>g[Y][X]>0==((Y,X)in s)]
  r,c=zip(*s);t=[g[i][min(c):max(c)+1]for i in R(min(r),max(r)+1)]
  for i in R(8):
   for y in R(h-L(t)+1):
