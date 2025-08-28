@@ -1,1 +1,1 @@
-p=lambda g:[g[~g.index(r)][~(j:=r.index(3)):~j-5:-1]for r in g if 3in r]
+p=lambda g:[g[~g.index(r)][(j:=~r.index(3)):j-5:-1]for r in g if 3in r]
