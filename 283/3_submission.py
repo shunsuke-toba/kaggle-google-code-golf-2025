@@ -1,1 +1,1 @@
-p=lambda g,z=[[0]*10]:[[a*sum(m)%22%5 for a,*m in zip(r,r[1:]+[0],[0]+r,u,d)]for u,r,d in zip(z+g,g,g[1:]+z)]
+p=lambda g,z=[[0]*10]:[[a*sum(m)%22%5for a,*m in zip(r,r[1:]+[0],[0]+r,u,d)]for u,r,d in zip(z+g,g,g[1:]+z)]
