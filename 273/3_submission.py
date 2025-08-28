@@ -1,6 +1,6 @@
 def p(g):
- s=[(i//10,i%10)for i in range(100)if sum(g,[])[i]]
+ s=[i for i in range(100)if sum(g,[])[i]]
  while s:
-  a,b=s[0];c,d=s[3];s=s[4:]
-  for r in g[a+1:c]:r[b+1:d]=[2]*(~b+d)
+  a,b,c,_,*s=s
+  for r in g[a//10+1:c//10]:r[a%10+1:b%10]=[2]*(~a+b)
  return g
