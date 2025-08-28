@@ -1,1 +1,1 @@
-p=lambda g,r=range(6):[[sum(g[i-k][j-k]for k in r if k<=i<k+3>j>=k)for j in r]for i in r]
+p=lambda g,a=[0]*6:[(a:=[*map(sum,zip([0]+a[:-1],r+[0]*3))])for r in g+[[0]*3]*3]
