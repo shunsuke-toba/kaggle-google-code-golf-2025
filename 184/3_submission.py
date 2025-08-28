@@ -1,1 +1,1 @@
-def p(g):f=lambda m:(m:=[0,*[i+1for i,a in enumerate(m)if sum(a)<1],len(m)],zip(m,m[1:]))[1];return[[max(max(r[c:d])for r in g[a:b])for c,d in f([*zip(*g)])]for a,b in f(g)]
+p=lambda g,f=lambda m:(m:=[0,*[i+1for i,a in enumerate(m)if sum(a)<1],len(m)],zip(m,m[1:]))[1]:[[max(max(r[c:d])for r in g[a:b])for c,d in f([*zip(*g)])]for a,b in f(g)]
