@@ -1,1 +1,1 @@
-p=lambda g,q=lambda x:len(x)-x.count(x[0])+1:[[g[0][0]]*q(g[0])]*q(g)
+p=lambda g,q=lambda x:len(x)-x.count(x[0])+1:[g[0][:1]*q(g[0])]*q(g)
