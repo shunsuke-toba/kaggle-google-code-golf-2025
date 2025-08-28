@@ -1,5 +1,8 @@
 def p(g):
+ def f(r,c):
+  if 10>r>-1<c<10>g[r][c]<1:
+   g[r][c]=5;q.append((r,c));f(r+1,c);f(r-1,c);f(r,c+1);f(r,c-1)
  for n in range(100):
-  for x,y in(q:=[(r:=n//10,c:=n%10)][g[r][c]:]):g[x][y]=4;q+=[(a,b)for d in(1,-1)for a,b in((x+d,y),(x,y+d))if 10>a>-1<b<10>g[a][b]<1]
-  for x,y in q:g[x][y]-=len(q)
+  q=[];f(*divmod(n,10))
+  for r,c in q:g[r][c]=4-len(q)
  return g
