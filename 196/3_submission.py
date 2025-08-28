@@ -5,5 +5,5 @@ def p(g):
  while k:
   k-=1;c=[];f(k//n,k%n)
   if c:h,w=[max(t)-min(t)for t in zip(*c)]
-  for y,x in c:g[y][x]=1+2*(len(c)/2==h+w>h>1<w)
+  for y,x in c:g[y][x]=1+2*(len(c)/2==h+w<=h*w)
  return g
