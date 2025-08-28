@@ -1,1 +1,5 @@
-def p(g):b=sum(g,[]);f=b.index;g=[[0]*10for _ in g];[g[(i+f(1)-f(v))//10].__setitem__(i%10,v)for i,v in enumerate(b)if v];return g
+def p(g):
+ b=sum(g,[]);f=b.index;g=[[0]*10for _ in g]
+ for i,v in enumerate(b):
+  if v:g[(i+f(1)-f(v))//10][i%10]=v
+ return g
