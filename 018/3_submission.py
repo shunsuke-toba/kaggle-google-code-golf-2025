@@ -5,7 +5,7 @@ def p(g):
    a=b=0
    for Y in R(y+1,h+1):
     for X in R(x+1,w+1):
-     if L({0,*sum(m:=[q[x:X]for q in g[y:Y]],[])})>4 and all(map(any,m+[*zip(*m)])):a,b,r=Y,X,m
+     if (L({0,*sum(m:=[q[x:X]for q in g[y:Y]],[])})>4)&all(map(any,m+[*zip(*m)])):a,b,r=Y,X,m
    if a:s+=r,
    for t in g[y:a]:t[x:b]=[0]*(b-x)
  for r in s:
@@ -15,5 +15,5 @@ def p(g):
     for x in R(w-(b:=L(r[0]))+1):
      if all(r[i][j]*(u.count(r[i][j])<2)==g[y+i][x+j]for i in R(a)for j in R(b)):
       for i in R(a):g[y+i][x:x+b]=r[i]
-   r=[*zip(*r[::-1])];z-3or r.reverse()
+   r=[*zip(*r[::-1])];z^3or r.reverse()
  return g
