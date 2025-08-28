@@ -1,5 +1,4 @@
-def p(g):
- R=range(12);s=sum
+def p(g,R=range(12),s=sum):
  for L in 3,4,5,6:
   for y in R:
    M=g[y:y+L];I=M[1:-1]
