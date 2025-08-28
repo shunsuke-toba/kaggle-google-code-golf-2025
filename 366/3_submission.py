@@ -3,7 +3,7 @@ def p(g,E=enumerate,R=range,L=len,F=filter):
  a,b=[t(lambda r:c in r)for c in(y,X)];n,m,p=L(a)-1,L(a[0])-1,[]
  for i in R(n):
   for j in R(m):
-   if{y}-{a[i][j],a[i+1][j],a[i][j+1]}:
+   if a[i][j]-y:
     k,l=i,j
     while k<n and a[k+1][l]-y:k+=1
     while l<m and a[k][l+1]-y:l+=1
