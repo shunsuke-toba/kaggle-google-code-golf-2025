@@ -1,12 +1,11 @@
 def p(g):
  m=len(g[0]);e=len(g);R=range;A=min;B=max
- a=e;c=i=m;b=d=f=j=0;I=()
+ a=e;c=i=m;b=d=f=j=0;I=[]
  for t in R(e*m):
   v=g[r:=t//m][o:=t%m]
   if v==4:a=A(a,r);b=B(b,r);c=A(c,o);d=B(d,o)
-  elif v:
-   if a<b<=r:e=A(e,r);f=B(f,r);i=A(i,o);j=B(j,o)
-   else:I+=((r,o,v),)
+  elif v and a<b<=r:e=A(e,r);f=B(f,r);i=A(i,o);j=B(j,o)
+  elif v:I+=[(r,o,v)]
  h=f-e+1;w=j-i+1
  for k in 2,3,4:
   for r in R(a,b-h*k+2):
