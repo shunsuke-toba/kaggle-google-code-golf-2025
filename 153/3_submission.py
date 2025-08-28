@@ -1,6 +1,4 @@
 def p(g):
- s=sum(g,[]);a,b={*s}-{0};f=lambda s:{(x-a,y-b)for a,b in[map(min,zip(*s))]for x,y in s};A,B=[f({divmod(i,10)for i in range(100)if s[i]==c})for c in(a,b)]
- if f({(i//3,i%3)for i in range(9)}-A)^B:a,b,A=b,a,B
- r=[[b]*3,[b]*3,[b]*3]
- for x,y in A:r[x][y]=a
- return r
+ s=sum(g,[]);a,b={*s}-{0};f=lambda S:{(x-a,y-b)for a,b in[map(min,zip(*S))]for x,y in S};A,B=[f({divmod(i,10)for i in range(100)if s[i]==c})for c in(a,b)];R=0,1,2
+ if f({(i,j)for i in R for j in R}-A)^B:a,b,A=b,a,B
+ return[[[b,a][(i,j)in A]for j in R]for i in R]
