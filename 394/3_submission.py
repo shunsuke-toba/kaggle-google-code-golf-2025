@@ -1,1 +1,1 @@
-def p(g):n=len(g);a=sum(g,[]).index(0);w=g[r:=a//n].count(0);return[g[(r+i-n//7-2)%(n&-2)][a%n:][:w]for i in range(w)]
+def p(g):n=len(g);a=sum(g,[]).index(0);w=g[r:=a//n].count(0);return[g[:n&-2][r+i-n//7-2][a%n:][:w]for i in range(w)]
