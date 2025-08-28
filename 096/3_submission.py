@@ -6,9 +6,9 @@ def p(g):
    for d in r(1,15):
     for _ in r(4):y=any(re.search(s*w+f"[^{s}]"*d+s,str(R)[1::3])for R in g)and(2*w+d,x,w)or y;g=t(g)
   L+=y or((1,x,1),(3,x,3))[f.count(x)>1],
- L.sort();z=L[-1][0];o=[[b]*z for _ in r(z)]
- for i in r(len(L)):
-  z,x,w=L[~i]
+ m=max(z for z,_,_ in L);o=[[b]*m for _ in r(m)]
+ for z,x,w in L:
+  i=m-z>>1
   for _ in r(4):
    for k in r(w):o[i][i+k]=o[i+k][i]=x
    o=t(o)
