@@ -1,4 +1,4 @@
-def p(g,p=range(100)):
+def p(g,p=range(99)):
  for k in p:
   if 7<g[i:=k//10][j:=k%10]:
    c=[(i,j)]
