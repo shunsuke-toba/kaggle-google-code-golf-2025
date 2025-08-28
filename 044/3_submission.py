@@ -8,7 +8,7 @@ def p(g):
      try:x=g[k]
      except:x=5;f=0
      if x==v:g[k]=5;q+=k,
-     elif f*(x-5):f=0
+     else:f*=x==5
    t=tuple(x-i for x in q)
    if f:d[t]=i
    elif r.count(v)==len(t)>1:e[t]=i,v
