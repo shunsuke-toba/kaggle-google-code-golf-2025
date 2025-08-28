@@ -1,1 +1,1 @@
-p=lambda g:(h:=[r[0]and r[:1]*len(r)or r for r in g],(g!=h)*h or [*zip(*p(zip(*g)))])[1]
+p=lambda g:g==(h:=[r[0]and[r[0]]*len(r)or r for r in g])and[*zip(*p(zip(*g)))]or h
