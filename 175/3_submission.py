@@ -1,1 +1,1 @@
-p=lambda g:[[x or g[j][i]or g[0][i!=j]for j,x in enumerate(r)]for i,r in enumerate(g)]
+p=lambda g,r=range(21):[[g[i][j]or g[j][i]or g[0][i!=j]for j in r]for i in r]
