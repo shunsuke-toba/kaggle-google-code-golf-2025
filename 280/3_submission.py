@@ -1,11 +1,8 @@
 def p(g):
- n=len(g)
- for y,x in[(i//n,i%n)for i in range(n*n)if g[i//n][i%n]==2]:
-  a=(g[y-1][x]-g[y+1][x])//3;b=(g[y][x-1]-g[y][x+1])//3;k=0
-  try:
-   while g[y-a*k][x-b*k]:k+=1
-  except:0
-  while n>y>-1<x<n:
-   for t in range(1-k,k):g[y+b*t][x+a*t]=2+(t!=0)
-   y+=a;x+=b
+ for x in range(2800):
+  n=len(g);i=x%n;j=x%~-n;a=0;k=n-j
+  if 3>g[i][j]>g[i][j+1]:
+   while g[i][j-a-1]:a+=1;g[i+a][j:]=g[i-a][j:]=[3]*k
+   g[i][j:]=[2]*k
+  if x%7:g=[*map(list,zip(*g[::-1]))]
  return g
