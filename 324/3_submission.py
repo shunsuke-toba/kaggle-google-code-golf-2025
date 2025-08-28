@@ -1,7 +1,5 @@
 def p(g):
- f=sum(g,[])
- a=max(g[0][:2]+g[1][:2],key=f.count);c=[*zip(*g)]
- s=[];m={};e=enumerate
+ f=sum(g,[]);a=max(g[0][:2]+g[1][:2],key=f.count);*c,=zip(*g);s=[];m={};e=enumerate
  for i,r in e(g):
   for j,d in e(r):
    if f.count(d)<3:s+=i+j,58+i-j;m[a in r and a in c[j]]=d
