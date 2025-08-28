@@ -1,1 +1,1 @@
-p=lambda g:[[(c:=max(range(1,10),key=sum(g,[]).count))*(v and c in r[:j+2][-3:] and c in[*zip(*g[:i+2][-3:])][j])for j,v in enumerate(r)]for i,r in enumerate(g)]
+p=lambda g,e=enumerate:[[(c:=max(range(1,10),key=sum(g,[]).count))*(v and c in r[:j+2][-3:] and c in[*zip(*g[:i+2][-3:])][j])for j,v in e(r)]for i,r in e(g)]
