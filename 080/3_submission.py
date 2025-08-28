@@ -4,6 +4,5 @@ def p(g,R=range,n=0):
  for i in R(m*m):
   for k in R(9*(A[y:=i//m][x:=i%m]==p[4])):
    u,v=y+k//3-1,x+k%3-1
-   if-1<u<m>v>-1:
-    for j in R(n*n):g[u*s+j//n][v*s+j%n]=p[k]
+   for j in R(n*n*(0<=u<m>v>=0)):g[u*s+j//n][v*s+j%n]=p[k]
  return g
