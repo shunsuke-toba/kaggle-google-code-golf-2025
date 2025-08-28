@@ -1,3 +1,3 @@
-def p(g):
- for i in range(64):j=i%8;i//=8;g[i+1][j+1]-=3*all(all(r[j:j+3])for r in g[i:i+3])
- return g
+def p(j):
+ for x in range(64):a=x//8;b=x%8;j[a+1][b+1]//=1+(j[a][b]*j[a+2][b+2]>0)
+ return j
