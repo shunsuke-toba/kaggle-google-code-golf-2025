@@ -10,6 +10,7 @@ def p(g):
       if 15>v>-1<u<10>g[u][v]>4:g[u][v]=0;t+=(u-y,v-x),
     s+=t,
  while s:
-  _,k,i,j=min((-sum(i+a<3 for a,b in s[k]),k,i,j)for k in r(len(s))for i in(1,2)for j in C if all(0<=j+b<15 and g[i+a][j+b]<1 for a,b in s[k]))
-  for a,b in s.pop(k):g[i+a][j+b]=1
+  _,t,i,j=min((-sum(i+a<3 for a,b in t),t,i,j)for t in s for i in(1,2)for j in C if all(j+b in C and g[i+a][j+b]<1 for a,b in t))
+  for a,b in t:g[i+a][j+b]=1
+  s.remove(t)
  return g
