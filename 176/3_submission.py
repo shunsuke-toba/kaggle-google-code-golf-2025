@@ -1,1 +1,1 @@
-p=lambda g:[[c+4*(m>>i%12&1)for i,c in enumerate(r)]for r,m in zip(g,(224,65,2051))]
+p=lambda g:[[c|m>>i%12&4 for i,c in enumerate(r)]for r,m in zip(g,(896,260,8204))]
