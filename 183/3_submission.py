@@ -1,1 +1,1 @@
-p=lambda g:(r:=range(n:=len(g)-4))and[[g[i+2][j+2]//8*g[-(i>=n/2)][-(j>=n/2)]for j in r]for i in r]
+p=lambda g:(r:=range(n:=len(g)-4))and[[g[i+2][j+2]%7*g[-(i>=n/2)][-(j>=n/2)]for j in r]for i in r]
