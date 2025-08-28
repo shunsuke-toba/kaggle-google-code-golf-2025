@@ -1,1 +1,1 @@
-p=lambda g,R=range:max((F.count(2),len(F),S)for e in R(122)for s in R(e)if all(F:=sum(S:=[t[s%11:e%11]for t in g[s//11:e//11]],[])))[2]
+p=lambda g:max((F.count(2),len(F),S)for e in range(171)for s in range(e)if all(F:=sum(S:=[t[s&15:e&15]for t in g[s>>4:e>>4]],[])))[2]
