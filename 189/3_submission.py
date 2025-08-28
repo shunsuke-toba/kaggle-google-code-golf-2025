@@ -1,1 +1,1 @@
-p=lambda g,R=range(6):(a:=g[2][0]<8,b:=g[0][2]<8)and[[g[i+3-3*a][j+3-3*b]//3*g[i//3+a*7][j//3+b*7]for j in R]for i in R]
+p=lambda g,R=range(6):[[g[i+3-3*(a:=8>g[2][0])][j+3-3*(b:=8>g[0][2])]//3*g[i//3+a*7][j//3+b*7]for j in R]for i in R]
