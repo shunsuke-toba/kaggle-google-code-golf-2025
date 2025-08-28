@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[g[i+k//3-1].__setitem__(j+k%3-1,c*5%9)for i,r in e(g)for j,c in e(r)if c%6&2 for k in range(9)if k-4]and g
+p=lambda g,e=enumerate:0*[g[i+k//3-1].__setitem__(j+k%3-1,c*5%9)for i,r in e(g)for j,c in e(r)if c%6&2 for k in range(9)if k-4]+g
