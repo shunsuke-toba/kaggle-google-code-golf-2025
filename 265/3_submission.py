@@ -1,5 +1,8 @@
 def p(g):
- for a,b,s,t in zip(g,g[1:],r:=eval(str(g)),r[1:]):
+ a=g[0];p=a[:]
+ for b in g[1:]:
+  q=b[:]
   for j in range(17):
-   if(sum(a[j:j+2]+b[j:j+2])<1)*(j%16<1or a[j-1]+b[j-1]|a[j+2]*b[j+2]-25):s[j:j+2]=t[j:j+2]=2,2
- return r
+   if(sum(p[j:j+2]+q[j:j+2])<1)*(j%16<1or p[j-1]+q[j-1]|p[j+2]*q[j+2]-25):a[j:j+2]=b[j:j+2]=2,2
+  a=b;p=q
+ return g
