@@ -1,4 +1,4 @@
 def p(g):
- r=range(10);x=[(g[b],~a)for a in r for b in r if g[a][b]];o=sum(b[-~a]-b[a]for b,a in x)>0
+ x=[(g[b],~a)for t in range(100)if g[a:=t//10][b:=t%10]];o=0<sum(b[-~a]-b[a]for b,a in x)
  for b,a in x:b[a+o]=2-b[a+o]
  return g
