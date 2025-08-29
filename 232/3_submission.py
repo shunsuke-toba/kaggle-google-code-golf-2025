@@ -1,1 +1,1 @@
-p=lambda g:[(l:=sum(r))and[*r[:(i:=r.index(l))],*((l,5)*7)[:len(r)-i]]or r for r in g]
+p=lambda g:[(l:=sum(r))and(r[:r.index(l)]+[l,5]*7)[:len(r)]or r for r in g]
