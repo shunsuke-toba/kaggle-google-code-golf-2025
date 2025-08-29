@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[[a,8][~-len(r)>j>0<i<~-len(g)and g[i-1][j]+g[i+1][j]+r[j-1]+r[j+1]==4*a>0]for j,a in e(r)]for i,r in e(g)]
+p=lambda g,e=enumerate:[[[a,8][~-len(r)>j>0<i<~-len(g)and g[i-1][j]*g[i+1][j]*r[j-1]*r[j+1]>0]for j,a in e(r)]for i,r in e(g)]
