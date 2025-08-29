@@ -1,1 +1,1 @@
-p=lambda g,r=range:[g[a].__setitem__(b,g[a][b]or f)for y in r(9)for x in(0,1,4)if(f:=g[y][x+2])>1>g[y-1][x+2]for a in r(y-2-g[y-2][x],y+3-y//8)for b in r(x,x+5)]and g
+p=lambda g,r=range:[a[b]or a.__setitem__(b,f)for y in r(9)for x in r(9)if(f:=g[y][x])>1>g[y-1][x]for a in g[y-2-g[y-2][x-2]:y+3-y//8]for b in r(x-2,x+3)]and g
