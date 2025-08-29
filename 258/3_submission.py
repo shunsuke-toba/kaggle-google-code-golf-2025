@@ -1,1 +1,1 @@
-p=lambda g:[[b|a*c*2for b,c,a in zip(r,r[1:]+[0],[0]+r)]for r in g]
+import re;p=lambda g:eval(re.sub('1, 0(?=, 1)','1,2',str(g)))
