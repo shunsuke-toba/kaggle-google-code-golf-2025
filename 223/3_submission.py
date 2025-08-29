@@ -1,1 +1,1 @@
-p=lambda g:[[*sum(zip(r,r,r),())]for r in g for _ in r]
+p=lambda g:[sum(zip(r,r,r),())for r in g for _ in r]
