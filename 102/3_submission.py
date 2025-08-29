@@ -1,5 +1,5 @@
 def p(g,R=range(12),s=sum):
- for L in R[3:7]:
+ for L in R[3:]:
   for y in R:
    M=g[y:y+L];I=M[1:-1]
    for x in R:
