@@ -1,1 +1,1 @@
-def p(g):a=sum(g,[]);b=a.index(v:=max(a));a=range(n:=len(g));return[[v*(i-b//n in(j-b%n,b%n-j))for j in a]for i in a]
+def p(g):b=g.index(r:=max(g));c=r.index(v:=max(r));a=range(len(g));return[[v*(i-b in(j-c,c-j))for j in a]for i in a]
