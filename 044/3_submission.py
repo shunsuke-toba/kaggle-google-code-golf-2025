@@ -7,7 +7,7 @@ def p(g):
     for k in j+1,j-1,j+10,j-10:
      try:
       if g[k]==v:g[k]=5;q+=k,
-      else:f*=g[k]==5
+      f*=g[k]==5
      except:f=0
    t=tuple(x-i for x in q)
    if f:d[t]=i
