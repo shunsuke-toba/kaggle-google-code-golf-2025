@@ -1,1 +1,1 @@
-def p(g):o=max(f:=sum(g,[]),key=bool);return[[(x:=c[0])+(0<r.count(o)<4 or 0<c.count(o)<4)*(o-x-(2*o-sum({*f}))*(x<1))for c in zip(r,*g)]for r in g]
+def p(g):o=max(f:=sum(g,[]),key=bool);return[[[c[0],[sum({*f})-o,o][c[0]>0]][0<r.count(o)<4 or 0<c.count(o)<4]for c in zip(r,*g)]for r in g]
