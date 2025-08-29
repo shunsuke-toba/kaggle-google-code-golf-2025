@@ -1,1 +1,1 @@
-p=lambda g:[(lambda r,k=0:[(k:=k^(a==c<b))*3*(b<2)for a,b,c in zip([0]+r,r,r[1:]+[0])])(r)for r in g]
+p=lambda g:[(k:=0)or[(k:=k^(a+c<b))*(2>b)*3for a,b,c in zip([0]+r,r,r[1:]+[0])]for r in g]
