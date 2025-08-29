@@ -1,1 +1,1 @@
-p=lambda g:[r[~i:~i-3:-1]for r in g if~(i:=bytes(r).find(0))]
+p=lambda g:[r[::-1][r.index(0):][:3]for r in g if 0 in r]
