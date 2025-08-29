@@ -1,7 +1,2 @@
 def p(g):
- n=len({*g[4]})+1;r=range(5*n);g=[[g[x//n][y//n]for y in r]for x in r]
- for s in-1,1:
-  for t in-1,1:
-   x=n*(s-~(g[0][n]<1))+s//2;y=n*(t-~(g[n][0]<1))+t//2
-   while g[x][y]<1:g[x][y]=2;x+=s;y+=t
- return g
+ n=len({*g[4]})+1;a=g[0][1]<1;b=g[1][0]<1;R=range(5*n);return [[2 if (v:=g[i//n][j//n])<1 and (i//n-a)&-2 and (i-j==(a-b)*n or i+j==(a+b+2)*n-1) else v for j in R]for i in R]
