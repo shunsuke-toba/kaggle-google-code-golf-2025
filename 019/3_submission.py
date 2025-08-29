@@ -1,1 +1,1 @@
-def p(g):g=[r*2for r in g*2];e=enumerate;[g[x].__setitem__(y,8)for i,r in e(g)for j,v in e(r)if v&7for x in(i-1,i+1)for y in(j-1,j+1)if g[x:x+1]if 0in g[x][y:y+1]];return g
+def p(g):g=[r*2for r in g*2];e=enumerate;[s.__setitem__(y,8)for i,r in e(g)for j,v in e(r)if v&7for s in g[i<1or i-1:i+2:2]for y in(j-1,j+1)if 0in s[y:y+1]];return g
