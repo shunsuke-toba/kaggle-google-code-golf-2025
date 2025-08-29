@@ -1,9 +1,4 @@
 def p(g):
- n=len(g);k=n*n
- def f(i,j):
-  if-1<i<n>j>=0<g[i][j]:g[i][j]=0;c[:0]=(i,j),;f(i+1,j);f(i-1,j);f(i,j+1);f(i,j-1)
- while k:
-  k-=1;c=[];f(k//n,k%n)
-  if c:h,w=[max(t)-min(t)for t in zip(*c)]
-  for y,x in c:g[y][x]=3**(len(c)/2==h+w<=h*w)
- return g
+ import re;s=re.sub;e=enumerate;g=eval(s('0','2',str(g)))
+ for _ in[0]*96:g=[[*map(int,s('2(?=0|$)','0',str(r)[-2::-3]))]for r in zip(*g)]
+ return[[v%2*(v+2*any(2in R[:j+2][-3:]for R in g[:i+2][-3:]))for j,v in e(r)]for i,r in e(g)]
