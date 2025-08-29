@@ -1,1 +1,1 @@
-p=lambda g:[[sorted({*sum(g,[])},key=lambda b:sum(b in r for r in g)*sum(b in r for r in zip(*g))-sum(g,[]).count(b))[-2]]]
+p=lambda g:[[sorted({*(f:=sum(g,[]))},key=lambda b:f.count(b)-sum(b in r for r in g)*sum(b in r for r in zip(*g)))[1]]]
