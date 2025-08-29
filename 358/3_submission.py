@@ -1,1 +1,1 @@
-p=lambda g:exec("s=[*filter(int,a:=max(g,key=sum))];a[:]=(s*8)[-a.index(s[0])%len(s):];g[:]=map(list,zip(*g));"*2)or g
+p=lambda g:exec("*s,=filter(int,a:=max(g,key=sum));a[:]=(s*8)[-a.index(s[0])%len(s):];g[:]=map(list,zip(*g));"*2)or g
