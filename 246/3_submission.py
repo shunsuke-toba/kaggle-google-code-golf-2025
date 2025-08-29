@@ -1,5 +1,4 @@
 def p(g):
- i=sum(g,[]).index;d=divmod;y,x,Y,X=d(i(2),m:=len(g[0]))+d(i(3),m)
- while x-X:x+=X>x or-1;g[y][x]=8
- while y-Y:g[y][X]=8;y+=Y>y or-1
+ s,e=map(sum(g,[]).index,(2,3));w=len(g[0])
+ while (s:=s+((e%w>s%w)-(e%w<s%w)or w*(e>s or-1)))-e:g[s//w][s%w]=8
  return g
