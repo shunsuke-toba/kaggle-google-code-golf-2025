@@ -1,4 +1,4 @@
-def p(g):
- g=eval(str(g).replace('0','1'))
- for _ in[0]*36:g=[[*map(int,(str(r)[-2::-3]+'0').replace('10','00')[:-1])]for r in zip(*g)]
+def p(g,r=str.replace):
+ g=eval(r(str(g),'0','1'))
+ for _ in[0]*36:g=[[*map(int,r('0'+str(R)[-2::-3],'01','00')[1:])]for R in zip(*g)]
  return g
