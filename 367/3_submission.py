@@ -1,7 +1,5 @@
 def p(g):
- h,w=len(g),len(g[0]);d=-1,0,1,0
- for k in range(9**5):
-  r,c,s=k%97%h,k%89%w,k%4;x,y=d[s]+r,d[~s]+c;t=g[r][c]-5
-  try:g[x-y+c][x-r+y]|=([g[r+d[s+~i]-h][(c+d[s-i])%w]for i in range(4)]==[5,t,0/~(x|y),5])*4;g[x][y]|=t&4
+ for s in range(8**5):
+  try:h,w=len(g),len(g[0]);d=-1,0,1,0;t=g[r:=s%97%h][c:=s%89%w]-5;s%=4;g[x:=d[s]+r][y:=d[~s]+c]|=t&4*(x|y>0);g[x-y+c][x-r+y]|=([g[r+d[s+~i]][c+d[s-i]]for i in range(4)]==[5,t,0,5])*4
   except:0
  return g
