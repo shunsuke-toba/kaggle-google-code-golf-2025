@@ -1,5 +1,5 @@
 def p(g):
- t=a=[0];b=[0];y=0
+ t=a=[y:=0];b=[0]
  for r in g:
   if s:=sum(r)>>2:t+=y,r.index(4),s;t[0]+=s
   elif t[0]:t=b
