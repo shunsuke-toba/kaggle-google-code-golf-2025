@@ -1,1 +1,1 @@
-p=lambda g:[[sum(([0]+r)[k:k+3]==[0,2,0]for k in range(j))%2*3*(c<2)for j,c in enumerate(r)]for r in g]
+p=lambda g:[(lambda r,k=0:[(k:=k^(a==c<b))*3*(b<2)for a,b,c in zip([0]+r,r,r[1:]+[0])])(r)for r in g]
