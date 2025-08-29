@@ -1,7 +1,2 @@
 def p(g,r=range(10)):
- a=[]
- for i in r:
-  for j in r:
-   if(v:=g[i][j])%5:c=v;d=j-i
-   elif v:a+=j-i,
- m=min(a);M=max(a);return[[c*(j-i in[d]+[M+2]*(M>d)+[m-2]*(m<d))for j in r]for i in r]
+ a=[];[v%5 and(c:=v,d:=j-i)or a.append(j-i) for i in r for j in r if(v:=g[i][j])];M,*_,m=sorted(a);return[[c*(j-i in[d]+[m+2]*(m>d)+[M-2]*(M<d))for j in r]for i in r]
