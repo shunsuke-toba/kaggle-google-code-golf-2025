@@ -1,6 +1,6 @@
 def p(g):
- R=range(10);A=[(i,j)for i in R for j in R if g[i][j]%5];t,l,a,b=A[0]+A[-1]
- for i in R:
-  for j in R:
-   for k in[*R[t:a+1]]*(g[i][j]==5):g[i+k-t][j:j+b-l+1]=g[k][l:b+1]
+ r=range(10);a=[(i,j)for i in r for j in r if g[i][j]%5];x,y=a[0]
+ for i in r:
+  for j in r:
+   for s,t in a*(g[i][j]==5):g[i+s-x][j+t-y]=g[s][t]
  return g
