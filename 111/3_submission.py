@@ -1,1 +1,1 @@
-def p(g):g=sum(g,[]);g=g[g.index(5)+9:];return g[:3],g[10:13],g[20:23]
+p=lambda g:[(g:=(g:=sum(g,[]))[g.index(5)+9:])[:3],g[10:13],g[20:23]]
