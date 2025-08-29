@@ -1,1 +1,1 @@
-p=lambda g:next([g[i].__setitem__(j,g[r-a//3][c-b//3])for a in(-2,2)for b in(-2,2)for i in(r+a,r-~a)for j in(c+b,c-~b)if-1<i<6>j>-1]for n in range(25)if g[r:=n//5][c:=n%5])and g
+p=lambda g:next([g[i].__setitem__(j,g[r+(i<r+2)][c+(j<c+2)])for i in(r-2,r-1,r+2,r+3)for j in(c-2,c-1,c+2,c+3)if j>-1<i<6>j]for n in range(25)if g[r:=n//5][c:=n%5])and g
