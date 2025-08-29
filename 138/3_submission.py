@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:(lambda f,t,b,l,r:f(f(g[l:r+1]for g in g[t:b+1])))(lambda A:[*zip(*[[x or r[0]*(r[0]in r[j:])|r[-1]*(r[-1]in r[:j])for j,x in e(r)]for r in A])],*[i for y in(g,zip(*g))for i,z in e(y)if min(z)])
+p=lambda g,e=enumerate:(lambda f,t,b,l,r:f(f(g[l:r+1]for g in g[t:b+1])))(lambda A:[*zip(*[[r[0]*(r[0]in r[j:])|r[-1]*(r[-1]in r[:j])|x for j,x in e(r)]for r in A])],*[i for y in(g,zip(*g))for i,z in e(y)if all(z)])
