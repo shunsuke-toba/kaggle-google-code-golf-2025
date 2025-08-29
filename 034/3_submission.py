@@ -1,6 +1,6 @@
 def p(g):
  f=sum(g,[])
- while 2 in f:
+ while 2in f:
   f[i:=f.index(2)]=k=sum({*f})-2;a=i//9;b=i%9;d=f[i-9]>0 or-1;e=f[i-1]>0 or-1
   for _ in g:
    for x,y in(a,b),(a+d,b),(a,b+e):
