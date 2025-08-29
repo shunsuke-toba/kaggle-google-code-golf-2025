@@ -1,4 +1,1 @@
-def p(g):
- for r in g:
-  if l:=sum(r):i=r.index(l);r[i:]=((l,5)*7)[:len(r)-i]
- return g
+p=lambda g:[(l:=sum(r))and[*r[:(i:=r.index(l))],*((l,5)*7)[:len(r)-i]]or r for r in g]
