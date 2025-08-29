@@ -1,1 +1,1 @@
-p=lambda g,f=lambda a:[*zip(*[[(x^8<1>r[j-1])*r[0]or x for j,x in enumerate(r)]for r in a[::-1]])]:f(f(f(f(g))))
+p=lambda g,f=lambda a:[*zip(*[[(p<1>x^8)*r[0]or x for p,x in zip((0,*r),r)]for r in a[::-1]])]:f(f(f(f(g))))
