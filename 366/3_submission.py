@@ -1,6 +1,6 @@
 def p(g,E=enumerate,R=range,L=len,F=filter):
  s=sum(g,[]);*_,z,y,X=sorted({*s},key=s.count)
- a,b=map(lambda c:[*map(list,zip(*F(lambda r:c in r,zip(*F(lambda r:c in r,g)))))],(y,X));n,m,p=L(a),L(a[0]),[]
+ a,b=[[*map(list,zip(*F(lambda r:c in r,zip(*F(lambda r:c in r,g))))) ]for c in(y,X)];n,m,p=L(a),L(a[0]),[]
  for i in R(n):
   for j in R(m):
    if a[i][j]-y:
