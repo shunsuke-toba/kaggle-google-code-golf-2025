@@ -1,1 +1,1 @@
-p=lambda g,r=range(11):(m:=36-sum(i//4*3+j//4 for i in r for j in r if g[i][j]&8),[[(g[m//3*4+x//4][m%3*4+y//4],5)[3in(x%4,y%4)]for y in r]for x in r])[1]
+p=lambda g,r=range(11):[[(g[(m:=36-sum(i//4*3+j//4 for i in r for j in r if g[i][j]&8))//3*4+x//4][m%3*4+y//4],5)[3in(x%4,y%4)]for y in r]for x in r]
