@@ -1,1 +1,1 @@
-def p(g):m=sum(g,[]);f=lambda g:zip(*(r for r in g if min({*m}-{0},key=m.count) in r));return*f(f(g)),
+def p(g):m=sum(g,[]);p=lambda g:zip(*[r for r in g if min({*m}-{0},key=m.count)in r]);return*p(p(g)),
