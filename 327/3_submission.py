@@ -1,1 +1,1 @@
-p=lambda g,a=[0]*6:[(a:=[*map(sum,zip([0]+a[:-1],r+[0]*3))])for r in g+[[0]*3]*3]
+p=lambda g,a=[0]*6,z=[0]*3:[(a:=[*map(sum,zip([0]+a,r+z))])for r in g+[z]*3]
