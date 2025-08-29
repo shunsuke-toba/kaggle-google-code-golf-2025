@@ -4,7 +4,7 @@ def p(g):
   (a,c),*_,(b,d)=[(k//n,k%n)for k in R(n*n)if g[k//n][k%n]]
   if g[a][c+2]<1:break
   g=r(g)
- while b:b-=1;t=b>a;g[b][c+2-t:d+t-1]=[4]*(d-c-3+2*t)
+ while b:b-=1;s=b<=a;g[b][c+1+s:d-s]=[4]*(d-c-1-2*s)
  for j in R(a):
   h=g[a+~j]
   if j<c+2:h[c+1-j]=4
