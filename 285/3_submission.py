@@ -10,5 +10,5 @@ def p(g):
      elif v*(c+v)*(a*b==0):s,t=y,x
    for a,b in d:
     if(v:=o[s+a][t+b])*(v+c):
-     for y,x in q:g[s+a+((y-s,s-y)[a&1])][t+b+((x-t,t-x)[b&1])]=abs(v)
+     for y,x in q:g[s+a+[y-s,s-y][a&1]][t+b+[x-t,t-x][b&1]]=abs(v)
  return g
