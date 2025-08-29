@@ -1,3 +1,1 @@
-def p(g):
- for a in g:a[::3]=[a*3//2for a in a[::3]]
- return g
+p=lambda g:[[a*b//4for a,b in zip([6,4,4]*7,r)]for r in g]
