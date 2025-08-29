@@ -1,1 +1,1 @@
-p=lambda g:(b:=[0]*(m:=25-5*g[0].count(0)))and[(b[:~i]+g[0]+b)[:m]for i in range(m)]
+p=lambda g:(m:=25-5*g[0].count(0))and[((~i+m)*[0]+g[0]+[0]*i)[:m]for i in range(m)]
