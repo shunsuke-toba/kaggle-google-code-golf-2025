@@ -5,10 +5,10 @@ def p(g):
   if v==4:a=A(a,r);b=B(b,r);c=A(c,o);d=B(d,o)
   elif v*(r>=b>a):e=A(e,r);f=B(f,r);i=A(i,o);j=B(j,o)
   elif v:L+=[(r,o,v)]
- f=f-e+1;j=j-i+1
+ f+=1-e;j+=1-i
  for k in 2,3,4:
-  for r in R(a,b-f*k+2):
-   for o in R(c,d-j*k+2):
+  for r in R(a,b):
+   for o in R(c,d):
     try:
      for x,y,z in L:1/(g[e+(x-r)//k][i+(y-o)//k]==z)
      for q in R(f*k):g[r+q][o:o+j*k]=[g[e+q//k][i+p//k]for p in R(j*k)]
