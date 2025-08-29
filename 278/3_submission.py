@@ -1,1 +1,1 @@
-p=lambda g,r=range:[exec('try:g[y][x]=g[y][x]or 3\nexcept:0')for a in(0,1)for i in r(len(g)-a)for j in r(len(g[0])-1+a)if g[i][j]+g[i+a][j+1-a]==4 for y in r(i-(i>0),i+2+a)for x in r(j-(j>0),j+3-a)]and g
+p=lambda g,r=range:[x<len(y)and y.__setitem__(x,y[x]or 3)for a in(0,1)for i in r(len(g)-a)for j in r(len(g[0])-1+a)if g[i][j]+g[i+a][j+1-a]==4 for y in g[i-(i>0):i+2+a]for x in r(j-(j>0),j+3-a)]and g
