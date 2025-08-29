@@ -1,1 +1,1 @@
-def p(g):e=enumerate;(a,b),*_,(c,d)=((i,j)for i,r in e(g)for j,x in e(r)if x&1);return[r[b:d+1]for r in g[a-1:c+2]]
+def p(g):s=bytes(sum(g,[]));w=len(g[0]);a,b=s.find(5),s.rfind(5);return[r[a%w:b%w+1]for r in g[a//w-1:b//w+2]]
