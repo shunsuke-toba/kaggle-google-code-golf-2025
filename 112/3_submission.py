@@ -1,5 +1,5 @@
 def p(g):
- w=len(g[0]);s=sum(g,[]);i=s.index(3);Y,X=i//w*2|1,i%w*2|1
+ w=len(g[0]);s=sum(g,[]);j=s.index(3);i=j
  while i:
-  if s[i:=i-1]:t=g[Y-i//w];t[j:=X-i%w]=g[i//w][j]=t[i%w]=2
+  if s[i:=i-1]:t=g[j//w*2+1-i//w];t[X:=j%w*2+1-i%w]=g[i//w][X]=t[i%w]=2
  return g
