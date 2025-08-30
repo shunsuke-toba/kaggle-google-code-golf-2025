@@ -1,1 +1,1 @@
-p=lambda g:[g[r][:4]+[i*g[r-r%3+1][x]for x in(5,8,11)for i in g[r%3][:3]]for r in range(9)]
+p=lambda g:[g[r][:4]+[i*j for j in g[-~r-r%3][5::3]for i in g[r%3][:3]]for r in range(9)]
