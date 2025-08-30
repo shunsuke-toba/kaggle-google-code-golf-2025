@@ -1,1 +1,1 @@
-p=lambda g:[[z or any(t)*8 for z,*t in zip(r,*g)]*2for r in g*2]
+p=lambda g:[[q[0]or any(q)*8 for q in zip(r,*g)]*2for r in g*2]
