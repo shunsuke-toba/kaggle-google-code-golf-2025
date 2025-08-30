@@ -1,4 +1,1 @@
-def p(g,r=str.replace):
- g=eval(r(str(g),'0','1'))
- for _ in[0]*36:g=[[*map(int,r('0'+str(R)[-2::-3],'01','00')[1:])]for R in zip(*g)]
- return g
+p=lambda g:eval("[*zip(*[[c*(1^c+i*r[i-1]>0)for i,c in enumerate(r)]for r in "*64+str(g).replace('0','1')+"[::-1]])]"*64)
