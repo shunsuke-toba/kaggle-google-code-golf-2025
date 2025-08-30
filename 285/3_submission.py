@@ -7,7 +7,7 @@ def p(g):
     for a,b in d:
      Y=y+a;X=x+b;v=n>Y>-1<X<n and o[Y][X]
      if v==c:o[Y][X]=-c;q+=(Y,X),
-     elif(a*b==0)*v*(c+v):s,t=y,x
+     elif a*b==0!=v!=-c:s,t=y,x
    for a,b in d:
     if(v:=o[s+a][t+b])*(v+c):
      for y,x in q:g[s+a+[y-s,s-y][a&1]][t+b+[x-t,t-x][b&1]]=abs(v)
