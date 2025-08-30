@@ -1,3 +1,4 @@
 def p(g):
- for y in range(b:=sum(g[a:=g.index(max(g))])//2+a):g[y][:b]=[2+(y<a)-(y>a)]*b;b-=1
+ m=max(g);c=sum(m)//2;b=y=c+g.index(m)
+ while b:g[y-b][:b]=[2+(b>c)-(b<c)]*b;b-=1
  return g

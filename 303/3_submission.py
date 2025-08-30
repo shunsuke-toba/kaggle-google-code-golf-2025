@@ -1,1 +1,1 @@
-p=lambda g:[[(2,c[0])[any(r)&any(c)]for c in zip(r,*g)]for r in g]
+p=lambda g:[[c[0]-2*any(r)*any(c)+2for c in zip(r,*g)]for r in g]

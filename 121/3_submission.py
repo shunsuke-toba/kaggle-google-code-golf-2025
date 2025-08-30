@@ -1,1 +1,1 @@
-def p(g):f=sum(g,[]);i=f.index(8);g=[f[i+d:][:3]for d in(-14,-1,12)];g[1][1]=max(g[0]);return g
+def p(g):g=sum(g,[]);g=[g[g.index(8)+d:][:3]for d in(-14,-1,12)];g[1][1]=max(g[0]);return g

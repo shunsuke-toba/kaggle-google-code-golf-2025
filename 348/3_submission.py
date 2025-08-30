@@ -1,1 +1,1 @@
-def p(g,E=enumerate):return[[((d:=j-g[0].index(7))%2+7)*(d<g.count(g[0])-i>-d)for j,_ in E(r)]for i,r in E(g)]
+p=lambda g,E=enumerate:[[((d:=j-g[0].index(7))%2+7)*(d<g.count(g[0])-i>-d)for j,_ in E(r)]for i,r in E(g)]

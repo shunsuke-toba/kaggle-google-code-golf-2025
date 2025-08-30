@@ -1,1 +1,1 @@
-p=lambda j:[[any(k)*3for k in zip(*r)]for r in zip(j,j[5:])]
+p=lambda g:[[any(k)*3for k in z]for z in map(zip,g,g[5:])]
