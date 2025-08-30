@@ -4,7 +4,7 @@ def p(g):
  for i in R(8):
   for y in R(h-L(t)+1):
    for x in R(w-L(t[0])+1):
-    if all(g[y+a][x+b]==u or u&1 for a,r in E(t)for b,u in E(r)):
+    if all((g[y+a][x+b]==u)|u&1 for a,r in E(t)for b,u in E(r)):
      for a,r in E(t):g[y+a][x:x+L(r)]=r
   t=[*zip(*t[::-1])];i^3 or t.reverse()
  return g
