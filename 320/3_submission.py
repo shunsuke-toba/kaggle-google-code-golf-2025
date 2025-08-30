@@ -1,1 +1,1 @@
-p=lambda g:[*zip(*(c[:-(s:=sum(c)//4)]+s*(8,)or c for c in zip(*g)))]
+p=lambda g:[*zip(*(c[:-(s:=sum(c)>>2)|256]+s*(8,)for c in zip(*g)))]
