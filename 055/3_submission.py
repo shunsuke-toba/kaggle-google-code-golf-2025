@@ -1,3 +1,3 @@
 def p(g,k=0):
- for r in g:k+=r[0]>7;l=0;r[:]=[(l:=l+(x>7),x or b'020463010'[k*3+l]&15)[1]for x in r]
+ for r in g:l=k*3;k+=r[0]>7;r[:]=[(x or 0x10364020>>l*4&15,l:=l+(x>7))[0]for x in r]
  return g
