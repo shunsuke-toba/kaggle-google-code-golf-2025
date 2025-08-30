@@ -1,1 +1,2 @@
-def p(g):e=enumerate;g=eval("[*zip(*[[c*(c^2+i*r[i-1]>0)for i,c in enumerate(r)]for r in"*64+str(g).replace('0','2')+"[::-1]])]"*64);return[[v%2*(v+2*any(2in R[:j+2][-3:]for R in g[:i+2][-3:]))for j,v in e(r)]for i,r in e(g)]
+e=enumerate
+def p(g):g=eval("[*zip(*[[c*(c^2+i*r[i-1]>0)for i,c in e(r)]for r in"*48+str(g).replace('0','2')+"[::-1]])]"*48);return[[v%2*(v+2*any(2in R[:j+2][-3:]for R in g[:i+2][-3:]))for j,v in e(r)]for i,r in e(g)]
