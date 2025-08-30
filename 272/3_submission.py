@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[c and-~(sum(r[j-(j>0):j+2]+[k[j]for k in g[i-(i>0):i+2]])>4)for j,c in e(r)]for i,r in e(g)]
+p=lambda g,e=enumerate:[[c/2*-~(sum(r[j-(j>0):j+2]+[k[j]for k in g[i-(i>0):i+2]])>4)for j,c in e(r)]for i,r in e(g)]
