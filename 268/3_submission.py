@@ -5,8 +5,9 @@ def p(g):
   if g[a][c+2]<1:break
   g=r(g)
  while b:
-  b-=1;s=b<=a;h=g[b];t=a+~b;h[c+1+s:d-s]=[4]*(d-c-1-2*s)
-  if s and t<c+2:h[c+1-t]=4
-  if s and t<=n-d:h[d-1+t]=4
+  b-=1;h=g[b];s=b<=a;t=a+~b;h[c+1+s:d-s]=[4]*(d-c-1-2*s)
+  if s:
+   if t<c+2:h[c+1-t]=4
+   if t<=n-d:h[d-1+t]=4
  while k-4:g=r(g);k+=1
  return g
