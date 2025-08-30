@@ -1,1 +1,1 @@
-p=lambda g:[sum(zip(r,r),())for r in zip(*filter(any,zip(*g)))if 4 in r for _ in'00']
+p=lambda g:[sum(zip(r,r),())for r in zip(*filter(any,zip(*g)))if max(r)for _ in'00']
