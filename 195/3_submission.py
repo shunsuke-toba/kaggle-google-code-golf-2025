@@ -1,1 +1,1 @@
-p=lambda g,r=range(9):[[g[(x:=g.index(next(filter(sum,g))))+i][(y:=min(g[x+k].index(5)for k in r))+j]&g[x+i%3*3][y+j%3*3]for j in r]for i in r]
+p=lambda g,r=range(9):(g:=[*zip(*filter(sum,zip(*filter(sum,g))))])and[[g[i][j]&g[i%3*3][j%3*3]for j in r]for i in r]
