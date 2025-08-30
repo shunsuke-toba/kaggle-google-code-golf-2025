@@ -1,1 +1,1 @@
-def p(g):n=len(g+g[0])//3;a=[r[:n]for r in g[:n]];b=[r[-n:]for r in g[-n:]];c='8'in str(a);return[[x*y//8for x in r for y in s]for r in(a,b)[c]for s in(b,a)[c]]
+def p(g):n=len(g+g[0])//3;d=[r[:n]for r in g[:n]],[r[-n:]for r in g[-n:]];c='8'in str(d[0]);return[[x*y//8for x in r for y in s]for r in d[c]for s in d[~c]]
