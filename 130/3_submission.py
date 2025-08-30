@@ -1,1 +1,1 @@
-t=0,3,6;p=lambda g:[[max(v*(v!=5)for v in g[i][c:c+3])for c in t]for i in t]
+p=lambda g:[[sum({*r[c:c+3]}-{5})for c in(0,3,6)]for r in g[::3]]
