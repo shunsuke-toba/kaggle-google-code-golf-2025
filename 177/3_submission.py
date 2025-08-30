@@ -1,1 +1,1 @@
-p=lambda g:[[*filter(None,r[::-1])]for r in g if any(r)]
+p=lambda g:[[*filter(int,r[::-1])]for r in g if max(r)]
