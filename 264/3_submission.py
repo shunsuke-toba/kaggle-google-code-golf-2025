@@ -1,5 +1,1 @@
-def p(g):
- a=range(9);w=len(g[0])-2;d={}
- for x in range((len(g)-2)*w):
-  if all(t:=[g[x//w+i//3][x%w+i%3]for i in a]):d[chr(97+sum(i*(t[i]!=5)for i in a))]=t
- return[[d['ehinatqzu'[r-r%3+c//3]][r%3*3+c%3]for c in a]for r in a]
+def p(g):a=range(9);w=len(g[0])-2;d={chr(97+sum(i*(u[i]!=5)for i in a)):u for x in range((len(g)-2)*w) if min(u:=[g[x//w+i//3][x%w+i%3]for i in a])};return[[d['ehinatqzu'[r-r%3+c//3]][r%3*3+c%3]for c in a]for r in a]
