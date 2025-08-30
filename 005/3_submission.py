@@ -3,6 +3,6 @@ def p(g):
  while 0in map(sum,(P:=[g[r+i][c:c+3]for i in R])+[*zip(*P)]):c=-~c%19;r+=c<1
  for Y in-4,0,4:
   for X in-4,0,4:
-   t=max(max(g[r+Y+i][c+X:c+X+3])for i in R);y,x=r,c
-   for _ in g:y+=Y;x+=X;[0<=y+i<21>x+j>=0<P[i][j]and g[y+i].__setitem__(x+j,t)for i in R for j in R]
+   y,x=r,c
+   for _ in g:y+=Y;x+=X;[0<=y+i<21>x+j>=0<P[i][j]and g[y+i].__setitem__(x+j,max(max(g[r+Y+k][c+X:c+X+3])for k in R))for i in R for j in R]
  return g
