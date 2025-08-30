@@ -1,8 +1,1 @@
-def p(g,t=0):
- for r in g:
-  b=99;i=0
-  for x in r:
-   if x&1:r[b:i]=[8]*(i-b);b=-~i
-   i+=1
- *g,=map(list,zip(*g))
- return t*g or p(g,1)
+p=lambda g,a=any,e=enumerate:[[r[j]or 8*(a(r[:j])*a(r[j+1:])|a(c[:i])*a(c[i+1:]))for j,c in e(zip(*g))]for i,r in e(g)]
