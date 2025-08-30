@@ -1,7 +1,1 @@
-def p(g):
- for _ in[0]*4:
-  for a in g:
-   for y,b in enumerate(a[1:]):
-    if 2>sum(g,[]).count(a[y])>b:a[:y]=[i or a[y]for i in a[:y]]
-  g=[*map(list,zip(*g[::-1]))]
- return g
+p=lambda g:exec('for r in g:\n for y,b in enumerate(r[1:]):\n  if 2>sum(g,[]).count(r[y])>b:r[:y]=[i or r[y]for i in r[:y]]\ng[:]=map(list,zip(*g[::-1]))\n'*4,locals()) or g
