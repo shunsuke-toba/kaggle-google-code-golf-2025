@@ -1,1 +1,1 @@
-p=lambda g:exec('{*g[0]}-{1}or g.pop(0);g[:]=zip(*g[::-1]);'*20)or eval(str(g).replace(*'10'))
+p=lambda g:exec('g[:2>max(g[0])]=[];g[:]=zip(*g[::-1]);'*20)or eval(str(g).replace(*'10'))
