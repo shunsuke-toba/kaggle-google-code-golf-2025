@@ -1,1 +1,1 @@
-p=lambda g:eval("[*zip(*[[c*(c^4+i*r[i-1]>0)for i,c in enumerate(r)]for r in"*64+str(g).replace(*'04')+"[::-1]])]"*64)
+p=lambda g:eval('[*zip(*[[c*(c^4+v>0)for c,v in zip(r,[0,*r])]for r in'*64+str(g).replace('0','4')+'[::-1]])]'*64)
