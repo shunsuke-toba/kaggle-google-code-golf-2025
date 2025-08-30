@@ -1,5 +1,4 @@
 def p(g):
  m=[*map(any,g)].index(1);n=[*map(any,zip(*g))].index(1)
- for _ in'123':
-  for k in range(25):j=k%5;i=k//5;g[m+i][n+j]|=g[m+4-j][n+i]
+ for k in range(75):i=k//5%5;g[m+i][n+k%5]|=g[m+~k%5][n+i]
  return g
