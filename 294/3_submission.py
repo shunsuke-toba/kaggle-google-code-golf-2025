@@ -1,3 +1,3 @@
-def p(j):
- for x in range(64):a=x//8;b=x%8;j[a+1][b+1]>>=j[a][b]*j[a+2][b+2]>0
- return j
+def p(g):
+ for y in range(64):a=y//8;y&=7;g[a+1][y+1]>>=g[a][y]*g[a+2][y+2]>0
+ return g
