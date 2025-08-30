@@ -1,1 +1,1 @@
-def p(g,E=enumerate):z=[(i+j*1j,v)for i,r in E(g)for j,v in E(r)if v];p=max(t:=[b-a*1j for a,w in z for b,v in z if w==v!=a-b+v],key=t.count)/(1-1j);exec('for s,v in z:'+'g[int(s.real)][int(s.imag)]=v;s=(s-p)*1j+p;'*4);return g
+def p(g,E=enumerate):z=[(i+j*1j,v)for i,r in E(g)for j,v in E(r)if v];p=max(p:=[b-a*1j for a,w in z for b,v in z if w==v!=a-b+v],key=p.count);exec('for s,v in z:'+'g[int(s.real)][int(s.imag)]=v;s=s*1j+p;'*4);return g
