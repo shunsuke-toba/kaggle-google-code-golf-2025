@@ -1,6 +1,5 @@
 def p(g,E=enumerate,R=range,L=len,F=filter):
- s=sum(g,[]);*_,z,y,X=sorted({*s},key=s.count)
- a,b=[[*map(list,zip(*F(lambda r:c in r,zip(*F(lambda r:c in r,g))))) ]for c in(y,X)];n,m,p=L(a),L(a[0]),[]
+ s=sum(g,[]);*_,z,y,x=sorted({*s},key=s.count);a,b=[[*map(list,zip(*F(lambda r:c in r,zip(*F(lambda r:c in r,g)))))]for c in(y,x)];n,m,p=L(a),L(a[0]),[]
  for i in R(n):
   for j in R(m):
    if a[i][j]-y:
@@ -12,6 +11,6 @@ def p(g,E=enumerate,R=range,L=len,F=filter):
  for _,r in sorted(p):
   for i in R(L(b)-L(r)+1):
    for j in R(L(b[0])-L(r[0])+1):
-    if all(b[i+u][j+v]==(X,c)[c!=z]for u,s in E(r)for v,c in E(s)):
+    if all(b[i+u][j+v]==(x,c)[c!=z]for u,s in E(r)for v,c in E(s)):
      for k,s in E(r):b[i+k][j:j+L(r[0])]=s
  return b
