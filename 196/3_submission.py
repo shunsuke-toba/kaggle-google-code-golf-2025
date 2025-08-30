@@ -1,2 +1,1 @@
-e=enumerate
-def p(g):g=eval("[*zip(*[[c*(c^2+i*r[i-1]>0)for i,c in e(r)]for r in"*48+str(g).replace(*'02')+"[::-1]])]"*48);return[[v%2*(v+2*any(2in R[:j+2][-3:]for R in g[:i+2][-3:]))for j,v in e(r)]for i,r in e(g)]
+p=lambda g,S="[*zip(*[[c",T=")for i,c in enumerate(r)]for r in":eval(str(eval((S+"^((i>c^1<1)*r[i-1]&2"+T)*8+(S+"*(c^2+i*r[i-1]>0"+T)*48+str(g).replace(*'02')+"[::-1]])]"*56)).replace(*'20'))
