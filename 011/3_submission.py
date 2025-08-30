@@ -1,1 +1,1 @@
-p=lambda g,r=range(11):[[[5,g[(m:=36-sum(i//4*3+j//4 for i in r for j in r if g[i][j]>7))//3*4+x//4][m%3*4+y//4]][x%4<3>y%4]for y in r]for x in r]
+p=lambda g,r=range(11):[[[5,g[(e:=45-sum(i//4*4+j//4 for i in r for j in r if g[i][j]&8))&-4|x//4][e%4*4|y//4]][x%4<3>y%4]for y in r]for x in r]
