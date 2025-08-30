@@ -3,4 +3,4 @@ def p(g):
  for x,k in enumerate(t:=[*zip(*g)]):
   if{*k}=={c:=k[0]}-{0}:
    for r,q in zip(g,o):q[x-(c in r[:x])]=q[x+(c in r[x+1:])]=c
- return any(o[0])and o or[*zip(*p(t))]
+ return o*any(o[0])or[*zip(*p(t))]
