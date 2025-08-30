@@ -1,1 +1,1 @@
-p=lambda g:[[g[n:=len(g)//2][n+g[n].index(x)]for x in y]for y in g]
+p=lambda g:[[g[(n:=len(g)//2)+y.index(x)][n]for x in y]for y in g]
