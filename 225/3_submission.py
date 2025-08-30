@@ -1,1 +1,1 @@
-p=lambda g,t=(-2,-1,2,3):any([g[r+i].__setitem__(c+j,g[r+(i<1)][c+(j<1)])for i in t for j in t if 6>c+j>-1<r+i<6]for n in range(25)if g[r:=n//5][c:=n%5])and g
+t=-2,-1,2,3;p=lambda g:any([g[r+i].__setitem__(c+j,g[r+(i<0)][c+(j<0)])for i in t for j in t if 6>c+j>-1<r+i<6]for n in range(25)if g[r:=n//5][c:=n%5])and g
