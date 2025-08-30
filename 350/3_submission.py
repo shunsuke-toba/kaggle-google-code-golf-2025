@@ -5,4 +5,4 @@ def p(g,t=0):
    if x&1:r[b:i]=[8]*(i-b);b=-~i
    i+=1
  *g,=map(list,zip(*g))
- return t and g or p(g,1)
+ return t*g or p(g,1)
