@@ -2,17 +2,15 @@ def p(g):
  r=sum(g,[]);g=r*1;d,e={},{}
  for i,v in enumerate(g):
   if v^5:
-   q=[i];g[i]=5;f=v<1
+   q=[i];g[i]=5;f=1>v
    for j in q:
     for k in j+1,j-1,j+10,j-10:
-     try:
-      if g[k]==v:g[k]=5;q+=k,
-      f*=g[k]==5
-     except:f=0
+     if g[k:k+1]==[v]:g[k]=5;q+=k,
+     f*=g[k:k+1]==[5]
    t=tuple(x-i for x in q)
    if f:d[t]=i
    if r.count(v)==len(t)>1:e[t]=i,v
- for t in {*e}&{*d}:
+ for t in e&d.keys():
   i,v=e[t]
-  for o in t:r[i+o]=0;r[d[t]+o]=v
+  for o in t:r[i+o],r[d[t]+o]=0,v
  return[*zip(*[iter(r)]*10)]
