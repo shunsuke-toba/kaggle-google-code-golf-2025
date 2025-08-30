@@ -1,1 +1,1 @@
-def p(g):g=[8]*sum(max(r)&1for r in g)+[0]*3;return g[1:4],(0,0,g[4]),[0]*3
+def p(g):g=[8]*(sum(map(max,g))*5&7)+[0]*3;return g[1:4],(0,0,g[4]),[0]*3
