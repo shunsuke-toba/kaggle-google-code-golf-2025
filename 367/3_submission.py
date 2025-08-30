@@ -1,5 +1,3 @@
 def p(g):
- for s in range(8**5):
-  try:d=-1,0,1,0;t=g[r:=s%97%len(g)][c:=s%89%len(g[0])]-5;s%=4;g[x:=d[s]+r][y:=d[~s]+c]|=t&4*(x|y>0);g[x-y+c][x-r+y]|=([g[r+d[s+~i]][c+d[s-i]]for i in range(4)]==[5,t,0,5])*4
-  except:0
+ for _ in range(20):m=len(g[0]);a=[[0]*m]*2+g;b=[[0]*m]+g;g=[*map(list,zip(*[[c|4*(p==4or[u,v,p,q]==[0,0,5,5])for c,(u,v,p,q)in zip(r,zip([0,*a[i]],[0,0,*b[i]],b[i],[0,*r]))]for i,r in enumerate(g)][::-1]))]
  return g

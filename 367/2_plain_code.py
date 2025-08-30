@@ -1,62 +1,29 @@
 # -*- coding: utf-8 -*-
-def p(grid):
-    import copy
-    g = copy.deepcopy(grid)
-    H, W = len(g), len(g[0])
-    
-    # 1. 全ての5のマスで隣接する4マスが時計回りに(5,5,0,0)のパターンを見つける
-    # そのマスについて5で挟まれた斜めのマスを4に変える
-    for r in range(H):
-        for c in range(W):
-            if g[r][c] == 5:
-                # 隣接する4マス（上、右、下、左）を時計回りでチェック
-                directions = [(-1, 0), (0, 1), (1, 0), (0, -1)]  # 上、右、下、左
-                neighbors = []
-                
-                for dr, dc in directions:
-                    nr, nc = r + dr, c + dc
-                    if 0 <= nr < H and 0 <= nc < W:
-                        neighbors.append(g[nr][nc])
-                    else:
-                        neighbors.append(-1)  # 境界外
-                
-                # 時計回りに(5,5,0,0)のパターンを探す
-                # 各パターンと対応する斜めの方向
-                patterns_and_diagonals = [
-                    ([5, 5, 0, 0], -1, 1),   # 上と右が5、下と左が0 → 右上斜め
-                    ([5, 0, 0, 5], -1, -1),  # 右と下が5、左と上が0 → 左上斜め  
-                    ([0, 0, 5, 5], 1, -1),   # 下と左が5、上と右が0 → 左下斜め
-                    ([0, 5, 5, 0], 1, 1)     # 左と上が5、右と下が0 → 右下斜め
-                ]
-                
-                for pattern, dr, dc in patterns_and_diagonals:
-                    if neighbors == pattern:
-                        nr, nc = r + dr, c + dc
-                        if 0 <= nr < H and 0 <= nc < W:
-                            g[nr][nc] = 4
-    
-    # 2. 4に隣接している0のマスを4に変えることを99回繰り返す
-    for iteration in range(99):
-        changed = False
-        new_g = copy.deepcopy(g)
+def p(g):
+    for _ in range(96):
+        n, m = len(g), len(g[0])
+        new_g = []
         
-        for r in range(H):
-            for c in range(W):
-                if g[r][c] == 0:
-                    # 隣接に4があるかチェック
-                    has_4_neighbor = False
-                    for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                        nr, nc = r + dr, c + dc
-                        if 0 <= nr < H and 0 <= nc < W and g[nr][nc] == 4:
-                            has_4_neighbor = True
-                            break
-                    
-                    if has_4_neighbor:
-                        new_g[r][c] = 4
-                        changed = True
+        for i in range(n):
+            row = []
+            for j in range(m):
+                # g[i-1][j]が4の場合、または
+                # g[i-2][j-1],g[i-1][j-2],g[i-1][j],g[i][j-1]=[0,0,5,5]の場合はg[i][j]|4
+                # それ以外はg[i][j]
+                
+                # 範囲外は0で処理
+                v1 = g[i-2][j-1] if i >= 2 and j >= 1 else 0
+                v2 = g[i-1][j-2] if i >= 1 and j >= 2 else 0
+                v3 = g[i-1][j] if i >= 1 else 0
+                v4 = g[i][j-1] if j >= 1 else 0
+                
+                if v3 == 4 or [v1, v2, v3, v4] == [0, 0, 5, 5]:
+                    row.append(g[i][j] | 4)
+                else:
+                    row.append(g[i][j])
+            new_g.append(row)
         
-        g = new_g
-        if not changed:
-            break
+        # 90度回転
+        g = [list(row) for row in zip(*new_g[::-1])]
     
     return g
