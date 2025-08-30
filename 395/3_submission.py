@@ -1,1 +1,1 @@
-p=lambda g:[[~-sum(z)&2for z in r]for r in map(zip,g,g[3:])]
+p=lambda g:[[a+b-1&2for a,b in r]for r in map(zip,g,g[3:])]
