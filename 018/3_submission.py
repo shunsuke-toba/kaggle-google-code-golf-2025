@@ -15,5 +15,5 @@ def p(g):
     for x in R(w-b+1):
      if all((u.count(c:=r[i][j])<2)*c==g[y+i][x+j]for i in R(a)for j in R(b)):
       for i in R(a):g[y+i][x:x+b]=r[i]
-   r=[*zip(*r[::-1])];z^3 or r.reverse()
+   r=[*zip(*r[::-1])];z^3or r.reverse()
  return g
