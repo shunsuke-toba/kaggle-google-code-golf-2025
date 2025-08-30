@@ -1,1 +1,1 @@
-p=lambda g:min((0 in(s:=sum(t:=[r[k%7:][:3]for r in g[k//7:][:3]],[])),sum(s),t)for k in range(49))[2]
+p=lambda g:min((0in(s:=sum(t:=[r[k%7:][:3]for r in g[k//7:][:3]],[])),sum(s),t)for k in range(49))[2]
