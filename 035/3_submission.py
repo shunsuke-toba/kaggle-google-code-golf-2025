@@ -1,1 +1,1 @@
-p=lambda g:eval("[*zip(*[[(p<1>x^8)*r[0]or x for p,x in zip((0,*r),r)]for r in"*4+str(g)+"[::-1]])]"*4)
+p=lambda g:exec("g[:]=zip(*[[(p<1>x^8)*r[0]or x for p,x in zip((0,*r),r)]for r in g[::-1]]);"*4)or g
