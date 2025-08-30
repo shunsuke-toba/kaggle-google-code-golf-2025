@@ -1,1 +1,1 @@
-p=lambda g:[*zip(*[c[-(h:=c.count(0)):]+c[:-h]for c in zip(*g)])]
+p=lambda g:[*zip(*[c[(h:=-c.count(0)):]+c[:h]for c in zip(*g)])]
