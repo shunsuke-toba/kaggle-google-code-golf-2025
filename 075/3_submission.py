@@ -1,1 +1,1 @@
-p=lambda g:[exec('g[r][c:c+3]=g[r%3][:3]')for r in range(9)for c in(4,7,10)if g[r+1-r%3][c+1]]and g
+p=lambda g:[g[r][:4]+[i*g[r-r%3+1][x]for x in(5,8,11)for i in g[r%3][:3]]for r in range(9)]
