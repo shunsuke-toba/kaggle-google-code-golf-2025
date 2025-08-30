@@ -1,4 +1,5 @@
 def p(g):
- (c,k),*_,(e,w)=[divmod(i,10)for i in range(89)if sum(g,[])[i]]
- for i in-1,1:l=g[c+i];r=g[e+i];l[k+i],r[w+i],l[w-i],r[k-i]=r[w+i],l[k+i],r[k-i],l[w-i]
- return g
+ g=sum(g,[])
+ z=[i for i in range(89)if g.count(g[i])<2]
+ for a,b,o in zip(z,z[::-1],[22,18,-18,-22]):g[a],g[b+o]=0,g[a]
+ return list(zip(*[iter(g)]*10))
