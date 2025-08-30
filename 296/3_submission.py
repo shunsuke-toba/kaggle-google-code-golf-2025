@@ -1,1 +1,1 @@
-p=lambda g:[(a,b|c,d)for a,b,*_,c,d in(g[0],map(max,*g[1::2]),g[4])]
+p=lambda g:[(a,b|c,d)for a,b,*_,c,d in(g[0],map(max,*g[1:4]),g[4])]
