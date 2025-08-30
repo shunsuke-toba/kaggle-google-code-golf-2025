@@ -5,5 +5,5 @@ def p(g):
   elif t[0]:t=b
   y+=1
  for t in a,b:
-  for r in g[-~t[1]:t[-3]]:r[t[2]+1:t[2]+t[3]-1]=[1+(t>min(a,b))]*(t[3]-2)
+  for r in g[-~t[1]:t[-3]]:x,y=t[2:4];r[x+1:x+y-1]=[1+(t>min(a,b))]*(y-2)
  return g
