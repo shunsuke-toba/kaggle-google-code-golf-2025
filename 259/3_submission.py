@@ -1,1 +1,1 @@
-p=lambda g:exec('g[:]=zip(*g[::-1])\nwhile max(g[0])<2:g.pop(0)\n'*4)or eval(str(g).replace(*'10'))
+p=lambda g:exec('{*g[0]}-{1}or g.pop(0);g[:]=zip(*g[::-1]);'*20)or eval(str(g).replace(*'10'))
