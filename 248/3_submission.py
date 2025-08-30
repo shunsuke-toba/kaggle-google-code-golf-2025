@@ -1,4 +1,4 @@
-def p(a):
- w=len(a[0])-1;i=10
- while i:i-=1;a[~i][~abs(i%(w*2)-w)]=1
- return a
+def p(g,i=9):
+ w=len(g[0])-1
+ while~i:g[~i][~abs(i%(w+w)-w)]=1;i-=1
+ return g
