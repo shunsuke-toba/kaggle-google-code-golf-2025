@@ -1,4 +1,4 @@
-def p(g):
- c=d=0
- for r in g[::-1]:w=len(r);r[:]=[8]*w;r[c]=1;c+=1-2*d;d^=c%~-w<1
+def p(g,i=9):
+ w=len(g[0])-1
+ while~i:r=g[~i]=[8]*-~w;r[~abs(i%(w+w)-w)]=1;i-=1
  return g

@@ -1,1 +1,1 @@
-def p(g):g=sum(zip(*g),());c=g.count;m=max(map(c,{*g}-{0}));return[[i for i in{}.fromkeys(g)if c(i)==m]]*m
+def p(g):g=sum(zip(*g),());r=__import__('statistics').multimode(filter(None,g));return[r]*g.count(r[0])
