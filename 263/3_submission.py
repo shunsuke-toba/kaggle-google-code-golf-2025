@@ -1,1 +1,1 @@
-def p(g):b=[*zip(*[iter((g,zip(*g))[h:=len(g)<4])]*3)];m=[str(x).count('0')for x in b];return(x:=b[m.index(min(m,key=m.count))],[*zip(*x)])[h]
+def p(g):b=[*zip(*[iter((g,zip(*g))[h:=len(g)<4])]*3)];m=[str(x).count('0')for x in b];return(x:=b[[*map(m.count,m)].index(1)],[*zip(*x)])[h]
