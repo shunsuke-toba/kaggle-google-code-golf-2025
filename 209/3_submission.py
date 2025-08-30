@@ -2,8 +2,8 @@ def p(g):
  R=range;A=min;B=max;a=e=99;b=d=f=j=0;L=[];c=i=m=len(g[0])
  for t in R(len(g)*m):
   v=g[r:=t//m][o:=t%m]
-  if v&4:a=A(a,r);b=B(b,r);c=A(c,o);d=B(d,o)
-  elif v*(r>=b>a):e=A(e,r);f=B(f,r);i=A(i,o);j=B(j,o)
+  if v&4:b=r;d=o;a>r and(a:=r,c:=o)
+  elif v*(a<b<=r):e=A(e,r);f=r;i=A(i,o);j=B(j,o)
   elif v:L+=[(r,o,v)]
  f+=1-e;j+=1-i
  for k in 2,3,4:
