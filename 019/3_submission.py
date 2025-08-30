@@ -1,1 +1,1 @@
-def p(g,e=enumerate):g=[r*2for r in g*2];[exec('s[y]=8')for i,r in e(g)for j,v in e(r)if v&7for s in g[i<1or i-1:i+2:2]for y in(j-1,j+1)if 0in s[y:y+1]];return g
+p=lambda g,e=enumerate:(g:=[r*2for r in g*2],[exec('s[y]=8')for i,r in e(g)for j,v in e(r)if v&7for s in g[i<1or i-1:i+2:2]for y in(j-1,j+1)if 0in s[y:y+1]])[0]
