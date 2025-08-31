@@ -3,9 +3,8 @@ def p(g,A=range):
  for r in A(len(g)):
   for o,v in enumerate(g[r]):
    if v&4:b=r;d=o;a>r and(a:=r,c:=o)
-   elif v*(a<b<=r):e=min(e,r);f=r;i=min(i,o);j=max(j,o)
+   elif v*(a<b<=r):e=min(e,r);i=min(i,o);f=r-e+1;j=max(j,o-i+1)
    elif v:L+=(r,o,v),
- f+=1-e;j+=1-i
  for k in A(5):
   for r in A(a,b):
    for o in A(c,d):
