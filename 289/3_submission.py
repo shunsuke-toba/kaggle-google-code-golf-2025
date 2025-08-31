@@ -1,1 +1,1 @@
-def p(g):k=len({*str(g)})-5;return[sum(zip(*[r]*k),())for r in g for _ in' '*k]
+p=lambda g:sum(((sum(zip(*[r]*(k:=len({*str(g)})-5)),()),)*k for r in g),())
