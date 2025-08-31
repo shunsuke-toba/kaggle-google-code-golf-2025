@@ -1,1 +1,1 @@
-p=lambda g:(k:=[*{}.fromkeys(sum(g,[]))])[-1]in g[0]and[k]or[*zip(k)]
+p=lambda g:(k:=[*{}.fromkeys(sum(g,[]))])[1]in g[0]and[k]or[*zip(k)]
