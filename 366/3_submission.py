@@ -10,5 +10,5 @@ def p(g,E=enumerate,R=range,L=len,F=filter):
   for i in R(L(b)-L(r)+1):
    for j in R(L(b[0])-L(r[0])+1):
     if all(b[i+u][j+v]==(x,c)[c!=z]for u,s in E(r)for v,c in E(s)):
-     for k,s in E(r):b[i+k][j:j+len(s)]=s
+     for k,s in E(r):b[i+k][j:j+L(s)]=s
  return b
