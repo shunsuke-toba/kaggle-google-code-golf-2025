@@ -1,1 +1,1 @@
-p=lambda g:([r[:len(r)//2]for r in g],a:=g[:len(g)//2])[a*2==g>g[:3]]
+p=lambda g:a if (a:=g[:len(g)//2])*2==g>g[:3]else[*map(p,g)]
