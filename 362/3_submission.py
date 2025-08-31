@@ -1,1 +1,1 @@
-def p(g):d=sum(r.pop()==5for r in g);return[r[d:]+r[:1]*-~d for r in g[-d:]+g[:-d]]
+def p(g):d=sum(r[9]==5for r in g);return[r[d:9]+r[:1]*-~d for r in g[-d:]+g[:-d]]
