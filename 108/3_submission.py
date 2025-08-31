@@ -1,1 +1,1 @@
-p=lambda g,r=range(20):[[g[i//2|1][j//2|1]for j in r]for i in r]
+p=lambda g,a=sorted(b'	'*4):[[g[i][j]for j in a]for i in a]
