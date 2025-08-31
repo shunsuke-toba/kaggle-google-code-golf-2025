@@ -1,1 +1,1 @@
-p=lambda g,x=0:(h:=g[1:]==g[:-1])*[r:=[(x:=a)for a,*_ in(g,zip(*g))[h]if a-x]]or[*zip(r)]
+p=lambda g,x=0:(h:=g[1:]==g[:-1])*[r:=[x:=a for a,*_ in(g,zip(*g))[h]if a-x]]or[*zip(r)]
