@@ -1,1 +1,1 @@
-p=lambda g:[[r[0]^u^v or v for u,v in zip(g[0],r)]for r in g]
+p=lambda g:[[u-v+r[0]or v for u,v in zip(g[0],r)]for r in g]
