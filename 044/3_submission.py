@@ -9,7 +9,7 @@ def p(g):
      f*=g[k:k+1]==[5]
    if f:d[t]=i
    if r.count(v)==len(t)>1:e[t]=i,v
- for t in e&d.keys():
+ for t in {*e}&{*d}:
   i,v=e[t]
   for o in t:r[i+o],r[d[t]+o]=0,v
  return[*zip(*[iter(r)]*10)]
