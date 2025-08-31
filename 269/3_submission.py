@@ -1,1 +1,1 @@
-def p(g):n=9-str(g).count('0');return[sum(zip(*[r]*n),())for r in g for _ in' '*n]
+def p(g):n=len({*str(g)})-5;return sum(([sum(zip(*[r]*n),())]*n for r in g),[])
