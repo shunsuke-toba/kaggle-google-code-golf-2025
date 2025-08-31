@@ -1,1 +1,1 @@
-p=lambda g,r=range:[y[x:x+1]==[0]and y.__setitem__(x,3)for a in(-1,0)for i in r(len(g)+a)for j in r(len(g[0])+~a)if g[i][j]+g[i-a][j-~a]==4for y in g[i-(i>0):i+2-a]for x in r(j-1,j+3+a)]and g
+p=lambda g,r=range:[y[x:x+1]==[0]and y.__setitem__(x,3)for a in(-1,0)for i in r(len(g)+a)for j in r(len(g[0])+~a)if g[i][j]+g[i-a][j-~a]==4for y in g[i-(i>0):i+2-a]for x in r(j-1,j+3+a)]*0+g
