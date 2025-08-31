@@ -1,1 +1,1 @@
-def p(g):*a,=map(sum,zip(*g));return[[-c&(h==max(a)or(h==min({*a}-{0}))*2)for c,h in zip(r,a)]for r in g]
+def p(g):*t,=zip(*g);return[[-c&(h==max(t)or(h==min(filter(sum,t)))*2)for c,h in zip(r,t)]for r in g]
