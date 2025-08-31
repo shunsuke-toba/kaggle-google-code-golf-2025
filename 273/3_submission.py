@@ -1,4 +1,5 @@
-def p(g):
- for a,b,c,_ in zip(*[(i for i in range(100)if sum(g,[])[i])]*4):
-  for r in g[a//10+1:c//10]:r[a%10+1:b%10]=[2]*(~a+b)
+def p(g,a=0):
+ for r in g:
+  if 4 in r:a and-~(a:=0)or(i:=r.index,b:=i(4,a:=i(4)+1))
+  elif a:r[a:b]=[2]*(b-a)
  return g
