@@ -1,1 +1,1 @@
-p=lambda g:0*[a[b]or exec('a[b]=f')for i in range(81)if(f:=g[y:=i//9][x:=i%9])>1>g[y-1][x]for a in g[y-2-g[y-2][x-2]:y+3]for b in range(x-2,x+3)]or g
+p=lambda g:[a[b]or exec('a[b]=f')for i in range(81)if(f:=g[y:=i//9][x:=i%9])>1>g[y-1][x]for a in g[y-2-g[y-2][x-2]:y+3]for b in range(x-2,x+3)]and g
