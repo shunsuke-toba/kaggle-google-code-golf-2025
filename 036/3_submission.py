@@ -1,1 +1,1 @@
-def p(g):k=max(z:=sum(g,[]),key=lambda x:z.index(x)+z[::-1].index(x));F=lambda a:zip(*[r for r in a if k in r]);return*F(F(g)),
+def p(g):s=str(g);k=int(max(s,key=lambda c:s.find(c)-s.rfind(c)));F=lambda a:zip(*[r for r in a if k in r]);return*F(F(g)),
