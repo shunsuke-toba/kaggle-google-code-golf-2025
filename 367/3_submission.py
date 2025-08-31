@@ -1,3 +1,3 @@
 def p(g):
- for _ in range(20):m=len(g[0]);a=[[0]*m]*2+g;b=[[0]*m]+g;g=[*map(list,zip(*[[c|4*(p==4or[u,v,p,q]==[0,0,5,5])for c,(u,v,p,q)in zip(r,zip([0,*a[i]],[0,0,*b[i]],b[i],[0,*r]))]for i,r in enumerate(g)][::-1]))]
+ for _ in range(20):m=len(g[0]);g=[*map(list,zip(*[[c|4*(t==4or[u,v,t,w]==[0,0,5,5])for c,u,v,t,w in zip(r,[0,*a],[0,0,*b],b,[0,*r])]for r,a,b in zip(g,[[0]*m]*2+g,[[0]*m]+g)][::-1]))]
  return g
