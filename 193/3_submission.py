@@ -1,1 +1,1 @@
-p=lambda g,E=enumerate:[[v*(sum(r[j-(j>0):j+2]+[z[j]for z in g[i-(i>0):i+2]])>v*3)for j,v in E(r)]for i,r in E(g)]
+p=lambda g,z=[[0]*20]:[[a*(sum(m)>a)for a,*m in zip(r,r[1:]+[0],[0]+r,u,d)]for u,r,d in zip(z+g,g,g[1:]+z)]
