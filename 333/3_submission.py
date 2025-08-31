@@ -1,1 +1,1 @@
-p=lambda g,f=lambda a:[[r[j]or(3in(x:=r[j:]))*sum(y:=r[:j])|(3in y)*sum(x)for j in range(10)]for r in zip(*a)]:f(f(g))
+p=lambda g,f=lambda a:[[r[j]or sum((3in(x:=r[j:]))*(y:=r[:j])+(3in y)*x)for j in range(10)]for r in zip(*a)]:f(f(g))
