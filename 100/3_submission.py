@@ -1,1 +1,1 @@
-p=lambda g:[[max((r.count(c)*sum(c in q for q in g),c)for r in g for c in set(r) if c)[1]]*2]*2
+p=lambda g:[[max((r.count(c)*sum(c in q for q in g),c)for r in g for c in r if c)[1]]*2]*2
