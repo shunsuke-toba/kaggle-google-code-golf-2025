@@ -1,1 +1,1 @@
-r=-1,0,1;p=lambda g:[g[n//9+i].__setitem__(n%9+j,i*j*4%8|(i|j)&1)for n,v in enumerate(sum(g,[]))if v for i in r for j in r]and g
+p=lambda g:[g[n//9+k//3-1].__setitem__(n%9+k%3-1,5*(k!=4)-4*(k&1))for n,v in enumerate(sum(g,[]))if v for k in range(9)]and g
