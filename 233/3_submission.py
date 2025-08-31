@@ -3,7 +3,7 @@ def p(g):
  for y in r(l(g)-2):
   for x in r(l(g[0])-2):
    b=[g[y+i][x:x+3]for i in T];m=sum(b,[])
-   if{2}<{*m}<{*m}|{0}:
+   if 0<min(m)<max(m):
     t+=(-m.count(2),b),
     for i in T:g[y+i][x:x+3]=0,0,0
  g=[*map(list,z(*f(any,z(*f(any,g)))))]
