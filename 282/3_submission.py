@@ -1,1 +1,1 @@
-p=lambda g:[g[n//9+k//3-1].__setitem__(n%9+k%3-1,k%2*4^5*(k!=4))for n,v in enumerate(sum(g,[]))if v for k in range(9)]and g
+p=lambda g:[g[n//9+k//3-1].__setitem__(n%9+k%3-1,k%2*4^5*(k!=4))for n,v in enumerate(sum(g,[]))for k in range(9)if v]and g
