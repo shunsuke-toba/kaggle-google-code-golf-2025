@@ -1,1 +1,1 @@
-p=lambda g:[[6*any(x)for x in zip(r,r[3:])]for r in g]
+p=lambda g:[[6*(r.pop(3)+c>0)for c in r]for r in g]
