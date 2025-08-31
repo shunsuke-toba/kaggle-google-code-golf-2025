@@ -1,4 +1,4 @@
 def p(g):
- a,b={*str(g)}-{*'[], 08'}
- for _ in[0]*160:g=[[*map(int,str(r)[1::3].replace('0'+b,a+b)[::-1].replace('0'+a,b+a))]for r in zip(*g)]
+ a,b={*sum(g,[])}-{0,8}
+ for _ in[0]*280:g=[*zip(*[[c or(v==a)*b or(v==b)*a for c,v in zip(r,(0,*r))]for r in g[::-1]])]
  return g
