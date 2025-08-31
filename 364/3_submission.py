@@ -1,11 +1,13 @@
 def p(g):
- h=len(g);w=len(g[0])
- for k in range(h*w):
-  if g[i:=k//w][j:=k%w]:
-   s=[(i,j)];k=g[i][j]=0
-   for x,y in s:
-    for a,b in(x+1,y),(x-1,y),(x,y+1),(x,y-1):
-     if h>a>-1<b<w>0<g[a][b]:g[a][b]=0;s+=(a,b),
-    k+=(((x+1,y)in s)+((x-1,y)in s))*(((x,y+1)in s)+((x,b)in s))
-   for x,y in s:g[x][y]=-~k*5%9
+ m=99;G=set()
+ for i,r in enumerate(g):
+  for j,v in enumerate(r):
+   if v:G|={i*m+j};r[j]=0
+ while G:
+  s=[G.pop()];k=0
+  for p in s:
+   for q in p+1,p-1,p+m,p-m:
+    if q in G:s+=q,;G-={q}
+   k+=((p+1 in s)+(p-1 in s))*((p+m in s)+(p-m in s))
+  for p in s:g[p//m][p%m]=-~k*5%9
  return g
