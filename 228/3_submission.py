@@ -1,5 +1,4 @@
 def p(g):
  g=sum(g,[])
- z=[i for i in range(89)if g.count(g[i])<2]
- for a,b,o in zip(z,z[::-1],[22,18,-18,-22]):g[a],g[b+o]=0,g[a]
- return list(zip(*[iter(g)]*10))
+ for i,a in enumerate(z:=[g.index(i)for i in g if g.count(i)<2]):g[a],g[z[~i]+22-4*i-32*(i>1)]=0,g[a]
+ return[*zip(*[iter(g)]*10)]
