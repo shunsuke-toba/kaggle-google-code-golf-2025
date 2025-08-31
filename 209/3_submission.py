@@ -1,11 +1,11 @@
 def p(g,R=range):
- c=i=a=e=99;k=b=d=f=j=0;L=[];m=len(g[0])
+ c=i=a=e=99;b=d=f=j=0;L=[];m=len(g[0])
  for t in R(len(g)*m):
   if(v:=g[r:=t//m][o:=t%m])&4:b=r;d=o;a>r and(a:=r,c:=o)
   elif v*(a<b<=r):e=min(e,r);f=r;i=min(i,o);j=max(j,o)
   elif v:L+=[(r,o,v)]
  f+=1-e;j+=1-i
- while k:=k+1:
+ for k in R(5):
   for r in R(a,b):
    for o in R(c,d):
     try:
