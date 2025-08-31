@@ -10,9 +10,8 @@ def p(g):
  for r in S:
   u=sum(r,[])
   for z in R(8):
-   a,b=L(r),L(r[0])
-   for y in R(h-a+1):
-    for x in R(w-b+1):
+   for y in R(h-(a:=L(r))+1):
+    for x in R(w-(b:=L(r[0]))+1):
      if all((u.count(c:=r[i][j])<2)*c==g[y+i][x+j]for i in R(a)for j in R(b)):
       for i in R(a):g[y+i][x:x+b]=r[i]
    r=[*zip(*r[::-1])];z^3or r.reverse()
