@@ -1,1 +1,1 @@
-def p(g):d,b,_={}.fromkeys(sorted(a:=sum(g,[]),key=a.count));exec('for r in g:\n try:p=r.index;r[p(d):p(b)]=[d]*(p(b)-p(d))\n except:p\ng[:]=map(list,zip(*g[::-1]))\n'*4);return g
+def p(g):a=sum(g,[]);d,b,_=sorted(sorted({*a}),key=a.count);exec('for r in g:\n try:p=r.index;r[p(d):p(b)]=[d]*(p(b)-p(d))\n except:p\ng[:]=map(list,zip(*g[::-1]))\n'*4);return g
