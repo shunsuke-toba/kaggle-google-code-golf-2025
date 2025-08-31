@@ -1,1 +1,1 @@
-p=lambda g,r=range(9):[[3*(i^j<4<8>i|j)for j in r[::2>g[1][2]or-1]]for i in r[::g[0][1]-2|1]]
+p=lambda g,r=range(9):[[3*(i^j<4<8>i|j)for j in r[::g[1][0]-2|1]]for i in r[::g[0][1]-2|1]]
