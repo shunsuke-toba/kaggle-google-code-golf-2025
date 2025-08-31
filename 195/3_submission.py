@@ -1,1 +1,1 @@
-p=lambda g,r=range(9):(g:=[*zip(*filter(sum,zip(*filter(sum,g))))])and[[g[i][j]&g[i%3*3][j%3*3]for j in r]for i in r]
+p=lambda g,f=filter,r=range(9):(g:=[*f(sum,zip(*f(sum,g)))])and[[g[j][i]&g[j*3%9][i*3%9]for j in r]for i in r]
