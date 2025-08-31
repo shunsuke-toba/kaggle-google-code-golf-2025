@@ -1,1 +1,1 @@
-p=lambda g:(h:=eval(str(g)),[g[x].__setitem__(y,8)for r,a in enumerate(h)for c in range(9)if a[c]>a[c-1]+h[r-1][c]for s in(-1,1)if h[r+(k:=a.index(0,c)-c)][d:=c+s*k]for S in(-1,2)for i in range(k*k)if-1<(x:=r+S*k+i//k)<10>(y:=d-s*S*k+i%k)>=0])and g
+p=lambda g:(f:=sum(g,[]),[g[x].__setitem__(y,8)for i in range(99)if f[i]>f[i-1]+f[i-10]for s in(-1,1)if f[i+(10+s)*(k:=f[i:].index(0))]for S in(-1,2)for n in range(k*k)if-1<(x:=i//10+S*k+n//k)<10>(y:=i%10+(s-S*s)*k+n%k)>=0])and g
