@@ -1,1 +1,1 @@
-def p(g):g=sum(zip(*g),());r=__import__('statistics').multimode(filter(None,g));return[r]*g.count(r[0])
+def p(g):return[c:=__import__('statistics').multimode(filter(None,g:=sum(zip(*g),())))]*g.count(c[0])
