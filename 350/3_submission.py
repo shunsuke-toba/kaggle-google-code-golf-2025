@@ -1,1 +1,1 @@
-p=lambda g,a=any,e=enumerate:[[r[j]or 8*(a(r[:j])*a(r[j+1:])|a(c[:i])*a(c[i+1:]))for j,c in e(zip(*g))]for i,r in e(g)]
+p=lambda g,a=any,e=enumerate:[[r[j]or 8*(a(r[:j])*a(r[j:])|a(c[:i])*a(c[i:]))for j,c in e(zip(*g))]for i,r in e(g)]
