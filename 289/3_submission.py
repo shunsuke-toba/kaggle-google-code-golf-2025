@@ -1,1 +1,1 @@
-def p(g):s={*sum(g,[])}^{0};return[sum(zip(*[r]*len(s)),())for r in g for _ in s]
+def p(g):k=len({*str(g)})-5;return[sum(zip(*[r]*k),())for r in g for _ in' '*k]
