@@ -1,5 +1,5 @@
 def p(g):
- o=[*map(list,g)];n=len(g);d=[(i//3-1,i%3-1)for i in range(9)if i^4]
+ n=len(o:=[*map(list,g)]);d=[(i//3-1,i%3-1)for i in range(9)if i^4]
  for k in range(n*n):
   if(c:=o[y:=k//n][x:=k%n])>0:
    o[y][x]=-c;q=[(y,x)]
