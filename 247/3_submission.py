@@ -1,1 +1,1 @@
-p=lambda g:[c:=__import__('statistics').multimode(filter(None,g:=sum(zip(*g),())))]*g.count(c[0])
+p=lambda g:[c:=__import__('statistics').multimode(filter(int,g:=sum(zip(*g),())))]*g.count(c[0])
