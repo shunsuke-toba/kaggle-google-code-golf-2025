@@ -1,1 +1,1 @@
-p=lambda g:eval("[*zip(*[[c|(l^3<1>c-2)for l,c in zip((3,*r),r)]for r in"*56+str(g).replace(*'02')+"[::-1]])]"*56)
+p=lambda g:eval("[*zip(*[[c|(l*c==6)for l,c in zip((3,*r),r)]for r in"*56+str(g).replace(*'02')+"[::-1]])]"*56)
