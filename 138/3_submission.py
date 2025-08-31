@@ -1,1 +1,1 @@
-p=lambda g:eval("[*zip(*[[(c,r[0])[r[0]in r[i:]]for i,c in enumerate(r)] for r in"*4+"[*zip(*(lambda x:x[(0,1)[0in x[0]]:])("*40+str(g)+(")[::-1])]")*40+"[::-1]])]"*4)
+p=lambda g:eval("[*zip(*[[(c,r[0])[r[0]in r[i:]]for i,c in enumerate(r)] for r in"*4+"[*zip(*(lambda x:x[0in x[0]:])("*40+str(g)+(")[::-1])]")*40+"[::-1]])]"*4)
