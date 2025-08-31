@@ -1,5 +1,5 @@
 def p(g):
- w=len(g[0])+2;g=sum(([0,*r,0]for r in g),s:=[0]*w)+s;P=range(w+1,~w+len(g))
+ w=len(g[0])+2;P=range(w+1,~w+len(g:=sum(([0,*r,0]for r in g),s:=[0]*w)+s))
  for j in P:
   for d in 1,w,w+1,w-1:
    if(a:=g[j+d])==g[j-d]>0<(c:=g[j]):
