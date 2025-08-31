@@ -1,1 +1,1 @@
-p=lambda g:[[(w,v)[4!=v]for v,w in zip(r,s[::-1])]for r,s in zip(g,g[::-1])]
+p=lambda g:[[(w,v)[v!=4]for v,w in zip(r,g.pop()[::-1])]for r in g[:]]
