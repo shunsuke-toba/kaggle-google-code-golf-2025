@@ -1,1 +1,1 @@
-p=lambda g,S="[*zip(*[[c",T=")for i,c in enumerate(r)]for r in":eval(str(eval((S+"^((i>c^1<1)*r[i-1]&2"+T)*8+(S+"*(c^2+i*r[i-1]>0"+T)*48+str(g).replace(*'02')+"[::-1]])]"*56)).replace(*'20'))
+p=lambda g,S="[*zip(*[[c",T="for c,v in zip(r,(2,*r))]for r in":eval(str(eval((S+"^(c^1<1)*(v%3<1)*2"+T)*8+(S+" or v&2"+T)*48+str(g)+"[::-1]])]"*56)).replace(*'20'))
