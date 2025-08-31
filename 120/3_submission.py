@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[[a,8][~-len(r)>j>0<i<~-len(g)>0<g[i-1][j]*g[i+1][j]*r[j-1]*r[j+1]]for j,a in e(r)]for i,r in e(g)]
+p=lambda g:[r.__setitem__(j,8)for p,r,n in zip(g,g[1:],g[2:])for j in range(1,len(r)-1)if p[j]*n[j]*r[j-1]*r[j+1]]and g
