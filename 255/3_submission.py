@@ -1,8 +1,8 @@
 def p(g,t=lambda x:[*map(list,zip(*x[::-1]))]):
- r=range(30);k=max(sum(g,[]))
+ r=range(30)
  for _ in' '*4:
   u=-1
-  for d in[i for i in r if k in g[i][5:]]+[30]:
+  for d in[i for i in r if{*g[i][5:]}-{0,13}]+[30]:
    for e in g[u+2:d-1]*(d-u>6):e[5:]=[13]*25
    u=d
   g=t(g)
