@@ -1,8 +1,8 @@
 def p(g):
  import re;r=range;b=max(f:=sum(g,[]),key=f.count);t=lambda m:[*map(list,zip(*m[::-1]))];L=[]
  for x in{*f}-{b}:
-  s=str(x);c=f.count(x)>1;y=c*2+1,x,c*2+1
-  for w in r(2,9):
+  s=str(x);c=2*(f.count(x)>1)+1;y=c,x,c
+  for w in r(2,6):
    for d in r(1,8):
     for _ in r(4):y=any(re.search(s*w+f"[^{s}]"*d+s,str(R)[1::3])for R in g)and(2*w+d,x,w)or y;g=t(g)
   L+=y,
