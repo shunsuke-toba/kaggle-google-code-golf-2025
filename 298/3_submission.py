@@ -1,1 +1,1 @@
-p=lambda g:[[g[2][~-g[2].index(v)%3]for v in r]for r in g]
+p=lambda g:[[g[2][r.index(v)*2-3]for v in r]for r in g]
