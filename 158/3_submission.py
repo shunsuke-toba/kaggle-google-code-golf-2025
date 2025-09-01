@@ -1,11 +1,11 @@
 def p(g,r=range):
  w=len(g[0])-2;t=0
  while len({*(f:=sum(p:=[R[t//w:][:3]for R in g[t%w:][:3]],[]))})<4:t+=1
- for k in r(12):
-  if k%3<1<k:p=[*zip(*p[::-1])]
-  m=3-k%3;q=r(s:=3*m)
-  for y in r(len(g)+1-s):
+ for m in[3,2,1]*4:
+  q=r(s:=3*m)
+  for y in r(-~len(g)-s):
    for x in r(w+3-s):
     if all((g[-1][0],v:=p[i//m][j//m])[f.count(v)<2]==g[y+i][x+j]for i in q for j in q):
      for i in q:g[y+i][x:x+s]=[p[i//m][j//m]for j in q]
+  if m<2:p=[*zip(*p[::-1])]
  return g
