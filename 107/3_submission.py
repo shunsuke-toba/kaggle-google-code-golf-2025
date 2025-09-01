@@ -1,1 +1,1 @@
-def p(g):n=len({*g[4]})+1;a=g[0][1]<1;b=g[a][0]<1;r=range(5*n);return[[g[i//n][j//n]or(i//n-a&-2 and(i-j-(a-b)*n)*(i+j-(a+b+2)*n+1)==0)*2 for j in r]for i in r]
+def p(g):n=len({*g[4]})+1;a,b=g[0][1]<1,g[1][0]<1;r=range(5*n);return[[g[i//n][j//n]or(i//n-a&-2and(i-j-(a-b)*n)*(i+j-(a+b+2)*n+1)==0)*2for j in r]for i in r]
