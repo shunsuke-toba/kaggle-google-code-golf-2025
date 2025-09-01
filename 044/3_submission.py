@@ -1,5 +1,5 @@
 def p(g):
- r=sum(g,[]);g=r*1;d,e={},{}
+ r=sum(g,[]);g=r*1;d={};e={}
  for i,v in enumerate(g):
   if v^5:
    q=[i];g[i]=5;f=1>v;t=0,
@@ -9,7 +9,7 @@ def p(g):
      f*=g[k:k+1]==[5]
    if f:d[t]=i
    if r.count(v)==len(t)>1:e[t]=i,v
- for t in {*e}&{*d}:
+ for t in{*d}&{*e}:
   i,v=e[t]
   for o in t:r[i+o],r[d[t]+o]=0,v
  return[*zip(*[iter(r)]*10)]
