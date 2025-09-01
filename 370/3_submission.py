@@ -4,7 +4,7 @@ def p(g):
   z=k//w+k%w*1j;k+=1
   if v<1:Z+=z,
   elif v-g[0][0]:p=z;d=v
- p-=max(Z,key=lambda z:abs((z:=p-z).real*w+1j*z.imag))
+ p-=max(Z,key=lambda z:(z:=p-z).real**2*w+z.imag**2)
  for z in Z:
   while len(g)>(z:=z+p).real>~0<z.imag<w:g[int(z.real)][int(z.imag)]=d
  return g
