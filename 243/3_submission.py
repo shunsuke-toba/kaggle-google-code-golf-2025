@@ -1,1 +1,1 @@
-p=lambda g:exec('for r in g:r[1:]=map(lambda a,b:b+(b<a<2),r,r[1:])\ng[:]=map(list,zip(*g[::-1]))\n'*80)or g
+p=lambda g:exec('g[:]=map(list,zip(*[(r[0],*map(lambda a,b:b or a==1,r,r[1:]))for r in g][::-1]));'*80)or g
