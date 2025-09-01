@@ -1,1 +1,1 @@
-p=lambda g,S="[*zip(*[[c or(",T=")*4for c,v in zip(r,(0,*r))]for r in":eval(str(eval((S+"v==4"+T)*60+(S+"len(r)>r.count(0)*2"+T)*4+str(g)+"[::-1]])]"*64)).replace(*'03'))
+p=lambda g,S="[*zip(*[[c or(",T="for c,v in zip(r,(0,*r))]for r in":eval(S+"3)"+T+(S+"v==4)*4"+T)*59+(S+"len(r)>r.count(0)*2)*4"+T)*4+str(g)+"[::-1]])]"*64)
