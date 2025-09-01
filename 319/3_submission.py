@@ -2,7 +2,7 @@ def p(g,r=range,l=len):
  s=sum(g,[]);*C,B=sorted({*s},key=s.count)
  def f(c,h=g):
   for _ in r(4):
-   while c not in h[0]:h=h[1:]
+   while(c in h[0])<1:h=h[1:]
    h=[*zip(*h[::-1])]
   return h
  for c in C:
