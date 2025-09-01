@@ -1,1 +1,1 @@
-def p(g):g=(g:=sum(g,[]))[g.index(8)-14:];g[14]=max(g[:3]);return g[:3],g[13:16],g[26:29]
+def p(g):g=sum(g,[]);g=g[g.index(8)-14:];return g[:3],(g[13],max(g[:3]),g[15]),g[26:29]
