@@ -1,1 +1,1 @@
-p=lambda g,r=range:[[[c]]for i in r(len(g)-2)for j in r(len(g[0])-2)if sum(0<g[i+u//3][j+u%3]!=(c:=g[i+1][j+1])for u in r(9))>7][0]
+p=lambda g:(s:=sum(g,[]))and[[min(s,key=lambda k:sum(x==y==k for x,y in zip(s,s[1:])))]]
