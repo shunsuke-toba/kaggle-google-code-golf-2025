@@ -1,5 +1,4 @@
-def p(g,t=lambda x:[*map(list,zip(*x[::-1]))]):
- r=range(30)
+def p(g,r=range(30),t=lambda x:[*map(list,zip(*x[::-1]))]):
  for _ in' '*4:
   u=-1
   for d in[i for i in r if{*g[i][5:]}-{0,13}]+[30]:
