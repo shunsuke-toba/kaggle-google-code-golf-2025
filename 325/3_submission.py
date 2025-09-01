@@ -1,1 +1,1 @@
-def p(g):e=enumerate;s={i+1j*j:v for i,r in e(g)for j,v in e(r)};f=lambda z:s.pop(z,0)and 1|f(z+1)|f(z-1)|f(z+1j)|f(z-1j);n=sum(map(f,s|s));return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
+def p(g):W=len(g[0]);s=dict(enumerate(sum(g,[])));f=lambda z:s.pop(z,0)and f(z+(z%W<W-1))|f(z-(z%W>0))|f(z+W)|f(z-W)|1;n=sum(map(f,s|s));return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
