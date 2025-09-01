@@ -1,1 +1,1 @@
-p=lambda g:exec("g[:]=zip(*[[v|3*(8in r[:i])*(8in r[i+1:])for i,v in enumerate(r)]for r in g]);"*2)or g
+p=lambda g,h=lambda g:[[v|3*(8in r[:i])*(8in r[i+1:])for i,v in enumerate(r)]for r in zip(*g)]:h(h(g))
