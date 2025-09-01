@@ -1,1 +1,1 @@
-p=lambda g:exec('for r in g:\n for y,b in enumerate(r[1:]):\n  if b<sum(g,[]).count(r[y])<2:r[:y]=[i or r[y]for i in r[:y]]\ng[:]=map(list,zip(*g[::-1]))\n'*4,{'g':g})or g
+p=lambda g:exec('for r in g:\n for y,b in enumerate(r[1:]):\n  if b<1==sum(g,[]).count(r[y]):r[:y]=map({0:r[y]}.get,r[:y],r[:y])\ng[:]=map(list,zip(*g[::-1]))\n'*4)or g
