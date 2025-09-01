@@ -8,11 +8,10 @@ def p(g):
   if a:S+=r,
   for t in g[y:a]:t[x:b]=[0]*(b-x)
  for r in S:
-  u=sum(r,[])
   for z in R(8):
    for y in R(h-(a:=L(r))+1):
     for x in R(w-(b:=L(r[0]))+1):
-     if all((u.count(c:=r[i][j])<2)*c==g[y+i][x+j]for i in R(a)for j in R(b)):
+     if all((str(r).count(str(c:=r[i][j]))<2)*c==g[y+i][x+j]for i in R(a)for j in R(b)):
       for i in R(a):g[y+i][x:x+b]=r[i]
    r=[*zip(*r[::-1])];z^3or r.reverse()
  return g
