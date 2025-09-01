@@ -1,4 +1,4 @@
-def p(g,k=2,d=0):
- o=g[:k]
- while o[:9]==o:o+=d*[0]+o[-k][:10-d],
- return o if g==o[:len(g)]else p(g,k+(d>1),d+1-(d>1)*3)
+def p(g,i=0):
+ k=2+i//3;o=g[:k]
+ while o[:9]==o:o+=i%3*[0]+o[-k][:10-i%3],
+ return g==o[:len(g)]and o or p(g,i+1)
