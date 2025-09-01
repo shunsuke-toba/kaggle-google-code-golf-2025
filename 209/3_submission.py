@@ -1,5 +1,5 @@
 def p(g,A=range):
- c=i=a=e=99;b=d=f=j=0;L=()
+ c=i=a=e=99;b=d=j=0;L=()
  for r in A(len(g)):
   for o,v in enumerate(g[r]):
    if v&4:b=r;d=o;a>r and(a:=r,c:=o)
