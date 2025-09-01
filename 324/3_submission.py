@@ -1,5 +1,5 @@
 def p(g):
- f=sum(g,[]);b=g[0][1]==g[1][0];a=g[0][b];*c,=zip(*g);s=[];m={};e=enumerate
+ f=sum(g,[]);a=f[f.count(f[0])<3];*c,=zip(*g);s=[];m={};e=enumerate
  for i,r in e(g):
   for j,d in e(r):
    if f.count(d)<3:s+=i+j,i-j-20;m[a in r and a in c[j]]=d
