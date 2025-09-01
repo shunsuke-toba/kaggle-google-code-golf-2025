@@ -1,1 +1,1 @@
-p=lambda g:[[t[0]or(max(r[1:-1])*max(t)<1)*3for t in zip(r,*g[1:-1])]for r in g]
+p=lambda g:[[t[0]or-3*any(r[1:-1])*any(t)+3for t in zip(r,*g[1:-1])]for r in g]
