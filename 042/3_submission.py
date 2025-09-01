@@ -1,1 +1,1 @@
-p=lambda g:(f:=sum(g,[]),[g[x].__setitem__(y,8)for i in range(99)if f[i-1]+f[i-10]<1 for s in(-1,1)if f[i+(10+s)*(k:=f[i:].index(0))]for S in(-1,2)for n in range(k*k)if-1<(x:=i//10+S*k+n//k)<10>(y:=i%10+(s-S*s)*k+n%k)>=0])and g
+p=lambda g:(f:=sum(g,[]),[g[x].__setitem__(y,8)for i in range(99)for s in(-1,1)if f[i-1]+f[i-10]<1<f[i+(10+s)*(k:=f.index(0,i)-i)]for S in(-1,2)for n in range(k*k)if-1<(x:=i//10+S*k+n//k)<10>(y:=i%10+(s-S*s)*k+n%k)>=0])and g
