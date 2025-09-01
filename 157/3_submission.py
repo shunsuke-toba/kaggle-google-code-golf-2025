@@ -1,7 +1,7 @@
 def p(g):
  r=range;d=1,0,-1,0;s=[]
  for n in r(150):
-  y=n//15;x=n%15;t=[(0,0)]*(g[y][x]>4);g[y][x]%=5
+  y=n//15;x=n%15;t=g[y][x]//5*[(0,0)];g[y][x]%=5
   for a,b in t:
    for k in r(4):
     u=y+a+d[k];v=x+b+d[k-1]
