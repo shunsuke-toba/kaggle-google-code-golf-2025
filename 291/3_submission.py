@@ -1,1 +1,1 @@
-p=lambda g:[[*{b for r,s in zip(g,g[1:])for b,c,d in zip(r,s[1:],s)if b==c>d}]]
+p=lambda g:[[*{x for x in {*sum(g,[])}-{0}if len({r.count(x)for r in g})>2}]]
