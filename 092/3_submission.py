@@ -1,1 +1,1 @@
-p=lambda g:exec("for r in g:\n if c:=sum(r)-sum({*r}):i=r.index;a=i(c);b=i(c,a+1)+1;r[a:b]=[c]*(b-a)\ng[:]=map(list,zip(*g))\n"*2)or g
+f=lambda a:[*zip(*[[(*({*r[:i]}&{*r[i:]}-{0}),c)[0]for i,c in enumerate(r)]for r in a])];p=lambda g:f(f(g))
