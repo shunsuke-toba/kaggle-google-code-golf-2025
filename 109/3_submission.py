@@ -1,1 +1,1 @@
-p=lambda g:(n:=len(g)//2)and[[e and r[n]for e in r[:n]+r[n-1::-1]]for r in g[:n]+g[n-1::-1]]
+def p(g):n=len(g)>>1;return[[e and r[n]for e in r[:n]+r[n-1::-1]]for r in g[:n]+g[n-1::-1]]
