@@ -1,1 +1,1 @@
-p=lambda g:[[*{x for x in {*sum(g,[])}-{0}if len({r.count(x)for r in g})>2}]]
+p=lambda g:[[max(range(1,10),key=lambda x:len({r.count(x)for r in g}))]]
