@@ -1,10 +1,12 @@
 def p(g):
  w=len(g[k:=0]);Z=[]
  for v in sum(g,[]):
-  z=k//w+k%w*1j;k+=1
-  if v<1:Z+=z,
-  elif v-g[0][0]:p=z;d=v
- p-=max(Z,key=lambda z:(z:=p-z).real**2*w+z.imag**2)
+  if v<1:Z+=k,
+  elif v-g[0][0]:p=k;d=v
+  k+=1
+ q=max(Z,key=lambda z:(p//w-z//w)**2*w+(p%w-z%w)**2)
+ t=p-q;x=p%w-q%w
  for z in Z:
-  while len(g)>(z:=z+p).real>~0<z.imag<w:g[int(z.real)][int(z.imag)]=d
+  c=z%w
+  while len(g)>(z:=z+t)//w>=0<=(c:=c+x)<w:g[z//w][c]=d
  return g
