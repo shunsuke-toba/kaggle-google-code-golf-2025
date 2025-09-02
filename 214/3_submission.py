@@ -1,1 +1,1 @@
-p=lambda g:[r[:4]+[*c,5,*g.pop()[2::-1]]for r,c in zip(g*1,zip(*g[::-1]))]
+p=lambda g:[r[:4]+[*c,5]+g.pop()[2::-1]for r,c in zip(g*1,zip(*g[::-1]))]
