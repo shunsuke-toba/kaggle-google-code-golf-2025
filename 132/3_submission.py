@@ -1,6 +1,1 @@
-def p(g):
- f=sum(g,[]);w=len(g[0]);I=f.index
- for v in{*f}-{0}:
-  i=I(v);j=I(v,-~i);c,d=sorted((i%w,j%w))
-  for R in g[i//w:j//w+1]:R[c:d+1]=[v]*-~(d-c)
- return g
+f=lambda g:[*zip(*[[sum({*r[:i]}&{*r[i:]})or c for i,c in enumerate(r)]for r in g])];p=lambda g:f(f([[sum({*r}&{*c})or c[0]for c in zip(r,*g)]for r in g]))
