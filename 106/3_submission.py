@@ -1,1 +1,1 @@
-p=lambda g:g+[r.__iadd__(c)[::-1]for r,c in zip(g,zip(*g[::-1]))][::-1]
+p=lambda g:g+[r.__iadd__(c)[::-1]for r,*c in zip(g,*g[::-1])][::-1]
