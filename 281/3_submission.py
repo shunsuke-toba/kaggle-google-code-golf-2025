@@ -5,5 +5,5 @@ for y,r in e(g):
 y=a
 while y<=b:
  x=c
- while x<=d:g[y][x]=l[a<y<b<99>c<x<d];x+=1
+ while x<=d:g[y][x]=l[a<y<b>=c<x<d];x+=1
  y+=1''')or g
