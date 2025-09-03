@@ -1,1 +1,3 @@
-p=lambda g,r=range(16):max((all({*i[b:d]}=={v}for i in g[a:c])*(c-a)*(d-b),[[v*(a<=i<c)*(b<=j<d)for j in r]for i in r])for a in r for b in r if(v:=g[a][b])for c in r for d in r[b:])[1]
+def p(g):
+ for _ in g:z=[[0]*16];g=[*map(list,zip(*[[c*((l==c or r==c)*(l+sum(m)>0))for c,l,r,*m in zip(r,[0]+r,r[1:]+[0],a,r[2:]+[0]*2,b)]for r,a,b in zip(g,z+g,g[2:]+z*2)]))]
+ return g
