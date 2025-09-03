@@ -1,4 +1,4 @@
 def p(g):
- for c in(f:=sum(g,[])):
-  u,v=zip(*[divmod(i,10)for i in range(100)if c==f[i]]);m=[r[min(v):max(v)+1]for r in g[u[0]:u[-1]+1]]
-  if m==[r[::-1]for r in m]:return m
+ for c in(sum(g,[])):
+  a=lambda x:c in x;f=lambda g:zip(*filter(a,g));s=list(f(f(g)))
+  if s==[r[::-1]for r in s]:return s
