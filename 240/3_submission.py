@@ -1,4 +1,3 @@
 def p(g):
- for a,b in zip(g,g[::-1]):a[:]=map(max,a,b[::-1],a[::-1],b)
- for i in 1,3,5:k=i;exec('g[i][k:=k+2]=g[~i][k]=g[k][i]=g[k][~i]=g[i][i+2];'*(8-i))
+ for k in range(1700):g[i:=k%19][j:=k%18]|=g[i][j-2]*(9>i+3<j<i+8+(i<2))|g[j][i]|g[~i][j]
  return g
