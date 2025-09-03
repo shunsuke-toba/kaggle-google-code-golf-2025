@@ -1,1 +1,1 @@
-def p(g):s=bytes(sum(g,[]));w=len(g[0]);a,b=s.find(5),s.rfind(5);return[r[a%w:b%w+1]for r in g[a//w-1:b//w+2]]
+p=lambda g:eval("(lambda a,i:[*zip(*((5in a[i])or a.pop())and a[::-1])])("*80+str(g)+",-2),-1)"*40)
