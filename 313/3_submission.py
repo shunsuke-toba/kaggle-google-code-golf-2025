@@ -1,1 +1,1 @@
-p=lambda g,j=1:[(g[j:=1-j][1:len({*g[0]})]*9)[:len(g)]for _ in g]
+p=lambda g:[(g[1:(n:=len(g))//12+3]*7)[:n]for g in g[:2]*10][:n]
