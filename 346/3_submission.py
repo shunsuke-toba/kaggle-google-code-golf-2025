@@ -1,1 +1,1 @@
-p=lambda g:(s:=sum(g,[]))and[[min(s,key=lambda k:sum(x==y==k for x,y in zip(s,s[1:])))]]
+p=lambda g:[[min(s:=sum(g,[]),key=lambda k:sum((k,k)==t for t in zip(s,s[1:])))]]

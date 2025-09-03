@@ -1,1 +1,1 @@
-def p(g):r=g.index(R:=max(g))+1;g[:r+1]=[([4,0]*8)[R>R[::2]*2:][:len(g)]]*r+[R];return g
+def p(g):r=g.index(R:=max(g))+1;return[([4,0]*8)[R>R[::2]*2:][:len(g)]]*r+[R]+g[r+1:]

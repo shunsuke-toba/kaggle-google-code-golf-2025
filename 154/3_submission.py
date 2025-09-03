@@ -1,7 +1,3 @@
 def p(g):
- for k,v in enumerate(sum(g,[])):
-  if v>4:
-   I=i=k//15;J=j=k%15
-   while g[i:=i+(I<2)-I//12][j:=j+(J<2)-J//12]-2:0
-   g[I][J]=0;g[i*2-I][j*2-J]=v
+ for _ in[1]*4:[(2in r)&(5in r)and exec(f"j=r.index(2);r[j+1:j+4],r[j-3:j]=r[j-3:j][::-1],[0]*3")for r in g];g=[*map(list,zip(*g[::-1]))]
  return g

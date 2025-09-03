@@ -1,4 +1,4 @@
 def p(g):
- a=sum(g,[]);g=[0]*100;i=a.index(b:=min(a,key=a.count))
- for j in 1,9,10,11:g[i+j]=g[i-j]=2
- g[i]=b;return*zip(*[iter(g)]*10),
+ b=min(g:=sum(g,[]),key=g.count);a=[0]*100;a[i:=g.index(b)]=b
+ for j in 1,9,10,11:a[i+j]=a[i-j]=2
+ return*zip(*[iter(a)]*10),

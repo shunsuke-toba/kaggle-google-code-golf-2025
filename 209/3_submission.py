@@ -9,7 +9,7 @@ def p(g,R=range):
   for r in R(a,b):
    for o in R(c,d):
     try:
-     for x,y,z in L:1/(g[e+(x-r)//k][i+(y-o)//k]^z<1)
+     for x,y,z in L:1/(g[e+(x-r)//k][i+(y-o)//k]==z)
      for q in R(f*k):g[r+q][o:o+j*k]=[g[e+q//k][i+p//k]for p in R(j*k)]
      return[r[c:d+1]for r in g[a:b+1]]
     except:0

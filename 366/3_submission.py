@@ -4,7 +4,7 @@ def p(g,E=enumerate,R=range,L=len,F=filter,S=sorted):
   if a[k:=(i:=o//m)][j:=o%m]^y:
    while a[k+1-n][l:=j]^y:k+=1
    while l+1<m and a[k][l+1]^y:l+=1
-   q=a[i:k+1];t=[r[j:l+1]for r in q];p+=(-L(s:=sum(t,[]))+s.count(z),t),
+   q=a[i:k+1];p+=(-L(s:=sum(t:=[r[j:l+1]for r in q],[]))+s.count(z),t),
    for r in q:r[j:l+1]=[y]*(l-j+1)
  for _,r in S(p):
   for i in R(L(b)-L(r)+1):

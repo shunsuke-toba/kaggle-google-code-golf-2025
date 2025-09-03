@@ -9,6 +9,6 @@ def p(g):
      elif a*b==0<v:s,t=y,x
    for a,b in d:
     if v:=o[s+a][t+b]:
-     for y,x in q:g[a and 2*s+a-y or y][b and 2*t+b-x or x]=v
+     for y,x in q:g[(y,2*s+a-y)[a%2]][(x,2*t+b-x)[b%2]]=v
    o[s][t]=c
  return g

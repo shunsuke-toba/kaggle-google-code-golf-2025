@@ -1,1 +1,1 @@
-p=lambda g,a=0:[(b:=0)or[b:=b+c for c in r]+[a:=b or a]for *r,_ in g]
+p=lambda g,a=0:[(b:=0)or[b:=b+c for c in r]+[a:=b or a]for*r,_ in g]
