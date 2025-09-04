@@ -1,1 +1,1 @@
-def p(g):a,w=range(9),len(g[0])-2;d={sum(i*(u[i]!=5)for i in a):u for x in range((len(g)-2)*w)if min(u:=[g[x//w+i//3][x%w+i%3]for i in a])};return[[d[b'ehinatqzu'[r-r%3+c//3]-97][r%3*3+c%3]for c in a]for r in a]
+def p(g):a,w=range(9),len(g[0])-2;return[[{sum(i*(u[i]!=5)for i in a):u for x in range((len(g)-2)*w)if min(u:=[g[x//w+i//3][x%w+i%3]for i in a])}[b'ehinatqzu'[r-r%3+c//3]-97][r%3*3+c%3]for c in a]for r in a]
