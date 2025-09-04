@@ -1,1 +1,3 @@
-p=lambda g:eval("(lambda a,i:[*zip(*((5in a[i])or a.pop())and a[::-1])])("*80+str(g)+",-2),-1)"*40)
+def p(g):
+ for i in[2,1]*40:g=[*zip(*((5in g[-i])or g.pop())and g[::-1])]
+ return g
