@@ -5,8 +5,6 @@ def p(g):
   elif v-g[0][0]:p=k;d=v
   k+=1
  q=max(Z,key=lambda z:(p//w-z//w)**2*w+(p%w-z%w)**2)
- t=p-q;x=p%w-q%w
  for z in Z:
-  c=z%w
-  while len(g)>(z:=z+t)//w>=0<=(c:=c+x)<w:g[z//w][c]=d
+  while w>(c:=z%w+p%w-q%w)>=0<=(z:=z+p-q)<len(g)*w:g[z//w][c]=d
  return g
