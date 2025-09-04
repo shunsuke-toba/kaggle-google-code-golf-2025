@@ -4,7 +4,7 @@ def p(g):
   y=n//15;x=n%15;t=g[y][x]//5*[(0,0)];g[y][x]%=5
   for a,b in t:
    for k in r(4):
-    u=y+a+d[k];v=x+b+d[k-1]
+    u=y+a+d[k];v=x+b+d[~k]
     if u<10>-1<v<15>g[u][v]>4:g[u][v]=0;t+=(u-y,v-x),
   s+=t,
  while s:
