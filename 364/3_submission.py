@@ -1,3 +1,3 @@
 def p(g):
- for _ in g:z=[[0]*30];g=[[c and a|b|d|e|((v:=a+b+d+e&3)<2)*4|(v>2)*8*((b+d>0)+(a+e>0)*2)for a,b,c,d,e in zip(s,[0]+t,t,t[1:]+[0],u)]for s,t,u in zip(z+g,g,g[1:]+z)]
- return[[c%8%6*2-c//27*5for c in r]for r in g]
+ for i in range(96):*g,=zip(*[[(c>0)*(u|c|l|(u>0<l)*(4**(i%4+1)))for u,c,l in zip(a,b,[0,*b])]for a,b in zip([[0]*30]+g,g)][::-1])
+ return[[[0,0,0,1,6,2][bin(c).count('1')]if c else 0for c in r]for r in g]
