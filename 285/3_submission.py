@@ -5,7 +5,7 @@ def p(g):
    o[y][x]=0;q=[(y,x)]
    for y,x in q:
     for a,b in d:
-     if (v:=o[(Y:=y+a)%n][(X:=x+b)%n])==c:o[Y][X]=0;q+=(Y,X),
+     if(v:=o[(Y:=y+a)%n][(X:=x+b)%n])==c:o[Y][X]=0;q+=(Y,X),
      elif a*b==0<v:s,t=y,x
    for a,b in d:
     if v:=o[s+a][t+b]:
