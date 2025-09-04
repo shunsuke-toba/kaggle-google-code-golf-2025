@@ -1,7 +1,3 @@
-def p(g):
- e=enumerate;S={(i,j)for i,r in e(g)for j,v in e(r)if v==2}
- while S:
-  T={S.pop()}
-  while U:=S&{(y+i//5-2,x+i%5-2)for i in range(25)for y,x in T}:T|=U;S-=U;y,x=zip(*T);a,b=min(x),max(x)+1
-  for r in g[min(y):max(y)+1]:r[a:b]=[4>>(v==2)for v in r[a:b]]
+def p(g,e=enumerate):
+ for S in[(2,4)]*24:g=[*zip(*[[(v,4)[v^2and r[j-(j>0)]in S and((r[j+1:]and r[j+1]in S)or(g[i-(i>0)][j]in S))]for j,v in e(r)]for i,r in e(g)][::-1])]
  return g
