@@ -6,7 +6,7 @@ def p(g):
    for j in q:
     for k in j+1,j-1,j+10,j-10:
      if g[k:k+1]==[v]:g[k]=5;q+=k,;t+=k-i,
-     f*=g[k:k+1]==[5]
+     f&=5in g[k:k+1]
    if f:d[t]=i
    if r.count(v)==len(t)>1:e[t]=i,v
  for t in{*d}&{*e}:
