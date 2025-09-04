@@ -1,1 +1,1 @@
-f=lambda g:zip(*[[sum({*r[:i]}&{*r[i:]})or c for i,c in enumerate(r)]for r in g]);p=lambda g:[*f(f([[sum({*r}&{*c})for c in zip(r,*g)]for r in g]))]
+p=lambda g,h=lambda g:[*zip(*[[max({*r[:i+1]}&{*r[i:]})for i in range(len(r))]for r in g])]:h(h([[sum({*r}&{*c})for c in zip(*g)]for r in g]))
