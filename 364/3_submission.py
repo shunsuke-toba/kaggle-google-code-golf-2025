@@ -1,3 +1,3 @@
-def p(g,i=4):
- for _ in g*4:*g,=zip(*[[(c>0)*(u|c|(u>0<l)*i&63)for u,c,l in zip(a,b,[0,*b])]for a,b in zip([30*[0]]+g,g)][::-1]);i*=2
- return[[c.bit_count()*5%14%9for c in r]for r in g]
+def p(g,i=96):
+ while i:*g,=zip(*[[c.bit_count()*5%14%9*(i<2)or(c>0)*(u|c|(u>0<l)*2**(i%4)*4)for u,c,l in zip(a,b,[0,*b])]for a,b in zip([30*[0]]+g,g)][::-1]);i-=1
+ return g
