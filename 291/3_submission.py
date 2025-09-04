@@ -1,2 +1,2 @@
 import re
-p=lambda g:[[int(re.search('([1-9])(, 0)+, \\1',str(g))[1])]]
+p=lambda g:[[int(re.search(r'([^0])(, 0)+, \1',str(g))[1])]]
