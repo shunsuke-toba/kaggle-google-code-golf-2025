@@ -1,9 +1,9 @@
 def p(g,R=range,E=enumerate):
- i=a=e=99;b=j=0;L=()
+ i=a=e=99;j=0;L=()
  for r,h in E(g):
   for o,v in E(h):
    if v&4:b=r;d=o;a>r and(a:=r,c:=o)
-   elif v*(a<b<r):e=min(e,r);i=min(i,o);f=r-e+1;j=max(j,o-i+1)
+   elif v>0<=a<b<r:e=min(e,r);i=min(i,o);f=r-e+1;j=max(j,o-i+1)
    elif v:L+=(r,o,v),
  for k in R(5):
   for r in R(a,b):
