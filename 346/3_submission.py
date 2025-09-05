@@ -1,1 +1,1 @@
-p=lambda g:[[min(zip(s:=sum(g,[]),s),key=[*zip(s,s[1:])].count)[0]]]
+p=lambda g:[min(zip(s:=sum(g,[]),s),key=[*zip(s,s[1:])].count)[:1]]
