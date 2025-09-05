@@ -1,1 +1,1 @@
-def p(g):k=int(max(s:=str(g),key=lambda c:s.find(c)-s.rfind(c)));F=lambda a:zip(*[r for r in a if k in r]);return*F(F(g)),
+def p(g):k=int(max(s:=str(g),key=lambda c:s.find(c)-s.rfind(c)));F=lambda a:zip(*filter({k}.issubset,a));return*F(F(g)),
