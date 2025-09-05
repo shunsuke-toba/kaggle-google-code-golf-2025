@@ -1,1 +1,1 @@
-p=lambda g,f=lambda a:zip(*[[x or 8*(1in{*r[:j]}&{*r[j:]})for j,x in enumerate(r)]for r in a]):[*f(f(g))]
+p=lambda g,f=lambda a:zip(*[[x or(1in{*r[:j]}&{*r[j:]})*8for j,x in enumerate(r)]for r in a]):[*f(f(g))]
