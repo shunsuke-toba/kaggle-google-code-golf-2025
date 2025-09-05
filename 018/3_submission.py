@@ -1,7 +1,7 @@
 def p(g):
  R=range;L=len;h,w=L(g),L(g[0]);S=[]
  for y in R(h*w):
-  x=y%w;y//=w;a=b=0
+  x=y%w;y//=w;a=0
   for Y in R(y+1,h+1):
    for X in R(x+1,w+1):
     if L({*sum(m:=[q[x:X]for q in g[y:Y]],[0])})*all(map(sum,m+[*zip(*m)]))>4:a,b,r=Y,X,m
