@@ -1,1 +1,1 @@
-f=filter;r=range(9);p=lambda g:(a:=[*f(sum,zip(*f(sum,g)))])and[[a[j//3][i//3]&a[j%3][i%3]for j in r]for i in r]
+def p(g):f=filter;*g,=f(sum,zip(*f(sum,g)));r=range(9);return[[g[j//3][i//3]&g[j%3][i%3]for j in r]for i in r]
