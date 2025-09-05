@@ -1,1 +1,1 @@
-p=lambda g,i=2:g*(i<1)or p([*map(list,zip(*([g[-2:][::(-1)**len(g)]+g[:-2],g][max(map(sum,g))>8])))],i-1)
+p=lambda g,t=lambda g:(*zip(*(g[-2:][::(-1)**len(g)]+g[:-2],g)[sum(max(g))>7]),):t(t(g))
