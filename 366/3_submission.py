@@ -3,9 +3,9 @@ def p(g,E=enumerate,R=range,L=len,F=filter,S=sorted):
  for o in R(n*m):
   if a[k:=(i:=o//m)][j:=o%m]^y:
    while a[k+1-n][l:=j]^y:k+=1
-   while l+1<m and a[k][l+1]^y:l+=1
-   q=a[i:k+1];p+=(-L(s:=sum(t:=[r[j:l+1]for r in q],[]))+s.count(z),t),
-   for r in q:r[j:l+1]=[y]*(-~l-j)
+   while l<m and a[k][l]^y:l+=1
+   q=a[i:k+1];p+=(-L(s:=sum(t:=[r[j:l]for r in q],[]))+s.count(z),t),
+   for r in q:r[j:l]=[y]*(l-j)
  for _,r in S(p):
   for i in R(n-L(r)+1):
    for j in R(m-L(r[0])+1):
