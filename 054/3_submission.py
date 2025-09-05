@@ -1,7 +1,7 @@
 def p(g,r=range):
  for z in r(676):
   i=z//26;j=z%26
-  if(q:=sum([u[j:j+5]for u in g[i:i+5]],[]))==q[::-1]and len({*q})>2:b=q[0];break
+  if(q:=[g[i+z//5][j+z%5]for z in r(25)])==q[::-1]and len({*q})>2:b=q[0];break
  for u in g[i:i+5]:u[j:j+5]=[b]*5;D=1,0,-1,0
  for i,j in[(i,j)for i in r(30)for j in r(30)if g[i][j]==q[12]]:
   for d in r(4):
