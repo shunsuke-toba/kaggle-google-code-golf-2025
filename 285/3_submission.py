@@ -1,5 +1,5 @@
 def p(g):
- n=len(o:=eval(str(g)));d=[(i//3-1,i%3-1)for i in range(9)if i-4]
+ n=len(o:=eval(str(g)));d=[(i//3-1,i%3-1)for i in range(9)]
  for k in range(n*n):
   if c:=o[y:=k//n][x:=k%n]:
    o[y][x]=0;q=[(y,x)]
