@@ -1,1 +1,1 @@
-p=lambda g:[exec('k=g[y][x-1::-1].index(5)\nfor t in g[y+1-k:y+1]:t[x-k:x]=[k+5]*k')for i in range(132)if g[y:=i//12][x:=i%12]&g[y+1][x-1]]and g
+p=lambda g:[exec('k=g[y][x-1::-1].index(5)\nfor t in g[y:y-k:-1]:t[x-k:x]=[k+5]*k')for i in range(132)if g[y:=i//12][x:=i%12]&g[y+1][x-1]]and g
