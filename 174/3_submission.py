@@ -1,1 +1,1 @@
-p=lambda g:next([*zip(*t)]for c in sum(g,[])if(t:=[*filter(a:=lambda x:c in x,zip(*filter(a,g)))])==t[::-1])
+p=lambda g:next([*zip(*t)]for c in sum(g,[])if(t:=[*filter(a:={c}.issubset,zip(*filter(a,g)))])==t[::-1])
