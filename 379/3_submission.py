@@ -1,1 +1,8 @@
-E=enumerate;f=lambda s:next(filter(int,s),0);h=lambda a:[*zip(*[[x|x//8&((t:=f(r[j+1:])|f(r[:j][::-1]))&2>0)or(t>9)*2for j,x in E(r)]for r in a])];p=lambda g:[[x%2*2or any(9in y[j-(j>0):j+2]for y in h(h(g))[i-(i>0):i+2])*8or x for j,x in E(r)]for i,r in E(h(h(g)))]
+def p(g):
+ for _ in g*4:
+  for i,b in enumerate(g):
+   try:
+    if b[j:=len(b)-b[::-1].index(2)]<1:k=b.index(8,j);b[j-1:k+2]=[2]*(k-j)+[8,2,8];g[i-1][k-1:k+2]=g[i+1][k-1:k+2]=[8]*3
+   except:0
+  g=[*map(list,zip(*g[::-1]))]
+ return g
