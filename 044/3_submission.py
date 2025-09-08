@@ -1,6 +1,6 @@
 def p(g):
- r=sum(g,[]);g=r*1;d={};e={}
- for i,v in enumerate(g):
+ r=sum(g,[]);d={};e={}
+ for i,v in enumerate(g:=r*1):
   if v^5:
    q=[i];g[i]=5;f=1>v;t=0,
    for j in q:
