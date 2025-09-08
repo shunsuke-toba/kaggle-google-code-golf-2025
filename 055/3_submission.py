@@ -1,1 +1,1 @@
-p=lambda g,k=0:[(l:=k*3,k:=k+r[0]//8)and[(x or 2222096>>l*3&7,l:=l+x//8)[0]for x in r]for r in g]
+p=lambda g,C=2222096:[[(x or c&7,c:=c>>x//8*3)[0]for x in r]for r in g if(c:=C,C:=C>>9*r[0]//8)]
