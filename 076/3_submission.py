@@ -1,6 +1,6 @@
 def p(g):
  L=len;R,E=range,enumerate;s=[divmod(sum(g,[]).index(3),w:=L(g[0]))]
- for y,x in s:s+=[(Y,X)for Y in R(y-1,y+2)for X in R(x-1,x+2)if L(g)>Y>-1<X<w>g[Y][X]>0==((Y,X)in s)];r,c=zip(*s);t=[r[min(c):max(c)+1]for r in g[min(r):max(r)+1]]
+ for y,x in s:s+=[(Y,X)for Y in R(y-1,y+2)for X in R(x-1,x+2)if L(g)>Y>-1<X<w>g[Y][X]>((Y,X)in s)<1];r,c=zip(*s);t=[r[min(c):max(c)+1]for r in g[min(r):max(r)+1]]
  for i in R(8):
   for y in R(L(g)-L(t)+1):
    for x in R(w-L(t[0])+1):

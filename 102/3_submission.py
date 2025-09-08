@@ -1,8 +1,9 @@
-def p(g,R=range(12),s=sum):
+R=range(12);s=sum
+def p(g):
  for L in R:
   for y in R:
-   M=g[y:y+L];I=M[1:-1]
+   M=g[y:y+L+2];I=M[1:-1]
    for x in R:
-    if s(s(m[x+1:x+L-1])for m in I)<1>20*~-L-s(s(m[x:x+L])for m in M):
-     for m in I:m[x+1:x+L-1]=[2]*(L-2)
+    if 20*-~L-s(s(m[x:x+L+2])for m in M)<1>s(s(m[x+1:][:L])for m in I):
+     for m in I:m[x+1:x+L+1]=[2]*L
  return g
