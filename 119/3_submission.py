@@ -1,5 +1,5 @@
 def p(g):
- for _ in'0'*4:
+ for _ in g*4:
   g=[*map(list,zip(*g[::-1]))];f=8in g[-1];i=0
   for h in g[::1-2*f]:
    if g[6][0]==2:k=g[0].index(0);k+=abs(g[-f].index(8)-i-k);h[k]=h[k]or 3;i+=1
