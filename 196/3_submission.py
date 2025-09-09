@@ -1,1 +1,1 @@
-p=lambda g,S="[*zip(*[[c",T="for c,v in zip(r,(2,*r))]for r in":eval(S+"*(c!=2)"+T+(S+"^(c<2)*~v%3&2"+T)*8+(S+" or v&2"+T)*47+str(g)+"[::-1]])]"*56)
+p=lambda g,S="[*zip(*[[c",T=" for c,v in zip(r,(2,*r))]for r in":eval(S+"%2*c"+T+(S+"^(c<2)*~v%3&2"+T)*8+(S+" or v&2"+T)*47+str(g)+"[::-1]])]"*56)
