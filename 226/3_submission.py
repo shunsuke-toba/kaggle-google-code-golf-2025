@@ -1,4 +1,4 @@
 def p(g):
- def f(r,c):
-  if 0<=r<10>c>=g[r][c]<1:g[r][c]=k;[f(r+d,c)or f(r,c+d)for d in(-1,1)]
- k=1;f(0,0);k=3;f(9,9);k=2;f(g[4][0]|4,g[0][4]|4);return g
+ g[0][0]=1;g[9][9]=3;g[4|g[4][0]][4|g[0][4]]=2
+ for _ in g*2:*g,=zip(*[[b|(5>a>b)*a for a,b in zip([5,*r],r)]for r in g][::-1])
+ return g
