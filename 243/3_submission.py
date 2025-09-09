@@ -1,1 +1,1 @@
-p=lambda g:exec('g[:]=zip(*[map(lambda a,b:b or a==1,(0,*r),r)for r in g][::-1]);'*80)or g
+p=lambda g:exec('g[:]=zip(*[map(max,r,map((1).__eq__,(0,*r)))for r in g][::-1]);'*80)or g
