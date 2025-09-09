@@ -1,1 +1,1 @@
-def p(g):f=filter;*g,=f(sum,zip(*f(sum,g)));r=range(9);return[[g[j//3][i//3]&g[j%3][i%3]for j in r]for i in r]
+def p(g):f=filter;*g,=zip(*f(sum,zip(*f(sum,g))));return[[x&y for x in r for y in s]for r in g for s in g]
