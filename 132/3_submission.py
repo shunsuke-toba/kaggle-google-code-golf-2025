@@ -1,1 +1,1 @@
-p=lambda g,h=lambda g:[*zip(*[[max({*r[:i+1]}&{*r[i:]})for i in range(len(r))]for r in g])]:h(h([sum({*r}&{*c})for c in zip(*g)]for r in g))
+p=lambda g,h=lambda g:[[max({*r[:i+1]}&{*r[i:]})for i in range(len(r))]for r in zip(*g)]:h(h([sum({*r}&{*c})for c in zip(*g)]for r in g))
