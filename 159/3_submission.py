@@ -1,1 +1,1 @@
-def p(g):e=enumerate;k=sum(2in r for r in g);t=[2]*k;a,b=map(min,zip(*{(i,j)for i,r in e(g)for j,v in e(r)if-3&v}));k//=3;r=range(3*k);return t,*[[2,*[g[a+i//k][b+j//k]for j in r],2]for i in r],t
+def p(g):k=sum(2in r for r in g);t=[2]*k;f=lambda g:[*zip(*filter(lambda r:set(r)-{0,2},g))];k//=3;r=range(3*k);return t,*[[2,*[f(f(g))[i//k][j//k]for j in r],2]for i in r],t
