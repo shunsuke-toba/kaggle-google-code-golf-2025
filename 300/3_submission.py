@@ -1,1 +1,1 @@
-p=lambda g:[*(f:=lambda a:zip(*filter({max(range(1,10),key=sum(g,[]).count)}.issubset,a)))(f(g))]
+p=lambda g:[*zip(*filter(k:={max(range(1,10),key=sum(g,[]).count)}.issubset,zip(*filter(k,g))))]
