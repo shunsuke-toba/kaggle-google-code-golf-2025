@@ -1,1 +1,8 @@
-def p(g):W=len(g[0]);s=dict(enumerate(sum(g,[])));f=lambda z:s.pop(z,0)and f(z+(z%W<W-1))|f(z-(z%W>0))|f(z+W)|f(z-W)|1;n=sum(map(f,s|s));return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
+def p(g):
+ n=0
+ for y,r in enumerate(g):
+  for x,v in enumerate(r):
+   if v:
+    n+=1
+    for R in g[y:y+4]:R[max(x-3,0):x+4]=[0]*7
+ return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
