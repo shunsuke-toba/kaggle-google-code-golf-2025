@@ -7,6 +7,6 @@ def p(g,r=range(30),t=lambda x:[*map(list,zip(*x[::-1]))]):
   g=t(g)
  for _ in g*4:
   for i in r:
-   if all(b'\n'<bytes(b).strip(b'\0\3')for b in g[i-(i>0):i+2]):u=g[i].index(13);g[i][:u]=u*[3]
+   if all(b'\n'<bytes(b).strip(b'\0\3')for b in g[:i+2][-3:]):u=g[i].index(13);g[i][:u]=u*[3]
   g=t(g)
  return[[x%10for x in b]for b in g]

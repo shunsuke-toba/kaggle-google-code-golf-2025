@@ -12,4 +12,4 @@ def p(g):
  for t in{*d}&{*e}:
   i,v=e[t]
   for o in t:r[i+o],r[d[t]+o]=0,v
- return[*zip(*[iter(r)]*10)]
+ return*zip(*[iter(r)]*10),
