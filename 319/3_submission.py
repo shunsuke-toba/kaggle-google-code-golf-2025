@@ -4,8 +4,8 @@ def p(g,r=range,l=len):
   for _ in g*4:
    while{c}-{*h[0]}:h=h[1:]
    h=[*zip(*h[::-1])]
-  return h
+  return[[[B,c][x==c]for x in t]for t in h]
  for c in C:
   for d in C:
    m,n=l(u:=f(d)),l(u[0]);q=f(c)
-   if(c-d)*any(all((q[i+k//n>>1][j+k%n>>1]==c)==(u[k//n][k%n]==d)for k in r(m*n))for i in r(l(q)*2-m+1)for j in r(l(q[0])*2-n+1)):return[[[B,c][x==c]for x in t]for t in q]
+   if(c-d)*any(all(q[i+k//n>>1][j+k%n>>1]^u[k//n][k%n]in{0,c^d}for k in r(m*n))for i in r(l(q)*2-m+1)for j in r(l(q[0])*2-n+1)):return q
