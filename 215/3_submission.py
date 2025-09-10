@@ -1,1 +1,1 @@
-p=lambda g:(g[3+(o:=g[6]>g[3]):6+o]*8)[o+o:][:len(g)]
+p=lambda g:([g[6-3*any(g[3])],g[4],g[5]]*8)[:len(g)]
