@@ -1,1 +1,1 @@
-p=lambda g,f=lambda a:[*zip(*[[r[j]or(5in{*r[:j]}&{*r[j:]}or r.count(5)<2<5in r[(j<5)*5:][:5])*8for j in range(10)]for r in a])]:f(f(g))
+p=lambda g:exec('g[:]=zip(*[[r[j]or(5in{*r[:j]}&{*r[j:]}or r.count(5)<2<5in r[(j<5)*5:][:5])*8for j in range(10)]for r in g]);'*2)or g
