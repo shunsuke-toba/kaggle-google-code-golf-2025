@@ -1,1 +1,1 @@
-def p(g):k=sum(2in r for r in g);t=[2]*k;f=lambda g:[*zip(*filter(lambda r:{*r}-{0,2},g))];k//=3;r=range(3*k);return t,*[[2,*[f(f(g))[i//k][j//k]for j in r],2]for i in r],t
+def p(g):k=sum(2in r for r in g);t=[2]*k;f=lambda g:[c for c in zip(*g) if{*c}-{0,2}];k//=3;r=range(3*k);return t,*[[2,*[f(f(g))[i//k][j//k]for j in r],2]for i in r],t
