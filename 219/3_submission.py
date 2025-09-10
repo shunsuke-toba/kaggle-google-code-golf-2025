@@ -1,6 +1,5 @@
 def p(g):
- b=[*map(any,g)];f=i=b.index(1)
- while b[i]:i+=1;a=i-f
+ b=[*map(any,g)];f=b.index(1);i=b.index(0,f);a=i-f
  while i<14:
   i+=1;u=a+1
   if b[i]:
