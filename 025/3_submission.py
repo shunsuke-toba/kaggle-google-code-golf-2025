@@ -1,5 +1,5 @@
 def p(g):
- o=[]
+ o=0
  for x,k in enumerate(t:=[*zip(*g)]):
   if{*k}<{0,c:=k[0]}:
    for r,q in zip(g,o:=o or[[0]*len(r)for r in g]):q[x]=q[x+(c in r[x+1:])-(c in r[:x])]=c
