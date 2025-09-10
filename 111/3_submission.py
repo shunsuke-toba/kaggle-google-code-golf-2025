@@ -1,1 +1,1 @@
-p=lambda g:[(h:=sum(g,[]))[h.index(5)+9+i:][:3]for i in(0,10,20)]
+p=lambda g:[(h:=sum(g,[]))[h.index(5)+i:][:3]for i in(9,19,29)]
