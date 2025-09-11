@@ -1,12 +1,2 @@
-def p(g):
- R=range;T=R(3);Z=zip;F=filter;L=len;t=()
- for y in R(L(g)-2):
-  for x in R(L(g[0])-2):
-   if 0<min(m:=sum(b:=[g[y+i][x:x+3]for i in T],[]))<max(m):
-    t+=(-m.count(2),b),
-    for i in T:g[y+i][x:x+3]=0,0,0
- g=[*map(list,Z(*F(any,Z(*F(any,g)))))]
- for _,b in sorted(t):
-  while any((y:=Y,x:=X)for Y in R(L(g)-2)for X in R(L(g[0])-2)if all(g[Y+i][X+j]==2*(b[i][j]!=2)for i in T for j in T))<1:b=[*Z(*b[::-1])]
-  for i in T:g[y+i][x:x+3]=b[i]
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚ…PE–!Ý÷)jvE[lÇçˆðâ¡ÒúHûéwØ”¹Š*”„zP3$$¥†TúTH™(L7šÛ×ë¿ôøt÷Ú•Àt™«sÊîMŽgÊ¸äC v¼§}°ØÙêýÀ‚ìB¾#d™ŸzÌŸo@0ŒòøR6EsžIèêßvé§ÓlšïdÜÏOfê^‡£ªÐOTV§bø–KbßîYõ!<Ûó÷R×âŠµ£Ó=ªL€E(Û„=ekb‡7ß-rõõÏögNYfÒe¼n;Ææ>ž¹Én»6'ßä9N·cÔŒž>'ãÌ)f;Ëþ_o,ŽZÔ.@>/–i""",'L1')))
