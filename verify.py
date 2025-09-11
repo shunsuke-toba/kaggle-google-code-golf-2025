@@ -112,9 +112,10 @@ if __name__ == "__main__":
     examples_path = f"{task_num:03d}/0_input.json"
     with open(examples_path, "r") as file:
         examples = json.load(file)
-    code_path = (
-        f"{task_num:03d}/3_submission.py"
-        if code_type == "sub"
-        else f"{task_num:03d}/2_plain_code.py"
-    )
+    if code_type == "sub":
+        code_path = f"{task_num:03d}/3_submission.py"
+    elif code_type == "unc":
+        code_path = f"{task_num:03d}/3_submission_uncompressed.py"
+    else:
+        code_path = f"{task_num:03d}/2_plain_code.py"
     verify_program(task_num, examples, code_path)
