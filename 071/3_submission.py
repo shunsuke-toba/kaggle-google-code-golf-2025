@@ -1,6 +1,6 @@
 def p(g,a=0):
  for r in g:
-  if a<1:t=r.index(a:=max(r))-r[::-1].index(a)
-  for i in range(16):
-   if 0<r[i]!=a:r[i]=r[~i+t]
+  for i,v in enumerate(r):
+   if a and 0<v!=a:r[i]=r[~i+t]
+   elif v>a:a=v;t=i-r[::-1].index(v)
  return g
