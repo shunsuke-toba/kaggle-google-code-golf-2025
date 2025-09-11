@@ -1,1 +1,1 @@
-p=lambda g:(*zip(*filter(k:={int(max(s:=str(g),key=lambda c:s.find(c)-s.rfind(c)))}.issubset,zip(*filter(k,g)))),)
+p=lambda g,f=filter:(*zip(*f(k:={int(max(s:=str(g),key=lambda c:s.find(c)-s.rfind(c)))}.issubset,zip(*f(k,g)))),)
