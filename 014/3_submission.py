@@ -1,1 +1,1 @@
-p=lambda g:(f:=lambda g,m=sum(g,[0]*37):[*zip(*filter({min(m,key=m.count)}.issubset,g))])(f(g))
+p=lambda g:(f:=lambda _:[*zip(*filter({min(m:=sum(g,[0]*30),key=m.count)}.issubset,_))])(f(g))
