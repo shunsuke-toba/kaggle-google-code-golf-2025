@@ -1,7 +1,2 @@
-def p(g):
- e=enumerate;(y,i,a),(y,X,b),(Y,x,_),_=p=[(i,j,v)for i,s in e(g)for j,v in e(s)if v]
- while i<=X:g[y][i]=g[Y][i]=~min(i-x,X-i)%2*5;i+=1
- for d,s in e(g[y:Y+1]):s[x]=s[X]=~min(d,Y-y-d)%2*5
- for i,j,v in p:
-  for s in g[i-1:i+2]:s[j-1:j+2]=[a^b^v]*3;g[i][j]=v
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚeg1…Ø_(Éİ,îª“ÿ±+æNNgcÂ¥+ncúÛ;ÍV©"Ş¼7ùâå&5ëhl§ÈQ^TÂ“.zƒ‚Ñî¢£ø›››×	ª™>Šb“éØ¬Ä»-†'U±SíÒwVB¤W'c£ßĞ3ºèÇ¦ŸÎš{Ùöl^Î‡·àã2ú]Óá”í_~šÌò¯–´šBõ'ËÇ3Úâ“ŒIFçÃõ~­xx½´WºÚ©BÏ¥ñ‹ÌXM""",'L1')))
