@@ -1,6 +1,2 @@
-def p(g,e=enumerate):
- (a,b),(d,e)=[(i,j)for i,r in e(g)for j,v in e(r)if v];h=e-b>>1
- if a-d:return[*zip(*p([*map(list,zip(*g))]))]
- for x,s in(b,1),(e,-1):
-  for r in g[a-2:a+3]:g[a-2][u:=x+s*h]=g[a+2][u]=r[u-s]=z=g[a][x];g[a][x:u:s]=[z]*h
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚ%NE²Ã0İçZÊ‰üqç{O8Ær¨pù ˜õmà–´Ô×á¢Û²×LD€%UŒ°!Í¤BO™[½‚F»¥Æ=m™70¦'5¯Çß–¼ähu?´Wüã;ªøRŞñì»¶Še,]$‚õÚ‹:ğW¬è—jâ¿+­³=µªä¢LşS±…©„|%]ìR¹’µÊV\r¼Kåg-¥ê•v/±TÕ'];(°3]RMQ""",'L1')))
