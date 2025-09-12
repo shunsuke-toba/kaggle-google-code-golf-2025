@@ -1,0 +1,9 @@
+def p(g):
+ R=range;F=-2,0,1,0,0,0;b=eval(str(g));w=len(g[0]);k=2
+ while 1:
+  B,i,j,k=max((sum(F[b[i+d][j]]+(d*(0<=j+d<w)and F[b[i][j+d]])for d in R(-r,r+1))-r/3,i,j,r)for r in(k,3)for i in R(r,len(g)-r)for j in R(w))
+  if B<1:return g
+  for d in R(-k,k+1):
+   for y,x in(i+d,j),(i,j+d):
+    b[y][x]//=5
+    g[y][x]+=b[y][x]*3
