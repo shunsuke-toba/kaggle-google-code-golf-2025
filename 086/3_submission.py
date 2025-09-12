@@ -1,9 +1,2 @@
-def p(g):
- n=len(h:=eval(str(g)))
- for Y in range(n*n):
-  if(b:=h[y:=Y//n][x:=Y%n])>h[y-1][x]+h[y][x-1]<1:
-   S=h[y+3][x]//b+1;s=S+2;X=x+s
-   for r in g[y-S:y+s+S]:r[x:X]=[b]*s
-   for r in g[y:y+s]:r[x-S:X+S]=[b]*(S*3+2);r[x]=r[X-1]=a=h[y+1][x+1]
-   g[y][x:X]=r[x:X]=[a]*s
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚ]NÅAAü_8#8¿9š(Î]ÖÝ%{ªqXßrËvN2áJ38I(²á²›}$Êª\0,åàÄI‹“Å‰ŸœûÄµE¢VŸøŽ8ò–½¡Åý}²^vø¸LÖòØí#þ×_xãçå‘-'#Öëgæîïúq8£Nôs\\SpûÈôŒëÑÚž­iyX+Hþ×~(ßu°ÍôèK«ž¡^S±œaíßëyÈaûú#þ«eÿÝRØU] á\rMBU",'L1')))

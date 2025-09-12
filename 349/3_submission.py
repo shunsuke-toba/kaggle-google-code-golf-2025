@@ -1,8 +1,2 @@
-def p(g):
- n=len(o:=eval(str(g)))
- for m in range(n*n):
-  if(u:=g[i:=m//n])[j:=m%n]>g[i-1][j]*i|u[j-1]*j:
-   while i<n>g[i][j]>0:i+=1;d=(*u,0).index(0,j);r=d-j>>1;l=j-r-n;a=m//n-r-n
-   for y in o[i:]:y[j:d]=[1]*r*2
-   for y,x in zip(o[a:i+r],g[a:]):y[l:d+r]=[c or 3for c in x[l:d+r]]
- return o
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚ=ANÄ0E÷=…7HIh™v)îE¢,ªIZeÜQ˜Bqxl„Øı8Ï~?Ä®jÕ¶ÂImãÇ\\Ôû­òXë–­ÂAiŠ	\riQ»ÅÕ%‹—Ó‰¼v™Óù‰gİà]ö&}ï.s6Y6àó-•é•`êmzÄa¨ÌŞöú)Qˆ‡êÛ¬ÇŠ¡ËÓ4ŒsW;ç_D¹%­îÒjãŞŞÙ<:vUóü´‡ _éª67³«úvåà5/øîL¾~øøûğ\rÔxÛ+~\0~Y",'L1')))
