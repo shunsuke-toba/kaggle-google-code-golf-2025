@@ -1,7 +1,2 @@
-def p(g,R=range,n=0):
- while 0in g[n]:n+=1
- s=n+1;m=len(t:=g[::s]);r=m-2;p=max(([t[i//r+k//3][(i%r+k%3)*s]for k in R(9)]for i in R(r*r)),key=sum)
- for i in R(m*m):
-  for k in R(9*(t[i//m][i%m*s]==p[4])):
-   for j in R(n*n*(m>(u:=i//m+k//3-1)>-1<(v:=i%m+k%3-1)<m)):g[u*s+j//n][v*s+j%n]=p[k]
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚMŽ±rÃ D{}Å5Ì\0²+NäóG¨e(<L°ÌE’“ü}@jÜÝ.o—ýt7˜¹?$LWòî@xºŸ¯ðppÞÕÔbß@Fjû!âÃ_4z£u¶b1voÃŒñúË¹YLPjl'¥NÖðÀÊÉNBf{ûN0AiLüCl*ìj”£‡Éýa^£hàå)ÊX×ÀkVòí‹hM`Qf‹8›w+*·ƒ÷$I’Ç_5V|[ÔõâÒõgþ,+«Î9–°7«Ìí])²æY/F¶O¶ä–5ørVþ",'L1')))
