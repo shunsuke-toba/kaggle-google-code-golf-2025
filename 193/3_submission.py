@@ -1,1 +1,1 @@
-p=lambda g,h=lambda g:[*zip(*[[a*(b+c>0)for a,b,c in zip(r,(*r[1:],0),(0,*r))]for r in g])]:h(h(g))
+p=lambda g,h=lambda g:[*zip(*[[a&(b|c)for a,b,c in zip(r,(*r[1:],0),(0,*r))]for r in g])]:h(h(g))
