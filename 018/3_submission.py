@@ -1,17 +1,5 @@
-def p(g):
- R=range;L=len;h,w=L(g),L(g[0]);S=[]
- for y in R(h*w):
-  x=y%w;y//=w;a=0
-  for Y in R(y+1,h+1):
-   for X in R(x+1,w+1):
-    if L({*sum(m:=[q[x:X]for q in g[y:Y]],[0])})*all(map(sum,m+[*zip(*m)]))>4:a,b,r=Y,X,m
-  if a:S+=r,
-  for t in g[y:a]:t[x:b]=[0]*(b-x)
- for r in S:
-  for z in R(8):
-   for y in R(h-(a:=L(r))+1):
-    for x in R(w-(b:=L(r[0]))+1):
-     if all((str(r).count(str(c:=r[k//b][k%b]))<2)*c==g[y+k//b][x+k%b]for k in R(a*b)):
-      for i in R(a):g[y+i][x:x+b]=r[i]
-   r=[*zip(*r[::-1])];z^3or r.reverse()
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚeQo‚0…ßù}1iKİö°\Öı	_4M—‡„(¨Wà²ÿ¾ŞŠaÉá~çôœóYìØ‰—"ÖéCÑğÒ,¬ÈVÚØˆíÈV5]S<œ…ìf½f]6¤©î2§ôf¢‡x©îŠxXO@ïîqcÕı-/×š× ÍÙô°¶¤9“¦4l¬UïGHw8ğÚ¸§Uy«N\ÖÂ
+ñşNå
+õF­Ug«X£C¶?g¡õ¯äV{WÉó¤÷ÒHÄ
+Fş6e~šü&áÂ„(ÆÊ#ÙOd—ğ|„¨ÈÄQJêÄ/-zƒùöxmÚğ±fŸ¦¹5ûYî5oOBnµöâûï>¦½´Ÿ^r2Áû‘¢ús@êÊK¡}}4•%õ¸$€di…ÍnÏ4È‹¯/÷aÑ^Ñ/øç×¨""",'L1')))
