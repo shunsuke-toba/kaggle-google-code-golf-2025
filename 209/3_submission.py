@@ -1,15 +1,2 @@
-def p(g,R=range,E=enumerate):
- i=a=e=99;j=0;L=()
- for r,h in E(g):
-  for o,v in E(h):
-   if v&4:b=r;d=o;a>r and(a:=r,c:=o)
-   elif v>0<b>a:e=min(e,r);i=min(i,o);f=r-e+1;j=max(j,o-i+1)
-   elif v:L+=(r,o,v),
- for k in R(5):
-  for r in R(a,b):
-   for o in R(c,d):
-    try:
-     for x,y,z in L:[0][g[e+(x-r)//k][i+(y-o)//k]^z]
-     for q in R(f*k):g[r+q][o:o+j*k]=[g[e+q//k][i+p//k]for p in R(j*k)]
-     return[r[c:d+1]for r in g[a:b+1]]
-    except:0
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚUOW–Â ıw|Í!Ó+®Àp,)/u„øì®~±&ÔÛÎ%ƒœ´´`r@*ıó£b¿€_jı¬Æš²É%©,»Y\0Ækè-rb{O•"UN¶ï2Ñ¨2íT<BÛŒÆR£H¥vÌ‹àÏËFÏ¿É(– •¥ ©*+á˜Ê5FÀ_T­ñÖÂE¹1Ë1×EWƒ‰¾lãû`l —šxc‘8àîŠ§"ëq²ÆC’½8ˆ£—¥y˜Â\0§ûÙÓS31§‡È…óô8¹š–×Ü|Ø0YäË‰qÒñzØLtˆY"Z¿{W{uu*vÊCXoĞ4©ÌøËäòœÂÄ2é€^ûÚµ|şós‰""",'L1')))
