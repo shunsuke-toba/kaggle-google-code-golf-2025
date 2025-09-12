@@ -1,1 +1,2 @@
-def p(g):n=len(g);(a,b),(c,d)=[(i//n,i%n)for i in range(n*n)if g[i//n][i%n]&1];f=lambda y,x,a,b,t=2:n>(Y:=y+a)>-1<(X:=x+b)<n and(2==(v:=g[Y][X])or t*v>7and f(y,x,b,-a,t-1)|f(y,x,-b,a,t-1)or v-8and f(Y,X,a,b,t)and g[Y].__setitem__(X,3)!=1);g[2*a-c][2*b-d]-8and f(a,b,a-c,b-d)or f(c,d,c-a,d-b);return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚ5jÃ †_Å^z®$6’šçH	U„ö62ZØÃO	@ÿó»ïGçûâz’WOå2pƒ¯è@*žÎgÂôL>7–X"¶ŠžSC‹ªZB¿´zòjnÖöÀ;fÙõ4ò¹—“Q´>õò~²p!fÈñNJ¾÷2ªY«ICiÉÍ>¾—'xµX³há÷ÈÂâ‘º‹œq:ê æ*{]–oŸSö·eá¾Á“laˆªkŒXu9¬pú½®–1–YÕ†ú{\\K¯†ÍçŸXü‘Y""",'L1')))
