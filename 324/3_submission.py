@@ -1,6 +1,2 @@
-def p(g):
- f=sum(g,[]);c=f.count;a=f[c(f[0])<3];*s,=zip(*g);m={};e=enumerate
- for i,r in e(g):
-  for j,d in e(r):
-   if c(d)<3:s+=i+j,(i-j,);m[a in r and a in s[j]]=d
- return [[(d,m[a in r and a in s[j]])[i+j in s or(i-j,)in s]for j,d in e(r)]for i,r in e(g)]
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚ•Í±jÆ ğ=Oq£&¦:%öDDU4AãÒÒw¯1ó7|ƒàı¹ÿïŒupO÷	Ö–ˆgBR®Ñ}è£å‹+tB'>%ış’|®ÂIfOyÂß?nÑæ–lQ—íÄQ °ş2ØQdæ‰Êˆ 8ĞÄto¯†%²°ÆuÛxêŞ+ ²ñ­"J‰æ¹{£	wc¸cÜK§ğÅ…	Š½ZÉàÿ5¿Pù""",'L1')))
