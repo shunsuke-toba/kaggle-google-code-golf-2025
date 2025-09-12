@@ -1,11 +1,2 @@
-def p(g,r=range):
- w=len(g[0])+1;t=0
- while len({*(f:=sum(p:=[R[t//w:][:3]for R in g[t%w:][:3]],[]))})<4:t+=1
- for m in[3,2,1]*4:
-  q=r(s:=3*m)
-  for y in r(-~len(g)-s):
-   for x in r(w-s):
-    if all((g[-1][0],v:=p[i//m][j//m])[f.count(v)<2]==g[y+i][x+j]for i in q for j in q):
-     for i in q:g[y+i][x:x+s]=[p[i//m][j//m]for j in q]
-  if m<2:p=[*zip(*p[::-1])]
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚmNE–ƒ@İçñ´F€U=ú$õj×¸çìC3.8ß_‚°[³HmÌœC§»“<èæAÉÎ‚…`ÖÛ‚Õ`p…›ÙŒY<Â9q¹à@.…Õª»ê&e7ÂÍèçWî{°‘fÑéZCÑĞUZğšÒ<Ú”ÕcLßÚ ®]QpË·‚ÃmúÒt“°û˜ç¬Áõ‚NíÀÔ˜ÌfajŸÃésµ-7lÇ}‡Œ‰ğ(ÂƒLÉ6$_\r6ÕBéOè½©û>Âà ›2ø£ûŸ0ê´›ßÚ 8%55èYnl¶«²½»ø|=",'L1')))
