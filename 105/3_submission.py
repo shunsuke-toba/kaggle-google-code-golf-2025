@@ -1,5 +1,2 @@
-def p(g):
- r=range;p=[(i,j)for i in r(len(g))for j in r(13)if g[i][j]];(a,*_,b),x=zip(*p);d=max(x)
- for i in r(a,b+1):
-  for j in r(2,d+1):g[i][j]=g[i][j]or(i in(a,b)or j%d<3or sum((2<x<d)*(y==i)+(a<y<b)*(x==j)for y,x in p)>1)*2
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes('xÚMNµÃPí=…Jé‡“* $33Of»>R5B4è"AÂIæ]c¾¡]C~ µ¶Ib°Àò!FWódw±ûËáD–ÆÃz=ì×ëŠ¿µø¬eZ—\\[!Š®*{¿K’`j`òêĞZÂBë¸VÛã ÆCblI-…l‹lçñx+o*	¬˜-ZáïVİäf-™ûàÕºlÅCú;8Jkiû`üûåIj','L1')))
