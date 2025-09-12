@@ -25,7 +25,7 @@ def compress_solution(solution_code: str) -> tuple[bytes, bool, int, int]:
     solution_bytes = solution_code.strip().encode("utf-8")
     original_len = len(solution_bytes)
 
-    compressed_data = zopfli.zlib.compress(solution_bytes)
+    compressed_data = zopfli.zlib.compress(solution_bytes).replace(b'\0',b'\\0')
 
     # 圧縮データをPythonコードとして埋め込み
     quote_count = compressed_data.count(b'"') + compressed_data.count(b"'")
