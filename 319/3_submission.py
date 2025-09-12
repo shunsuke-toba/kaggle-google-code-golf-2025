@@ -1,11 +1,2 @@
-def p(g,r=range,l=len):
- s=sum(g,[]);*C,B=sorted({*s},key=s.count)
- def f(c,h=g):
-  for _ in g*4:
-   while{c}-{*h[0]}:h=h[1:]
-   h=[*zip(*h[::-1])]
-  return[[[B,c][x==c]for x in t]for t in h]
- for c in C:
-  for d in C:
-   m,n=l(u:=f(d)),l(u[0]);q=f(c)
-   if(c-d)*any(all(q[i+k//n>>1][j+k%n>>1]^u[k//n][k%n]in{0,c^d}for k in r(m*n))for i in r(l(q)*2-m+1)for j in r(l(q[0])*2-n+1)):return q
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚ=PErC1Ýç*[gºrF)CüÌ\\îÝkýÀî‘Ðõ|(U0ª©Þç7J)õr47å\0jºÌZ¼Æ¥~½RSÔ­çªÝüï‹š‰Sty‹.¾rF!h\0~QÃ¢ý(>Â(õÀ¼hEy¶6!…<7k±Cbý•J‡lÌx¾FQk¯íêœ™_GÎš?‰œµôý”m½lVˆ#äí<Ý½0ÈF9¥*4ä+q”*™ŽËÊr%Y0vQïó/µOSUq4L¦Ó|µš¯9&w=Ú„,âš-_GùÏlälÜ?™•È¬Ze:G¹m„z1Î†ó^/ª/Fnþ[çS¡ú0’uÿ",'L1')))
