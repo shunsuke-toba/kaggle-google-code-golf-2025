@@ -3,6 +3,6 @@ def p(g,r=lambda x:[*zip(*x[::-1])]):
  if g[a][c+2]:return r(r(r(p(r(g)))))
  while b:
   b-=1;h=g[b]=[*g[b]];s=b<=a;t=a+~b;h[c-~s:d-s]=[4]*(d+~c-2*s)
-  if-2<t<c+2:h[c+1-t]=4
-  if-2<t<=n-d:h[d-1+t]=4
+  for k in c+1-t,d-1+t:
+   if n>k>~0<t+1:h[k]=4
  return g
