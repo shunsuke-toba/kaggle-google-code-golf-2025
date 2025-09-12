@@ -5,6 +5,7 @@ description = "Google Code Golf Championship 2025 Solutions"
 requires-python = ">=3.8"
 dependencies = [
     "numpy>=1.24.4",
+    "zopfli>=0.2.3.post1",
 ]
 
 [tool.uv]
