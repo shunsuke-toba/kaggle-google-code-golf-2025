@@ -1,8 +1,2 @@
-def p(g):
- w=len(g[0])+2;P=range(w+1,~w+len(g:=sum(([0,*r,0]for r in g),s:=[0]*w)+s))
- for j in P:
-  for d in 1,w,w+1,w-1:
-   if(a:=g[j+d])==g[j-d]>0<(c:=g[j]):
-    for k in P:
-     if c==g[k]or a==g[k+d]==g[k-d]:g[k-d:k-~d:d]=a,c,a
- return[g[i:i+w-2]for i in P[::w]]
+#coding:L1
+import zlib;exec(zlib.decompress(bytes('xÚEL5v1íç*K¥å"~Ãà·Ì«nÎËm¤ÏÃ8ÁEE0Æ“ŠaUj»ù¸Ð­=ÅQ±]»™m¶îÏ£RaåÌÍ­Êé|ƒlOµ»#¥¢amïZ ÖN¬KÎl¶vìdýZtØNªEŠag‡R“\0?”_«OÕgµÔ9•ûÛÿµÜƒ¶%QÉJ0õ¥¾õò[Ì·~0	­ë][Àm|<o§<ÜZö›ò=¹,¿•dN–','L1')))
