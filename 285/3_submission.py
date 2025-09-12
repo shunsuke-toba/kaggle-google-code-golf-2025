@@ -1,13 +1,2 @@
-def p(g):
- n=len(o:=eval(str(g)));d=[(i//3-1,i%3-1)for i in range(9)]
- for k in range(n*n):
-  if c:=o[y:=k//n][x:=k%n]:
-   o[y][x]=0;q=[(y,x)]
-   for y,x in q:
-    for a,b in d:
-     if(v:=o[(Y:=y+a)%n][(X:=x+b)%n])==c:o[Y][X]=0;q+=(Y,X),
-     elif a*b==0<v:s,t=y,x
-   for a,b in d:
-    if v:=o[s+a][t+b]:
-     for y,x in q:g[(y,2*s+a-y)[a%2]][(x,2*t+b-x)[b%2]]=v;o[s][t]=c
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes('xÚ­ÐÁn„ à»O1—M`ÅÄÝ#fždÂÉ&¬¤*¼}P“¶×ÞÌ7ÿŒ˜ÍÌrÙÀŠäIªeõàáåÀªÁáÛ¸4fì¢ò8æ±×ÎæòfÁðáµÀ!q¥¨(¨"0á1TÀ~ØX«2+—E9³åt%a.Peü!×oXl5¿9E,´cþ(‰+‚8É¿¡R£EV]TæâÚ5ï´­ï#b/wqbªø?u÷ï&g­kók<ïÉ»ÈIßž*×L’]à4fÁ£ZiWt*œðæs÷ìøá|n','L1')))
