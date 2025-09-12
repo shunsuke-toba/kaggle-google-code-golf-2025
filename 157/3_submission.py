@@ -1,11 +1,2 @@
-def p(g):
- r=range;d=1,0,-1,0;s=[]
- for n in r(150):
-  y=n//15;x=n%15;t=g[y][x]//5*[(0,0)];g[y][x]%=5;s+=t,
-  for a,b in t:
-   for k in r(4):
-    if(u:=y+a+d[k])<10>-1<(v:=x+b+d[~k])<15>g[u][v]>4:g[u][v]=0;t+=(u-y,v-x),
- while s:
-  _,t,i,j=min((~sum(i+a<3for a,b in t),t,i,j)for t in s for i in(1,2)for j in r(15)if all(j+b<15>g[i+a][j+b]<1for a,b in t));s.remove(t)
-  for a,b in t:g[i+a][j+b]=1
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚ]Anƒ0E÷œb6‘Æµ)¸\r`rËªˆÔIâTØPØäìµI¤¦ÝØßOã§Ñ?´|aÏÊ$E.ÒpTŽ”N »`ÁXÛ·(‹<ŽÁB6ËdQÍd7áòÔ«E«YgYñ¢09ÓÕm¨¨'/XmØGŸšœ~õ[¶R0Ž%-¼áuÒ¬–ù.•5N%Í|Øm…Å®W£V“ÞmËG¢¼òœpL1¥3	|šs.z?„Féb,âÍ4¼©ßŸ—b÷™ÄAŒ&D”âmåÇç:˜é 9ŸñÈ÷÷…‚R«ðÒµü#f•{ÚËujÑ³ÿU<}#™ÀÐúq°Ðÿ\0Ùgwž",'L1')))
