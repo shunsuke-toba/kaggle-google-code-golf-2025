@@ -1,1 +1,2 @@
-def p(g):r=range(25);m=r[:16];t=next([k-0*(c:=v)for k in r if(v:=g[y-~k//5][x+1+k%5])]for y in m for x in m if g[y][x+1]>4<g[y+1][x]);[g[y+k//5].__setitem__(x+k%5,c)for y in m for x in m if[k for k in r if g[y+k//5][x+k%5]]==t for k in t];return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚ]ŽÃ0EÈW\\ÉjºÎ:ÄÞ~$¦K£B6‘Uû÷KjS+ðnœça{¼¤SZ R¼gå©U‰‚’4þpÜËNÓ¨úg„Ç1ôrÔäÌ\\ùºn«†ÍTù]9l^0£›£ìiÝÙE‹Ñðí|Í÷â³Ø¨9ik—§üƒñø«Á/åÂL”vå’ÞBÔ	D›Þ1À}\0úŽMœ",'L1')))
