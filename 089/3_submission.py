@@ -1,9 +1,2 @@
-R=range(-2,3)
-def p(g):
- for k in 2,3:
-  for i,j in(a:=[(i//13,i%13)for i in range(169)if sum(g,[])[i]==k]):
-   if(B:=sorted((v,x,y)for x in R for y in R if-1<i+x<13>j+y>=0<(v:=g[i+x][j+y])!=k))[2:]:c=B[len(B)>>1][0];break
-  for I,J in a:
-   for v,x,y in B:
-    if v==c:g[I+x][J+y*(i^I|j^J<1or k*2-5)]=c
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes('xÚ-PÅ–ƒ0İóõ&Èi£#;Xv›ƒk îöñCÒî^›Á6^–92LİÂJ–5*1U:ÅjÛi:|Ùim+{®×íÅâ“	±t>$–+qú€"oŸ˜İaJù˜q ñ±@éğıQØ­¶û<Cè¨Ÿõ‹ü?‹ÿ™d¹<J^ÄæÚÙ&–Sk¦6:R(Y;óY;ñqŒ™I}šÂ›çKô‡‡ølê%Û<nº]İ˜±P ’WŒşÄH¨êRZ2W€{ÚEE<pïuàÙD¡šÆ+ö!U:Û|Ø.;å?¥‰Yî','L1')))
