@@ -1,7 +1,2 @@
-def p(g,R=range,n=23):
- f=bytes(sum(g,[]));i=f.find(1);k=f.rfind(1);m=[(*[x&4for x in r[i%n+1:k%n]],)for r in g[i//n+1:k//n]]
- for _ in R(4):
-  h=len(r:=m[::-1]);w=len(r[0])
-  for i in R(n*n):k=i%n;i//=n;[(*g[k:k+w],)for g in g[i:i+h]]in(m,r)and[exec('V[U]=1')for V in g[i-(i>0):i-~h]for U in R(n)if-2<U-k<=w>V[U]]
-  m=[*zip(*r)]
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚ5ÁnÂ0†ï{Š^qieœRÌC Á%²&6’beõP\0ÁvØ³Ïî”øÿlŞûPMW­1í¤ó•àüìSğıûìOæté•:hÃK`Ù›Ú¨ÿô_ôèLénÏ‹ğ•Š[ÁR$Ç#™46„¨‚œ§œw§Ó;Ğ‡H5JŞ2Y›EÖüôb’ÅŞY[7íõ‘¸ò<À)lD5µº¥Õ+:mœ\\g78-OD,¦¯ìdïüÍ˜ñÖm›ñ½u;´Ö†W3°\\ÿ(ç›ÁêùrSÇ%^Wyô˜]ùÃGS&Ğ2ùó%é’?mIe¯",'L1')))
