@@ -1,12 +1,4 @@
-def p(g):
- import re;r=range;f=sum(g,[]);C=f.count;b=max(f,key=C);L=[]
- for x in{*f}-{b}:
-  s=str(x);c=1+2*(C(x)>1);y=c,x,c
-  for n in r(128):w=n//32+2;d=n%7+1;y=any(re.search(s*w+f"[^{s}]"*d+s,str(R)[1::3])for R in g)and(2*w+d,x,w)or y;g=[*zip(*g[::-1])]
-  L+=y,
- m=max(L)[0];o=[[b]*m for _ in r(m)]
- for z,x,w in L:
-  for _ in r(4):
-   for k in r(w):o[i:=m-z>>1][i+k]=o[i+k][i]=x
-   o=[*map(list,zip(*o[::-1]))]
- return o
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚDOÅ–³0Þóùubèh8éØ–Û\\2œõ¾û„êæúý$NRPA‰˜²¼*›4‰ùÉÛ>‡’
+£²/:3äy°†×)]$þ‰L‹GiÙ\0dÅ_£]xP˜ åm×@™×‰á§ªç:27<¢64pü.Ô7h‚B&P7ž[ñb2™Ä0c^ü{"ººŠ\rl’q›Mô[¼"éoáîÚƒóÇ¤¥'¡36sÐE((bh¨ëXñ­šoLÉÎƒ
+~gmG·Y±Œt!eX„o¨ò£g‰©3|ˆÐÁùQ­wS›£³ÿí€>Ì-vö´¸]­“"c<mçsÝY8\\IÕ·ÕÇÏð9iDX”ZRZŒ?\0´ºÌ""",'L1')))

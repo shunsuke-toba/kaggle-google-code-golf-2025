@@ -1,0 +1,17 @@
+def p(g):
+ import re;C=sum(g,[]).count;b=max(sum(g,[]),key=C);L=[]
+ for R in{*sum(g,[])}-{b}:
+  s=str(R);c=1+2*(C(R)>1);y=c,R,c
+  for n in range(128):w=n//32+2;d=n%7+1;y=any(re.search(s*w+f"[^{s}]"*d+s,str(R)[1::3])for R in g)and(2*w+d,R,w)or y;g=[*map(list,zip(*g[::-1]))]
+  L+=y,
+ m=max(L)[0];g=[[b]*m for _ in range(m)]
+ for z,R,w in L:
+  for k in range(w):g[i:=m-z>>1][i+k]=g[i+k][i]=R
+  g=[*map(list,zip(*g[::-1]))]
+  for k in range(w):g[i:=m-z>>1][i+k]=g[i+k][i]=R
+  g=[*map(list,zip(*g[::-1]))]
+  for k in range(w):g[i:=m-z>>1][i+k]=g[i+k][i]=R
+  g=[*map(list,zip(*g[::-1]))]
+  for k in range(w):g[i:=m-z>>1][i+k]=g[i+k][i]=R
+  g=[*map(list,zip(*g[::-1]))]
+ return g
