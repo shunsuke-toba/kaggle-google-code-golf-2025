@@ -22,17 +22,16 @@ def compress_solution(solution_code: str) -> tuple[bytes, bool, int, int]:
     Returns:
         tuple: (最終バイト, 圧縮使用フラグ, 元サイズ, 最終サイズ)
     """
-    solution_bytes = solution_code.strip().encode('utf-8')
+    solution_bytes = solution_code.strip().encode("utf-8")
     original_len = len(solution_bytes)
 
     compressed_data = zopfli.zlib.compress(solution_bytes)
 
     # 圧縮データをPythonコードとして埋め込み
     quote_count = compressed_data.count(b'"') + compressed_data.count(b"'")
-    has_newline = b'\n' in compressed_data or b'\r' in compressed_data
-    has_backslash = b'\\' in compressed_data
+    has_newline = b"\n" in compressed_data or b"\r" in compressed_data
 
-    if quote_count >= 2 or has_newline or has_backslash:
+    if quote_count >= 2 or has_newline:
         compressed_data_str = b'"""' + compressed_data + b'"""'
     elif b'"' in compressed_data:
         compressed_data_str = b"'" + compressed_data + b"'"
@@ -43,7 +42,7 @@ def compress_solution(solution_code: str) -> tuple[bytes, bool, int, int]:
 
     # UTF-8でデコードできるかテスト
     try:
-        compressed_code.decode('utf-8')
+        compressed_code.decode("utf-8")
         final_code = compressed_code
     except UnicodeDecodeError:
         # エラーが出る場合はL1エンコーディング指定を追加
@@ -56,6 +55,7 @@ def compress_solution(solution_code: str) -> tuple[bytes, bool, int, int]:
         return final_code, True, original_len, compressed_len
     else:
         return solution_bytes, False, original_len, original_len
+
 
 def save_compressed_solution(task_id: int, solution_code: str, output_dir: str = "submission"):
     """
@@ -71,7 +71,7 @@ def save_compressed_solution(task_id: int, solution_code: str, output_dir: str =
 
     final_bytes, used_compression, original_len, final_len = compress_solution(solution_code)
 
-    with open(file_path, 'wb') as f:
+    with open(file_path, "wb") as f:
         f.write(final_bytes)
 
     # 結果を表示
@@ -82,6 +82,7 @@ def save_compressed_solution(task_id: int, solution_code: str, output_dir: str =
 
     return final_len
 
+
 def compress_file(input_file: str, output_file: str = None):
     """
     ファイルからソリューションを読み込んで圧縮
@@ -90,13 +91,13 @@ def compress_file(input_file: str, output_file: str = None):
         input_file: 入力ファイルパス
         output_file: 出力ファイルパス (Noneの場合は入力ファイルを上書き)
     """
-    with open(input_file, 'r', encoding='utf-8') as f:
+    with open(input_file, "r", encoding="utf-8") as f:
         solution_code = f.read()
 
     final_bytes, used_compression, original_len, final_len = compress_solution(solution_code)
 
     output_path = output_file or input_file
-    with open(output_path, 'wb') as f:
+    with open(output_path, "wb") as f:
         f.write(final_bytes)
 
     print(f"圧縮結果: {input_file}")
@@ -106,6 +107,7 @@ def compress_file(input_file: str, output_file: str = None):
         print(f"  圧縮なし {original_len} bytes (圧縮効果なし)")
 
     return final_len
+
 
 def compress_task(task_num: int, output_dir: str = "submission"):
     """
@@ -121,13 +123,13 @@ def compress_task(task_num: int, output_dir: str = "submission"):
     if os.path.exists(uncompressed_file):
         print(f"圧縮元: {uncompressed_file} -> 出力先: {submission_file}")
 
-        with open(uncompressed_file, 'r', encoding='utf-8') as f:
+        with open(uncompressed_file, "r", encoding="utf-8") as f:
             solution_code = f.read()
 
         final_bytes, used_compression, original_len, final_len = compress_solution(solution_code)
 
         # 同じフォルダの3_submission.pyに出力
-        with open(submission_file, 'wb') as f:
+        with open(submission_file, "wb") as f:
             f.write(final_bytes)
 
         if used_compression:
@@ -140,6 +142,7 @@ def compress_task(task_num: int, output_dir: str = "submission"):
     else:
         print(f"エラー: ファイルが見つかりません: {uncompressed_file}")
         return None
+
 
 def main():
     """コマンドライン実行時のメイン関数"""
@@ -172,6 +175,7 @@ def main():
         except Exception as e:
             print(f"エラー: {e}")
             sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
