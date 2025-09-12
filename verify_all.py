@@ -1,4 +1,5 @@
-import os, json
+import os
+import json
 from verify import verify_program
 
 score_sum = 0
@@ -7,9 +8,8 @@ for i in range(1, 401):
     with open(examples_path, "r") as file:
         examples = json.load(file)
     code_path = f"{i:03d}/3_submission.py"
-    with open(code_path, 'r') as f:
-        content = f.read()
-    if len(content) <= 1:
+    task_length = os.path.getsize(code_path)
+    if task_length <= 1:
         print(f"{i:03d} : unsolved")
         continue
     try:

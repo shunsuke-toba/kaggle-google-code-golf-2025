@@ -78,8 +78,7 @@ def verify_program(task_num, examples, task_path, verbose=True):
                 " * Submit that zip file to the Kaggle competition so that it can be officially scored."
             )
 
-        solution = open(task_path).read()
-        score = max([0.1, 2500 - len(solution.encode("utf-8"))])
+        score = max([0.1, 2500 - task_length])
         return score
     else:
         expected = arc_agi_expected if arc_agi_expected else arc_gen_expected
