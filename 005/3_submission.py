@@ -1,8 +1,2 @@
-def p(g):
- R=0,1,2;r=c=0
- while 0in map(sum,(P:=[g[r+i][c:c+3]for i in R])+[*zip(*P)]):c=-~c%19;r+=c<1
- for Y in-4,0,4:
-  for X in-4,0,4:
-   y,x=r,c
-   for _ in g:y+=Y;x+=X;[0<=y+i<21>x+j>=0<P[i][j]and g[y+i].__setitem__(x+j,max(max(g[r+Y+k][c+X:][:3])for k in R))for i in R for j in R]
- return g
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("xÚU†Ã@†ÈS»íÙ´…ÛdúUX+b›æ6½ôb›ºäpÏ~“À9,ãÿ?şo/ÍÑJ“À™´JÕ.‹äI'ğõ>Ğá}=ˆÇ³WâdÈ¶6bpÖ{wıŒ€‘³“h7ßa›“tÒxÚşø—ô-‹H>OXÈ’ÉíAiuàµ5)ş%0«‰¢ò|®mÅ-´fF*³	©È¬ÎiÆïÒã„İ‘t~²ìÒ¹ú~Örå^«êÑŒalúª©¾Äòïol…qÖì\\6n«½”?Y§»õt	Äf|F¶øûtW",'L1')))
