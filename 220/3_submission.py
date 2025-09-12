@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:0*[g[i+k//3-17].__setitem__(j+k%3-1,c*5%9)for i,r in e(g)for j,c in e(r)for k in b'01235678'if c%6&2]+g
+p=lambda g,e=enumerate:0*[g[i+k//3-17].__setitem__(j+k%3-1,c*5%9)for i,r in e(g)for j,c in e(r)for k in(c^4>5)*b'01235678']+g
