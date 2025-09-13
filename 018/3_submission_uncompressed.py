@@ -1,17 +1,19 @@
 def p(g):
- w=len(g[0]);S=[]
- for y in range(len(g)*w):
-  x=y%w;y//=w;a=0
-  for Y in range(y+1,len(g)+1):
-   for X in range(x+1,w+1):
-    if len({*sum(m:=[q[x:X]for q in g[y:Y]],[0])})*all(map(sum,m+[*zip(*m)]))>4:a,b,r=Y,X,m
-  if a:S+=r,
-  for t in g[y:a]:t[x:b]=[0]*(b-x)
- for r in S:
-  for z in range(8):
-   for y in range(len(g)-(a:=len(r))+1):
-    for x in range(w-(b:=len(r[0]))+1):
-     if all((str(r).count(str(c:=r[k//b][k%b]))<2)*c==g[y+k//b][x+k%b]for k in range(a*b)):
-      for i in range(a):g[y+i][x:x+b]=r[i]
-   r=[*zip(*r[::-1])];z^3or r.reverse()
+ R=range;L=len;h,w=L(g),L(g[0]);S=[]
+ for y in R(h):
+  for x in R(w):
+   a=0
+   for i in R(y+1,h+1):
+    for j in R(x+1,w+1):
+     if L({*sum(m:=[r[x:j]for r in g[y:i]],[0])})*all(map(sum,m+[*zip(*m)]))>4:a,b,s=i,j,m
+   if a:S+=s,
+   for r in g[y:a]:r[x:b]=[0]*(b-x)
+ for s in S:
+  for z in R(8):
+   k=str(s);a=L(s);b=L(s[0])
+   for y in R(h-a+1):
+    for x in R(w-b+1):
+     if all((k.count(str(c:=s[i//b][i%b]))<2)*c==g[y+i//b][x+i%b]for i in R(a*b)):
+      for r in R(a):g[y+r][x:x+b]=s[r]
+   s=[*zip(*s[::-1])];z^3or s.reverse()
  return g
