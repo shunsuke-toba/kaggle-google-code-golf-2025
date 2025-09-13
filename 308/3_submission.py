@@ -1,7 +1,3 @@
-def p(g,E=enumerate):
- m=~-len(g)//5;k=2*m+1;o=[[b:=max(g[0],key=g[0].count)]*k for _ in[0]*k];s=[0]*20;p=[]
- for i,x in E(g):
-  for j,v in E(x):
-   if v-b:s[v]+=i;s[~v]+=j;p+=(i,j,v),
- for i,j,v in p:o[m+i-s[v]//4][m+j-s[~v]//4]=v
- return o
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚR6àT6AðOû‹»Ë>SE‚sîn­£d]g¢‚7§ë'¶I FdñdÀÆfcgN»Ýåeâqi¯/¿_é‰¶˜ÍéwÏ®M’ãPle7v¢»4AuàAw¾û¾c_!ÅqÏŒ}Ý»Ÿ98Æ‘±N¦Q0Ž@W!ÙHÏð›°+Ô_á·
+ãß÷k¯ôÍ€²ÛÙ¾16ÔØaÂ@@¢8pÀí\0“PLB""",'L1')))
