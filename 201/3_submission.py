@@ -1,5 +1,3 @@
-def p(g):
- j=s=w=13;h=bytes(sum(g,[]));a=h.find(4);b=a%w;a//=w;c=h.rfind(4);d=c%w;c//=w;o=[r[b:-~d]for r in g[a:-~c]]
- for r,v in enumerate(h):k=r%w;r//=w;r-a|c-r|k-b|d-k<0<v&-5 and(s:=min(s,r),k<j and(j:=k,f:=v!=o[1][0]))
- for r in o[1:-1]:r[1:-1]=g.pop(s)[j:j+~b+d][::1-2*f]
- return o
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚ=NUzÃ0~ï)ÊµÃO‰Nâ¯¦¢q|ö•Í–~Ê‹²¿'…^¿EÃÇ¨ÆôS‚µ!•Ãæ”F	Ö^ÙlsòD£ìøæ·Oêä˜LŒ“ML”ø>š(;Ÿ;dœ¥àşåórÇû¼ßlûK…l>ïõÏ5GŸªÅVm
+È‚Ô:äG!~–ànò“¹ü§sÓŸÜíâ ÖS÷¹Ÿà¦Ùápêtq{®µ€SêîX8gÁœÒ^ÿn~¬Î_n¬¼ınOe-´ö_jçsºVyŒÇ©ø‘ó©GX$""",'L1')))
