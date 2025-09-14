@@ -1,15 +1,21 @@
-def p(g,r=range):
- for z in r(676):
-  a=[g[(i:=z//26)+k//5][(j:=z%26)+k%5]for k in r(25)]
-  if a==a[::-1]and len({*a})>2:break
- b=a[0]
- for k in r(25):g[i+k//5][j+k%5]=b
- d=1,0,-1,0
- s=[(i,j)for z in r(676)if g[(i:=z//26+2)][(j:=z%26+2)]==a[12]]
- for i,j in s:
-  for c in r(4):
-   v=a[(22,10,2,14)[c]];x=i;y=j
-   while v!=b!=g[x][y]:g[x][y]=v;x+=d[c];y+=d[~c]
-  for k in r(25):
-   if g[i-2+k//5][j-2+k%5]!=b!=a[k]:g[i-2+k//5][j-2+k%5]=a[k]
- return g
+def p(g,R=range):
+ for a in R(26):
+  for b in R(26):
+   v=[g[a+c//5][b+c%5]for c in R(25)]
+   if v==v[::-1]and len({*v})>2:
+    z=v[0]
+    for c in R(25):g[a+c//5][b+c%5]=z
+    s=[(a+2,b+2)for a in R(26)for b in R(26)if g[a+2][b+2]==v[12]]
+    for a,b in s:
+     x=a;y=b;w=v[22]
+     while w!=z!=g[x][y]:g[x][y]=w;x+=1
+     x=a;y=b;w=v[10]
+     while w!=z!=g[x][y]:g[x][y]=w;y+=1
+     x=a;y=b;w=v[2]
+     while w!=z!=g[x][y]:g[x][y]=w;x-=1
+     x=a;y=b;w=v[14]
+     while w!=z!=g[x][y]:g[x][y]=w;y-=1
+     for c in R(25):
+      if g[a-2+c//5][b-2+c%5]!=z!=v[c]:
+       g[a-2+c//5][b-2+c%5]=v[c]
+    return g
