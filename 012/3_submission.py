@@ -1,1 +1,1 @@
-p=lambda g,A=range(-2,3),C=enumerate:[g[i+d].__setitem__(f+x-1,b[x-(d*f!=0)])for i,b in C(eval(f'{g}'))for x,a in C(b)for d in A for f in A if(d*d+f*f)%5*a*b[x-2]]and g
+p=lambda g,A=range(-2,3),C=enumerate:[g[i+d].__setitem__(f+x-1,b[x-(d*f!=0)])for i,b in C(eval(f'{g}'))for x,a in C(b)for d in A for f in A if(d*d+f*f)%5*a*b[x-2]]*0+g
