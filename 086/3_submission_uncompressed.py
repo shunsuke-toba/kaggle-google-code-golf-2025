@@ -1,10 +1,10 @@
 def p(g):
- n=len(h:=eval(str(g)))
- for y in range(n):
-  for x in range(n):
-   if(b:=h[y][x])>h[y-1][x]+h[y][x-1]<1:
-    a=h[y+1][x+1];s=h[y+3][x]//b+3;S=s-2;X=x+s
-    for r in g[y-S:y+s+S]:r[x:X]=[b]*s
-    for r in g[y:y+s]:r[x-S:X+S]=[b]*(S*3+2);r[x]=r[X-1]=a
-    g[y][x:X]=r[x:X]=[a]*s
+ h=eval(str(g))
+ for y,r in enumerate(h):
+  for x,b in enumerate(r):
+   if b>h[y-1][x]+h[y][x-1]<1:
+    a=h[y+1][x+1];s=h[y+3][x]//b+3;n=s-2;m=x+s
+    for r in g[y-n:y+s+n]:r[x:m]=[b]*s
+    for r in g[y:y+s]:r[x-n:m+n]=[b]*(n*3+2);r[x]=r[m-1]=a
+    g[y][x:m]=r[x:m]=[a]*s
  return g
