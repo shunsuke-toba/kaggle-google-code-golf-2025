@@ -9,7 +9,7 @@ def p(g):
   for R in range(a,b):
    for O in range(c,d):
     try:
-     for r,o,v in l:g[e+(r-R)//k][i+(o-O)//k]^v and 1/0
+     for r,o,v in l:g[e+(r-R)//k][i+(o-O)//k]-v and 1/0
      for r in range(h*k):
       for o in range(j*k):g[R+r][O+o]=g[e+r//k][i+o//k]
      return[R[c:d+1]for R in g[a:b+1]]
