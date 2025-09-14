@@ -1,6 +1,2 @@
 #coding:L1
-import zlib;exec(zlib.decompress(bytes("""xÚeÍŽÛ Çïy
-z¨fÒm®Dó$ˆ®ˆCRlÀ^°·›T}÷2ÄRºj.±æ7Ìÿãì.læW¡v¬`Y#¿‚6âØ½ÂnðeÊ‹;óß]ù£»aùÖOkZÄÑÂ	µî¢yðe»Ÿywñaq™/
-ƒ§³eYõÌ'–?c¸
-ú™Ë”q^•„9&ˆ0cp‰[íO7¢úÙ1ÚœÚ%›®Ž§.’cæ/ÌêQ!÷
-§——(Œê××h~Üˆ³_?}p´#ûdtP8%ž˜Wn¤¾¡Ñ°Ñ7´Ú×Ýƒ9Îùž,E-QB«Vh29{3Ôœ[Cü.`@wž+êñ«VÇÃ~d¯ÐðÖõÜ¢ÑÜÿ“¸©g!6<<q|`êkÛx”?i/×Ú‹|7ˆüz¡û/xoÆW(tÃ¥5ºlWhüýçqíæ¦;þÿJ‘ÊHí²Õ$–ËnYsb§¿Ð;¾±""",'L1')))
+import zlib;exec(zlib.decompress(bytes("""xÚeR…®Ã ý¢ƒ–>Ò°¹¹Ix+m˜@saúõ¯0÷ÊQ¬³=9	5èµõÓÃ¼ÜàEë5T3òµ‹Ir’'7òŠ„€¶½Åâ…,·l™Ï¿['IÇ@Év€@ì1bÎ3rB‚zDP®ìQ¯Íæ¯3ŒTŽŠ6ñ¸ÝL€bú´Gi®‘™•¾ÓÅ>~,ÂÖ'ÍÂv«7æð¨tïÊìÁ.øì6‚¤RmQxåëˆVq&Y¯¹ƒT¼r¸‘[Fëc™É+0x#ãË­ÆwìÜöÆ©çØ0Y•îª¾±õwýMœ@ÌèpGå—l¾ßÞÌ°éîŒ-þŒ»žæC½.êJi¸®ÕÛ*¢¼L¼ŠÍeÑùQh=`K6mÉç]©Ê‘ró™ú$kÓÜ""",'L1')))

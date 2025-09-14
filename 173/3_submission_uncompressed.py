@@ -1,8 +1,1 @@
-def p(g):
- w=len(g[0])+2;p=range(w+1,~w+len(g:=sum(([0,*r,0]for r in g),s:=[0]*w)+s))
- for d in w+1,w,w-1,1:
-  for j in p:
-   if(a:=g[j+d])==g[j-d]>0<(c:=g[j]):
-    for j in p:
-     if c==g[j]or g[j+d]==g[j-d]==a:g[j-d:j-~d:d]=a,c,a
- return[g[j:j+w-2]for j in p[::w]]
+def p(n):[((r:=[n[y+f//3][t+f%3]for f in range(9)])==r[::-1])*r[4]*any(r[:4])*(r[4]==n[l+1][d+1]or sum(n[l+f//3][d+f%3]==r[f]for f in range(9))==8)and exec('for f in range(9):n[l+f//3][d+f%3]=r[f]')for l in range(len(n)-2) for y in range(len(n)-2) for d in range(len(n[0])-2) for t in range(len(n[0])-2)];return n
