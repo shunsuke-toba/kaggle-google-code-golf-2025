@@ -7,4 +7,4 @@ def p(g):
   for d in range(30):
    if all(bytes(b).strip(b'\0\3')>b'\n'for b in g[:d+2][-3:]):u=g[d].index(13);g[d][:u]=[3]*u
   g=[*map(list,zip(*g[::-1]))]
- return[[d%10for d in b]for b in g]
+ return[[d%10 for d in b]for b in g]
