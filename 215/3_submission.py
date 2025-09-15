@@ -1,1 +1,1 @@
-p=lambda g:((max(g[3],g[6]),*g[4:6])*7)[:len(g)]
+p=lambda g:((max(g[3::3]),*g[4:6])*7)[:len(g)]
