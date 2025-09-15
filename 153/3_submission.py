@@ -1,2 +1,1 @@
-#coding:L1
-import zlib;exec(zlib.decompress(bytes('xÚ•Í±nÃ Æñ§¸ñˆ@rÔÍÕ\r¶1²±ˆŠÙ¤J„x÷bOU=uıóı¸qòğÀY¶6Úge¬üdå(_¶¢sSxúâèF†Ôf|iVoí¤¿¯Pgù1,ê’¤İóK½k†TiGó¾ã}Ä ®ÍÁÂşºò2Oxm<l&X".R@ÿáv1P®ËÛßáÇn¿CP©ÇAwR÷mGƒî¬Sz®‹1Æ)¶æøªšÎ¸=]°?QHbù','L1')))
+def p(g):s=sum(g,[]);c,b,_=sorted({*s},key=s.count);f=lambda a:zip(*filter(lambda r:b in r,a));h=lambda a:[*zip(*[*a+[[0]*3]*(len(a)<3*all(a[0]))][::-1])];return[[x or c for x in r]for r in h(h(h(h([*f(f(g))]))))]
