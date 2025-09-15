@@ -1,1 +1,1 @@
-p=lambda g,R=range(10):[[max(g[r-r%5|2])*(4*r%7<2or c%9<1)for c in R]for r in R]
+p=lambda g,R=range(10):[[max(g[r-r%5|2])*(c%9*(r%7&-3)<1)for c in R]for r in R]
