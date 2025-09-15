@@ -1,1 +1,3 @@
-def p(g):s=sum(g,[]);c,b,_=sorted({*s},key=s.count);f=lambda a:zip(*filter(lambda r:b in r,a));h=lambda a:[*zip(*[*a+[[0]*3]*(len(a)<3*all(a[0]))][::-1])];return[[x or c for x in r]for r in h(h(h(h([*f(f(g))]))))]
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚ}LÃQ¼§Šw‹í”²öî·ë­ÓxŠ²Ù©»»TBC
+ˆƒNy]v†³ÁædŸıì‹òoÁ9)¾&€*H)íÔ~ÚG¡ŸõqÕ~~âÅ‘Ÿ†è1œwO~6º;]Z§¹ïÿ¹xY|†èJ'""",'L1')))
