@@ -1,5 +1,5 @@
 def p(g):
- h=eval(str(g))
+ h=[r[:]for r in g]
  for y,r in enumerate(h):
   for x,b in enumerate(r):
    if b>h[y-1][x]+h[y][x-1]<1:
