@@ -1,1 +1,1 @@
-p=lambda g:[exec("j=len(r)\nwhile j:\n if(v:=r[j:=j-1])in b[j+1:]*v:r[j:j+2]=0,v")for r,b in zip(g,g[1:])]and g
+p=lambda g:[exec("j=len(r)\nwhile j:\n if(v:=r[j:=j-1])in b[j+1:]*v:r[j:j+2]=0,v")for r,b in zip(g,g[1:])]*0+g
