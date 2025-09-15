@@ -1,1 +1,1 @@
-p=lambda g,i=8:0in g[0]and p(g[1:],i)or i and p([*zip(*(i<5and[[(c,r[0])[r[0]in r[j:]]for j,c in enumerate(r)]for r in g]or g))][::-1],i-1)or g
+p=lambda g,i=8:0in g[0]and p(g[1:],i)or i and p([*zip(*(i<5and[(r[0],)*(k:=len(r)-r[::-1].index(r[0]))+r[k:]for r in g]or g))][::-1],i-1)or g
