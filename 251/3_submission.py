@@ -1,1 +1,1 @@
-p=lambda g:eval('[*zip(*[[c*(c+d>1)for c,d in zip(r,(0,*r))]for r in'*36+str(g).replace(*'01')+'[::-1]])]'*36)
+p=lambda g:eval('[*zip(*[map(lambda c,d:c*(c+d>1),r,(0,*r))for r in'*32+str(g).replace(*'01')+'[::-1]])]'*32)
