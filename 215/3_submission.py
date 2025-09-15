@@ -1,1 +1,1 @@
-p=lambda g:([g[6-3*any(g[3])],g[4],g[5]]*8)[:len(g)]
+p=lambda g:((max(g[3],g[6]),*g[4:6])*7)[:len(g)]
