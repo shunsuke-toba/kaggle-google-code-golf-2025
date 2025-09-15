@@ -1,6 +1,6 @@
 def p(g):
  while 2in(f:=sum(g,[])):
-  a=f.index(2);d,e=f[a+9]<1or-1,f[a+1]<1or-1;b=a%9;a//=9
-  for x,y in(a,b),(a+d,b),(a,b+e):
-   while 9>x>-1<y<9:g[x][y]=sum({*f})-2;x+=d;y+=e
+  a=f.index(2);d,e=f[a+9]<1or-1,f[a+1]<1or-1;c=sum({*f})-2
+  for s in a,a+d*9,a+e:
+   while 81>s>-1<(s%9)-e<9:g[s//9][s%9]=c;s+=d*9+e
  return g
