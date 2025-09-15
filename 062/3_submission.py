@@ -1,5 +1,3 @@
 def p(g):
- s=10;f=sum(g,[]);k=sum({*f})-2;i=f.index(2);a=(i//s,i%s)[b:=k in g[i//s]]+(k>f[i-s+9*b]);g=[s*[3]for g in g];n=90
- while n:=n-1:
-  if f[n]:g[i:=n//s][j:=n%s]=g[(2*a+~i,i)[b]][(j,2*a+~j)[b]]=k
- return g
+ s=10;f=sum(g,[]);k=sum({*f})-2;i=f.index(2);a=(i//s,i%s)[b:=k in g[i//s]]+(k>f[i-s+9*b])
+ return [[k if g[r][c]|g[(2*a+~r,r)[b]%s][(c,2*a+~c)[b]%s]else 3 for c in range(s)]for r in range(s)]
