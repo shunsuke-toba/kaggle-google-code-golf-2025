@@ -1,1 +1,1 @@
-def p(g,i=0):k=2+i//3;o=[(i%3*[0]*(j//k)+g[j%k])[:10]for j in range(10)];return o*(g==o[:len(g)])or p(g,i+1)
+p=lambda g,i=0:(o:=[(i%3*[0]*(j//(k:=2+i//3))+g[j%k])[:10]for j in range(10)])*(g==o[:len(g)])or p(g,i+1)
