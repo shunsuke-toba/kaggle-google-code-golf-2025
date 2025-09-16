@@ -1,1 +1,1 @@
-p=lambda g:[[(y-x)/5+3]*3for x,y,_ in g]
+p=lambda g:[[2^1+y>>x]*3for x,y,_ in g]
