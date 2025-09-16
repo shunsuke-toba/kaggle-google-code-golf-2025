@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:(f:=lambda s:not s or any(f(s-p)*[g[t>>4].__setitem__(t&15,k)for t in p]for*q,k in((1,2,2),(16,32,2),(1,16,17,8))if(p:={min(s)+d for d in(0,*q)})<=s))({i<<4|j for i,r in e(g)for j,c in e(r)if c})and g
+p=lambda g,e=enumerate:(f:=lambda s:not s or any(f(s-p)*[g[t>>4].__setitem__(t&15,2+6*(a<b))for t in p]for a,b in((1,1),(16,16),(1,16))if(p:={m:=min(s),m+a,m+b,m+a+b})<=s))({i<<4|j for i,r in e(g)for j,c in e(r)if c})and g
