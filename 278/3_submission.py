@@ -1,1 +1,1 @@
-p=lambda g,r=range:[exec('y[x]=3')for a in(-1,0)for i in r(len(g)+~a)for j in r(len(g[0])+a)if g[i][j]+g[i-~a][j-a]==4for y in g[i-(i>0):i+3+a]for x in r(j-1,j+2-a)if 0in y[x:x+1]]*0+g
+p=lambda g,r=range:[exec('y[x]=3')for a in(-1,0)for i in r(len(g)+~a)for y in g[i-(i>0):i+3+a]for j in r(len(y)+a)if g[i][j]+g[i-~a][j-a]==4for x in r(j-1,j+2-a)if 0in y[x:x+1]]*0+g
