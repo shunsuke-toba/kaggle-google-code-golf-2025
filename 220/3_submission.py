@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:0*[g[i+k//8-6].__setitem__(j+k%3-1,c*5%9)for i,r in e(g)for j,c in e(r)for k in(c^4>5)*b'*+)029:8']+g
+p=lambda g,e=enumerate:[[c or sum(sum(r[j and j-1:j+2])for r in g[i and i-1:i+2])*5%9 for j,c in e(r)]for i,r in e(g)]
