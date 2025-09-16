@@ -1,1 +1,1 @@
-p=lambda g:[[6*(r.pop(3)+c>0)for c in r]for r in g]
+p=lambda g:[[6*(r.pop(3)>-c)for c in r]for r in g]
