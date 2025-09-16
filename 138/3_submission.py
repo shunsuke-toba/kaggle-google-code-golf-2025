@@ -1,1 +1,1 @@
-p=lambda g,i=8:0in g[0]and p(g[1:],i)or i and p([*zip(*(i<5and[(r[0],)*(k:=bytes(r).rfind(r[0])+1)+r[k:]for r in g]or g))][::-1],i-1)or g
+p=lambda g,i=8:0in g[0]and p(g[1:],i)or i and p([*zip(*i<5and[r[:1]*(k:=-~bytes(r).rfind(r[0]))+r[k:]for r in g]or g)][::-1],i-1)or g
