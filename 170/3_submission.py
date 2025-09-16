@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:(s:=[(j,b:=i,v)for i,r in e(g)for j,v in e(r)if v],r:=range(n:=3+any(g[b-3])),m:=s[~n**2][1]//n)and[[g[s[0][1]+u*m][min(s[:-n*n])[0]+v*m]and s[u*n+v-n*n][2]for v in r]for u in r]
+p=lambda g,e=enumerate:(s:=[(j,i,v)for i,r in e(g)for j,v in e(r)if v],r:=range(n:=3+any(g[-5])),m:=s[~n**2][1]//n)and[[g[s[0][1]+u*m][min(s[:-n*n])[0]+v*m]and s[u*n+v-n*n][2]for v in r]for u in r]
