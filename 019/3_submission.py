@@ -1,1 +1,1 @@
-p=lambda g:(g:=[r*2for r in g]*2,[[c or any(v for s in g[i<1or i-1:i+2:2]for v in s[j<1or j-1:j+2:2])*8for j,c in enumerate(r)]for i,r in enumerate(g)])[1]
+p=lambda g,e=enumerate:(g:=[r*2for r in g]*2)and[[c or any(v for s in g[i<1or~-i:i+2:2]for v in s[j<1or~-j:j+2:2])*8for j,c in e(r)]for i,r in e(g)]
