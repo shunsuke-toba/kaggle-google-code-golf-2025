@@ -1,1 +1,1 @@
-p=lambda g:[[5+g[i&4|1][j&12|1]*(r[j]<5)for j in range(11)]for i,r in enumerate(g)]
+p=lambda g,e=enumerate:[[5+g[i&4|1][j&12|1]*(c<5)for j,c in e(r)]for i,r in e(g)]
