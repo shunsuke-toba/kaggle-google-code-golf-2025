@@ -1,5 +1,5 @@
 def p(g,a=0):
  for r in g:
-  if 4 in r:i=r.index;a^=i(4)+1;b=i(4,a)
-  elif a:r[a:b]=[2]*(b-a)
+  if 4in r:i=r.index;b=i(4,a:=a^i(4)+1)-a
+  elif a:r[a:a+b]=[2]*b
  return g
