@@ -1,1 +1,1 @@
-def p(g):r,k=[[i for i,x in enumerate(m)if{*x}-{*g[0]}][:3]for m in(g,zip(*g))];s=k[1]-k[0];return[[(v:=g[a][b])*(v==g[a][b+s]==g[a+s][b]==g[a+s][b+s]!=max(g[0]))for b in k]for a in r]
+def p(g):r,k=[[i for i,x in enumerate(m)if{*x}-{*g[0]}][:3]for m in(g,zip(*g))];s=k[1]-k[0];return[[(v:=g[a][b])*(v==g[a][b+s]==g[a+s][b]==g[a+s][b+s]!=g[0][b])for b in k]for a in r]
