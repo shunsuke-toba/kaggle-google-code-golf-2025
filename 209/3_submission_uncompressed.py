@@ -1,16 +1,16 @@
 def p(g):
  i=a=e=99;j=0;l=()
- for R,y in enumerate(g):
-  for O,v in enumerate(y):
-   if v&4:b=R;d=O;a>R and(a:=R,c:=O)
-   elif v>0<b>a:e=min(e,R);i=min(i,O);h=R-e+1;j=max(j,O-i+1)
-   elif v:l+=(R,O,v),
+ for y,Y in enumerate(g):
+  for x,v in enumerate(Y):
+   if v&4:b=y;d=x;a>y and(a:=y,c:=x)
+   elif v>0<b>a:e=min(e,y);i=min(i,x);h=y-e+1;j=max(j,x-i+1)
+   elif v:l+=(y,x,v),
  for k in range(1,5):
-  for R in range(a,b):
-   for O in range(c,d):
+  for y in range(a,b):
+   for x in range(c,d):
     try:
-     for r,o,v in l:g[e+(r-R)//k][i+(o-O)//k]-v and 1/0
+     for r,o,v in l:g[e+(r-y)//k][i+(o-x)//k]-v and 1/0
      for r in range(h*k):
-      for o in range(j*k):g[R+r][O+o]=g[e+r//k][i+o//k]
-     return[R[c:d+1]for R in g[a:b+1]]
+      for o in range(j*k):g[y+r][x+o]=g[e+r//k][i+o//k]
+     return[g[y][c:d+1]for y in range(a,b+1)]
     except:0
