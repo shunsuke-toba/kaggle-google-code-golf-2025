@@ -1,1 +1,1 @@
-p=lambda g:(r:=range(2,n:=len(g)-2))and[[g[i][j]%7*g[-(i>n/2)][-(j>n/2)]for j in r]for i in r]
+def p(g):r=range(2,n:=len(g)-2);return[[g[i][j]%7*g[-(i>n/2)][-(j>n/2)]for j in r]for i in r]
