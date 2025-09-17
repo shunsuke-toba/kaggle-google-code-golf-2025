@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[c or sum(sum(r[j and j-1:j+2])for r in g[i and i-1:i+2])*5%9 for j,c in e(r)]for i,r in e(g)]
+p=lambda g,e=enumerate:[[c or sum(sum(r[j-(j>0):j+2])for r in g[i-(i>0):i+2])*5%9 for j,c in e(r)]for i,r in e(g)]
