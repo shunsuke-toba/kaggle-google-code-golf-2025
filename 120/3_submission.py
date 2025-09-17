@@ -1,1 +1,1 @@
-p=lambda g:[exec('r[j]=8')for p,r,n in zip(g,g[1:],g[2:])for j in range(1,len(r)-1)if p[j]*n[j]*r[j-1]*r[j+1]]*0+g
+p=lambda g:[exec('r[j]=8;'*p[j]*n[j]*r[j-1]*r[j+1])for p,r,n in zip(g,g[1:],g[2:])for j in range(1,len(r)-1)]*0+g
