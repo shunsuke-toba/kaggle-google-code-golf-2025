@@ -1,4 +1,3 @@
-def p(g):
- n=len(g);(a,c),*_,(b,d)=[(i//n,i%n)for i in range(n*n)if g[i//n][i%n]]
- if g[a][c+2]:return[*zip(*p([*zip(*g)][::-1])[::-1])]
- return[[4 if i<b and (c+(s:=i<=a)<j<d-s or s*(j-i==c+2-a or j+i==d+a-2)) else g[i][j]for j in range(n)]for i in range(n)]
+#coding:L1
+import zlib;exec(zlib.decompress(bytes("""xÚUf1†¸§(3ÙÄé)H7O£r›ìš8Óµi¡Oßä,Z?Ÿf¾\\VØq#\r¢=¾c²Yóañn3…ˆr½ª•¥õó\0Q8’nÕ(É
+[½Á|'I—éÆş(_ß‡Fó#;šÏ°Gïİ+Óùô±³ßÆ™ï4.6d‰æ:g× +4ƒÕIı‚KÔ©ÿò”ÜÊ£•áÄ±ò®„éIäù'•N}""",'L1')))
