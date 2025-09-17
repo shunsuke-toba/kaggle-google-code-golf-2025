@@ -1,1 +1,3 @@
-p=lambda g,r=range:[exec('y[x]=3')for a in(-1,0)for i in r(len(g)+~a)for y in g[i-(i>0):i+3+a]for j in r(len(y)+a)if g[i][j]+g[i-~a][j-a]==4for x in r(j-1,j+2-a)if 0in y[x:x+1]]*0+g
+def p(g):
+ for _ in g*8:*g,=zip(*[[x^(y&3==2==x&3)*8^(x<1<8<y+z)*3for x,y,z in zip(r,[0,*r],[0,*a])]for a,r in zip([[0]*20]+g,g)][::-1])
+ return g
