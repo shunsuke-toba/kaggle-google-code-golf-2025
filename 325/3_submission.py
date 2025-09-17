@@ -1,6 +1,7 @@
-def p(g,n=0,e=enumerate):
- for y,r in e(g):
-  for x,v in e(r):
-   n+=v>0
-   for R in g[y:y+v//2]:R[x-2*(x>1):x+4]=[0]*6
+def p(g,n=0,y=0):
+ for r in g:
+  while 8 in r:
+   n+=1;x=r.index(8)
+   for R in g[y:y+4]:R[x-2*(x>1):x+4]=[0]*6
+  y+=1
  return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
