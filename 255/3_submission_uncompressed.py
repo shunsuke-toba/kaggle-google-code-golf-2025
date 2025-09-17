@@ -5,6 +5,6 @@ def p(g):
    for b in g[u+2:d-1]*(d-u>6):b[5:]=[13]*25
    u=d
   for d in range(30):
-   if all(bytes(b).strip(b'\0\3')>b'\n'for b in g[:d+2][-3:]):u=g[d].index(13);g[d][:u]=[3]*u
+   if not any(13 not in b or {*b[:b.index(13)]}-{0,3} for b in g[:d+2][-3:]):u=g[d].index(13);g[d][:u]=[3]*u
   g=[*map(list,zip(*g[::-1]))]
  return[[d%10 for d in b]for b in g]
