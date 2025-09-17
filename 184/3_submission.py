@@ -1,1 +1,1 @@
-p=lambda g,f=lambda m,b=0:[slice(b,b:=i)for i,a in enumerate((*m,[]))if sum(a)<1]:[[max(max(g[s])[t])for t in f(zip(*g))]for s in f(g)]
+p=lambda g,f=lambda g,b=0:(*zip(*[map(max,zip(*g[b:(b:=i+1)-1]))for i,a in enumerate((*g,[]))if sum(a)<1]),):f(f(g))
