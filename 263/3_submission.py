@@ -1,1 +1,1 @@
-def p(g):*b,=zip(*[iter((g,zip(*g))[h:=len(g)<4])]*3);m=[str(x).count('0')for x in b];return(x:=b[[*map(m.count,m)].index(1)],[*zip(*x)])[h]
+def p(g):h=len(g)<4;g=sorted((str(x).count('0'),(x,[*zip(*x)])[h])for x in zip(*[iter((g,zip(*g))[h])]*3));return g[-(g[0][0]==g[1][0])][1]
