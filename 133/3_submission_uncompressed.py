@@ -6,8 +6,8 @@ def p(g):
    if w>x>-1<y<h>g[y][x]>0:a+=f(y,x)
   return a
  s=[f(y,x)for y in range(h)for x in range(w)if g[y][x]]
- b=min(s,key=lambda t:(len(t)<3,len(t)))
- r,c,p=min(b,key=lambda t:sum(v==t[2]for y,x,v in b))
+ b=min((len(t),t)for t in s if len(t)>2)[1]
+ r,c,p=min((sum(v==t[2]for y,x,v in b),t)for t in b)[1]
  for t in s:
   a=[(y,x)for y,x,v in t if v==p or((q:=v)and[])];m=int(len(a)**.5)
   for y,x,v in b:
