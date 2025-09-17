@@ -1,1 +1,1 @@
-p=lambda g,k=2,d=0:(o:=[(j//k*d*[0]+g[j%k])[:10]for j in range(10)])*(g==o[:len(g)])or p(g,k+d//2,-~d%3)
+p=lambda g,t=6:(o:=[(j//(k:=t//3)*(t%3)*[0]+g[j%k])[:10]for j in range(10)])*(g==o[:len(g)])or p(g,t+1)
