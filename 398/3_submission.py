@@ -1,1 +1,1 @@
-def p(g):r=[0]*5*(5-g[0].count(0));return[r:=r[1:]+[c]for c in g[0]+r[5:]]
+def p(g):g,=g;r=[0]*5*(5-g.count(0));return[r:=r[1:]+[c]for c in g+r[5:]]
