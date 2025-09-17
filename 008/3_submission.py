@@ -1,7 +1,1 @@
-def p(g):
- k=i=f=0
- while k<4:
-  if(m:=max(g[i]))<f:g+=g.pop(i),
-  i+=f<=m;f+=m>7
-  if m&3:g=[*zip(*g[::-1])];k+=1;i=f=0
- return g
+p=lambda g:exec("i=f=0;g[:]=zip(*g[::-1])\nwhile~(m:=max(g[i]))&2:f>m and g.append(g.pop(i));i+=m>=f;f|=m>7\n"*4)or g
