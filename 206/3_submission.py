@@ -1,4 +1,4 @@
 def p(g):
- a=b=9;e=enumerate;[v-5and(a:=min(a,i),b:=min(b,j))or(s:=i-1,t:=j-1)for i,r in e(g)for j,v in e(r)if v]
+ e=enumerate;a,b=map(min,zip(*((i,j)for i,r in e(g)for j,v in e(r)if v*(v-5or((s:=i-1)-(t:=j-1))*0))))
  for k in 0,1,2:g[s+k][t:t+3]=g[a+k][b:b+3]
  return g
