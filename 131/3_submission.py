@@ -1,1 +1,1 @@
-p=lambda g:(w:=len(g[0]))>(l:=len(g))and[*zip(*p([*map(list,zip(*g))]))]or(h:=[*filter(any,g[(r:=g.index([2]*w)+1):])])and(g[:r]+h+[[8]*w]+g[:1]*l)[:l]or p(g[::-1])[::-1]
+p=lambda g:(w:=len(g[0]))>(l:=len(g))and[*zip(*p([*zip(*g)]))]or(h:=[*filter(any,g[(r:=[*map(max,g)].index(2)+1):])])and(g[:r]+h+[[8]*w]+g[:1]*l)[:l]or p(g[::-1])[::-1]
