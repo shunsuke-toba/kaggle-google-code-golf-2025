@@ -1,1 +1,1 @@
-p=lambda g,x=0:(h:=[(x:=r)for r in g if x!=r])*(g==h)or p([*zip(*h)])
+p=lambda g:g!=(g:=[(g:=r)for r in g if g!=r])and p([*zip(*g)])or g
