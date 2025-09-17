@@ -1,4 +1,1 @@
-def p(g):
- b=bytes(sum(g,[]));w=len(g[0]);k=0
- while{*b[(n:=b.find(k)):(m:=b.rfind(k)):w]}^{k}:k+=1
- return[r[n%w+1:m%w]for r in g[n//w+1:m//w]]
+def p(g,k=0):b=bytes(sum(g,[]));w=len(g[0]);return{*b[(n:=b.find(k)):(m:=b.rfind(k)):w]}^{k}and p(g,k+1)or[r[n%w+1:m%w]for r in g[n//w+1:m//w]]
