@@ -1,1 +1,1 @@
-p=lambda g:[[*map(max,*(t for t in g if 1>any(a*b*(a-b)for a,b in zip(r,t))))]for r in g]
+p=lambda g:[[*map(max,*(t for t in g if sum(0<a!=b>0for a,b in zip(r,t))<1))]for r in g]
