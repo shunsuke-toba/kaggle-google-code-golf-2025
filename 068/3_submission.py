@@ -1,4 +1,1 @@
-def p(g):
- b=min(g:=sum(g,[]),key=g.count);a=[0]*100;a[i:=g.index(b)]=b
- for j in 1,9,10,11:a[i+j]=a[i-j]=2
- return*zip(*[iter(a)]*10),
+def p(g):g=sum(g,[]);b=min(g,key=g.count);i=g.index(b);return*zip(*[iter([(j==i)*b or 2*(3586>>abs(j-i)&1) for j in range(100)])]*10),
