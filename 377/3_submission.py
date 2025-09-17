@@ -1,1 +1,1 @@
-def p(g):x=();h=[(x:=r)for r in g if x!=r];return h*(g==h)or p([*zip(*h)])
+p=lambda g,x=0:(h:=[(x:=r)for r in g if x!=r])*(g==h)or p([*zip(*h)])
