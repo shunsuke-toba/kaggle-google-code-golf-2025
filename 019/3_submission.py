@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:(g:=g*2)and[[c or any(sum((s*2)[j<1or~-j:j+2:2])for s in g[i<1or~-i:i+2:2])*8for j,c in e(r*2)]for i,r in e(g)]
+p=lambda g,e=enumerate:[[c or any(sum((s*2)[j<1or~-j:j+2:2])for s in (g*2)[i<1or~-i:i+2:2])*8for j,c in e(r*2)]for i,r in e(g*2)]
