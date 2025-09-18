@@ -1,1 +1,4 @@
-p=lambda g:exec("i=f=0;g[:]=zip(*g[::-1])\nwhile~(m:=max(g[i]))&2:f>m and g.append(g.pop(i));i+=m>=f;f|=m>7\n"*4)or g
+def p(g):
+ for _ in[0]*4:
+  c,d=map([*map(max,g)].index,(8,2));g+=g[c+2:d];g[c+2:d]=[];g=[*zip(*g[::-1])]
+ return g
