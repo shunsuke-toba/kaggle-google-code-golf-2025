@@ -7,5 +7,5 @@ def p(g):
      if len({r[x]for r in s for x in range(b)})<3:
       for r,x in[(r,x)for r in s for x in range(b)if r[x]-r[0]]:
        for t in s:t[x]=r[x]
-       r[:]=[r[x]]*b
+       for t in range(b):r[t]=r[x]
       return s
