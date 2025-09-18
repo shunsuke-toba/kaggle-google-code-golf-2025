@@ -1,1 +1,1 @@
-def p(g):r,b=max(zip(g,a:=range(len(g))));r,c=max(zip(r,a));return[[r*(i-b in(j-c,c-j))for j in a]for i in a]
+def p(g):r,b=max(zip(g,a:=range(len(g))));m=max(r);return[[m*(j-r.index(m)in(i-b,b-i))for j in a]for i in a]
