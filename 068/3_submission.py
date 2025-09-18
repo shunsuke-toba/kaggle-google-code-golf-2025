@@ -1,1 +1,1 @@
-def p(g):g=sum(g,[]);b=min(g,key=g.count);i=g.index(b);return*zip(*[iter([(j==i)*b or 2*(3586>>abs(j-i)&1) for j in range(100)])]*10),
+def p(g):g=sum(g,[]);i=g.index(min(g,key=g.count));return*zip(*[(2*(3586>>abs(j-i)&1)+(j==i)*g[i]for j in range(100))]*10),
