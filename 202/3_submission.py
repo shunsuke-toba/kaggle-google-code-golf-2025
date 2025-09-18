@@ -1,1 +1,1 @@
-p=lambda g:len({0,*g[0]})>2and[*zip(*p([*zip(*g)]))]or[[v*all(max(s)^v|s[i]for s in g)for i,v in enumerate(r)]for r in g]
+p=lambda g:len({0,*g[0]})>2and[*zip(*p([*zip(*g)]))]or[[*map(min,zip(*(t for t in g if max(t)==max(r))))]for r in g]
