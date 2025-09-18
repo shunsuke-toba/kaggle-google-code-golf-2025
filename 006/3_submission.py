@@ -1,1 +1,1 @@
-p=lambda g:[[2*r[c-4]*r[c]for c in(4,5,6)]for r in g]
+p=lambda g:[[2*c*r.pop(4)for c in r[:3]]for r in g]
