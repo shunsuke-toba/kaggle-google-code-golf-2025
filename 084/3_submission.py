@@ -1,3 +1,4 @@
-def p(a,i=1):
- while a[i:]:a[-1][i]=4;a[~i][i]=2;i+=1
- return a
+def p(g,i=0):
+ *h,b=g
+ for r in h:i-=1;r[i]=2;b[i]=4
+ return g
