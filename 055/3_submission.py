@@ -1,1 +1,1 @@
-p=lambda g,C=2222096:[[x+0*(c:=c>>x//8*3)or c&7 for x in r]for r in g if(c:=C,C:=C>>9*all(r))]
+p=lambda g,C=2222096:[(c:=C,C:=C>>9*all(r))and[x+(c:=c>>x//8*3)%8*(x<1)for x in r]for r in g]
