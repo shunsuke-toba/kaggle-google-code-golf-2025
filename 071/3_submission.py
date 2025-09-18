@@ -1,2 +1,1 @@
-def p(g,a=0):
- return[[v and(a or(t:=i-r[::-1].index(v),a:=v))and(v*(v==a)or r[~i+t]) for i,v in enumerate(r)]for r in g]
+p=lambda g,a=0:[[v*(v==a)or v and(a or{t:=i-r[::-1].index(a:=v)})and r[~i+t] for i,v in enumerate(r)]for r in g]
