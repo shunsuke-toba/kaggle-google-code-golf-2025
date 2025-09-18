@@ -1,3 +1,1 @@
-def p(g):
- for _ in g*8:*g,=zip(*[[x^(x*y&6==4)*8^(y+z-1>>3>x)*3for x,y,z in zip(r,[0,*r],[0,*a])]for a,r in zip([[0]*20]+g,g)][::-1])
- return g
+p=lambda g,n=8:n and p([*zip(*[[x^-(x*y%3)&8^(y|z>7<<x)*3for x,y,z in zip(r,[0,*r],[0,*a])]for a,r in zip([g[0]]+g,g)][::-1])],n-1)or g
