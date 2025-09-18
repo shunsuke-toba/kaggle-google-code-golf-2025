@@ -1,1 +1,1 @@
-def p(g):r=range(d:=str(g*3).count('0'));return[[g[i%3][j%3]*(i//3*d+j<27-d)for j in r]for i in r]
+def p(g):d=str(g).count('0');return[(r*(9-d*i-d)+[0]*3*d)[:3*d]for i in range(d)for r in g]
