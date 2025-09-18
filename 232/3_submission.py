@@ -1,1 +1,1 @@
-p=lambda g:[(r[:r.index(l:=sum(r))]+[l,5*(l>0)]*7)[:len(r)]for r in g]
+p=lambda g:[([0]*r.index(l:=sum(r))+[l,5]*7*l+r)[:len(r)]for r in g]
