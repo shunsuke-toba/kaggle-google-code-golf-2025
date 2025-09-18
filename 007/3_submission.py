@@ -1,1 +1,1 @@
-p=lambda g,r=range(7):[[max(sum(g,[])[(i+j)%3::3])for j in r]for i in r]
+p=lambda g:[*zip(*[(max(sum(g,[])[k%3::3])for k in range(49))]*7)]
