@@ -1,1 +1,1 @@
-p=lambda g:[g:=[*zip(*g[::-1][1-(5in g[-i]):])]for i in(2,1)*24][-1]
+p=lambda g:[g:=[*zip(*g[(5in g[-i])-2::-1])]for i in(2,1)*24][-1]
