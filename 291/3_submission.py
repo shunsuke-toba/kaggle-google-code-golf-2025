@@ -1,2 +1,1 @@
-import re
-p=lambda g:[[int(re.split(r'([^0])(, 0)+, \1',str(g))[1])]]
+p=lambda g,c=1:len({r.count(c)for r in g})>2 and [[c]] or p(g,c+1)
