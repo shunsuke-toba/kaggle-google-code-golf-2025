@@ -1,6 +1,4 @@
 def p(g):
- f=sum(g,[]);d=f.index
- for v in{*f}-{0}:
-  i=d(v);j=d(v,i+1)
-  while j>i:j-=9+2*(j%9!=i%9);g[j//10][j%10]=v
+ for j,v in enumerate(f:=sum(g,[])):
+  while v and j>(i:=f.index(v)):j-=9+2*(j%9!=i%9);g[j//10][j%10]=v
  return g
