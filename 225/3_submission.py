@@ -1,1 +1,1 @@
-t=-2,-1,2,3;p=lambda g,n=0:g[r:=n//5][c:=n%5]and[g[r+i].__setitem__(c+j,g[r-i//4][c-j//4])for i in t for j in t if 6>c+j>-1<r+i<6]and g or p(g,n+1)
+s=range(6);p=lambda g,n=0:g[r:=n//5][c:=n%5]and[[g[y][x]|g[r+(y<r)][c+(x<c)]*((y-r)&(x-c)&2)//2 for x in s]for y in s]or p(g,n+1)
