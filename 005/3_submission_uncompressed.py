@@ -1,14 +1,15 @@
 def p(g):
- R=0,1,2;r=c=0
- while 0in map(sum,(P:=[[g[r+i][c+j]for j in R]for i in R])+[*zip(*P)]):
-  c=-~c%19
-  r+=c<1
- for Y in-4,0,4:
-  for X in-4,0,4:
-   y,x=r,c;v=max(g[r+Y+i][c+X+j]for i in R for j in R)
+ A=0,1,2;a=b=0
+ while 0in map(sum,(C:=[[g[a+i][b+j]for j in A]for i in A])+[*zip(*C)]):
+  b=-~b%19
+  a+=b<1
+ for d in-4,0,4:
+  for e in-4,0,4:
+   y,x=a+d,b+e;v=max(g[y+i][x+j]for i in A for j in A)
+   y,x=a,b
    for _ in g:
-    y+=Y;x+=X
-    for i in R:
-     for j in R:
-      if 0<=y+i<21>j+x>=0<P[i][j]:g[y+i][x+j]=v
+    y+=d;x+=e
+    for i in A:
+     for j in A:
+      if 0<=y+i<21>j+x>=0<C[i][j]:g[y+i][x+j]=v
  return g
