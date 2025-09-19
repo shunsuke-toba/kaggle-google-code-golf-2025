@@ -1,1 +1,1 @@
-p=lambda g,f=lambda g,b=-1:[*zip(*(map(max,*g[b+1:(b:=i)])for i,a in enumerate((*g,[]))if sum(a)<1))]:f(f(g))
+p=lambda g,f=lambda g,b=0:[*zip(*(map(max,*g[b:(b:=i+1)])for i,a in enumerate(g+[[]])if sum(a)<1))]:f(f(g))
