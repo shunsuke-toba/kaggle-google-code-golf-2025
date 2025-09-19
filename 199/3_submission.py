@@ -1,1 +1,1 @@
-p=lambda g:[([4,0]*8)[(R:=max(g))<R[1::2]:][:len(g)]]*-~(r:=g.index(R))+[R]+g[r+2:]
+p=lambda g:-~(r:=g.index(R:=max(g)))*[([4,0]*8)[R<R[1::2]:][:len(g)]]+[R]+g[r+2:]
