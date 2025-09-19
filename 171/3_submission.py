@@ -1,3 +1,1 @@
-def p(g):
- for r in g:r[0]=r[-1]=8
- g[0]=r[:]=[8]*len(r);return g
+p=lambda g:(h:=[8]*len(g[0]),*([8,*b,8]for a,*b,c in g[1:-1]),h)

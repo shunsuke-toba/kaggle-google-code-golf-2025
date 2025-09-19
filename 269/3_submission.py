@@ -1,1 +1,1 @@
-p=lambda g:sum(([sum(zip(*[r]*(n:=len({*str(g)})-5)),())]*n for r in g),[])
+p=lambda g:sum([(k:=len({*str(g)})-5)*[sum(zip(*[r]*k),())]for r in g],[])

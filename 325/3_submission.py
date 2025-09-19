@@ -1,8 +1,8 @@
 def p(g):
- n=y=0
- for r in g:
+ o=[]
+ while g:
+  r=g.pop(0)
   while 8in r:
-   n+=1;x=r.index(8)
-   for R in g[y:y+4]:R[x-2*(x>1):x+4]=[0]*6
-  y+=1
- return[[0]*i+[8]+[0]*(n+~i)for i in range(n)]
+   o=[R+[0]for R in o]+[[0]*len(o)+[8]];x=r.index(8)
+   for R in r,*g[:3]:R[x-2*(x>1):x+4]=[0]*6
+ return o
