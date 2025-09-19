@@ -8,7 +8,7 @@ def p(g):
      if g[k:k+1]==[v]:g[k]=5;q+=k,;t+=k-i,
      f*=5in g[k:k+1]
    if f:d[t]=i
-   if len(t)==c(v)>1:e[t]=i,v
+   if c(v)==len(t)>1:e[t]=i,v
  for t in d:
   if t in e:
    i,v=e[t];a=d[t]
