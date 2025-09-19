@@ -1,1 +1,1 @@
-p=lambda g,h=lambda x:{}.fromkeys(zip(*filter(sum,x))):[*h(h(g))]
+p=lambda g,h=lambda x:{k:0 for k in zip(*x)if max(k)}:[*h(h(g))]
