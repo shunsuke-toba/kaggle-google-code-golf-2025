@@ -1,1 +1,1 @@
-p=lambda g,n=56:n and p([[c|2>>c|(c<3==l)for l,c in zip((3,*r),r)]for r in zip(*g[::-1])],n-1)or g
+p=lambda g,n=8:n and p([[l:=c|2>>c|(l==3>c)for c in r]for r in zip(*g[::-1])if(l:=3)],n-1)or g
