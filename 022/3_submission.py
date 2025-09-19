@@ -1,1 +1,1 @@
-p=lambda g,a=range:[[max(g[i//9+x][i%9+y]*(g[i//9+1][i%9+1]==5)for i in a(81))for y in a(3)]for x in a(3)]
+p=lambda g:[[max(s[i+d+e]for i in range(121)if (s:=sum(g,[]))[i]==5)for e in(-1,0,1)]for d in(-11,0,11)]
