@@ -1,1 +1,1 @@
-p=lambda g:[(g:=[(a:=0)or[a:=c or a&7and s-a for c in r]for r in zip(*g[::-1])])for s in[sum({*sum(g,[])})-8]*44]and g
+p=lambda g:[g:=[(a:=0)or[a:=c or a&7and s-a for c in r]for r in zip(*g[::-1])]for s in[sum({*sum(g,[])})-8]*44]and g
