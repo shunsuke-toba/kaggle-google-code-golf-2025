@@ -1,6 +1,3 @@
-def p(g,b=0):
- for n in range(400):
-  a=[]
-  while(s:=[*g,[]][n//20][n%20:]+[0])[0]:a+=s[:s.index(0)],;n+=20
-  if(r:=str(a).count('2'))>b:o=a;b=r
- return o
+def p(g):
+ def f(n):s=(g+[[]])[n//20][n%20:]+[0];return s[0]and[s[:s.index(0)]]+f(n+20)or[]
+ return max(map(f,range(400)),key=lambda a:str(a).count('2'))
