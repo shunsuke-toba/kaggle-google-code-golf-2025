@@ -1,2 +1,1 @@
-#coding:L1
-import zlib;exec(zlib.decompress(bytes("xÚLÃA\0ü§ŠùÅvJ9Û·Þúcû5ž(NÀZi{Ó@B$rá“4nõ'½ÕÁ>úâÂwÁ1‰Þ&ÈÔ9i¥¦ìæ¶)º…í¤fxàÑž†Åm8mŒüÞ¸ü@ÄJbšÿ>Ù/WöôÔKb",'L1')))
+R=range(-2,8);T=0,1,2;p=lambda g:next(h for a in R for b in R for c in R for d in R if min(sum(h:=[[g[a+i][b+j]^g[c+i][d+j]for j in T]for i in T],[])))
