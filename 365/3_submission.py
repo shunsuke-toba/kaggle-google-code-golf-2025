@@ -1,1 +1,1 @@
-p=lambda g:max((all(F:=sum(S:=[t[n&15:n>>8&15]for t in g[n>>4&15:n>>12]],[]))*F.count(2),~n&255,S)for n in range(43776))[2]
+p=lambda g:max((all(F:=sum(S:=[t[n>>8&15:n&15]for t in g[n>>12:n>>4&15]],[]))*F.count(2),-n>>8,S)for n in range(43776))[2]
