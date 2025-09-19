@@ -1,1 +1,2 @@
-p=lambda g,f=lambda g,b=0:[*zip(*(map(max,*g[b:(b:=i+1)])for i,a in enumerate(g+[[]])if sum(a)<1))]:f(f(g))
+import itertools as I
+p=lambda g,f=lambda g:[*zip(*(map(max,*v)for k,v in I.groupby(g,any)if k))]:f(f(g))
