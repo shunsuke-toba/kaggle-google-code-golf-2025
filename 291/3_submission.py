@@ -1,1 +1,1 @@
-p=lambda g,c=1:len({r.count(c)for r in g})>2 and [[c]] or p(g,c+1)
+p=lambda g,c=1:[[c]]*(len({r.count(c)for r in g})>2)or p(g,c+1)
