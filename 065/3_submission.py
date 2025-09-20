@@ -1,1 +1,1 @@
-def p(g):m=len(g);n=m//2;f=sum(g,[]);i=[*map(f.count,f)].index(1);return[r[-n*(i%m>n):][:n]for r in g[-n*(i>n*m):][:n]]
+def p(g):n=len(g)//2;q=[[r[s:s+n]for r in g[t:t+n]]for t in(0,n+1)for s in(0,n+1)];return min(q,key=q.count)
