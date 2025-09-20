@@ -1,1 +1,1 @@
-p=lambda g,r=range(11):[[[5,g[(e:=45-sum(g[i][j]//8*(i&-4|j>>2)for i in r for j in r))&-4|x>>2][e%4*4|y>>2]][x%4<3>y%4]for y in r]for x in r]
+r=range(11);p=lambda g:[[[5,g[(e:=370-sum(i&-4|j//4for i in r for j in r if g[i][j]))&-4|x>>2][e%4*4|y>>2]][x%4<3>y%4]for y in r]for x in r]
