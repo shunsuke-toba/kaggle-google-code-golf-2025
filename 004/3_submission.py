@@ -1,1 +1,1 @@
-p=lambda g:[exec("j=len(r)\nwhile j:\n if 0<r[j:=j-1]in b[j+1:]:r[j:j+2]=0,r[j]")for r,b in zip(g,g[1:])]*0+g
+p=lambda g:[r.insert(j,r.pop(j-1))for r,b in zip(g,g[1:])for j in range(len(r),0,-1)if 0<r[j-1]in b[j:]]*0+g
