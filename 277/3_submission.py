@@ -1,3 +1,1 @@
-def p(g,r=range(9)):
- f=lambda i,j,d=8:0<=i<10>j>-1<g[i][j]==d and(g[i].__setitem__(j,-d%3)or-~sum(f(i+s//3-1,j+s%3-1,d)for s in r))
- f(*min((s,i,j)for i in r for j in r if(s:=f(i,j)))[1:],1);return g
+def p(g,r=range(9)):f=lambda i,j,d=8:0<=i<10>j>-1<g[i][j]==d and(g[i].__setitem__(j,-d%3)or-~sum(f(i+s//3-1,j+s%3-1,d)for s in r));f(*min((f(i,j)or 17,i,j)for i in r for j in r)[1:],1);return g
