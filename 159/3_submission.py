@@ -1,1 +1,1 @@
-def p(g):k=sum(2in r for r in g);t=[2]*k;f=lambda g:[c for c in zip(*g)if-3&max(c)];k//=3;r=range(3*k);return t,*[[2,*[f(f(g))[i//k][j//k]for j in r],2]for i in r],t
+def p(g):k=sum(2in r for r in g);t=[2]*k;f=lambda g:[c for c in zip(*g)if-3&max(c)];k//=3;return t,*[[2,*sum(zip(*([r]*k)),()),2]for r in f(f(g))for _ in[0]*k],t
