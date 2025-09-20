@@ -1,1 +1,1 @@
-p=lambda g,i=8:0in g[0]and p(g[1:],i)or i and p([r[:1]*(k:=i>4or bytes(r).rfind(r[0]))+r[k:]for r in zip(*g[::-1])],i-1)or g
+p=lambda g,i=8:i and p((g[1:],[r[:1]*(k:=i>4or bytes(r).rfind(r[0]))+r[k:]for r in zip(*g[::-1])])[h:=all(g[0])],i-h)or g
