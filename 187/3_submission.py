@@ -1,1 +1,1 @@
-p=lambda g,n=8:n and p([[l:=c|2>>c|(l==3>c)for c in r]for r in zip(*g[::-1])if(l:=3)],n-1)or g
+p=lambda g:exec("g[:]=map(lambda r,l=3:[l:=c|2>>c|(l==3>c)for c in r],zip(*g[::-1]));"*8)or g
