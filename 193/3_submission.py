@@ -1,1 +1,1 @@
-p=lambda g,h=lambda g:[*zip(*(map(min,r,map(int.__or__,r[1:]+[0],[0]+r))for*r,in g))]:h(h(g))
+p=lambda g,h=lambda g:[*zip(*(map(min,r,map(max,r[1:]+[0],[0]+r))for*r,in g))]:h(h(g))
