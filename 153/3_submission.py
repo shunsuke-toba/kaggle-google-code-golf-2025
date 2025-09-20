@@ -1,1 +1,1 @@
-R=range(-2,8);T=0,1,2;p=lambda g:next(h for a in R for b in R for c in R for d in R if min(sum(h:=[[g[a+i][b+j]^g[c+i][d+j]for j in T]for i in T],[])))
+R=range(100);T=0,1,2;p=lambda g:next(h for A in R for B in R if min(sum(h:=[[g[A//10-2+i][A%10-2+j]^g[B//10-2+i][B%10-2+j]for j in T]for i in T],[])))
