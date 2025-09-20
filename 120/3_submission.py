@@ -1,1 +1,1 @@
-p=lambda g:[exec('r[j]=8;'*n[j]*r[j-1]*p[j+1])for p,r,n in zip(g,g[1:],g[2:])for j in range(1,len(r)-1)]*0+g
+p=lambda g:g+0*[exec('r[j]=8;'*n[j]*r[~-j]*u)for p,r,n in zip(g,g[1:],g[2:])for j,u in enumerate(p[2:],1)]
