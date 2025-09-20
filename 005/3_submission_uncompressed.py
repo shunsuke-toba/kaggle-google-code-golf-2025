@@ -1,12 +1,10 @@
 def p(g):
  A=0,1,2;a=b=0
- while 0in map(sum,(C:=[[g[a+i][b+j]for j in A]for i in A])+[*zip(*C)]):
-  b=-~b%19
-  a+=b<1
+ while 0in map(sum,(C:=[g[a+i][b:b+3]for i in A])+[*zip(*C)]):
+  b=-~b%19;a+=b<1
  for d in-4,0,4:
   for e in-4,0,4:
-   y,x=a+d,b+e;v=max(g[y+i][x+j]for i in A for j in A)
-   y,x=a,b
+   v=max(g[a+d+i][b+e+j]for i in A for j in A);y,x=a,b
    for _ in g:
     y+=d;x+=e
     for i in A:
