@@ -1,1 +1,1 @@
-def p(g):n=len(g)//2;q=[[r[s:s+n]for r in g[t:t+n]]for t in(0,n+1)for s in(0,n+1)];return min(q,key=q.count)
+def p(g):n=len(g)//2;p=0,n+1;return min(q:=[[r[s:s+n]for r in g[t:t+n]]for t in p for s in p],key=q.count)
