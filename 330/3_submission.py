@@ -1,1 +1,1 @@
-def p(g):R=range(10);f=lambda x,y:x//10|y//10or g[x][y]^5or{t:=(x,y)}&v or(v.add(t),f(x+1,y),f(x-1,y),f(x,y+1),f(x,y-1));return[[g[i][j]%2+(v:={0},f(i,j),len(v)==7)[2]for j in R]for i in R]
+def p(g):R=range(10);f=lambda x,y:x//10|y//10or g[x][y]^5or{t:=(x,y)}&v or[(v.add(t),f(x+d,y),f(x,y+d))for d in(-1,1)];return[[g[i][j]%2+(v:={0},f(i,j),len(v)==7)[2]for j in R]for i in R]
