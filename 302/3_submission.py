@@ -1,1 +1,1 @@
-p=lambda g:[exec('k=g[y][x-1::-1].index(5)\nfor t in g[y:y-k:-1]:t[x-k:x]=[k+5]*k')for i in range(132)if g[y:=i//12][x:=i%12]*g[y+1][x-1]]*0+g
+p=lambda g:[exec('for x in range(1,11):\n if u[x]>4<r[x-1]==5>r[x]:\n  k=r.index(5,x)-x\n  r[x:x+k]=[k+5]*k')for u,r in zip(g,g[1:-1])]*0+g
