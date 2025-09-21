@@ -1,1 +1,1 @@
-def p(g):*t,=zip(*g);return[[-c&(h<sorted({*t})[2])*2+(h==max(t))for c,h in zip(r,t)]for r in g]
+p=lambda g:[[-c&(h<(s:=sorted({*zip(*g)}))[2])*2+(h>s[-2])for h,c in zip(zip(*g),r)]for r in g]
