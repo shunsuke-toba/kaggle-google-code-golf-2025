@@ -1,1 +1,1 @@
-p=lambda g,f=filter:[*f(sum,zip(*[*f(sum,zip(*g))]*2))]
+p=lambda g,h=lambda q:[*filter(sum,zip(*q))]:h(h(g)*2)
