@@ -1,1 +1,1 @@
-p=lambda g:[r.insert(j,r.pop(j-1))for r,b in zip(g,g[1:])for j in range(len(r),0,-1)if 0<r[j-1]in b[j:]]*0+g
+p=lambda g:[(m:=0,[m+v-(m:=v*(v in b[j+1:]))for j,v in enumerate(r)])[1]for r,b in zip(g,g[1:])]+g[-1:]
