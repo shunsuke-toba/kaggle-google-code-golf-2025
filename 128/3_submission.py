@@ -1,1 +1,1 @@
-p=lambda g:[*zip(*map(lambda*c:c[(h:=-c.count(0)):]+c[:h],*g))]
+p=lambda g:[*zip(*map(lambda*c:c[c.count(0)^15:]+c,*g))][:15]
