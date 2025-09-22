@@ -1,1 +1,1 @@
-p=lambda g:[[c and r[0]for c in r]for r in g]
+p=lambda g:[[c%~c&r[0]for c in r]for r in g]
