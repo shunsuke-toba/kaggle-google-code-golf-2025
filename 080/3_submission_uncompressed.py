@@ -5,5 +5,5 @@ def p(g,r=range,n=0):
   for x in r(m):
    for k in r(9*(p[4]==t[y][s*x])):
     u=y+k//3-1;v=x+k%3-1
-    for j in r(n**2*(-1<u<m)*(-1<v<m)):g[s*u+j//n][s*v+j%n]=p[k]
+    for j in r(n*n*(m>u>-1)*(m>v>-1)):g[s*u+j//n][s*v+j%n]=p[k]
  return g
