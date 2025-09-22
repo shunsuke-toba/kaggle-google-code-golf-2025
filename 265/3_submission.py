@@ -1,1 +1,1 @@
-p=lambda g:[exec('t=5,*map(max,a,b)\nfor j in range(17):\n if t[j]|t[6]>4>t[j+1]|t[j+2]:a[j:j+2]=b[j:j+2]=2,2')for a,b in zip(g,g[1:])]and g
+p=lambda g:0*[exec('t=5,*map(max,a,b)\nfor j in range(17):\n if t[j]|t[6]>4>t[j+1]|t[j+2]:a[j:j+2]=b[j:j+2]=2,2')for a,b in zip(g,g[1:])]+g
