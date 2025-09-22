@@ -1,1 +1,1 @@
-def p(g):f=lambda n:(s:=(g+[[]])[n//20][n%20:]+[0])[0]and[s[:s.index(0)]]+f(n+20)or[];return f(max(range(400),key=lambda n:str(f(n)).count('2')))
+p=lambda g:(f:=lambda n:(s:=(g+[[]])[n//20][n%20:]+[0])[0]and[s[:s.index(0)]]+f(n+20)or[])(max(range(400),key=lambda n:str(f(n)).count('2')))
