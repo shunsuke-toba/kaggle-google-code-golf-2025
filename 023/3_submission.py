@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:(f:=lambda s:not s or any(s>=(p:={m:=min(s),m+a,m+b,m+a+b})and f(s-p)*[g[t//9].__setitem__(t%9,2+a%b*6)for t in p]for b in(1,9)for a in(b,1)))({i*9+j for i,r in e(g)for j,c in e(r)if c})*g
+p=lambda g,e=enumerate:(f:=lambda s:not s or any(f(s-p)*[g[t//9].__setitem__(t%9,2+a%b*6)for t in p]for a in(1,9)for b in(a,9)if(p:={m:=min(s),m+a,m+b,m+a+b})<=s))({i*9+j for i,r in e(g)for j,c in e(r)if c})*g
