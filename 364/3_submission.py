@@ -1,1 +1,1 @@
-p=lambda g,i=96:i and p([*zip(*[[c*i-c and+u|c|(u>0<l)*4<<i%4or+c.bit_count()*5%14%9 for u,c,l in zip(a,b,[0,*b])]for a,b in zip([30*[0]]+g,g)][::-1])],i-1)or g
+p=lambda g,i=96:i and p([*zip(*[[[u|c|(u>0<l)*4<<i%4,c.bit_count()*5%14%9][c*i==c] for u,c,l in zip(a,b,[0,*b])]for a,b in zip([30*[0]]+g,g)][::-1])],i-1)or g
