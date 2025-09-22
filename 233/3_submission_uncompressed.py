@@ -7,6 +7,6 @@ def p(g):
     for i in range(3):g[p+i][q:q+3]=0,0,0
  g=[*map(list,zip(*filter(any,zip(*filter(any,g)))))]
  for _,b in sorted(t):
-  while any((y:=p,x:=q)for p in range(len(g)-2)for q in range(len(g[0])-2)if all(g[p+i][q+j]==2*(b[i][j]!=2)for j in range(3) for i in range(3)))<1:b=[*zip(*b[::-1])]
+  while 1>any((y:=p,x:=q)for p in range(len(g)-2)for q in range(len(g[0])-2)if all(g[p+i][q+j]==2-2*(b[i][j]==2)for j in range(3) for i in range(3))):b=[*zip(*b[::-1])]
   for i in range(3):g[y+i][x:x+3]=b[i]
  return g
