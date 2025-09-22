@@ -1,1 +1,1 @@
-p=lambda g,i=4:i and p([[t,t[:(j:=t[3]<2)]+t[j:][6::-1]+t[j+7:]][{*t}>{0,5}]for t in zip(*g[::-1])],i-1)or g
+p=lambda g,i=4:i and p([t[:(j:=t[3]<2)]+t[j:j+7][::-({*t}>{0,5})|1]+t[j+7:]for t in zip(*g[::-1])],i-1)or g
