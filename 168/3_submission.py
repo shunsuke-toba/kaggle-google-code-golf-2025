@@ -1,6 +1,3 @@
-def p(g):
- for r in range(81):
-  if s:=sorted(v:=g[q:=r//9][(c:=r%9):c+2]+g[q+1][c:c+2])[1]:
-   p=v.index(0);q+=p>1;c+=p&1
-   while(c:=c-1+p%2*2)>-1<(q:=q-1+(p&2))<10>c:g[q][c]=s
+def p(g,r=range(10)):
+ for _ in g*4:u=v=0;*g,=zip(*[[r|u*(i-j==v)|(x*y*w and(u:=x,v:=i-j,0)[2])for j,r,x,y,w in zip(r,b,a,[0,*a],[0,*b])]for i,a,b in zip(r,g[:1]+g,g)][::-1])
  return g
