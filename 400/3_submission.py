@@ -1,1 +1,1 @@
-p=lambda g:[(k:=sum(g,[]))[~k.index(1)-24*i::-1][:5]for i in range(5)]
+p=lambda g:[g[~g.index(a)][~a.index(1)::-1][:5]for a in g if 1 in a]
