@@ -1,1 +1,1 @@
-p=lambda g:[exec('for x in range(1,11):\n if u[x]+r[x-1]-r[x]>9:k=r.index(5,x)-x;r[x:x+k]=[k+5]*k')for u,r in zip(g,g[1:])]*0+g
+p=lambda g:[exec('for x in range(1,11):\n if u[x]>r[x]<r[x-1]:k=r.index(5,x)-x;r[x:x+k]=[k+5]*k')for u,r in zip(g,g[1:])]*0+g
