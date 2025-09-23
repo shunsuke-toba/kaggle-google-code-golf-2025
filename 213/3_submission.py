@@ -1,1 +1,1 @@
-p=lambda g:(t:=min(map(max,g))>0)*(h:=[c:=[y for r in[g,zip(*g)][t]for y in{*r}if y%5]]*len(c))or[*zip(*h)]
+p=lambda g:(t:=all(map(max,g)))*(h:=[c:=[y for r in[g,zip(*g)][t]for y in{*r}if y%5]]*len(c))or[*zip(*h)]
