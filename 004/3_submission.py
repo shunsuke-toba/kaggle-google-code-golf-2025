@@ -1,1 +1,1 @@
-p=lambda g,m=0:[[m+v-(m:=v*(v in b[j+1:]))for j,v in enumerate(r)]for r,b in zip(g,g[1:]+[[]])]
+p=lambda g,m=0:g[1:]and[[m+v-(m:=v*(v in g[1][j+1:]))for j,v in enumerate(g[0])]]+p(g[1:])or g
