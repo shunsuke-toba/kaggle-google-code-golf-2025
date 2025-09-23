@@ -1,1 +1,1 @@
-p=lambda g:[*zip(*(c[:(y:=bytes(c).rfind(max(r[i-1]&r[i]&r[i+1]&p[i]for r,p in zip(g[1:],g)for i in range(19)))+1)]+-y%20*(max(c[y:]),)or c for c in zip(*g)))]
+p=lambda g:[*zip(*(c[:20-(f:=~bytes(c).rfind(max(r[i-1]&r[i]&r[i+1]&p[i]for r,p in zip(g[1:],g)for i in range(19)))%20)]+f*(max(c[-f:]),)for c in zip(*g)))]
