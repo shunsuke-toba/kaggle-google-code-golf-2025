@@ -1,1 +1,1 @@
-R=range(100);T=-2,-1,0;p=lambda g:next(h for A in R for B in R if all(sum(h:=[[g[A//10+i][A%10+j]^g[B//10+i][B%10+j]for j in T]for i in T],[])))
+R=range(100);T=-2,-1,0;p=lambda g:next(h for A in R for B in R if all(sum(h:=[[(s:=sum(g,[]))[A+10*i+j]^s[B+10*i+j]for j in T]for i in T],[])))
