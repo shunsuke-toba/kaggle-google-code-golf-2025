@@ -1,1 +1,1 @@
-p=lambda g,T=b",TD<M5I9Y)Q1",C=enumerate:[g[i+o//10-6].__setitem__(x+o//2%5-3,b[x-o%2])for i,b in C(eval(f'{g}'))for x,a in C(b)if a*b[x-2]for o in T]*0+g
+p=lambda g,T=b'*R@<I3G5Y-U1',C=enumerate:[g[i+o//10-6].__setitem__(x+o%5-3,b[x-o%2])for i,b in C(eval(f'{g}'))for x,a in C(b)if a*b[x-2]for o in T]*0+g
