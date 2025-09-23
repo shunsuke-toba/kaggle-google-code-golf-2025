@@ -1,7 +1,7 @@
 def p(g):
- for i in range(11):
-  for j in range(11):
-   for k in range(11):
-    if not(sum(sum(r[j:j+k+2])for r in g[i:i+k+2])+~k*20|sum(sum(r[j+1:j+k+1])for r in g[i+1:i+k+1])):
-     for r in g[i+1:i+k+1]:r[j+1:j+k+1]=[2]*k
+ for y in range(11):
+  for x in range(11):
+   for s in range(11):
+    if not(sum(sum(row[x:x+s+2])for row in g[y:y+s+2])+~s*20|sum(sum(row[x+1:x+s+1])for row in g[y+1:y+s+1])):
+     for row in g[y+1:y+s+1]:row[x+1:x+s+1]=[2]*s
  return g
