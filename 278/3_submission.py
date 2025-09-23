@@ -1,1 +1,1 @@
-p=lambda g,n=8:n and p([*zip(*[[x^x*y%-3&8^(y|z>7<<x)*3for x,y,z in zip(r,[0,*r],[0,*a])]for a,r in zip(g[:1]+g,g)][::-1])],n-1)or g
+p=lambda g,n=8:n and p([*zip(*map(lambda a,r:(x^x*y%-3&8^(y|z>7<<x)*3for x,y,z in zip(r,[0,*r],[0,*a])),g[:1]+g,g))][::-1],n-1)or g
