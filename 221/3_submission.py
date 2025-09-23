@@ -1,1 +1,1 @@
-def p(g):d=str(g).count('0');return[(r*(9+d*~i)+[0]*3*d)[:3*d]for i in range(d)for r in g]
+def p(g):d=str(g).count('0');return[(r*(9+d*~i)+[0]*21)[:3*d]for i in range(d)for r in g]
