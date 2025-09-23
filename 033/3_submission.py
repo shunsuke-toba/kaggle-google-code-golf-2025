@@ -1,1 +1,1 @@
-p=lambda g,R=range(17):[[g[r][c]or g[r%6][c%6]and g[5][5]for c in R]for r in R]
+p=lambda g:[[(x,r[5])[x<y]for x,y in zip(r,t[:6]*3)]for r,t in zip(g,g[:6]*3)]
