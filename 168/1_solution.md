@@ -51,6 +51,3 @@
 - i+j==yならそのマスをxで塗る
 - 上、右、右上のマスが全て0でない場合その数字をxとし、y=i+jとする
 - 盤面全体を回転する
-
-### 縮まらなかったコード
-- def p(g): for _ in g*4: x=y=0 for j in range(81):g[i:=j//9+1][j:=j%9]|=x*(i+j==y);x,y=g[i-1][j]*g[i][j+1]*g[i-1][j+1]and(g[i-1][j],i+j)or(x,y) g=[*map(list,zip(*g[::-1]))] return g

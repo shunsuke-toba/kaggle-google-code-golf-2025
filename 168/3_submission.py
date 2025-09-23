@@ -1,6 +1,5 @@
 def p(g):
- for r in range(81):
-  if s:=sorted(v:=g[q:=r//9][(c:=r%9):c+2]+g[q+1][c:c+2])[1]:
-   p=v.index(0)
-   while(c:=c-1+p%2*2)>-1<(q:=q-1+(p&2))<9>c:g[q+p//2][c+p%2]=s
+ for _ in g*4:
+  g=[*map(list,zip(*g[::-1]))];x=y=0
+  for j in range(81):g[i:=j//9+1][j:=j%9]|=x*(i+j==y);x|=g[i][j];y|=(i+j)*(g[i-1][j]*g[i][j+1]*g[i-1][j+1]>0)
  return g
