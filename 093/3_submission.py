@@ -1,1 +1,1 @@
-p=lambda g,i=4:i and p([g:=[*zip(*g[::-1])],[r[:7]+(5,)*(7-(z:=r[7:].count(0)))+(0,)*z for r in g]][5in g[0]],i-1)or g
+p=lambda g,i=4:i and p([g:=[*zip(*g[::-1])],[r[:7]+((5,)*7+(0,)*r[7:].count(0))[-7:] for r in g]][5in g[0]],i-1)or g
