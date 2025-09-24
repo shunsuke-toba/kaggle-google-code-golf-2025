@@ -1,1 +1,1 @@
-p=lambda g:(r:=range(n:=len(g)))and[[3*(min(x,y,n+~x,n+~y)&1==(x==y-1<n-n%4//2-y))for x in r]for y in r]
+def p(g):r=range(n:=len(g));return[[3*(min(x,y,n+~x,n+~y)&1==(x==y-1<n-n%4//2-y))for x in r]for y in r]
