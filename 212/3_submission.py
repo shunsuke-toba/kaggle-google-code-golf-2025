@@ -1,4 +1,4 @@
-def p(g,b=99):
- v=g[r:=b//10][b%10]
- while~r%11*(m:=r-g.index([5]*10))*v:g[r][b%10]=v;r+=v%2^(m<0)or-1
- if b:p(g,b-1);return g
+def p(g,b=99,h=0):
+ v=g[r:=b//10][c:=b%10]
+ while~r%11and(g[r][c]-5)*v:g[r][c]=v;r+=v%2^h or-1
+ if b:p(g,b-1,h|v//3);return g
