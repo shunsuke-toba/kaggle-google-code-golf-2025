@@ -1,1 +1,1 @@
-p=lambda g:(f:=lambda g:sum(zip(g:=[*filter(any,zip(*g))],g),()))(f(g))
+f=lambda g:sum(((c,)*2*any(c)for c in zip(*g)),());p=lambda g:f(f(g))
