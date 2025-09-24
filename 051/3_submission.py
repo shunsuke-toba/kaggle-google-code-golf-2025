@@ -1,6 +1,7 @@
 p=lambda g:exec("""g[:]=map(list,zip(*g[::-1]))
 for r in g:
- y=-1
- for b in r[1:]:
-  if 2>sum(g,[]).count(a:=r[y:=y+1])>b:r[:y]=map({0:a}.get,r[:y],r)
+ i=u=t=0
+ for a in r:
+  if u==a>0:break
+  u|=a*(u<1);t|=u!=a>0;r[i]=a or u*t;i+=1
 """*4)or g
