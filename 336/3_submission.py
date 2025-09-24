@@ -1,1 +1,1 @@
-p=lambda g:exec('g[:]=zip(*[[r[j]or(5in{*r[:j]}&{*r[j:]}or sum(r)%8^5|j//5^(5in r[:5])<1)*8for j in range(10)]for r in g]);'*2)or g
+p=lambda g:exec('g[:]=zip(*[[r[j]or(5in{*r[:j]}&{*r[j:]}or(sum(r)&5>4)>j//5^(5in r[:5]))*8for j in range(10)]for r in g]);'*2)or g
