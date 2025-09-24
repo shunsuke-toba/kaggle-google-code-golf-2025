@@ -5,4 +5,4 @@ def p(g):
  for c in range(len(g[0])):
   for r in range(len(g)):
    if g[r][c]==0:t+=0,;f(r,c)
- return[[2*(c>1)or t[-c-2]//max(t)+min(t)//t[-c-2]*8for c in r]for r in g]
+ return[[2*(c>1)or (t[-c-2]==max(t))+(t[-c-2]==min(t))*8for c in r]for r in g]
