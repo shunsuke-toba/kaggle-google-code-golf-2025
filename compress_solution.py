@@ -28,41 +28,25 @@ def compress_solution(solution_code: str) -> tuple[bytes, bool, int, int]:
     compressed_data = zopfli.zlib.compress(solution_bytes).replace(b'\\',b'\\\\').replace(b'\0',b'\\0').replace(b'\r',b'\\r').replace(b'\n',b'\\n')
 
     # 圧縮データをPythonコードとして埋め込み
-    quote_count = compressed_data.count(b'"') + compressed_data.count(b"'")
 
-    if quote_count >= 6:
-        compressed_data_str = b'"""' + compressed_data + b'"""'
-    elif quote_count >= 2:
-        if b'"' in compressed_data:
-            first_quote_found = False
-            new_data = b''
+    if compressed_data.count(b'"') and compressed_data.count(b"'"):
+        new_data = b''
+        if compressed_data.count(b'"') < compressed_data.count(b"'"):
             for i in range(len(compressed_data)):
-                if compressed_data[i:i+1] == b'"' and not first_quote_found:
-                    first_quote_found = True
-                    new_data += b'"'
-                elif compressed_data[i:i+1] == b'"':
-                    new_data += b'\\"'
-                elif compressed_data[i:i+1] == b"'":
-                    new_data += b"\\'"
-                else:
-                    new_data += compressed_data[i:i+1]
-            compressed_data = new_data
-            compressed_data_str = b"'" + compressed_data + b"'"
-        else:
-            first_quote_found = False
-            new_data = b''
-            for i in range(len(compressed_data)):
-                if compressed_data[i:i+1] == b"'" and not first_quote_found:
-                    first_quote_found = True
-                    new_data += b"'"
-                elif compressed_data[i:i+1] == b"'":
-                    new_data += b"\\'"
-                elif compressed_data[i:i+1] == b'"':
+                if compressed_data[i:i+1] == b'"':
                     new_data += b'\\"'
                 else:
                     new_data += compressed_data[i:i+1]
             compressed_data = new_data
             compressed_data_str = b'"' + compressed_data + b'"'
+        else:
+            for i in range(len(compressed_data)):
+                if compressed_data[i:i+1] == b"'":
+                    new_data += b"\\'"
+                else:
+                    new_data += compressed_data[i:i+1]
+            compressed_data = new_data
+            compressed_data_str = b"'" + compressed_data + b"'"
     elif b'"' in compressed_data:
         compressed_data_str = b"'" + compressed_data + b"'"
     else:
