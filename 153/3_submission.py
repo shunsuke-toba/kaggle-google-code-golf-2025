@@ -1,1 +1,1 @@
-R=range(100);T=-2,-1,0;p=lambda g:next(h for A in R for B in R if all(sum(h:=[[(s:=sum(g,[]))[A+10*i+j]^s[B+10*i+j]for j in T]for i in T],[])))
+T=2,1,0;p=lambda g:next(h for k in range(10000)if all(sum(h:=[[(s:=sum(g,[]))[k//100-10*i-j]^s[k%100-10*i-j]for j in T]for i in T],[])))
