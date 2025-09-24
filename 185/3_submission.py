@@ -1,1 +1,1 @@
-def p(g):f=lambda m:zip(l:=[i for i,x in enumerate(m)if{*x}-{*g[0]}],l[1:]);return[[(v:=g[a][b])*(v==g[a][d]==g[c][b]==g[c][d]!=g[0][b])for b,d in f(zip(*g))]for a,c in f(g)]
+def p(g):f=lambda m:zip(l:=[(i,x)for i,x in enumerate(m)if{*x}-{*g[0]}],l[1:]);return[[A[b]*(A[b]==A[d]==C[b]==C[d]!=B[0])for(b,B),(d,D)in f(zip(*g))]for(a,A),(c,C)in f(g)]
