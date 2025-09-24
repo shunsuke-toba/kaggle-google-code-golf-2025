@@ -1,1 +1,1 @@
-p=lambda g:[[2-2*any(t)for t in r]for r in map(zip,g,g[4:])]
+p=lambda g:[[2-2*any(t)for t in zip(r,g.pop(4))]for r in g]
