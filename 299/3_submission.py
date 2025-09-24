@@ -1,3 +1,2 @@
 def p(g):
- for r in g[2:]:r[:]=[max(r)]*6;r[g[0].index(8)]^=8-r[0]
- return g
+ return [[v+(2-6*(v>0))*(t:=2 in r) for v in g[0]]for r in g]
