@@ -29,28 +29,12 @@ def compress_solution(solution_code: str) -> tuple[bytes, bool, int, int]:
 
     # 圧縮データをPythonコードとして埋め込み
 
-    if compressed_data.count(b'"') and compressed_data.count(b"'"):
-        new_data = b''
-        if compressed_data.count(b'"') < compressed_data.count(b"'"):
-            for i in range(len(compressed_data)):
-                if compressed_data[i:i+1] == b'"':
-                    new_data += b'\\"'
-                else:
-                    new_data += compressed_data[i:i+1]
-            compressed_data = new_data
-            compressed_data_str = b'"' + compressed_data + b'"'
-        else:
-            for i in range(len(compressed_data)):
-                if compressed_data[i:i+1] == b"'":
-                    new_data += b"\\'"
-                else:
-                    new_data += compressed_data[i:i+1]
-            compressed_data = new_data
-            compressed_data_str = b"'" + compressed_data + b"'"
-    elif b'"' in compressed_data:
-        compressed_data_str = b"'" + compressed_data + b"'"
-    else:
+    if compressed_data.count(b'"') < compressed_data.count(b"'"):
+        compressed_data = compressed_data.replace(b'"', b'\\"')
         compressed_data_str = b'"' + compressed_data + b'"'
+    else:
+        compressed_data = compressed_data.replace(b"'", b"\\'")
+        compressed_data_str = b"'" + compressed_data + b"'"
 
     compressed_code = b"import zlib;exec(zlib.decompress(bytes(%s,'L1')))" % compressed_data_str
 
