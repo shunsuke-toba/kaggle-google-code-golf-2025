@@ -1,1 +1,1 @@
-p=lambda g:max(map(f:=lambda n:(s:=(g+[[]])[n//20][n%20:]+[0])[0]and[s[:s.index(0)]]+f(n+20)or[],range(400)),key=lambda s:str(s).count('2'))
+p=lambda g:max(map(f:=lambda n:(s:=(*g,[])[n//20][n%20:]+[0])[0]and[s[:s.index(0)]]+f(n+20)or[],range(400)),key=lambda s:str(s).count('2'))
