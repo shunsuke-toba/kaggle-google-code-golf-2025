@@ -1,1 +1,1 @@
-def p(g):f=lambda m:zip(l:=[(i,x)for i,x in enumerate(m)if{*x}-{*g[0]}],l[1:]);return[[A[b]*(A[b]==A[d]==C[b]==C[d]!=B[0])for(b,B),(d,D)in f(zip(*g))]for(a,A),(c,C)in f(g)]
+def p(g):L=[x for x in g if{*x}-{*g[0]}];C=[c for c in zip(*L)if{*c}-{(l:=max(g[0]))}];return[[B[i]*(B[i]==D[i]==B[i+1]==D[i+1]!=l)for B,D in zip(C,C[1:])]for i in(0,1,2)]
