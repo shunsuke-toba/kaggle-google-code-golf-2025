@@ -1,1 +1,1 @@
-p=lambda g,m=0:g[1:]and[[m+v-(m:=v*(v in g[1][j+1:]))for j,v in enumerate(g[0])]]+p(g[1:])or g
+p=lambda g,m=0:g[1:]and(b:=g[1])and[[m+v-(m:=v*(v in (b:=b[1:])))for v in g[0]]]+p(g[1:])or g
