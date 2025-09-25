@@ -1,1 +1,1 @@
-p=lambda g:len({0,*g[0]})>2and[*zip(*p([*zip(*g)]))]or[[*map(min,*(t for t in g if max(r)in t))]for r in g]
+p=lambda g:len({0,*g[0]})>2and[*zip(*p([*zip(*g)]))]or[[*map(min,*filter({max(r)}.issubset,g))]for r in g]
