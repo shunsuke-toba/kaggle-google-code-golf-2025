@@ -1,1 +1,1 @@
-p=lambda g,r=range(16):min((sum(L:=[{*i[b:d]}=={v}for i in g])*(b-d),[[v*m*(b<=j<d)for j in r]for m in L])for v in r[1:]for b in r for d in r)[1]
+p=lambda g,r=range(16):min((sum(map(sum,L:=[[v*(b<=j<d)*({*i[b:d]}=={v})for j in r]for i in g]))//-v,L)for v in r[1:]for b in r for d in r)[1]
