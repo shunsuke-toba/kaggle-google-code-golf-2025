@@ -1,1 +1,1 @@
-def p(g):t=[2]*sum(2in r for r in g);u=t[2::3];return t,*([2,*r,2]for r in zip(*[c for c in zip(*g)if-3&max(c)for _ in u])if-3&max(r)for _ in u),t
+def p(g):t=[2for r in g if 2in r];u=t[2::3];return t,*([2,*r,2]for r in zip(*[c for c in zip(*g)if-3&max(c)for _ in u])if-3&max(r)for _ in u),t
