@@ -1,1 +1,1 @@
-p=lambda g:[[c+5*(sum(k[i-(i>0):i+2])+d+l>3==c)for c,d,l,*k in zip(r,r[1:]+[0],[0]+r,*g)]for i,r in enumerate(g)]
+p=lambda g:[[c+5*(sum(k[i-(i>0):i+2])+d+l>c>2)for c,d,l,*k in zip(r,r[1:]+[0],[0]+r,*g)]for i,r in enumerate(g)]
