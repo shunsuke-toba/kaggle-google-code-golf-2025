@@ -1,4 +1,5 @@
 def p(g):
- g=sum(g,[]);a=g.index
- while(t:=7>>(3in g))in g:p=a(8%t);k=a(t)-p;g[p+k:p:k//(abs(k)%14)-k]=0,-t
- return*zip(*[map(abs,g)]*15),
+ g=sum(g,[]);i=225
+ while i:
+  if (t:=g[i:=i-1])>2:g[i],k=0,i-g.index(8%t);g[i-k+k//(abs(k)%14)]=t
+ return*zip(*[iter(g)]*15),
