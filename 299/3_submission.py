@@ -1,1 +1,1 @@
-p=lambda g:[[[v,v//4+2][2 in r]for v in g[0]]for r in g]
+p=lambda g:[[(v,v%6+2)[2 in r]for v in g[0]]for r in g]
