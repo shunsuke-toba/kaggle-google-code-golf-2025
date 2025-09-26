@@ -3,5 +3,5 @@ for r in g:
  i=u=t=0
  for a in r:
   if u==a>0:break
-  u|=a*(u<1);t|=u!=a>0;r[i]=a or u*t;i+=1
+  u=u or a;t|=u!=a>0;r[i]=a or u*t;i+=1
 """*4)or g
