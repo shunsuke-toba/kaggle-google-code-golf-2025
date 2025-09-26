@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[v|any(5in s[j-(j>0):j+2]for s in g[i-(i>0):i+2])for j,v in e(r)]for i,r in e(g)]
+p=lambda g,R=range(9):[[g[i][j]|any(5in s[j-(j>0):j+2]for s in g[i-(i>0):i+2])for j in R]for i in R]
