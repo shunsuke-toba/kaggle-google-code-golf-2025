@@ -1,1 +1,1 @@
-p=lambda g:[exec('for x in range(1,11):k=u[x]>r[x]and r.index(r[x-1],x)-x;r[x:x+k]=[k+5]*k')for u,r in zip(g,g[1:])]*0+g
+p=lambda g:[exec('x=10\nwhile x:k=u[x]>r[x]and r.index(r[x-1],x)-x;r[x:x+k]=[k+5]*k;x-=1')for u,r in zip(g,g[1:])]*0+g
