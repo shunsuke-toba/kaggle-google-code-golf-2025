@@ -1,1 +1,1 @@
-p=lambda g,a=sorted(b'	'*4):[[g[i][j]for j in a]for i in a]
+p=lambda g,f=lambda x:sum(zip(*[x[1::2]]*4),()):f([*map(f,g)])
