@@ -1,1 +1,1 @@
-p=lambda g:[[a+b-1&2for a,b in zip(r,g.pop(3))]for r in g]
+p=lambda g:[[r.pop(0)+b-1&2for b in g.pop(3)]for r in g]
