@@ -1,1 +1,1 @@
-p=lambda g,E=enumerate:[[sum({*r[:j:3]}&{*r[j::3]}|{*c[:i:3],c[i]}&{*c[i::3]})for j,c in E(zip(*g))]for i,r in E(g)]
+p=lambda g,E=enumerate:[[sum({*r[:j:3]}&{*r[j::3]}|{*c[i::-3]}&{*c[i::3]})for j,c in E(zip(*g))]for i,r in E(g)]
