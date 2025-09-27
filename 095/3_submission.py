@@ -1,1 +1,1 @@
-p=lambda g,R=range(9):[[g[i][j]|any(5in s[j-(j>0):j+2]for s in g[i-(i>0):i+2])for j in R]for i in R]
+p=lambda g,R=range(9):[[g[i][j]|any(g[(i+k//3-1)%9][(j+k%3-1)%9]for k in R)for j in R]for i in R]
