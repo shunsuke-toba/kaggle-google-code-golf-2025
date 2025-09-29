@@ -1,1 +1,1 @@
-p=lambda g,C=2222096:[(c:=C,C:=C>>9*all(r))and[x|(c:=c>>x%5)&7>>x for x in r]for r in g]
+p=lambda g,C=2222096:[(c:=C,C:=C>>9*all(r))and[x|7>>x&(c:=c>>x%5)for x in r]for r in g]
