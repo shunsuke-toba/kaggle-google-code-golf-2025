@@ -1,1 +1,1 @@
-def p(g):a,w=range(9),len(g[0])-2;return[[{tuple(y==5 for y in u[1::2]):u for x in range((len(g)-2)*w)if min(u:=[g[x//w+i//3][x%w+i%3]for i in a])}[r>2,c>2,c<6,r<6][r%3*3+c%3]for c in a]for r in a]
+def p(g):a,w=range(9),len(g[0])-2;return[[{(*map(5 .__eq__,u[1::2]),):u for x in range((len(g)-2)*w)if min(u:=[g[x//w+i//3][x%w+i%3]for i in a])}[r>2,c>2,c<6,r<6][r%3*3+c%3]for c in a]for r in a]
