@@ -1,1 +1,1 @@
-def p(g):l=max(g[0]);C=[c for c in zip(*(x for x in g if{*x}-{0,l}))if{*c}-{l}];return[[B[i]*(B[i]==D[i]==B[i+1]==D[i+1]!=l)for B,D in zip(C,C[1:])]for i in(0,1,2)]
+def p(g):z={*g[0]};g=[c for c in zip(*(x for x in g if{*x}-z))if{*c}-z];return[[B[i]*(B[i]==D[i]==B[i+1]==D[i+1]!=max(z))for B,D in zip(g,g[1:])]for i in(0,1,2)]
