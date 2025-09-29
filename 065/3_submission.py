@@ -1,1 +1,1 @@
-def p(g):n=len(g)>>1;h=[(r[:n],r[-n:])for r in g];return min(q:=[*zip(*h[:n]),*zip(*h[-n:])],key=q.count)
+p=lambda g:min(q:=[*zip(*(h:=[(r[:(n:=len(g)>>1)],r[-n:])for r in g])[:n]),*zip(*h[-n:])],key=q.count)
