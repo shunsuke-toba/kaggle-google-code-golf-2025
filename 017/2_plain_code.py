@@ -3,18 +3,19 @@ def p(grid):
     h, w = len(g), len(g[0])
 
     # Repeat 8 times
-    for rotation in range(8):
-        # For each pair of rows i and j
-        for i in range(h):
-            for j in range(h):
-                # If g[i][0] and g[j][0] are both non-zero and equal
-                if g[i][0] != 0 and g[j][0] != 0 and g[i][0] == g[j][0]:
-                    # Apply g[j][k] |= g[i][k] for all columns
-                    for k in range(w):
-                        g[j][k] |= g[i][k]
+    for iteration in range(8):
+        # For each row i (0 to 20, when i=0, i-1=-1 which is fine)
+        for i in range(21):
+            # For each pair of columns j and k
+            for j in range(21):
+                for k in range(21):
+                    # If g[i-1][j] and g[i-1][k] are both non-zero and equal
+                    if g[i-1][j] != 0 and g[i-1][k] != 0 and g[i-1][j] == g[i-1][k]:
+                        # Apply g[i][j] |= g[i][k]
+                        g[i][j] |= g[i][k]
 
-        # Rotate 90 degrees
-        g = [[g[h - 1 - j][i] for j in range(h)] for i in range(w)]
+        # Transpose the grid
+        g = [[g[j][i] for j in range(h)] for i in range(w)]
         h, w = w, h
 
     return g
