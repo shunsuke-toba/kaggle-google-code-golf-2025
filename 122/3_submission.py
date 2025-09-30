@@ -1,1 +1,1 @@
-p=lambda g:sum(max(g))>7and[*zip(*p([*zip(*g)]))]or g[-2:][::(-1)**len(g)]+g[:-2]
+p=lambda g:sum(max(g))>7and[*zip(*p([*zip(*g)]))]or g[-2:][::len(g)%-2|1]+g[:-2]
