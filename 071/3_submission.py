@@ -1,1 +1,1 @@
-p=lambda g,a=0:[[(a or{t:=i-r[::-1].index(a:=v)})and a*(v>0<r[~i+t]) for i,v in enumerate(r)]for r in g]
+p=lambda g,a=0:[[(a or{t:=i-r[::-1].index(a:=v)})and a*(v>0<r[~i+t])for i,v in enumerate(r)]for r in g]
