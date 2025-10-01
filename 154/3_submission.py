@@ -1,1 +1,1 @@
-p=lambda g,n=4:n and p([r[:(j:=2>r[3])]+r[j:j+7][::1|-(5in r[:3])]+r[j+7:]for r in zip(*g[::-1])],n-1)or g
+p=lambda g,n=4:n and[r[:(j:=2>r[3])]+r[j:j+7][::1|-(5in r[:3])]+r[j+7:]for r in zip(*p(g,n-1)[::-1])]or g
