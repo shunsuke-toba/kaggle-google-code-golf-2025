@@ -1,1 +1,1 @@
-def p(g):_,o,p={}.fromkeys(sum(g,[]));return[[[x,[p,o][x>0]][0<r.count(o)<4or 0<c.count(o)<4]for x,*c in zip(r,*g)]for r in g]
+def p(g):_,o,p={}.fromkeys(sum(g,[]));return[[[x,(p,o)[x>0]][3in{r.count(o)|1,c.count(o)|1}]for x,*c in zip(r,*g)]for r in g]
