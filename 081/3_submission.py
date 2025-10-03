@@ -1,3 +1,3 @@
 def p(g):
- for y in range(36):x=y%6;y//=6;l=g[y][x:x+2]+g[y+1][x:x+2];i=l.index(0);g[y+i//2][x+i%2]=sum(l)>16
+ for y in range(36):x=y%6;y//=6;a,b=g[y][x:x+2];c,d=g[y+1][x:x+2];g[y+(c!=d)][x+(b!=d)]+=a&d|b&c>7
  return g
