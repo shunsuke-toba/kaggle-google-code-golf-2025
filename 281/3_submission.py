@@ -1,7 +1,10 @@
-p=lambda g:exec('''a=d=0;l=[];e=enumerate
-for y,r in e(g):
- for x,p in e(r):
+p=lambda g:exec('''a=d=y=0;l=[]
+for r in g:
+ x=0
+ for p in r:
   if p:l or(c:=x);a=a or~y;b=y;d=max(d,x);l+={p}-{8,*l}
+  x+=1
+ y+=1
 y=~a
 while b>=y:
  x=c
