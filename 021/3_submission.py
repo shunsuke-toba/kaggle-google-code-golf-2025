@@ -1,1 +1,1 @@
-p=lambda g,q=lambda x:-~min(map(x.count,x)):[g[0][:1]*q(g[0])]*q(g)
+p=lambda g,q=lambda x:x[:1]*-~min(map(x.count,x)):q([*map(q,g)])
