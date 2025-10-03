@@ -1,1 +1,1 @@
-p=lambda g:(f:=lambda g:[[r[j]or(0<sum(r[:j])<sum(r)or sum(r)&5>j//5^(5in r[:5])+4)*8for r in g]for j in range(10)])(f(g))
+s=sum;f=lambda g:[[r[j]or(0<s(r[:j])<s(r)or s(r)&5>j//5^(5in r[:5])|4)*8for r in g]for j in range(10)];p=lambda g:f(f(g))
