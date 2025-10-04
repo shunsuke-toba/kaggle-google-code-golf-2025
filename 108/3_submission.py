@@ -1,1 +1,1 @@
-p=lambda g,f=lambda x:sum(zip(*[x[1::2]]*4),()):f([*map(f,g)])
+p=lambda g:g[1:]and[sum(zip(*[g[1][1::2]]*4),())]*4+p(g[2:])
