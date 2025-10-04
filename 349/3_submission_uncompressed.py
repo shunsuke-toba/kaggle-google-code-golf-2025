@@ -1,5 +1,5 @@
 def p(g):
- o=eval(str(g));n=len(g)
+ o=[r[:]for r in g];n=len(g)
  for m in range(n*n):
   if(u:=g[i:=m//n])[j:=m%n]>g[i-1][j]*i|u[j-1]*j:
    while i<n and g[i][j]:i+=1;d=j
