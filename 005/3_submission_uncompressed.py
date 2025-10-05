@@ -5,7 +5,7 @@ def p(c):
  for d in-4,0,4:
   for e in-4,0,4:
    v=max(c[a+d+i][b+e+j]for i in range(3)for j in range(3));y,x=a,b
-   for _ in c:
+   for j in c:
     y+=d;x+=e
     for i in range(3):
      for j in range(3):
