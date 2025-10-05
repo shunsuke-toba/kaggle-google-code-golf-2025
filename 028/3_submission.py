@@ -1,1 +1,1 @@
-p=lambda g:[[k:=max(g[r-r%5|2]),*[k*(4*r%7<2)]*8,k]for r in range(10)]
+p=lambda g:[[k:=max(g[c&7]),*[k*(c&8>0)]*8,k]for c in b":2:2277?7?"]
