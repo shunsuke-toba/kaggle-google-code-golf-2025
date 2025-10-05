@@ -1,1 +1,1 @@
-def p(g):f=filter;*g,=zip(*f(sum,zip(*f(sum,g))));return[[x&y for x in r for y in s]for r in g for s in g]
+p=lambda g:exec("g[:]=zip(*filter(sum,g));"*2)or[[x&y for x in r for y in s]for r in g for s in g]
