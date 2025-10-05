@@ -1,1 +1,1 @@
-def p(g):m=min(g:=sum(g,[]),key=g.count);return*zip(*[(7172>>abs(j-g.index(m))&2|m*(g[j]==m)for j in range(100))]*10),
+p=lambda g:(*zip(*[(7172>>abs(j-(h:=sum(g,[])).index(m:=min(h,key=h.count)))&2|m*(h[j]==m)for j in range(100))]*10),)
