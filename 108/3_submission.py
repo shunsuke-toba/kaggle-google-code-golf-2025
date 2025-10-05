@@ -1,1 +1,1 @@
-p=lambda g:g[1:]and[sum(zip(*[g[1][1::2]]*4),())]*4+p(g[2:])
+p=lambda g:g and[sum(zip(*[g[1][1::2]]*4),())]*4+p(g[2:])
