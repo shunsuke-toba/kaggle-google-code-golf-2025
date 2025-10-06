@@ -1,1 +1,1 @@
-p=lambda g,h=lambda g:[((s:=0)or[max(v,(s:=s^v//8)*3)for v in r],r)[s]for r in zip(*g)]:h(h(g))
+p=lambda g,h=lambda g:[((s:=0)or[v|(s:=s^v//8)*3>>v for v in r],r)[s]for r in zip(*g)]:h(h(g))
