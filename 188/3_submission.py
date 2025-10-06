@@ -1,1 +1,1 @@
-p=lambda g:((a:=g[:len(g)//2])*2==g>g[:3])*a or[*map(p,g)]
+p=lambda g:(a:=g[:len(g)//2])*(a*2==g>g[:2])or[*map(p,g)]
