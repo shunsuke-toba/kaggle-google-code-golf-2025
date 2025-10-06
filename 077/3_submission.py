@@ -1,1 +1,1 @@
-p=lambda g,n=24:n and p([*zip(*map(lambda a,r:map(lambda c,l,n,u:(c,4)[20>>l&(20>>n|20>>u)&(c!=2)],r,[0,*r],[*r[1:],0],a),g[:1]+g,g))][::-1],n-1)or g
+p=lambda g:exec("g[:]=[*zip(*map(lambda a,r:map(lambda c,l,n,u:(c,4)[20>>l&(20>>n|20>>u)&(c!=2)],r,[0,*r],[*r[1:],0],a),g[:1]+g,g))][::-1];"*24)or g
