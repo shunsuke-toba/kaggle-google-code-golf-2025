@@ -1,1 +1,1 @@
-p=lambda g:(h:=[8]*len(g[0]),*([8,*b,8]for a,*b,c in g[1:-1]),h)
+p=lambda g:[h:=[8]*len(g[0]),*[[8,*g[1][1:-1],8]]*(len(g)-2),h]
