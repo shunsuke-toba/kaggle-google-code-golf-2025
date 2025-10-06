@@ -1,5 +1,5 @@
 def p(g):
  for r in range(81):
   c=r%9;r//=9;v=g[r][c:c+2]+g[r+1][c:c+2];p=v.index(0)
-  while 0<=(r:=r-1+(p&2))<9>(c:=c-1+p%2*2)>=0<v.count(0)<2:g[r+p//2][c+p%2]=v[~p]
+  while-1<(r:=r-1+(p&2))<9>(c:=c-1+p%2*2)>-1<v.count(0)<2:g[r+p//2][c+p%2]=v[~p]
  return g
