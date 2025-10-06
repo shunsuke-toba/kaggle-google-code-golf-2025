@@ -9,7 +9,11 @@ def p(g):
       for b in -1,0,1:
        if v:=o[(y+a)%n][(x+b)%n]:
         if v==c:o[(y+a)%n][(x+b)%n]=0;q+=((y+a)%n,(x+b)%n),
-        elif a*b==0:u,w=y,x
+    for y,x in q:
+     for a in -1,0,1:
+      for b in -1,0,1:
+       if v:=o[(y+a)%n][(x+b)%n]:
+        if a*b==0:u,w=y,x
     for y,x in q:
      for a in -1,0,1:
       for b in -1,0,1:
