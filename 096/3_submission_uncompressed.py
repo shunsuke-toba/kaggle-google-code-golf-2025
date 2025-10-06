@@ -1,6 +1,6 @@
 def p(g):
- import re;C=sum(g,[]).count;b=max(sum(g,[]),key=C);L=[]
- for R in{*sum(g,[])}-{b}:
+ import re;f=sum(g,[]);C=f.count;b=max(f,key=C);L=[]
+ for R in{*f}-{b}:
   s=str(R);c=1+2*(C(R)>1);y=c,R,c
   for n in range(128):w=n//32+2;d=n%7+1;y=any(re.search(s*w+f"[^{s}]"*d+s,str(R)[1::3])for R in g)and(2*w+d,R,w)or y;g=[*map(list,zip(*g[::-1]))]
   L+=y,
