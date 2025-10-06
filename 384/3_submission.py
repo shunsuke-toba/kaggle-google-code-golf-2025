@@ -1,1 +1,1 @@
-f=lambda g:sum(((c,c)*any(c)for c in zip(*g)),());p=lambda g:f(f(g))
+p=lambda g,n=0:sum(((c,c)*any(c)for c in zip(*(n*g or p(g,1)))),())
