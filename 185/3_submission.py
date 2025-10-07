@@ -1,3 +1,3 @@
 def p(g):
  for z in[{*g[0]}]*2:g=[c for c in zip(*g)if{*c}-z]
- return[[a*(a==b==c==d!=max(z))for a,b,c,d in zip(B,B[1:],D,D[1:])]for B,D in zip(g,g[1:])]
+ return[[B[j]*(B[j]==B[j+1]==D[j]==D[j+1]!=max(z))for j in(0,1,2)]for B,D in zip(g,g[1:])]
