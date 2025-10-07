@@ -1,1 +1,1 @@
-def p(g):R=range(10);f=lambda x,y:x//10|y//10or g[x][y]^5or{t:=(x,y)}&v or[(v.add(t),f(x+d,y),f(x,y+d))for d in(-1,1)];return[[g[i][j]%2+(v:={0},f(i,j),len(v)==7)[2]for j in R]for i in R]
+p=lambda g,t=40,e=8:t and p([*zip(*[[(t<2<v)*((v.bit_count()==8)+1)or v and v|n|(v<6)*(e:=e*2)for v,n in zip(R,(0,*R))]for R in g[::-1]])],t-1)or g
