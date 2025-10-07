@@ -1,1 +1,1 @@
-p=lambda g,p=[0]*9:[p:=[r[i]and(p[i]or-~max(p))for i in range(9)]for r in g]
+p=lambda g,p=[0]*9:[p:=[y and(x or-~max(p))for x,y in zip(p,r)]for r in g]
