@@ -1,1 +1,1 @@
-def p(g):a=sum(g,[]);d=a.count;d=d(c:=min(a,key=d))//4+1;return[a[a.index(c)+len(g)*r:][:d]for r in range(d)]
+def p(g):a=sum(g,[]);d=a.count;c=min(a,key=d);return[r[r.index(c):][:d(c)//4+1]for r in g if c in r]
