@@ -1,1 +1,1 @@
-p=lambda g,F=lambda M:[max(M[i%10::10])for i in range(len(M))]:[*map(F,F(g))]
+p=lambda g:[*map(F:=lambda M:[max(M[i%10::10])for i in range(len(M))],F(g))]
