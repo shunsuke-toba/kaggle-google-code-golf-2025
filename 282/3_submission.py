@@ -1,1 +1,1 @@
-p=lambda g:[g[n//9+k//3].__setitem__(n%9+k%3,k&1or(k!=4)*5)for n,v in enumerate(sum(g,[]),~9)for k in range(9)if v]*0+g
+p=lambda g:[g[(m:=n+(k//6))//9].__setitem__(m%9,k%6)for n,v in enumerate(sum(g,[]),~9)for k in b'7<Cqs}'if v]*0+g
