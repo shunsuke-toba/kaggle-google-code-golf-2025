@@ -1,1 +1,1 @@
-p=lambda g:[[*map(max,*((t,r)[max(0<a!=b>0for a,b in zip(r,t))]for t in g))]for r in g]
+p=lambda g:[[*map(max,*(r*max(0<a!=b>0for a,b in zip(r,t))+t for t in g))]for r in g]
