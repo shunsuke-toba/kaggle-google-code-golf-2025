@@ -12,5 +12,5 @@ def p(g):
  for t in e:
   if t in o:
    i,v=e[t]
-   for w in t:r[i+w],r[o[t]+w]=0,v
+   for k in t:r[i+k],r[o[t]+k]=0,v
  return*zip(*[iter(r)]*10),
