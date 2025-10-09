@@ -1,1 +1,1 @@
-def p(g):a=sum(g,[]);d=a.count;c=min(a,key=d);return[r[r.index(c):][:d(c)//4+1]for r in g if c in r]
+p=lambda g:[r[r.index(c):][:d(c)//4+1]for r in g if(c:=min(a:=sum(g,[]),key=(d:=a.count)))in r]
