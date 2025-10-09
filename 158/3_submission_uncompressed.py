@@ -1,5 +1,5 @@
 def p(g,t=0):
- while len({*(f:=sum(p:=[r[t//-~len(g[0]):][:3]for r in g[t%-~len(g[0]):][:3]],[]))})<4:t+=1
+ while len(set(f:=sum(p:=[r[t//-~len(g[0]):][:3]for r in g[t%-~len(g[0]):][:3]],[])))<4:t+=1
  c=f.count
  for _ in range(4):
   for m in 3,2,1:
