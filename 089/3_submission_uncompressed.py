@@ -7,5 +7,5 @@ def p(g):
   for s in a:
    i,j=s
    for v,x,y in b:
-    if v==c:g[i+x][j+y*(s==t or k-2 or-1)]=c
+    if v==c:g[i+x][j+y*(k-2 or s==t or-1)]=c
  return g
