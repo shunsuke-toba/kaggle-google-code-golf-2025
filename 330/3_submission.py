@@ -1,1 +1,1 @@
-p=lambda g,t=24,e=8:t and p([*zip(*[[[(0<v)*-~(v.bit_count()==8),v|n|(6>v)*(e:=e*2)][t*v>v]for v,n in zip(R,(0,*R))]for R in g[::-1]])],t-1)or g
+p=lambda g,t=24,e=8:t and p([*zip(*[[v and((2>t)<<(v.bit_count()==8)or v|n|(6>v)*(e:=e*2))for v,n in zip(R,(0,*R))]for R in g[::-1]])],t-1)or g
