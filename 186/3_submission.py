@@ -1,1 +1,1 @@
-p=lambda g,z=[0]*3:((s:=[2]*sum(sum(g,z))+z)[:3],[0,s[3],0],z)
+p=lambda g:((s:=[2]*sum(sum(g,z:=[0]*3))+z)[:3],[0,s[3],0],z)
