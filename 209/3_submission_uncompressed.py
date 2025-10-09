@@ -10,7 +10,7 @@ def p(g):
   for Y in range(a,b):
    for X in range(c,d):
     try:
-     for y,x,v in l:g[e+(y-Y)//k][i+(x-X)//k]-v and 1/0
+     for y,x,v in l:1/(g[e+(y-Y)//k][i+(x-X)//k]==v)
      for y,x,v in m:
       for r in range(k):
        for o in range(k):g[Y+(y-e)*k+r][X+(x-i)*k+o]=v
