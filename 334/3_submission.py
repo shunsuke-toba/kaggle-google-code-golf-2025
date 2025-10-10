@@ -1,1 +1,1 @@
-b=0,5,0;c=0,0,5;p=lambda g:(c,b,a:=[5]*3,c,a,b,a,b,b)[max(max(g))%3::3]
+u=(0,5,0),[5]*3,(0,0,5);p=lambda g:(u[d:=max(max(g))-1],u[1-d],u[d>1])
