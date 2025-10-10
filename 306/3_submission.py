@@ -1,1 +1,1 @@
-p=lambda g:g if g*0==0 else[p(max(g[i%10::10]))for i in range(len(g))]
+p=lambda g:g*0!=0and[p(max(g[i%10::10]))for i in range(len(g))]or g
