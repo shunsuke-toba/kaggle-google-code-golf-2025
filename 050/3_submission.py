@@ -1,1 +1,1 @@
-p=lambda g,h=lambda g:[((s:=0)or[v|(s:=s^v//8)*3>>v for v in r],r)[s]for r in zip(*g)]:h(h(g))
+p=lambda g,h=lambda g:[(s:=0,[v|(s:=s^v//8)*3>>v for v in r],r)[1+s]for r in zip(*g)]:h(h(g))
