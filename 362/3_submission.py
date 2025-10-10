@@ -1,1 +1,1 @@
-p=lambda g:[r[(d:=g.count(g[0])):9]+r[:1]*-~d for r in g*2][~d-9:-d]
+p=lambda g:[r[(d:=g.count(g[0])):9]+-~d*r[:1]for r in g*2][~d-9:-d]
