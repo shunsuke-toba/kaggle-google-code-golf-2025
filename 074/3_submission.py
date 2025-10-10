@@ -1,3 +1,3 @@
 def p(g):
- for k in range(1900):r[j]=(r:=g[i:=k%30])[j:=k%31%30]%9|g[j][i]%9|r[1-j]*(j>1)%9
+ for k in range(2200):g[i][j]=min(g[j:=k%31%30][i:=k%30],g[i][j^(j>1)*31])
  return g
