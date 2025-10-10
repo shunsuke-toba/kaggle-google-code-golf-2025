@@ -1,4 +1,4 @@
 def p(g):
- s,e=map(sum(g,[]).index,(2,8));w=len(g[0])
- while(s:=s+((e%w>s%w)-(e%w<s%w)or(w,-w)[e<s]))-e:g[s//w][s%w]=4
+ s,e=map(sum(g,[]).index,(8,2));w=len(g[0])
+ while(s:=s+(-1,1)[e>s]*(w,1)[not e//w-s//w])-e:g[s//w][s%w]=4
  return g
