@@ -1,1 +1,4 @@
-p=lambda g,r=range(9):(f:=lambda i,j,c=1:-1<i<10>j>=0<g[i][j]!=c and(g[i].__setitem__(j,c)or-~sum(f(i+s//3-1,j+s%3-1,c)for s in r)))(*min((f(i,j)or 17,i,j)for i in r for j in r)[1:],2)and g
+def p(g,r=range(9)):
+ def f(i,j,c=1):
+  if-1<i<10>j>=0<g[i][j]!=c:g[i][j]=c;return-~sum(f(i+s//3-1,j+s%3-1,c)or-0for s in r)
+ f(*min((f(i,j)or 17,i,j)for i in r for j in r)[1:],2);return g
