@@ -1,1 +1,3 @@
-p=lambda g,R=range(30):[[min(min(g[a][b],g[b][a])for a in(y,31^y)for b in(x,31^x)if a<30>b)for x in R]for y in R]
+def p(g):
+ for k in range(9999):i=k%30;j=k%31%30;g[i][j]=g[j][i]%9|g[i][1-j]*(j>1)%9|g[i][j]%9
+ return g
