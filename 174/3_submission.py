@@ -1,1 +1,1 @@
-p=lambda g,f=filter:min([*zip(*t)]for c in sum(g,[])if(t:=[*f(a:={c}.issubset,zip(*f(a,g)))])==t[::-1])
+p=lambda g,f=filter:{(t:=[*f(a:={c}.issubset,zip(*f(a,g)))])==t[::-1]:[*zip(*t)]for c in sum(g,[])}[1]
