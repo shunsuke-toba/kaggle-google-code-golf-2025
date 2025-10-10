@@ -1,3 +1,1 @@
-def p(g):
- for k in range(2200):g[i][j]=min(g[j:=k%31%30][i:=k%30],g[i][j^(j>1)*31])
- return g
+k=0;p=lambda g:exec("k+=1;g[i][j]=min(g[j:=k%31%30][i:=k%30],g[i][j^(j>1)*31]);"*2200)or g
