@@ -1,1 +1,1 @@
-p=lambda g,f=filter:{(t:=[*f(a:={c}.issubset,zip(*f(a,g)))])==t[::-1]:[*zip(*t)]for c in sum(g,[])}[1]
+def p(g,n=1,_=filter):a={n}.issubset;t=[*_(a,zip(*_(a,g)))];return t==t[::-1]and[*zip(*t)]or p(g,n+1)
