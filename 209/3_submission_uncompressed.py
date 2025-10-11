@@ -1,8 +1,10 @@
 def p(g):
  l=m=();i=a=e=99
- for y,Y in enumerate(g):
-  for x,v in enumerate(Y):
-   if v&4:b=y;d=x;a>y and(a:=y,c:=x)
+ for y,r in enumerate(g):
+  for x,v in enumerate(r):
+   if v&4:
+    b=y;d=x
+    if a>y:a=y;c=x
    elif v>0<b>a:m+=(y,x,v),;e=min(e,y);i=min(i,x)
    elif v:l+=(y,x,v),
  for k in range(1,5):
