@@ -1,5 +1,5 @@
 def p(g):
- l=m=();i=a=e=99
+ i=e=a=99;l=m=()
  for y,r in enumerate(g):
   for x,v in enumerate(r):
    if v&4:
@@ -13,7 +13,6 @@ def p(g):
     try:
      for y,x,v in l:1/(g[e+(y-p)//k][i+(x-q)//k]==v)
      for y,x,v in m:
-      for r in range(k):
-       for o in range(k):g[p+(y-e)*k+r][q+(x-i)*k+o]=v
+      for r in range(k*k):g[p+(y-e)*k+r//k][q+(x-i)*k+r%k]=v
      return[g[p][c:d+1]for p in range(a,b+1)]
     except:0
