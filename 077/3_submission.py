@@ -1,1 +1,1 @@
-p=lambda g:exec("g[:]=zip(*[[(c,4)[20>>l&(20>>n|20>>u)&(c!=2)]for c,l,n,u in zip(r,[0,*r],[*r[1:],0],a)][::-1]for a,r in zip(g[:1]+g,g)]);"*24)or g
+p=lambda g:exec("g[:]=zip(*map(lambda a,r:[(c,4)[20>>l&(20>>n|20>>u)&(c!=2)]for c,l,n,u in zip(r,[0,*r],[*r[1:],0],a)][::-1],g[:1]+g,g));"*24)or g
