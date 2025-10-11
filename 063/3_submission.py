@@ -1,1 +1,1 @@
-p=lambda g:[[v or+3^3*any(r[1:-1])*any(c)for v,_,*c,_ in zip(r,*g)]for r in g]
+p=lambda g:[[v or+3>>any(r[1:-1])*max(c)for v,_,*c,_ in zip(r,*g)]for r in g]
