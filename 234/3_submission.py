@@ -1,3 +1,1 @@
-def p(g):
- for s in[{0}]*4:[sum(r)*2<max(r)*len(s:=s|{*r})and(g:=g+g[:1]).remove(r)for r in g];*g,=zip(*g[::-1])
- return g
+p=lambda g:[g:=[*zip(*(g[:1]*11+[r for r in g if r.count(max(next(filter(any,g))))!=1])[-len(g):])][::-1]for _ in g][3]
