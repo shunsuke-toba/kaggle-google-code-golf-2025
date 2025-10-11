@@ -1,6 +1,6 @@
 def p(g):
- d=min(i for i,r in enumerate(g)for j,v in enumerate(r)if v==8)
  e=min(j for i,r in enumerate(g)for j,v in enumerate(r)if v==8)
+ d=min(i for i,r in enumerate(g)for j,v in enumerate(r)if v==8)
  a=min(i for i,r in enumerate(g)for j,v in enumerate(r)if v%8)
  c=min(j for i,r in enumerate(g)for j,v in enumerate(r)if v%8)
  s=[(n:=i-d,j-e)for i,r in enumerate(g)for j,v in enumerate(r)if v==8]
