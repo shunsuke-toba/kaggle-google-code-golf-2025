@@ -1,1 +1,1 @@
-def p(g,n=1,_=filter):a={n}.issubset;t=[*_(a,zip(*_(a,g)))];return t==t[::-1]and[*zip(*t)]or p(g,n+1)
+p=lambda g,n=1,_=filter:(t:=[*_((a:={n}.issubset),zip(*_(a,g)))])==t[::-1]and[*zip(*t)]or p(g,n+1)
