@@ -5,7 +5,10 @@ def p(g):
    if v&4:
     b=y;d=x
     if a>y:a=y;c=x
-   elif v>0<b>a:m+=(y,x,v),;e=min(e,y);i=min(i,x)
+   elif v>0<b>a:
+    m+=(y,x,v),
+    if e>y:e=y
+    if i>x:i=x
    elif v:l+=(y,x,v),
  for k in range(1,5):
   for p in range(a,b):
@@ -13,6 +16,7 @@ def p(g):
     try:
      for y,x,v in l:1/(g[e+(y-p)//k][i+(x-q)//k]==v)
      for y,x,v in m:
-      for r in range(k*k):g[p+(y-e)*k+r//k][q+(x-i)*k+r%k]=v
+      for r in range(k):
+       for s in range(k):g[p+(y-e)*k+r][q+(x-i)*k+s]=v
      return[g[p][c:d+1]for p in range(a,b+1)]
     except:0
