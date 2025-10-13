@@ -1,3 +1,1 @@
-def p(g):
- *g,=filter(sum,zip(*g));n=6+2*(g[6:]!=g[:-6])
- return*zip(*(g[:n]*5)[:15]),
+def p(g):*g,=filter(sum,zip(*g));return*zip(*(g[:6+2*(g[6:]!=g[:-6])]*3)[:15]),
