@@ -1,1 +1,1 @@
-def p(g):R=range(11);i,k=divmod(sum(g,[]).index(4),11);return[[5*(g[y][x]==5)or g[i&-4|y&3][k&-4|x&3]*(y^i%4*4<3>x^k%4*4)for x in R]for y in R]
+def p(g):R=range(11);i,k=divmod(sum(g,[]).index(4),11);return[[5*(g[y][x]==5)or(y^i%4*4<3>x^k%4*4)*g[i&-4|y&3][k&-4|x&3]for x in R]for y in R]
