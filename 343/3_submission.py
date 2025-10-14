@@ -1,1 +1,1 @@
-def p(g):*g,=filter(sum,zip(*g));return*zip(*(g[:6+2*(g[6:]!=g[:-6])]*3)[:15]),
+p=lambda g:[(r[:6+2*(r[:4]in(r[4:8],r[8:12]))]*3)[:15]for r in g]
