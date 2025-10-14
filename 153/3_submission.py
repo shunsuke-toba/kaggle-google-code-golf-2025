@@ -1,1 +1,1 @@
-p=lambda g:next((h[:3],h[3:6],h[6:])for k in range(9999)if(s:=sum(g,[]))and all(h:=[s[k//100-d]^s[k%100-d]for d in b'\n\0']))
+p=lambda g:next((h[:3],h[3:6],h[6:])for k in range(9999)if min(h:=[(s:=sum(g,[]))[k//100-d]^s[k%100-d]for d in b'\n\0']))
