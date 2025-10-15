@@ -1,1 +1,1 @@
-p=lambda g:[max((c>0,r.count(c)*sum(c in q for q in g),c)for r in g for c in r)[2:]*2]*2
+p=lambda g:[max((r.count(c)*sum(0<c in q for q in g),c)for r in g for c in r)[1:]*2]*2
