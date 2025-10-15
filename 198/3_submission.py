@@ -1,1 +1,1 @@
-p=lambda g,S="[*zip(*[[c or(%s)for c,v in zip(r,(0,*r))]for r in ":eval(S%3+S%"v&-v&4"*59+S%"any(r[:2])*4"*4+"g"+"[::-1]])]"*64)
+p=lambda g:[g:=[*zip(*[[c or(3,v&-v&4,any(r[:2])*4)[t]for c,v in zip(r,(0,*r))]for r in g[::-1]])]for t in[2]*4+[1]*59+[0]][-1]
