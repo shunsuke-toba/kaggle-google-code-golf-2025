@@ -1,4 +1,1 @@
-def p(g,*b):
- for a in g:
-  if b==(b:=a):y=0;a[:]=[y:=x&~y for x in a]
- return g
+p=lambda g,b=():[b==(b:=a)and(b:=(y:=0)or[y:=x&~y for x in a])or a for a in g]
