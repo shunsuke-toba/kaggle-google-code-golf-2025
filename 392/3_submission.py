@@ -1,1 +1,1 @@
-p=lambda g,R=range(10):[o for s in(2,3)for r in R for c in R if(o:=[[[5,max(a:=sum(g,[]))][max(i-r+2-s,r-i,j-c+2-s,c-j)%s&1]for j in R]for i in R])if(max(a),5)not in zip(a,sum(o,[]))][0]
+p=lambda g,R=range(10):[o for s in(2,3)for r in R for c in R if(m:=max(a:=sum(g,[])),5)not in zip(a,sum(o:=[[[5,m][max(i-r+2-s,r-i,j-c+2-s,c-j)%s&1]for j in R]for i in R],[]))][0]
