@@ -1,1 +1,1 @@
-p=lambda g:[*map(l:=lambda*r,c=0:[(c:=c^x)|x for x in r],*[l(*(sum({*r}&{*c})for r in g))for c in zip(*g)])]
+p=lambda g:[*map(l:=lambda*r,c=0:[(c:=c^x)|x for x in r],*map(lambda*c:l(*(sum({*r}&{*c})for r in g)),*g))]
