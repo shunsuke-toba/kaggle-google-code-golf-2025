@@ -15,7 +15,10 @@ google-code-golf-2025
 ├── verify.all（全てのsubをテストした上でスコアを計算）
 ├── list.py（subが未実装のファイルの一覧を取得）
 ├── generate_testcases.py（テストケースのテキストファイルを生成するためのスクリプト）
-└── generate_submission.py（提出用のフォルダを生成するためのスクリプト）
+├── generate_submission.py（提出用のフォルダを生成するためのスクリプト）
+├── compress_solution.py（zlib圧縮によるコード最適化）
+├── optimize_variables.py（ランダム探索による変数名最適化）
+└── optimize_and_compress.py（変数名最適化 + 圧縮の統合ツール）
 ```
 
 ## テストケースの色付き表示方法

@@ -1,16 +1,16 @@
-def p(g):
- for a in range(26):
-  for b in range(26):
-   v=[g[a+c//5][b+c%5]for c in range(25)]
-   if v==v[::-1]and len({*v})>2:
-    for c in range(25):g[a+c//5][b+c%5]=v[0]
-    for a,b in[(a,b)for a in range(26)for b in range(26)if g[a+2][b+2]==v[12]]:
-     for c in 1,-1:
-      x,y=a+2,b+2;w=v[12+10*c]
-      while w!=v[0]!=g[x][y]:g[x][y]=w;x+=c
-     for c in 1,-1:
-      x,y=a+2,b+2;w=v[12+2*c]
-      while w!=v[0]!=g[x][y]:g[x][y]=w;y+=c
-     for c in range(25):
-      if v[c]!=v[0]!=g[a+c//5][b+c%5]:g[a+c//5][b+c%5]=v[c]
-    return g
+def p(w):
+ for i in range(26):
+  for n in range(26):
+   t=[w[i+e//5][n+e%5]for e in range(25)]
+   if t==t[::-1]and len({*t})>2:
+    for e in range(25):w[i+e//5][n+e%5]=t[0]
+    for i,n in[(i,n)for i in range(26)for n in range(26)if w[i+2][n+2]==t[12]]:
+     for e in 1,-1:
+      h,f=i+2,n+2;r=t[12+10*e]
+      while r!=t[0]!=w[h][f]:w[h][f]=r;h+=e
+     for e in 1,-1:
+      h,f=i+2,n+2;r=t[12+2*e]
+      while r!=t[0]!=w[h][f]:w[h][f]=r;f+=e
+     for e in range(25):
+      if t[e]!=t[0]!=w[i+e//5][n+e%5]:w[i+e//5][n+e%5]=t[e]
+    return w
