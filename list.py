@@ -5,7 +5,7 @@ for i in range(1, 401):
     src = f"{i:03}/3_submission.py"
     if os.path.exists(src):
         # 中身が書かれているか
-        with open(src, 'r') as f:
+        with open(src, 'rb') as f:
             content = f.read()
         if len(content) <= 1:
             print(f"{i:03d} : unsolved")
