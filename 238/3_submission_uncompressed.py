@@ -1,9 +1,9 @@
-def p(g):
- e=min(j for i,r in enumerate(g)for j,v in enumerate(r)if v==8)
- d=min(i for i,r in enumerate(g)for j,v in enumerate(r)if v==8)
- a=min(i for i,r in enumerate(g)for j,v in enumerate(r)if v%8)
- c=min(j for i,r in enumerate(g)for j,v in enumerate(r)if v%8)
- s=[(n:=i-d,j-e)for i,r in enumerate(g)for j,v in enumerate(r)if v==8]
- g=[r[c:c+n+3]for r in g[a:a+n+3]];t=g[-1][1],g[1][0],g[1][-1],g[0][1]
- for i,j in s:g[i+1][j+1]=(i-j)*(i+j-n)and t[(i<j)*2+(i+j<n)]or 8
- return g
+def p(r):
+ m=min(f for a,r in enumerate(r)for f,u in enumerate(r)if u==8)
+ n=min(a for a,r in enumerate(r)for f,u in enumerate(r)if u==8)
+ a=min(a for a,r in enumerate(r)for f,u in enumerate(r)if u%8)
+ t=min(f for a,r in enumerate(r)for f,u in enumerate(r)if u%8)
+ u=[(e:=a-n,f-m)for a,r in enumerate(r)for f,u in enumerate(r)if u==8]
+ r=[r[t:t+e+3]for r in r[a:a+e+3]];t=r[-1][1],r[1][0],r[1][-1],r[0][1]
+ for a,f in u:r[a+1][f+1]=(a-f)*(a+f-e)and t[(a<f)*2+(a+f<e)]or 8
+ return r

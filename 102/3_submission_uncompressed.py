@@ -1,7 +1,7 @@
-def p(g):
- for a in range(11):
-  for b in range(11):
-   for c in range(11):
-    if sum(sum(r[c:c+a+2])for r in g[b:b+a+2])-20*a-20==sum(sum(r[c+1:c+a+1])for r in g[b+1:b+a+1])==0:
-     for r in g[b+1:b+a+1]:r[c+1:c+a+1]=[2]*a
- return g
+def p(b):
+ for q in range(11):
+  for o in range(11):
+   for p in range(11):
+    if sum(sum(s[p:p+q+2])for s in b[o:o+q+2])-20*q-20==sum(sum(s[p+1:p+q+1])for s in b[o+1:o+q+1])==0:
+     for s in b[o+1:o+q+1]:s[p+1:p+q+1]=[2]*q
+ return b

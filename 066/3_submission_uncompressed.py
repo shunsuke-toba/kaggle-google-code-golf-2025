@@ -1,9 +1,9 @@
-def p(g):
- n=len(g);(a,b),(c,d)=[(y,x)for y in range(n)for x in range(n)if g[y][x]&1]
- def f(a,b,c,d,t,u=0):
-  if n>(y:=a+c)>-1<(x:=b+d)<n:
-   if g[y][x]==2:return g[y][x]
-   if g[y][x]^8 and f(y,x,c,d,t,1):g[y][x]=3;return g[y][x]
-   if u and g[y][x]*t>7:return f(a,b,d,-c,t-1,u)or f(a,b,-d,c,t-1,u)
- f(a,b,a-c,b-d,2)or f(c,d,c-a,d-b,2)
- return g
+def p(o):
+ n=len(o);(a,r),(c,d)=[(e,q)for e in range(n)for q in range(n)if o[e][q]&1]
+ def f(a,r,c,d,t,u=0):
+  if n>(e:=a+c)>-1<(q:=r+d)<n:
+   if o[e][q]==2:return o[e][q]
+   if o[e][q]^8 and f(e,q,c,d,t,1):o[e][q]=3;return o[e][q]
+   if u and o[e][q]*t>7:return f(a,r,d,-c,t-1,u)or f(a,r,-d,c,t-1,u)
+ f(a,r,a-c,r-d,2)or f(c,d,c-a,d-r,2)
+ return o

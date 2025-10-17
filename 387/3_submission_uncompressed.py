@@ -1,6 +1,6 @@
-def p(g):
- (a,c,e),(a,d,f),(b,c,_),(b,d,_)=p=[(i,j,v)for i,r in enumerate(g)for j,v in enumerate(r)if v]
- for i in range(c,d+1):g[a][i]=g[b][i]=5-min(i-c,d-i)%2*5
- for i in range(a,b+1):g[i][c]=g[i][d]=5-min(i-a,b-i)%2*5
- for i,j,v in p:g[i][j-1:j+2]=g[i-1][j-1:j+2]=g[i+1][j-1:j+2]=[e^f^v]*3;g[i][j]=v
- return g
+def p(n):
+ (a,u,r),(a,d,t),(f,u,s),(f,d,s)=e=[(p,u,d)for p,u in enumerate(n)for u,d in enumerate(u)if d]
+ for p in range(u,d+1):n[a][p]=n[f][p]=5-min(p-u,d-p)%2*5
+ for p in range(a,f+1):n[p][u]=n[p][d]=5-min(p-a,f-p)%2*5
+ for p,u,d in e:n[p][u-1:u+2]=n[p-1][u-1:u+2]=n[p+1][u-1:u+2]=[r^t^d]*3;n[p][u]=d
+ return n

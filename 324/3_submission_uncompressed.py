@@ -1,9 +1,9 @@
-def p(g):
- e=sum(g,[]);a=e[e.count(e[0])<3];*s,=zip(*g);t={}
- for i,r in enumerate(g):
-  for j,d in enumerate(r):
-   if e.count(d)<3:s+=i+j,i-j-60;t[a in r and a in s[j]]=d
- for i,r in enumerate(g):
-  for j,d in enumerate(r):
-   if i+j in s or i-j-60 in s:r[j]=t[a in r and a in s[j]]
- return g
+def p(n):
+ e=sum(n,[]);a=e[e.count(e[0])<3];*s,=zip(*n);t={}
+ for i,r in enumerate(n):
+  for l,m in enumerate(r):
+   if e.count(m)<3:s+=i+l,i-l-60;t[a in r and a in s[l]]=m
+ for i,r in enumerate(n):
+  for l,m in enumerate(r):
+   if i+l in s or i-l-60 in s:r[l]=t[a in r and a in s[l]]
+ return n
