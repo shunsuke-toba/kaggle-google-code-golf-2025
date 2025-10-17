@@ -1,8 +1,8 @@
-def p(g,e=enumerate):
- (i,a),(f,d)=[(i,a)for i,r in e(g)for a,v in e(r)if v];h=d-a>>1
- if i-f:return[*map(list,zip(*p(list(map(list,zip(*g))))))]
- x,s=a,1
- for r in g[i-2:i+3]:g[i-2][u:=x+s*h]=g[i+2][u]=r[u-s]=g[i][x];g[i][x:u:s]=[g[i][x]]*h
- x,s=d,-1
- for r in g[i-2:i+3]:g[i-2][u:=x+s*h]=g[i+2][u]=r[u-s]=g[i][x];g[i][x:u:s]=[g[i][x]]*h
- return g
+def p(o,e=enumerate):
+ (i,a),(f,z)=[(i,a)for i,r in e(o)for a,n in e(r)if n];h=z-a>>1
+ if i-f:return[*map(list,zip(*p(list(map(list,zip(*o))))))]
+ n,e=a,1
+ for r in o[i-2:i+3]:o[i-2][f:=n+e*h]=o[i+2][f]=r[f-e]=o[i][n];o[i][n:f:e]=[o[i][n]]*h
+ n,e=z,-1
+ for r in o[i-2:i+3]:o[i-2][f:=n+e*h]=o[i+2][f]=r[f-e]=o[i][n];o[i][n:f:e]=[o[i][n]]*h
+ return o
