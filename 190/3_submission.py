@@ -1,3 +1,2 @@
-def p(g,b=9**5):
- while b:b-=1;i=b%9%8;j=b%8;a=b%5&2;c=b%7&2;v=g[i+a];g[i+2-a][j+2-c]|=~v[j+1]&v[j+c]&g[i+1][j+1]
- return g
+import re
+p=lambda g,k=96:k and p(eval(re.sub('0(.{25}0, ([1-9]).{28}[1-9])',r'\2\1',str([*zip(*g[::-1])]))),k-1)or g
