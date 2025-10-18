@@ -1,1 +1,1 @@
-p=lambda g,b=0:[(b:=(a,(y:=0)or[y:=x&~y for x in a])[b==a])for a in g]
+p=lambda g,b=0:[b:=g*(y:=b!=g)or[y:=g&~y for g in g]for g in g]
