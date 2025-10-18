@@ -1,1 +1,1 @@
-def p(g,e=enumerate):x,y,z=zip(*((j,i,v)for i,r in e(g)for j,v in e(r)if v));n=3+any(g[-5]);r=range(n);m=y[~n**2]//n;return [[g[y[0]+u*m][min(x[:-n*n])+v*m]and z[u*n+v-n*n]for v in r]for u in r]
+def p(g,e=enumerate):x,y,z=zip(*((j,i,v)for i,r in e(g)for j,v in e(r)if v));r=range(n:=3+any(g[-5]));k=n*n;m=y[~k]//n;return [[g[y[0]+u*m][min(x[:-k])+v*m]and z[u*n+v-k]for v in r]for u in r]
