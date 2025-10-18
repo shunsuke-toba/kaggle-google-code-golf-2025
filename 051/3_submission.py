@@ -1,1 +1,1 @@
-p=lambda g,i=4:i and p([(t:=(u:=0))or[(t:=t|u*a|-(u==a>0),u:=u or a,a or(t>0)*u)[2]for a in r]for r in zip(*g[::-1])],i-1)or g
+p=lambda g,i=4:i and p([(t:=(u:=0))or[a+(a<1)*(0<(t:=t|u*a|-(u==a>0)))*(u:=u or a)for a in r]for r in zip(*g[::-1])],i-1)or g
