@@ -1,6 +1,2 @@
-def p(g):
- m=~-len(g);i=m*m
- while i:=i-1:
-  t=g[y:=i//m];d=0<g[y+1][z:=i%m]or-1;e=t[z+1]>0;e-=t[z-1]>0;y*=t[z]>g[a:=y+d][b:=z+e]
-  while 0<y<m>z>0!=e:g[y:=y-d][z:=z-e]=g[a+d][b+e]
- return g
+import re
+p=lambda g,k=36:k and p(eval(re.sub('0((.{%d})*.{%d}([^0]), \\3.{%d}0, \\3.{%d}([^0]))'%((n:=len(g)*3)-1,n-5,n-2,n-5),'\\4\\1',str([*zip(*g[::-1])]))),k-1)or g
