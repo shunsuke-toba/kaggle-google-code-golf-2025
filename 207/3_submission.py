@@ -1,1 +1,1 @@
-p=lambda g:min(h:=[[r[o:o+2]for r in g[p:p+2]]for p in(0,3)for o in(0,3)],key=h.count)
+p=lambda g:[[min(v:=g[i][j::3]+g[i+3][j::3],key=v.count)for j in(0,1)]for i in(0,1)]
