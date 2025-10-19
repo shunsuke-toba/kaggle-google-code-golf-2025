@@ -1,9 +1,9 @@
-def p(s):
- p=~-len(s)//5;o=p+-~p;o=[[b:=max(s[0],key=s[0].count)]*o for j in[0]*o];t=[0]*20
- for x,h in enumerate(s):
-  for j,h in enumerate(h):
-   if h^b:t[h]+=x;t[~h]+=j
- for x,h in enumerate(s):
-  for j,h in enumerate(h):
-   if h^b:o[p+x-t[h]//4][p+j-t[~h]//4]=h
+def p(n):
+ m=~-len(n)//5;o=m+-~m;o=[[g:=max(n[0],key=n[0].count)]*o for j in[0]*o];e=[0]*20
+ for w,f in enumerate(n):
+  for j,f in enumerate(f):
+   if f^g:e[f]+=w;e[~f]+=j
+ for w,f in enumerate(n):
+  for j,f in enumerate(f):
+   if f^g:o[m+w-e[f]//4][m+j-e[~f]//4]=f
  return o
