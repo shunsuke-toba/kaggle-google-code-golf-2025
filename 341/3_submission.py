@@ -1,4 +1,2 @@
-def p(g):
- b=bytes(sum(g,[]));r,(_,a,b,_)=map(sorted,zip(*{divmod(f(k),10)for k in b for f in(b.find,b.rfind)if k}))
- for r in g[r[1]+1:r[2]]:r[a+1:b]=[8]*(b+~a)
- return g
+import re
+p=lambda g,k=48:k and p(eval(re.sub(r'(([^0]).{5}\2.{28}(.{32})*)0((.{32})*.{28}([^0]).{5}\6)',r'\1(8)\4',str([*zip(*g)]))),k-1)or g
