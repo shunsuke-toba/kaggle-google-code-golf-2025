@@ -1,1 +1,2 @@
-def p(g):f=sum(g,[]);[g[x].__setitem__(y,8)for i in range(79)for s in(-1,1)if f[i-1]==f[i-10]<f[i::10+s][k:=f.index(0,i)-i]for u in(2*k,-k)for n in range(k*k)if(x:=i//10+k-u+n//k)<10>(y:=i%10+s*u+n%k)>-1<x];return g
+import re
+p=lambda g,k=108:k and p(eval(re.sub('0((, 8){,%d}(.{32}){,%d}.{%d}[^3](.{28}0, 3){%d}.{%d}3)'%(n:=k%3,n,3*n+5,-~n,28-3*n),'8\\1',str([*zip(*g[::-1])]))),k-1)or g
