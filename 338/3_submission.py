@@ -1,1 +1,1 @@
-p=lambda g,k=0:[[3>>b&-(k:=k^(b>c)|b&c>0)for b,c in zip(r,r[1:]+[0])]for r in g]
+p=lambda g,k=0:[[(k:=0<k|b<c+3)*3>>b for b,c in zip(r,r[1:]+[0])]for r in g]
