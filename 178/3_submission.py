@@ -1,1 +1,1 @@
-p=lambda g,x=0:g if[]!=g*0else[x:=p(b)for b in g if x!=p(b)]
+p=lambda g,x=0:g*([]!=g*0)or[x:=p(b)for b in g if x!=p(b)]
