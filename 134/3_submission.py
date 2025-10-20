@@ -1,4 +1,1 @@
-def p(g):
- for d in(s:=sum(g,[])):
-  (a,*_,c),y=zip(*(divmod(i,len(g[0]))for i,v in enumerate(s)if v==d))
-  if(k:=len({*_})//3%7)*3>c-a:return[[sum({*s},-d)*(v==d)for v in r[min(y)::k][:3]]for r in g[a:c:k]]
+def p(g,f=filter):s=str(g);b=min(sum(g,[]),key=lambda c:s.count(f'{c}, {c}'));k=len(g:=[*zip(*f(any,zip(*f(any,eval(s.replace(*f'{b}0'))))))])//3;return[[b*(c>0)for c in r[::k]]for r in g[::k]]
