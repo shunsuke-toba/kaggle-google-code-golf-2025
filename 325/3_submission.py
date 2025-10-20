@@ -1,4 +1,4 @@
-def p(g,o=()):
+def p(g,*o):
  while g:
   r,*g=g
   while 8in r:
