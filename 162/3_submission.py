@@ -1,5 +1,2 @@
-def p(g,n=323):
- if n:p(g,n-1)
- t=g[n%18:][:3];n//=18
- for r in t*all([0]*4>r[n:n+3]for r in t):r[n:n+3]=1,1,1
- return g
+import re
+p=lambda g,k=4:k and p(eval(re.sub(r'(0, 0, 0)(.{55})\1(.{55})\1',r'1,1,1\2(1),1,1\3(1),1,1',str(g))),k-1)or g
