@@ -1,5 +1,5 @@
 def p(f):
- g=23;a=bytes(sum(f,[]));h=a.find(1);c=a.rfind(1);d=[(*[f&4for f in f[h%g+1:c%g]],)for f in f[h//g+1:c//g]]
+ g=23;a=bytes(sum(f,[]));h=a.find(1);c=a.rfind(1);d=[(*[f&4for f in f[h%g+1:c%g]],)for f in f[h//g+1:c//g]];print(d)
  for h in range(4):
   for h in range(g*g):
    c=h%g;h//=g
