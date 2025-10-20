@@ -1,3 +1,2 @@
-def p(g,z=36):
- while z:z-=1;x=z%6;a,b=g[Y:=z//6][x:x+2];c,d=g[Y+1][x:x+2];g[Y+(c!=d)][x+(b!=d)]+=a&d!=c&b
- return g
+import re
+p=lambda g,k=8:k and p(eval(re.sub('0(, 8.{19}8)',r'1\1',str([*zip(*g[::-1])]))),k-1)or g
