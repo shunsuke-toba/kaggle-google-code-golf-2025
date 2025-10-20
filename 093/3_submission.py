@@ -1,1 +1,2 @@
-p=lambda g,i=4:i and p([g:=[*zip(*g)][::-1],[((0,)*r[:7].count(0)+(5,)*7)[:7]+r[7:]for r in g]][5in g[0]],i-1)or g
+import re
+p=lambda g,k=12:k and p(eval(re.sub('5((, 0)*), [^05]','5, 5\\1',str([*zip(*g[::-1])]))),k-1)or g
