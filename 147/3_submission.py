@@ -1,1 +1,2 @@
-p=lambda g:[[c+5*(sum(k)>c>2)for c,*k in zip(r,*g[i-(i>0):i+2],[0]+r,r[1:]+[0])]for i,r in enumerate(g)]
+import re
+p=lambda g,k=4:k and p(eval(re.sub('3, [^0]','8,8',str([*zip(*g[::-1])]))),k-1)or g
