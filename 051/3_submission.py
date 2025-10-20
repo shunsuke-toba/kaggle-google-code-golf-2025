@@ -1,1 +1,2 @@
-p=lambda g,i=4:i and p([(t:=(u:=0))or[a+(a<1)*(0<(t:=t|u*a|-(u==a>0)))*(u:=u or a)for a in r]for r in zip(*g[::-1])],i-1)or g
+import re
+p=lambda g,k=64:k and p(eval(re.sub(r'(0, ([1-9]), (?!\2)[1-9][^)]+)0',r'\1\2',str([*zip(*g[::-1])]))),k-1)or g
