@@ -1,11 +1,11 @@
-def p(g):
- t=[]
- def f(r,c):
-  if len(g)>r>~0<c<len(g[0])>g[r][c]==0:g[r][c]=~len(t);t[-1]+=1;f(r+1,c);f(r-1,c);f(r,c+1);f(r,c-1)
- for c in range(len(g[0])):
-  for r in range(len(g)):
-   if len(g)>r>~0<c<len(g[0])>g[r][c]==0:t+=0,;f(r,c)
- for c in range(len(g[0])):
-  for r in range(len(g)):
-   if len(g)>r>~0<c<len(g[0])>g[r][c]<1:g[r][c]=(t[-g[r][c]-2]==max(t))+((t[-g[r][c]-2]==min(t))<<3)
- return g
+def p(i):
+ n=[]
+ def p(r,d):
+  if len(i)>r>~0<d<len(i[0])>i[r][d]==0:i[r][d]=~len(n);n[-1]+=1;p(r+1,d);p(r-1,d);p(r,d+1);p(r,d-1)
+ for d in range(len(i[0])):
+  for r in range(len(i)):
+   if len(i)>r>~0<d<len(i[0])>i[r][d]==0:n+=0,;p(r,d)
+ for d in range(len(i[0])):
+  for r in range(len(i)):
+   if len(i)>r>~0<d<len(i[0])>i[r][d]<1:i[r][d]=(n[-i[r][d]-2]==max(n))+((n[-i[r][d]-2]==min(n))<<3)
+ return i
