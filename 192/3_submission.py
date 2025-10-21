@@ -1,1 +1,2 @@
-p=lambda g,e=enumerate:[[(c:=max(range(1,10),key=sum(g,[]).count))*(c in r[:j+2][-3:]*r[j])*(c in t)for j,t in e(zip(*g[:i+2][-3:]))]for i,r in e(g)]
+import re
+p=lambda g,k=23:-k*g or p(eval(re.sub(rf'(\d), [^0](?=, \1|{", 0|"*(k<12)}\))',r'\1, \1',str([*zip(*g[::-1])]))),k-1)
