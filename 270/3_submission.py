@@ -1,1 +1,1 @@
-import re;p=lambda g,k=7:-k*g or p(eval(re.sub(rf'({7-(n:=k&4)})((, .)*, )0(?=, {n%3+1})',r'0\2\1',str([*zip(*g[::-1])]))),k-1)
+import re;p=lambda g,k=7:-k*g or p(eval(re.sub(rf'({7-(k&4)})((, .)*, )0(?=, {k//4+1})',r'0\2\1',str([*zip(*g[::-1])]))),k-1)
