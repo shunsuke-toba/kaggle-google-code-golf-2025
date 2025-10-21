@@ -1,5 +1,1 @@
-def p(g):
- g=sum(g,[]);i=225
- while i:
-  if(t:=g[i:=i-1])>2:g[i],k=0,i-g.index(8%t);g[i-k+k//(abs(k)%14)]=t
- return*zip(*[iter(g)]*15),
+import re;p=lambda g,k=7:-k*g or p(eval(re.sub(rf'({7-(n:=k//4%2)*4})((, .)*, )0(?=, {1+n})',r'0\2\1',str([*zip(*g[::-1])]))),k-1)
