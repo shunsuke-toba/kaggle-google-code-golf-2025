@@ -1,1 +1,1 @@
-p=lambda g:[g:=[*zip(*[map(lambda c,v:c&-5>>v or j,r,(0,*r))for r in g[::-1]])]for j in[4]+[0]*67][-1]
+p=lambda g,i=67:-i*g or p([*zip(*[[c&-5>>v or(i>64)*4for c,v in zip(r,(0,*r))]for r in g[::-1]])],i-1)
