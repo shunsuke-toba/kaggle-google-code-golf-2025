@@ -1,1 +1,1 @@
-p=lambda g,i=0:g*(i>35)or p([*zip(*[map(lambda c,d:c&~(1>d)or i<1,r,(0,*r))for r in g[::-1]])],i+1)
+p=lambda g,i=35:-i*g or p([*zip(*[map(lambda c,d:c&~(1>d)or i>34,r,(0,*r))for r in g[::-1]])],i-1)
