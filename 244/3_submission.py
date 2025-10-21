@@ -1,1 +1,1 @@
-p=lambda g,f=1:g[f]==g[0]and p(g,f+1)or[r[::~f]for r in g[::f+1]]
+p=lambda g:[r[::~(f:=g.index(min(g,key=set)))]for r in g][::f+1]
