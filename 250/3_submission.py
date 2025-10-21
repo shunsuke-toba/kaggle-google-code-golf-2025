@@ -1,4 +1,1 @@
-def p(g):
- a=sum(g,[]);k=a.index(2)-8;I=r=k//10;i=j=0
- for v in a:g[i][j]-=v;g[I][min(max(j,k%10-3),k%10)]|=v;i+=j>8;j=-~j%10;I+=i>I<r+3
- return g
+import re;p=lambda g,k=7:-k*g or p(eval(re.sub(r'(2.{%d})0((,.{%d})*.{%d})5'%((2+k//4*26,)*3),r'\1 5\2 0',str([*zip(*g[::-1])]))),k-1)
