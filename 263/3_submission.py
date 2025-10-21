@@ -1,1 +1,1 @@
-def p(g):h=g>g[:3];g=sorted([str(x).count('0'),x,zip(*x)]for x in zip(*[iter((zip(*g),g)[h])]*3));return*g[-(g[0]>g[1][:1])][~h],
+p=lambda g:g[3:]and(g:=sorted((str(x).count('0'),x)for x in zip(*[iter(g)]*3)))[-(g[0]>g[1][:1])][1]or[*zip(*p([*zip(*g)]))]
