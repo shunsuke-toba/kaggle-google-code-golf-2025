@@ -1,1 +1,1 @@
-def p(g):t=*zip(*g),;m=*map(min,t),0;return[[m[x+(0<m[x+1]in r[:x])-(0<m[x-1]in r[x:])]for x in range(len(r))]for r in g]*any(m)or[*zip(*p(t))]
+p=lambda g:any(m:=(*map(min,t:=[*zip(*g)]),0))*[[m[x+(0<m[x+1]in r[:x])-(0<m[x-1]in r[x:])]for x in range(len(r))]for r in g]or[*zip(*p(t))]
