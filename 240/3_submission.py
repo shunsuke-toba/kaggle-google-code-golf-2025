@@ -1,1 +1,1 @@
-k=0;p=lambda g:exec("k+=1;g[i:=k%19][j:=k%18]|=g[i][j-2]*(i<j-2<16-i)|g[j][~i];"*1493)or g
+k=1;p=lambda g:exec("k+=2;g[i:=k%19][j:=k%18]|=g[i][j-2]*(i<j-2<16-i)|g[j][~i];"*746)or g
