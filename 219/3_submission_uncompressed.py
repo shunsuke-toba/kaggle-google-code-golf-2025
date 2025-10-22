@@ -1,11 +1,11 @@
-def p(g):
- b=[*map(any,g)];f=b.index(1);i=b.index(0,f);a=i-f
+def p(l):
+ e=[*map(any,l)];f=e.index(1);i=e.index(0,f);a=i-f
  while i<14:
-  i+=1;u=a+1
-  if b[i]:
-   while b[i]:i+=1;u-=1
-   for x in range(9):
-    s=x%u+i-a;w=m=s>g[1][3]>a*3>g[7][7]>g[1][4]
-    for q in range(100):k=q%10;o=q%9%a;g[12][q%6+4]|=q%2<w;m|=g[s+o][k]>1>g[f+o][k-x//u]<=k-x//u;g[s+o][k]|=g[f+o][k-x//u]>1>m==g[s+o][k]<=k-x//u<50<q
-    if~-m:break
- return g
+  i+=1;p=a+1
+  if e[i]:
+   while e[i]:i+=1;p-=1
+   for g in range(9):
+    w=g%p+i-a;r=t=w>l[1][3]>a*3>l[7][7]>l[1][4]
+    for d in range(100):k=d%10;m=d%9%a;l[12][d%6+4]|=d%2<r;t|=l[w+m][k]>1>l[f+m][k-g//p]<=k-g//p;l[w+m][k]|=l[f+m][k-g//p]>1>t==l[w+m][k]<=k-g//p<50<d
+    if~-t:break
+ return l
