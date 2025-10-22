@@ -1,1 +1,1 @@
-p=lambda g,z=[[0]*10]:[[a+u*8+d*2+l*6+r*7for a,l,r,u,d in zip(r,[0]+r,r[1:]+[0],*m)]for r,*m in zip(g,z+g,g[1:]+z)]
+import re;p=lambda g,k=3:-k*g or p(eval(re.sub('0(?=, 1)',f'{[7,2,6,8][k]}',str([*zip(*g[::-1])]))),k-1)
