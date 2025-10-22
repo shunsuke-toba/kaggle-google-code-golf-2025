@@ -1,1 +1,1 @@
-import re;p=lambda g,k=3:-k*g or p(eval(re.sub('0(?=, 1)',f'{[7,2,6,8][k]}',str([*zip(*g[::-1])]))),k-1)
+import re;p=lambda g,k=3:-k*g or p(eval(re.sub('0(?=, 1)',"7268"[k],str([*zip(*g[::-1])]))),k-1)
