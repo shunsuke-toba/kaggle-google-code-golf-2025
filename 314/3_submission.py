@@ -1,1 +1,1 @@
-p=lambda g,r=range(8):[[max((x:=g[i-3][j])*(x==g[i-5][j]),(x:=g[i])[j-3]*(x[j-3]==x[j-5]),x[j])for j in r]for i in r]
+p=lambda g,r=range(8):[[max((x:=g[i])[j],(y:=g[i-3][j])-(y^g[i-5][j]),(y:=x[j-3])-(y^x[j-5]))for j in r]for i in r]
