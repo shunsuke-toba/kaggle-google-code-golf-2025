@@ -1,1 +1,1 @@
-p=lambda g,R=range(16):[[(i+j)%max(g[0])+1for j in R]for i in R]
+p=lambda g:[(sorted({*g[0]}-{0})*8)[i:i+16]for i in range(16)]
