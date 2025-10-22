@@ -1,2 +1,1 @@
-import re
-p=lambda g,k=3:-k*g or p(eval(re.sub(r'(0, 0, 0)(.{55})\1(.{55})\1',r'1,1,1\2 1,1,1\3 1,1,1',str(g))),k-1)
+import re;x=1,1,1;p=lambda g,f=lambda g:eval(re.sub(r'(0, 0, 0)(.{55})\1(.{55})\1',r'*x\2*x\3*x','%s'%g)):f(f(g))
