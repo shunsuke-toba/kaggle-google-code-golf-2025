@@ -1,12 +1,12 @@
-def p(g):
- t=()
- for i in range(len(g)-2):
-  for j in range(len(g[0])-2):
-   if 0<min(m:=sum(b:=[g[i+k][j:j+3]for k in range(3)],[]))<max(m):
-    t+=(-m.count(2),b),
-    for k in range(3):g[i+k][j:j+3]=[0]*3
- g=[*map(list,zip(*filter(any,zip(*filter(any,g)))))]
- for _,b in sorted(t):
-  while 1>any((y:=i,x:=j)for i in range(len(g)-2)for j in range(len(g[0])-2)if all(g[i+k][j+l]==2-2*(b[k][l]==2)for l in range(3) for k in range(3))):b=[*zip(*b[::-1])]
-  for k in range(3):g[y+k][x:x+3]=b[k]
- return g
+def p(b):
+ e=()
+ for i in range(len(b)-2):
+  for o in range(len(b[0])-2):
+   if 0<min(l:=sum(f:=[b[i+n][o:o+3]for n in range(3)],[]))<max(l):
+    e+=(-l.count(2),f),
+    for n in range(3):b[i+n][o:o+3]=[0]*3
+ b=[*map(list,zip(*filter(any,zip(*filter(any,b)))))]
+ for _,f in sorted(e):
+  while 1>any((c:=i,h:=o)for i in range(len(b)-2)for o in range(len(b[0])-2)if all(b[i+n][o+l]==2-2*(f[n][l]==2)for l in range(3) for n in range(3))):f=[*zip(*f[::-1])]
+  for n in range(3):b[c+n][h:h+3]=f[n]
+ return b
