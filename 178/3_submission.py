@@ -1,1 +1,1 @@
-p=lambda g,*y:g*(g*0==0)or[y for x in g if y!=(y:=p(x))]
+p=lambda g:g*(g*0==0)or[g for x in g if g!=(g:=p(x))]
