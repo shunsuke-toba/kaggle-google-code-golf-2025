@@ -1,11 +1,11 @@
-def p(l):
- for o in range(10,5,-1):
-  for n in range(10,5,-1):
-   for r in range(len(l)-o):
-    for f in range(len(l[0])-n):
-     d=[r[f:f+n]for r in l[r:r+o]]
-     if len({r[f]for r in d for f in range(n)})<3:
-      for r,f in[(r,f)for r in d for f in range(n)if r[f]-r[0]]:
-       for e in d:e[f]=r[f]
-       for e in range(n):r[e]=r[f]
+def p(r):
+ for a in range(10,5,-1):
+  for e in range(10,5,-1):
+   for i in range(len(r)-a):
+    for l in range(len(r[0])-e):
+     d=[i[l:l+e]for i in r[i:i+a]]
+     if len({i[l]for i in d for l in range(e)})<3:
+      for i,l in[(i,l)for i in d for l in range(e)if i[l]-i[0]]:
+       for a in d:a[l]=i[l]
+       for a in range(e):i[a]=i[l]
       return d

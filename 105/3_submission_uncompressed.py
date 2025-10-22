@@ -1,5 +1,5 @@
-def p(g):
- s=[(u,n)for u in range(len(g))for n in range(13)if g[u][n]];(a,*u,b),x=zip(*s);f=max(x)
- for u in range(a,b+1):
-  for n in range(2,f+1):g[u][n]=g[u][n]or(u in(a,b)or n in(2,f)or sum((2<x<f)*(u==d)+(a<d<b)*(n==x)for d,x in s)>1)*2
- return g
+def p(d):
+ m=[(u,n)for u in range(len(d))for n in range(13)if d[u][n]];(o,*u,f),p=zip(*m);r=max(p)
+ for u in range(o,f+1):
+  for n in range(2,r+1):d[u][n]=d[u][n]or(u in(o,f)or n in(2,r)or sum((2<p<r)*(u==d)+(o<d<f)*(n==p)for d,p in m)>1)*2
+ return d
