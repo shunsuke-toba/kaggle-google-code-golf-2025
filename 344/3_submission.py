@@ -1,1 +1,1 @@
-p=lambda g:exec("g[:]=zip(*eval(str(g).replace('3, 2','8,0').replace('2, 3','0,8')));"*2)or g
+import re;p=lambda g,k=3:-k*g or p(eval(re.sub('3, 2','8,0',str([*zip(*g[::-1])]))),k-1)
