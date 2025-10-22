@@ -1,9 +1,1 @@
-p=lambda g:exec('''a=d=y=0;l=[]
-for r in g:
- x=0
- for p in r:
-  if p:l or(c:=x);a=a or~y;B=b=y;d=max(d,x);l+={p}-{8,*l}
-  x+=1
- y+=1
-s=l[:1]
-while~a<=b:g[b][c:d+1]=s+[l[~a<b<B]]*(d+~c)+s;b-=1''')or g
+import re;p=lambda g,k=119:-k*g or p(eval(re.sub((s:='([^0](, [^0]){%d})(.{%d})'%(c:=k//40+2,(len(g)-c)*3+1))+s+'(?=.*8)[08](, [08]){%d}'%c,r'\1\3\1\6\4',str([*zip(*g[::-1])]))),k-1)
