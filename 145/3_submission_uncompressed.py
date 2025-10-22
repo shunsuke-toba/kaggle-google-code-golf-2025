@@ -1,11 +1,11 @@
-def p(i):
- n=[]
- def p(r,d):
-  if len(i)>r>~0<d<len(i[0])>i[r][d]==0:i[r][d]=-len(n);n[-1]+=1;p(r+1,d);p(r-1,d);p(r,d+1);p(r,d-1)
- for d in range(len(i[0])):
-  for r in range(len(i)):
-   if len(i)>r>~0<d<len(i[0])>i[r][d]==0:n+=0,;p(r,d)
- for d in range(len(i[0])):
-  for r in range(len(i)):
-   if len(i)>r>~0<d<len(i[0])>i[r][d]<1:i[r][d]=(n[-i[r][d]-1]==max(n))+8*(n[-i[r][d]-1]==min(n))
- return i
+def p(r):
+ e=[]
+ def p(f,d):
+  if len(r)>f>~0<d<len(r[0])>r[f][d]==0:r[f][d]=-len(e);e[-1]+=1;p(f+1,d);p(f-1,d);p(f,d+1);p(f,d-1)
+ for d in range(len(r[0])):
+  for f in range(len(r)):
+   if len(r)>f>~0<d<len(r[0])>r[f][d]==0:e+=0,;p(f,d)
+ for d in range(len(r[0])):
+  for f in range(len(r)):
+   if len(r)>f>~0<d<len(r[0])>r[f][d]<1:r[f][d]=(e[-r[f][d]-1]==max(e))+8*(e[-r[f][d]-1]==min(e))
+ return r

@@ -1,8 +1,8 @@
-def p(f):
- g=23;a=bytes(sum(f,[]));h=a.find(1);c=a.rfind(1);d=[(*[f&4for f in f[h%g+1:c%g]],)for f in f[h//g+1:c//g]];print(d)
- for h in range(4):
-  for h in range(g*g):
-   c=h%g;h//=g
-   [(*[f&4for f in f[c:c+len(d[0])]],)for f in f[h:h+len(d)]]in(d,d[::-1])and[exec('f[h]=1')for f in f[h-(h>0):h-~len(d)]for h in range(g)if-2<h-c<=len(d[0])>f[h]]
-  d=[*zip(*d[::-1])]
- return f
+def p(r):
+ t=23;h=bytes(sum(r,[]));i=h.find(1);f=h.rfind(1);u=[(*[r&4for r in r[i%t+1:f%t]],)for r in r[i//t+1:f//t]];print(u)
+ for i in range(4):
+  for i in range(t*t):
+   f=i%t;i//=t
+   [(*[r&4for r in r[f:f+len(u[0])]],)for r in r[i:i+len(u)]]in(u,u[::-1])and[exec('r[i]=1')for r in r[i-(i>0):i-~len(u)]for i in range(t)if-2<i-f<=len(u[0])>r[i]]
+  u=[*zip(*u[::-1])]
+ return r
