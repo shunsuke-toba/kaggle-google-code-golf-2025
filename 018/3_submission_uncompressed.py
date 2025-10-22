@@ -1,19 +1,19 @@
-def p(g):
- S=[]
- for y in range(len(g)):
-  for x in range(len(g[0])):
-   a=0
-   for i in range(y+1,len(g)+1):
-    for j in range(x+1,len(g[0])+1):
-     if len({*sum(m:=[r[x:j]for r in g[y:i]],[0])})*all(map(sum,m+[*zip(*m)]))>4:a,b,s=i,j,m
-   if a:S+=s,
-   for r in g[y:a]:r[x:b]=[0]*(b-x)
- for s in S:
-  for z in range(8):
-   a=len(s);b=len(s[0])
-   for y in range(len(g)+1-a):
-    for x in range(len(g[0])+1-b):
-     if all((str(s).count(str(c:=s[i//b][i%b]))<2)*c==g[y+i//b][x+i%b]for i in range(a*b)):
-      for r in range(a):g[y+r][x:b+x]=s[r]
-   s=[*zip(*s[::-1])];z^3or s.reverse()
- return g
+def p(c):
+ f=[]
+ for t in range(len(c)):
+  for n in range(len(c[0])):
+   p=0
+   for l in range(t+1,len(c)+1):
+    for m in range(n+1,len(c[0])+1):
+     if len({*sum(x:=[l[n:m]for l in c[t:l]],[0])})*all(map(sum,x+[*zip(*x)]))>4:p,e,u=l,m,x
+   if p:f+=u,
+   for l in c[t:p]:l[n:e]=[0]*(e-n)
+ for u in f:
+  for l in range(8):
+   p=len(u);e=len(u[0])
+   for t in range(len(c)+1-p):
+    for n in range(len(c[0])+1-e):
+     if all((str(u).count(str(f:=u[l//e][l%e]))<2)*f==c[t+l//e][n+l%e]for l in range(p*e)):
+      for l in range(p):c[t+l][n:e+n]=u[l]
+   u=[*zip(*u[::-1])];l^3or u.reverse()
+ return c
