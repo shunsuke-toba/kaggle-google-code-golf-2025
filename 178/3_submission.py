@@ -1,1 +1,1 @@
-p=lambda g:g*(g*0==0)or[p(g:=x) for x in g if x!=g]
+p=lambda g:g*-1*-1or[p(g:=x)for x in g if x!=g]
