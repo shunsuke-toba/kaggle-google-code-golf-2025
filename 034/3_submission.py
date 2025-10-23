@@ -1,1 +1,1 @@
-import re;p=lambda g,k=7:-k*g or p(eval(re.sub('(?=(.{32})*(.{29})?(...)?2, ([^02]).{25}[^0])\d',r'\4',str([*zip(*g[::-1])]))),k-1)
+import re;p=lambda g,k=7:-k*g or p(eval(re.sub('(?=(.{32})*(.{29}|...)?2, ([^02]).{25}[^0])\d',r'\3',str([*zip(*g[::-1])]))),k-1)
