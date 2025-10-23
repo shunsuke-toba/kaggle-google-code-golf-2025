@@ -1,1 +1,1 @@
-import re;p=lambda g,k=36:k and p(eval(re.sub(r'0((.{%d})*.{%d}([^0]), \3.{%d}0, \3.{%d}(.))'%((n:=len(g)*3-5)+4,n,n+3,n),r'\4\1',str([*zip(*g[::-1])]))),k-1)or g
+import re;p=lambda g,k=8:k and p(eval(re.sub(r'0(?=(.{%d})*.{%d}(, [^0])\2.{%d}0\2.{%d}(.))'%(n:=len(g)*3-1,n-6,n-1,n-4),r'\3',str([*zip(*g[::-1])]))),k-1)or g
