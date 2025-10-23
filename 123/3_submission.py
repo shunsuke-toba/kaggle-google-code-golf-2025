@@ -1,1 +1,1 @@
-p=lambda g,r=range(10):[[g[0][max(i,j)%(4+any(g[4]))]for j in r]for i in r]
+p=lambda g:[[(a:=g[0][:4+any(g[4])]*3)[i]]*i+a[i:10]for i in range(10)]
