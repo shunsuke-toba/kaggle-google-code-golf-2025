@@ -7,5 +7,5 @@ def p(r):
    if len(r)>f>~0<d<len(r[0])>r[f][d]==0:e+=0,;p(f,d)
  for d in range(len(r[0])):
   for f in range(len(r)):
-   if len(r)>f>~0<d<len(r[0])>r[f][d]<1:r[f][d]=(e[-r[f][d]-1]==max(e))+8*(e[-r[f][d]-1]==min(e))
+   if len(r)>f>~0<d<len(r[0])>r[f][d]<0:r[f][d]=(e[~r[f][d]]==max(e))+8*(e[~r[f][d]]==min(e))
  return r
