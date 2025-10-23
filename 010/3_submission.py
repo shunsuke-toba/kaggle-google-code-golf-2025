@@ -1,1 +1,1 @@
-p=lambda g,p=[0]*9:[p:=[x or sum(r)*y/25for x,y in zip(p,r)]for r in g]
+p=lambda g,p=[0]*9:[p:=[x or sum(r)*y%6for x,y in zip(p,r)]for r in g]
