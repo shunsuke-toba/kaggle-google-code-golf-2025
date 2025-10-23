@@ -1,4 +1,4 @@
 def p(g):
- c=sum(m:=max(g))//2;b=c+g.index(m)
- for r in g:r[:b]=[2+(b>c)-(b<c)]*b;b-=b>0
+ b=sum(m:=max(g))//2+g.index(m)
+ for r in g:r[:b]=[3-m[b]-(r is m)]*b;b-=b>0
  return g
