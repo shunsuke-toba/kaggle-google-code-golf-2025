@@ -1,4 +1,6 @@
 def p(g):
- f=sum(((r+[0]*9)[:9]for r in g),[])+[0]*9;q=[f.index(2)]
+ f=[]
+ for r in g+[[]]:f+=(r+[0]*9)[:9]
+ q=[f.index(2)]
  for i in q:q+=f[i]*[i+1,i-1,i+9,i-9];f[i]=0
  return[8-8*(2in f)],
