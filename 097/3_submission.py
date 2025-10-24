@@ -1,1 +1,1 @@
-p=lambda g,e=enumerate:[[v*(sum(sum((0,*r)[x:x+3])for r in g[y-(y>0):y+2])>v)for x,v in e(r)]for y,r in e(g)]
+p=lambda g,e=enumerate:[[v*(sum(sum((0,*r)[x:x+3])for r in[[],*g][y:y+3])>v)for x,v in e(r)]for y,r in e(g)]
