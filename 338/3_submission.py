@@ -1,1 +1,1 @@
-p=lambda g:[(k:=0)or[-(k:=b|k&1^k>>1|b*k>>2)&3>>b for b in r]for r in g]
+p=lambda g:[(k:=0)or[-(k:=b|(0<k<3+b))&3>>b for b in r]for r in g]
