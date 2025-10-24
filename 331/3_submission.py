@@ -1,1 +1,1 @@
-p=lambda g,k=3:-k*g or p(eval(str([*zip(*g[::-1])]).replace('0, 1','7268'[k]+",1")),k-1)
+p=lambda g:[g:=eval(str([*zip(*g[::-1])]).replace('0, 1',c+',1'))for c in'8627']and g
