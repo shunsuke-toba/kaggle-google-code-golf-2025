@@ -1,1 +1,1 @@
-p=lambda g:[*zip(*map(lambda*c,b=sum(g,[]):c[:20-(f:=~bytes(c).rfind(max(map(min,b,b[1:],b[3:],b[4:])))%20)]+f*(max(c[-f:]),),*g))]
+p=lambda g:[*zip(*map(lambda*c:c[:20-(f:=~bytes(c).rfind(max(map(min,b:=sum(g,[]),b[17:],b[21:])))%20)]+f*(max(c[-f:]),),*g))]
