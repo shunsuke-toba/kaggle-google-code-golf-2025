@@ -1,1 +1,1 @@
-p=lambda g:[[min(v:=g[i][j::3]+g[i+3][j::3],key=v.count)for j in(0,1)]for i in(0,1)]
+p=lambda g:[min(s:=[a[:2],a[3:],b[:2],b[3:]],key=s.count)for a,b in zip(g,g[3:])]
