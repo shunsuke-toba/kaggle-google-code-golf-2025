@@ -1,14 +1,14 @@
 def p(g):
- i=len(g);w=len(g[0])
- def l(t,x):
-  h=[(t,x,g[t][x])];g[t][x]=0
-  for t,x in(t+1,x),(t,x+1),(t-1,x),(t,x-1):
-   if w>x>-1<t<i>g[t][x]>0:h+=l(t,x)
-  return h
- i=[l(t,x)for t in range(i)for x in range(w)if g[t][x]]
- d=min((len(i)<3,len(i),i)for i in i)[2];r,c,o=min((sum(v==i[2]for t,x,v in d),i)for i in d)[1]
- for i in i:
-  h=[(t,x)for t,x,v in i if v==o]
-  for t,x,v in d:
-   for j,p in h:g[(t-r)*int(len(h)**.5)+j][(x-c)*int(len(h)**.5)+p]=(min(v for t,x,v in i if v^o),o)[v==o]
+ m=len(g);f=len(g[0])
+ def p(r,o):
+  w=[(r,o,g[r][o])];g[r][o]=0
+  for r,o in(r+1,o),(r,o+1),(r-1,o),(r,o-1):
+   if f>o>-1<r<m>g[r][o]>0:w+=p(r,o)
+  return w
+ m=[p(r,o)for r in range(m)for o in range(f)if g[r][o]]
+ d=min((len(m)<3,len(m),m)for m in m)[2];h,f,e=min((sum(v==m[2]for r,o,v in d),m)for m in d)[1]
+ for m in m:
+  w=[(r,o)for r,o,v in m if v==e]
+  for r,o,v in d:
+   for i,p in w:g[(r-h)*int(len(w)**.5)+i][(o-f)*int(len(w)**.5)+p]=(min(v for r,o,v in m if v^e),e)[v==e]
  return g
