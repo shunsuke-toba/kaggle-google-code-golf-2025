@@ -1,1 +1,3 @@
-def p(g,f=filter):s=str(g);b=min(sum(g,[]),key=lambda c:s.count(f'{c}, {c}'));k=len(g:=[*zip(*f(any,zip(*f(any,eval(s.replace(*f'{b}0'))))))])//3;return[[b*(c>0)for c in r[::k]]for r in g[::k]]
+def p(g,f=filter):
+ for b in {*sum(g,[])}-{0}:
+  if len({*(h:=[*zip(*f(any,zip(*f(any,[[d*(d!=b)for d in r]for r in g]))))])})<4:k=len(h)//3;return[[b*(c>0)for c in r[::k]]for r in h[::k]]
