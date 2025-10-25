@@ -11,7 +11,6 @@ def p(e):
   for n,o in enumerate(o):
    if t-j|p-t|n-i|m-n<0<o:
     if t<r:r=t
-    if n<l:l=n;f=o!=u[1][0]
- for t,o in enumerate(u[1:-1]):
-  o[1:-1]=e[r+t][l:l+m-i-1][::1-2*f]
+    if n<l:l,f=n,o!=u[1][0]
+ for t,o in enumerate(u[1:-1]):o[1:-1]=e[r+t][l:l+m-i-1][::1-2*f]
  return u
