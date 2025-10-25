@@ -1,1 +1,1 @@
-def p(g,y=63):b,c,d,*_=g[y>>3:];c[y%8+1]>>=b[y%8]*d[-8|y]>0;y and p(g,y-1);return g
+def p(g,y=63):y>0!=p(g,~-y);b,c,d,*_=g[y>>3:];y&=7;c[y+1]>>=b[y]*d[y-8]>0;return g
