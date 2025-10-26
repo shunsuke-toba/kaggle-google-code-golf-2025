@@ -1,1 +1,1 @@
-p=lambda g:g and[g[0]and p(g[1])or g[1]]*4+p(g[2:])
+p=lambda g:g>g*0==[] and[p(g[1])]*4+p(g[2:])or g
