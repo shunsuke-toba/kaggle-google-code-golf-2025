@@ -1,1 +1,1 @@
-p=lambda g,f=lambda a:[[r[j]or(3in r)*sum(r[j::3in r[:j]or-1])for j in range(10)]for r in zip(*a)]:f(f(g))
+import re;p=lambda g,k=23:-k*g or p(eval(re.sub('(\d), 0(?=[^)]*3)',r'\1,\1',f'{*zip(*g[::-1]),}')),k-1)
