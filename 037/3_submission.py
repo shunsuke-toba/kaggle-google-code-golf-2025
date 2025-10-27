@@ -1,4 +1,1 @@
-def p(g):
- for j,v in enumerate(f:=sum(g,[])):
-  while(d:=j-f.index(v))*v:j-=9+(d%9>0)*2;g[j//10][j%10]=v
- return g
+import re;p=lambda g,k=23:-k*g or p(eval(re.sub(r'(([^0]).{28})0(?=(.{29})*.{28}\2)',r'\1\2',str(g[::-1]))),k-1)
