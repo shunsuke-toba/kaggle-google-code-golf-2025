@@ -1,4 +1,1 @@
-def p(g):
- a=enumerate;R=[(i,j)for i,r in a(g)for j,v in a(r)if(v>2==(c:=i,d:=j))|v%3];a,b=map(max,*R)
- for i,j in R:g[i][j]-=2;g[i+c+~a][j+d+~b]+=2
- return g
+import re;p=lambda g,k=9,b=0:-k*g or p(eval(re.sub(b and'((2, )*)0,'or'()x',r'0,\1',s:=f'{*zip(*g),}')),k-1,re.search('2[^)]*3',s))
