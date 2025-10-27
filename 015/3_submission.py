@@ -1,4 +1,1 @@
-def p(g,i=81):
- while i:=i-1:
-  for X in(-1,1)[(w:=g[y:=i//9][x:=i%9]-1)&6:]:g[y+X][x+w*X]=g[y-w*X][x+X]=7-3*w
- return g
+import re;S=re.sub;p=lambda g,k=7:-k*g or p(eval(S('0(?=.{31}2)','4',S('0(?=, 1)','7',f'{*zip(*g[::-1]),}'))),k-1)
