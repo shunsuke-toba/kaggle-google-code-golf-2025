@@ -1,5 +1,1 @@
-def p(g):
- for s in-1,1:
-  x,y=divmod(sum(g,[]).index(8),13);u=d=s
-  while(x:=x-d)<13>(y:=y+s-d)>-1<x:g[x][y]=5;u^=s;d^=u
- return g
+import re;p=lambda g,k=1:-k*g or p(eval(re.sub('0(?=((...){,2}.{35})?.{40}(.{76})*8)','5',str([r[::-1]for r in g[::-1]]))),k-1)
