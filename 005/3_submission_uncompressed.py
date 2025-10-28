@@ -1,13 +1,16 @@
 def p(c):
- a=b=0;r=0,1,2
- while 0in map(sum,(g:=[c[a+e][b:b+3]for e in r])+[*zip(*g)]):
-  b=(b+1)%19;a+=b<1
- for d in-4,0,4:
-  for z in-4,0,4:
-   t=max(c[a+d+e][b+z+j]for e in r for j in r);l,p=a,b
-   for j in c:
-    l+=d;p+=z
-    for e in r:
-     for j in r:
-      if g[e][j]and-1<l+e<21 and-1<p+j<21:c[l+e][p+j]=t
+ for x in range(19):
+  for g in range(19):
+   k=[[c[x+i][g+j]for j in range(3)]for i in range(3)]
+   if all(sum(k[i])for i in range(3))and all(sum(k[i][j]for i in range(3))for j in range(3)):
+    for w in range(3):
+     for l in range(3):
+      h=max(c[x+w*4-4+i][g+l*4-4+j]for i in range(3)for j in range(3));y,r=x,g
+      for i in range(3):
+       for i in range(3):
+        y+=w*4-4;r+=l*4-4
+        for i in range(3):
+         for j in range(3):
+          if k[i][j]and-1<y+i<21and-1<r+j<21:c[y+i][r+j]=h
+    return c
  return c
