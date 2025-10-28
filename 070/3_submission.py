@@ -1,5 +1,1 @@
-def p(g):
- a=b=0
- for k in zip(*g):b+=8in k;a+=b<1
- for r in g:r[a:a+b]=[x|x+(8in r)&2for x in r[a:a+b]]
- return g
+import re;p=lambda g,k=23:-k*g or p(eval(re.sub('([38], )1(?=..(.{50})?[38])',r'\1 3',f'{*zip(*g[::-1]),}')),k-1)
