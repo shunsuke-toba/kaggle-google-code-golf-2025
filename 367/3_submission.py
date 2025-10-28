@@ -1,3 +1,1 @@
-def p(g):
- for _ in g*4:b=e=g[0];*g,=zip(*[([c|4*(q>u+v<p)|p%5for c,p,q,u,v in zip(r,b,[0,*r],e,[0,0,*b])],e:=[0,*b],b:=r)[0]for r in g][::-1])
- return g
+import re;p=lambda g,k=19:-k*g or(lambda h:[*zip(*eval(re.sub('0(?=(.{%d}5, 0.{%d}0)|, 4)'%(n:=len(h[0])*3+4,n-6),'4',str(h[::-1]))))])(p(g,k-1))
