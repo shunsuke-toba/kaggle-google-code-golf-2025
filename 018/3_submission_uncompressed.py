@@ -7,7 +7,7 @@ def p(c):
     for m in range(n+1,len(c[0])+1):
      if len({*sum(x:=[l[n:m]for l in c[t:l]],[0])})*all(map(sum,x+[*zip(*x)]))>4:p,e,u=l,m,x
    if p:f+=u,
-   for l in c[t:p]:l[n:e]=[0]*(e-n)
+   for l in c[t:p]:l[n:e]=[0]*len(u[0])
  for u in f:
   for l in range(8):
    p=len(u);e=len(u[0])
