@@ -1,1 +1,1 @@
-p=lambda g,R=range(9):[[g[i][j]|any(g[(i+k//3-1)%9][(j+k%3-1)%9]for k in R)for j in R]for i in R]
+import re;p=lambda g,k=3:-k*g or[*zip(*eval(re.sub('0(?=, (.{29})?5)','1',str(p(g,k-1)[::-1]))))]
