@@ -1,1 +1,1 @@
-p=lambda g,n=7:-n*g or p([*zip(*map(lambda a,r:map(lambda x,y,z:x^x*y*6&8or(y|z>7)*3,r,[0,*r],[0,*a]),g[:1]+g,g))][::-1],n-1)
+import re;p=lambda g,k=3:-k*g or p(eval(re.sub('0(?=((...){,3}.{%d})?..2..2)'%(len(g)*3-7),'3',f'{*zip(*g[::-1]),}')),k-1)
