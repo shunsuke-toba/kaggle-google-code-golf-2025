@@ -1,1 +1,1 @@
-p=lambda g:exec("g[:]=zip(*map(lambda a,r:[(c,4)[20>>l&(20>>n|20>>u)&(c!=2)]for c,l,n,u in zip(r,[0,*r],[*r[1:],0],a)][::-1],g[:1]+g,g));"*24)or g
+import re;p=lambda g,k=23:-k*g or p(eval(re.sub('([24], )[135-9](?=(, |.{%d})[24])'%(len(g)*3+1),r'\1 4',f'{*zip(*g[::-1]),}')),k-1)
