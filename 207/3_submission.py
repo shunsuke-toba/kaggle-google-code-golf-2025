@@ -1,1 +1,1 @@
-p=lambda g:[min(s:=[a[:2],a[3:],b[:2],b[3:]],key=s.count)for a,b in zip(g,g[3:])]
+p=lambda g:[(a,b)[a[:2]==a[3:]][(a[:2]==b[:2])*3:][:2]for a,b in zip(g,g[3:])]
