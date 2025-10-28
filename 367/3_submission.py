@@ -1,1 +1,1 @@
-import re;p=lambda g,k=19:-k*g or(lambda h:[*zip(*eval(re.sub('0(?=(.{%d}5, 0.{%d}0)|, 4)'%(n:=len(h[0])*3+4,n-6),'4',str(h[::-1]))))])(p(g,k-1))
+import re;p=lambda g,k=19:-k*g or[*zip(*eval(re.sub('0(?=(.{%d}5, 0.{%d}0)|, 4)'%(n:=len((h:=p(g,k-1))[0])*3+4,n-6),'4',str(h[::-1]))))]
