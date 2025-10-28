@@ -1,1 +1,1 @@
-import re;p=lambda g,k=1:-k*g or p(eval(re.sub('0(?=((...){,2}.{35})?.{40}(.{76})*8)','5',str([r[::-1]for r in g[::-1]]))),k-1)
+import re;p=lambda g,r='0(?=((...){,2}.{35})?.{40}(.{76})*8)':eval(re.sub(r,'5',re.sub(r,'5',str(g))[::-1])[::-1])
