@@ -1,1 +1,1 @@
-import re;p=lambda g,k=15:-k*g or p(eval(re.sub('0(?=, ([2-9]))'+'(?=.{31}0)'*(k>11)+'x'*(k==3),r'\1',str([*zip(*g)][::-1]))),k-1)
+import re;p=lambda g,k=15:-k*g or p(eval(re.sub('0(?=, ([2-9]))'+'(?=.{31}0)'*(k>11)+'x'[k^3:],r'\1',str([*zip(*g)][::-1]))),k-1)
