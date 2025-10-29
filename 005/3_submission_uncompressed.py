@@ -1,15 +1,14 @@
-def p(q):
- for a in range(19):
+def p(t):
+ for f in range(19):
   for n in range(19):
-   if all(sum(q[a+j][n+i]for i in range(3))for j in range(3))and all(sum(q[a+j][n+i]for j in range(3))for i in range(3)):
-    for f in range(3):
+   if all(sum(t[f+c][n+j]for j in range(3))for c in range(3))and all(sum(t[f+c][n+j]for c in range(3))for j in range(3)):
+    for r in range(3):
      for l in range(3):
-      u,g=a,n
-      for j in range(3):
-       for i in range(3):
-        u+=f*4-4;g+=l*4-4
-        for j in range(3):
-         for i in range(3):
-          if q[a+j][n+i]and-1<u+j<21and-1<g+i<21:q[u+j][g+i]=max(q[a+f*4-4+j][n+l*4-4+i]for j in range(3)for i in range(3))
-    return q
- return q
+      a,s=f,n
+      for c in range(3):
+       for j in range(3):
+        a+=r*4-4;s+=l*4-4
+        for c in range(3):
+         for j in range(3):
+          if t[f+c][n+j]and-1<a+c<21and-1<s+j<21:t[a+c][s+j]=max(t[f+r*4-4+c][n+l*4-4+j]for c in range(3)for j in range(3))
+    return t
