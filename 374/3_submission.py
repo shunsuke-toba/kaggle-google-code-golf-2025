@@ -1,5 +1,1 @@
-def p(g,t=1):
- for k in range(1584):
-  i=9-k//198;*g,=map(list,zip(*g));h=g[k%-11];k%=9
-  if[5]*i==h[k:k+i]:h[k:k+i]=[t%7]*i;t*=4
- return g
+import re;p=lambda g,k=19,c=1:-k*g or p(eval((r:=re.subn(('5, '*(n:=k//2))[:-2],(f'{c},'*n)[:-1],f'{*zip(*g),}'))[0]),k-1,(c+r[1]*3)%5)
