@@ -1,1 +1,1 @@
-import re;p=lambda g,r='0(?=((...){,2}.{35})?.{40}(.{76})*8)':eval(re.sub(r,'5',re.sub(r,'5',str(g))[::-1])[::-1])
+import re;p=lambda g,r='0(?=(.{40}|.{75}(...){,2})(.{76})*8)',s=re.sub:eval(s(r,'5',s(r,'5',str(g))[::-1])[::-1])
