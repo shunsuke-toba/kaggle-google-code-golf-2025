@@ -1,1 +1,1 @@
-p=lambda g:(l:=len(g))<6and[*zip(*p([*zip(*g)]))]or 2in(r:=next(h:=filter(any,g)))and(g[:g.index(r)+1]+[*h]+[[8]*len(r)]+g[:1]*l)[:l]or p(g[::-1])[::-1]
+p=lambda g:(l:=len(g))<6and[*zip(*p([*zip(*g)]))]or 2in(r:=next(h:=filter(any,g)))and(g[:g.index(r)+1]+[*h,[8]*len(r)]+g[:1]*l)[:l]or p(g[::-1])[::-1]
