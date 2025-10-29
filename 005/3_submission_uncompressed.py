@@ -1,16 +1,15 @@
-def p(c):
- for x in range(19):
-  for g in range(19):
-   k=[[c[x+i][g+j]for j in range(3)]for i in range(3)]
-   if all(sum(k[i])for i in range(3))and all(sum(k[i][j]for i in range(3))for j in range(3)):
-    for w in range(3):
+def p(q):
+ for a in range(19):
+  for n in range(19):
+   if all(sum(q[a+j][n+i]for i in range(3))for j in range(3))and all(sum(q[a+j][n+i]for j in range(3))for i in range(3)):
+    for f in range(3):
      for l in range(3):
-      h=max(c[x+w*4-4+i][g+l*4-4+j]for i in range(3)for j in range(3));y,r=x,g
-      for i in range(3):
+      u,g=a,n
+      for j in range(3):
        for i in range(3):
-        y+=w*4-4;r+=l*4-4
-        for i in range(3):
-         for j in range(3):
-          if k[i][j]and-1<y+i<21and-1<r+j<21:c[y+i][r+j]=h
-    return c
- return c
+        u+=f*4-4;g+=l*4-4
+        for j in range(3):
+         for i in range(3):
+          if q[a+j][n+i]and-1<u+j<21and-1<g+i<21:q[u+j][g+i]=max(q[a+f*4-4+j][n+l*4-4+i]for j in range(3)for i in range(3))
+    return q
+ return q
