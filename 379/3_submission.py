@@ -1,6 +1,1 @@
-p=lambda g:exec("""g[:]=map(list,zip(*g[::-1]));a,b,*t=g
-for c in t:
- s=bytes(b);k=s.find(8,j:=s.rfind(2))-1
- if-1<j<k:b[j:k+3]=*[2]*(k-j),8,2,8;a[k:k+3]=c[k:k+3]=8,8,8
- a,b=b,c
-"""*4)or g
+import re;p=lambda g,k=71:-k*g or p(eval(re.sub('.{7}(.{%d}).{9}(0, ){%d}2(.{%d})0, 8, 0'%(n:=len(g)*3-5,c:=k//8,n-c*3-3),r'8,8,8\1 8,2,8'+',2'*c+r',2\3 8,8,8',f'{*zip(*g[::-1]),}')),k-1)
