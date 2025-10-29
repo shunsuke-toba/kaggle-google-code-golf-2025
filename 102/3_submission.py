@@ -1,1 +1,1 @@
-p=lambda g,t=95,e=8:-t*g or p([[((v&5,2)[v.bit_count()in{1,4,9,16}],v|(v!=5)*(n&~5)|(v<1)*(e:=e*2))[t>0]for v,n in zip(R,(0,*R))]for R in zip(*g[::-1])],t-1)
+p=lambda g,t=95,e=8:-t*g or p([[((v&5,2)[v.bit_count()in{1,4,9,16}],v|(v>5<n)*n|(v<1)*(e:=e*2))[t>0]for v,n in zip(R,(0,*R))]for R in zip(*g[::-1])],t-1)
