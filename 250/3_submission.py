@@ -1,1 +1,1 @@
-import re;p=lambda g,k=7:-k*g or[*zip(*eval(re.sub('(2.{%d})0((,.{%d})*.{%d})5'%((2+k//4*26,)*3),r'\1 5\2 0',str(p(g,k-1)[::-1]))))]
+import re;p=lambda g,k=7:-k*g or p(eval(re.sub('(2%s)0((,%s)*%s)5'%(('..'*[1,14][k>3],)*3),r'\1 5\2 0',f'{*zip(*g[::-1]),}')),k-1)
