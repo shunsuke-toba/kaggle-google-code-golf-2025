@@ -1,1 +1,1 @@
-import re;p=lambda g,k=19,c=1:-k*g or p(eval((r:=re.subn((', 5'*(n:=k//2))[2:],(f',{c}'*n)[1:],f'{*zip(*g),}'))[0]),k-1,(c+r[1]*3)%5)
+p=lambda g,k=19,c=1:-k*g or p(eval(t:=(s:=f'{*zip(*g),}').replace((', 5'*(n:=k//2))[2:],(f',{c}'*n)[1:])),k-1,(c+(s>t)*3)%5)
