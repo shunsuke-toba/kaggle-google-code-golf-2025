@@ -1,1 +1,1 @@
-p=lambda g:[*zip(*(len(c:=[y for r in g for y in{*r}if y%5])<len(g)and[c]*len(c)or p([*zip(*g)])))]
+p=lambda g:[*zip(*len(c:=[y for r in g for y in{*r}if y%5])<len(g)and[c]*len(c)or p([*zip(*g)]))]
