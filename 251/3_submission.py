@@ -1,1 +1,1 @@
-p=lambda g,i=35:-i*g or[[c&~(1>d)or i<1for c,d in zip(r,(0,*r))]for r in zip(*p(g,i-1)[::-1])]
+p=lambda g,i=35:-i*g or[(d:=0)or[(d:=c&~(d<1))or i<1for c in r]for r in zip(*p(g,i-1)[::-1])]
