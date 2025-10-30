@@ -1,1 +1,1 @@
-R=range;p=lambda g:[[{(*map(5 .__eq__,u[1::2]),):u for r in zip(g,g[1:],g[2:])for u in zip(*(v[i:]for v in r for i in R(3)))if min(u)}[r>2,c>2,c<6,r<6][r%3*3+c%3]for c in R(9)]for r in R(9)]
+R=range(9);p=lambda g:[[{(*map(5 .__eq__,u[1::2]),):u for r in zip(g,g[1:],g[2:])for u in zip(*(v[i:]for v in r for i in R[:3]))if min(u)}[r>2,c>2,c<6,r<6][r*3%9+c%3]for c in R]for r in R]
