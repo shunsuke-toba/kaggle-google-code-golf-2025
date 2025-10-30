@@ -1,1 +1,1 @@
-def p(g,n=1):t=sum(g,[]);s=[i-5for i in b''if t[i-5]];return{v:=t[n+i]for i in s}-{v-len(s)%t.count(v)}and p(g,n+1)or eval(str(g).replace(*f'{v}5'))
+def p(g,n=1):t=sum(g,[]);c=0;return{(c:=c+1)and(v:=t[n+i-5])for i in b''if t[i-5]}-{v-c%t.count(v)}and p(g,n+1)or eval(str(g).replace(*f'{v}5'))
