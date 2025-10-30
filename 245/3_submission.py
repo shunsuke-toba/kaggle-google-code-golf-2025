@@ -1,1 +1,1 @@
-import re;p=lambda g,k=9,b=1:-k*g or p(eval(re.sub('((2, )*)0,',r'0,\1',s:=f'{*zip(*g),}',-b)),k-1,re.search('2[^)]*3',s)==None)
+import re;p=lambda g,k=9,b=1:-k*g or p(eval(re.sub('((2, )*)0,',r'0,\1',s:=f'{*zip(*g),}',-b)),k-1,not re.search('2[^)]*3',s))
