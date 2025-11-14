@@ -2,3 +2,5 @@
 submission.zip
 **/__pycache__/*
 *.txt
+!requirements.txt
+!directory_structure.txt
