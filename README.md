@@ -114,6 +114,10 @@ python verify_all.py
 python generate_testcases.py
 ```
 
+## NeurIPS Presentation
+
+The file `logiclynx_presentation.mp4` contains the presentation video as specified in the "NeurIPS Presentation" section of the email.
+
 ## LICENSE
 
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
