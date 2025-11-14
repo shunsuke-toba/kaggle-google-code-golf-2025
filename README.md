@@ -1,97 +1,119 @@
-# Google-Code-Golf-2025
+# Google Code Golf 2025 - Solution Repository
 
-## ファイル構成
+Below you can find a outline of how to reproduce my solution for the Google Code Golf 2025 competition.
+If you run into any trouble with the setup/code or have any questions please contact me at toba0248624@gmail.com.
+
+## ARCHIVE CONTENTS
 
 ```
-google-code-golf-2025
-├── XXX（001~400）
-│   ├── testcases（テストケースのフォルダ）
-│   ├── 0_input.json（入力JSON）
-│   ├── 0_gen.py（テストケースの生成方法が書かれたPythonコード）
-│   ├── 1_solution.md（問題の考察ポイントや解くための手続きを自然言語で記述）
-│   ├── 2_plain_code.py（平易なPythonで記載されたコード）
-│   └── 3_submission.py（コードゴルフ用のコード）
-├── verify.py（テストケースを実行するためのバリデータ）
-├── verify.all（全てのsubをテストした上でスコアを計算）
-├── list.py（subが未実装のファイルの一覧を取得）
-├── generate_testcases.py（テストケースのテキストファイルを生成するためのスクリプト）
-├── generate_submission.py（提出用のフォルダを生成するためのスクリプト）
-├── compress_solution.py（zlib圧縮によるコード最適化）
-├── optimize_variables.py（ランダム探索による変数名最適化）
-└── optimize_and_compress.py（変数名最適化 + 圧縮の統合ツール）
+google-code-golf-2025/
+├── XXX/ (001-400)              : Individual problem directories
+│   ├── testcases/              : Test case files for visualization
+│   ├── 0_input.json            : Problem specification and examples
+│   ├── 0_gen.py                : Test case generation code
+│   ├── 1_solution.md           : Solution approach and analysis (Japanese)
+│   ├── 2_plain_code.py         : Readable Python implementation
+│   └── 3_submission.py         : Code golf optimized version
+├── verify.py                   : Test case validator for individual problems
+├── verify_all.py               : Batch tester and score calculator
+├── list.py                     : List unimplemented solutions
+├── generate_testcases.py       : Generate test case text files
+├── generate_submission.py      : Create submission.zip package
+├── compress_solution.py        : Code optimization using zlib compression
+├── optimize_variables.py       : Variable name optimization via random search
+├── optimize_and_compress.py    : Integrated optimization tool
+└── task-visualizer/            : Web-based task visualization tool
 ```
 
-## テストケースの色付き表示方法
+## HARDWARE
 
-- generate_testcases.pyを実行すると、testcasesフォルダにテストケースのテキストファイルが生成される
-- VSCodeの拡張機能「Color My Text」をインストール
-- ワークスペースの設定に以下を追加
-- テキストファイルをVSCode上で開くと色がついて表示される
+This solution can run on standard hardware:
 
-```json
-{
-    "colorMyText.configurations": [
-        { 
-            "paths": ["**/testcases/*.txt"],
-            "rules": [
-                { "patterns": ["0"], "color": "White"},
-                { "patterns": ["1"], "color": "BrightBlack"},
-                { "patterns": ["2"], "color": "BrightBlue"},
-                { "patterns": ["3"], "color": "BrightCyan"},
-                { "patterns": ["4"], "color": "BrightGreen"},
-                { "patterns": ["5"], "color": "BrightMagenta"},
-                { "patterns": ["6"], "color": "BrightRed"},
-                { "patterns": ["7"], "color": "Red"},
-                { "patterns": ["8"], "color": "BrightYellow"},
-                { "patterns": ["9"], "color": "Blue"}
-            ]
-        }
-    ]
-}
-```
+- Ubuntu 20.04 LTS or later (or WSL2 on Windows)
 
-## Docker Composeを使った実行方法
+## SOFTWARE
 
-### 環境構築
+Python packages are detailed in `requirements.txt`:
+
+- Python 3.11
+
+## DATA SETUP
+
+The repository already contains all problem data in JSON format. No additional downloads are required.
+
+## ENVIRONMENT SETUP
+
+### Option 1: Docker
 
 ```bash
-# Dockerコンテナをビルド
+# Build the Docker container
 docker compose build
-```
 
-### ワンライナーで実行
-
-```bash
-# タスク1のsubmissionコードをテスト
+# Test a single problem
 docker compose run --rm code-golf python verify.py 1 sub
 
-# タスク1のplainコードをテスト
-docker compose run --rm code-golf python verify.py 1 plain
-
-# 全タスクのテスト
+# Test all problems
 docker compose run --rm code-golf python verify_all.py
 ```
 
-## 進め方
+### Option 2: Local Python Environment
 
-- 問題を読んで1_solution.mdを頑張って書く
-- 2_plain_code.pyをAIに書かせる
-- 3_submission.pyをAIに書かせる
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
+# Test a single problem
+python verify.py 1 sub
 
-
-## タスクのビジュアライザ
-
+# Test all problems
+python verify_all.py
 ```
+
+## SOLUTION BUILD
+
+```bash
+# Generate submission.zip containing task001.py to task400.py
+python generate_submission.py
+```
+
+## Compression-based Optimization
+
+```bash
+# Variable name optimization via random search
+python optimize_variables.py <problem_number>
+
+# Compression-based optimization
+python compress_solution.py <problem_number>
+
+# Combined optimization
+python optimize_and_compress.py <problem_number>
+```
+
+## Web-based Visualizer
+
+```bash
 cd task-visualizer
-```
-
-httpサーバーを起動
-
-```
+npm install
 npm run dev
 ```
 
-`http://localhost:8080/task-visualizer/` にアクセスすると各タスクの入力がビジュアライズされます
+Access `http://localhost:8080/task-visualizer/` to view interactive task visualizations.
 
-ARC-GEN exampleは展開するときに少し重い時があります。
+Note: ARC-GEN examples may take a moment to expand/load.
+
+## Utility Scripts
+
+```bash
+# List problems without submission implementations
+python list.py
+
+# Test all submissions and calculate total score
+python verify_all.py
+
+# Generate test case text files for visualization
+python generate_testcases.py
+```
+
+## LICENSE
+
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
